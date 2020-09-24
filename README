@@ -1,0 +1,13 @@
+An implementation of one of the world's oldest text-based adventure games in
+one of the world's newest programming languages.
+
+To run:
+
+  $ cd adventure
+  $ go run adventure.go
+
+
+Go is available from most Linux package managers. A one click installer for
+Windows and MacOS is available here:
+
+  https://golang.org/doc/install
