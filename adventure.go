@@ -56,6 +56,14 @@ func loadRooms() {
 			rooms = append(rooms, r)
 		}
 	}
+
+	// Panic if fewer than 15 rooms are defined.
+	// TODO Disabled for now while development continues.
+	/*
+		if len(rooms) < 15 {
+			panic("The game must have at least 15 rooms")
+		}
+	*/
 	// Debug: uncomment to show that JSON data is now a struct in rooms array
 	//fmt.Printf("length=%d capacity=%d %v\n", len(rooms), cap(rooms), rooms)
 }
