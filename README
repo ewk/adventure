@@ -1,10 +1,9 @@
 An implementation of one of the world's oldest text-based adventure games in
 one of the world's newest programming languages.
 
-To run:
+To run from the root directory:
 
-  $ cd adventure
-  $ go run adventure.go
+  $ go run .
 
 
 Go is available from most Linux package managers. A one click installer for

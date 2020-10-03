@@ -73,4 +73,6 @@ func loadRooms() {
 func main() {
 	loadRooms()
 
+	playGame()
+
 }
