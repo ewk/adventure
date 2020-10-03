@@ -31,7 +31,8 @@ type Room struct {
 
 // game play object
 type Object struct {
-	Name string
+	Name      string
+	ShortDesc string
 }
 
 // loadRooms reads room definitions from local storage and creates a
