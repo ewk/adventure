@@ -12,7 +12,8 @@ const MaxConnections = 6
 const MaxRooms = 15
 const MaxObjects = 8
 
-var rooms []Room // graph of rooms
+var rooms []Room                         // graph of rooms
+var inventory = make(map[string]*Object) // player inventory
 
 // definition of a room
 type Room struct {
@@ -25,12 +26,13 @@ type Room struct {
 	Visited   bool
 	Count     int                   // number of connections
 	Out       [MaxConnections]*Room // outbound connections
-	objects   []*Object             // objects in this room
+	objects   map[string]*Object    // objects in this room
 }
 
 // game play object
 type Object struct {
-	Name string
+	Name      string
+	ShortDesc string
 }
 
 // loadRooms reads room definitions from local storage and creates a
@@ -70,5 +72,7 @@ func loadRooms() {
 
 func main() {
 	loadRooms()
+
+	playGame()
 
 }
