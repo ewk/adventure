@@ -18,7 +18,6 @@ var inventory = make(map[string]*Object) // player inventory
 // definition of a room
 type Room struct {
 	Name      string
-	RoomType  string
 	Feature1  string
 	Feature2  string
 	LongDesc  string
