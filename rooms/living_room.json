@@ -1,7 +1,7 @@
 {
   "name": "Living Room",
-  "feature1": "",
-  "feature2": "",
+  "feature1": "fireplace",
+  "feature2": "couch",
   "longDesc": "",
-  "shortDesc": ""
+  "shortDesc": "You are in the living room."
 }
