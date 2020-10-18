@@ -2,7 +2,7 @@
   "name": "Bathroom",
   "features": {
 	"feature1": "description1",
-	"feature1": "description2",
+	"feature1": "description2"
   },
   "longDesc": "",
   "shortDesc": "You are in the bathroom."
