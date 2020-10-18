@@ -1,7 +1,7 @@
 {
   "name": "Family Room",
   "features": {
-	"feature1": "description1",
+	"desk": "The desk is covered in papers and office supplies.",
 	"feature2": "description2"
   },
   "longDesc": "",

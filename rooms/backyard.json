@@ -1,7 +1,7 @@
 {
   "name": "Backyard",
   "features": {
-	"feature1": "description1",
+	"eagle": "The eagle seems to have noticed you.  You wonder if it will swoop down to grab you if you step into the yard.",
 	"feature2": "description2"
   },
   "longDesc": "",
