@@ -1,9 +1,9 @@
 {
   "name": "Front Porch",
-  "features": map[string]string{
+  "features": {
 	"feature1": "description1",
 	"feature1": "description2",
-  }
+  },
   "longDesc": "",
   "shortDesc": "You are standing on your front porch.  The front door, which enters into the downstairs hallway, is to the north."
 }
