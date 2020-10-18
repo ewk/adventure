@@ -3,8 +3,8 @@ package main
 import (
 	"encoding/json"
 	"io/ioutil"
+	// "fmt"
 	"log"
-	"fmt"
 	"regexp"
 )
 
@@ -65,7 +65,7 @@ func loadRooms() {
 		}
 	*/
 	// Debug: uncomment to show that JSON data is now a struct in rooms array
-	fmt.Printf("length=%d capacity=%d %v\n", len(rooms), cap(rooms), rooms)
+	// fmt.Printf("length=%d capacity=%d %v\n", len(rooms), cap(rooms), rooms)
 }
 
 func main() {
