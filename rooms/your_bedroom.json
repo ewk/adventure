@@ -1,7 +1,7 @@
 {
   "name": "Your Bedroom",
   "features": {
-	"feature1": "description1",
+	"closet": "The closet is full of toys.  At the back of the closet is a laundry chute leading to the basement.",
 	"feature2": "description2"
   },
   "longDesc": "",

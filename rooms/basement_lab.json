@@ -1,8 +1,8 @@
 {
   "name": "Basement Lab",
   "features": {
-	"feature1": "description1",
-	"feature2": "description2"
+	"laundry chute": "",
+	"hatch": ""
   },
   "longDesc": "",
   "shortDesc": "You are in the basement lab. To the west, a hatch leads up and out to the backyard."
