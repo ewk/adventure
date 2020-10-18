@@ -1,7 +1,9 @@
 {
   "name": "Basement Lab",
-  "feature1": "laundry chute exit",
-  "feature2": "box of mechanical parts",
+  "features": map[string]string{
+	"feature1": "description1",
+	"feature1": "description2",
+  }
   "longDesc": "",
   "shortDesc": "You are in the basement lab. To the west, a hatch leads up and out to the backyard."
 }

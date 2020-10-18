@@ -1,7 +1,9 @@
 {
   "name": "Backyard",
-  "feature1": "eagle",
-  "feature2": "",
+  "features": map[string]string{
+	"feature1": "description1",
+	"feature1": "description2",
+  }
   "longDesc": "",
   "shortDesc": "You are in the backyard. If you turn east and face the house, a basement hatch is on the southern corner, and a door to the dining room is on the northern corner."
 }

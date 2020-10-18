@@ -1,7 +1,9 @@
 {
   "name": "Main Staircase",
-  "feature1": "",
-  "feature2": "",
+  "features": map[string]string{
+	"feature1": "description1",
+	"feature1": "description2",
+  }
   "longDesc": "",
   "shortDesc": "You are on the staircase."
 }

@@ -1,7 +1,9 @@
 {
   "name": "Living Room",
-  "feature1": "fireplace",
-  "feature2": "couch",
+  "features": map[string]string{
+	"feature1": "description1",
+	"feature1": "description2",
+  }
   "longDesc": "",
   "shortDesc": "You are in the living room."
 }
