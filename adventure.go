@@ -3,6 +3,7 @@ package main
 import (
 	//"fmt"
 	"encoding/json"
+	// "fmt"
 	"io/ioutil"
 	"log"
 	"regexp"
@@ -19,15 +20,12 @@ var inventory = make(map[string]*Object) // player inventory
 // definition of a room
 type Room struct {
 	Name      string
-	RoomType  string
-	Feature1  string
-	Feature2  string
+	Features  map[string]string
 	LongDesc  string
 	ShortDesc string
 	Visited   bool
-	Count     int                   // number of connections
 	Out       [MaxConnections]*Room // outbound connections
-	objects   map[string]*Object    // objects in this room
+	Objects   map[string]*Object    // objects in this room
 }
 
 // game play object
@@ -68,7 +66,7 @@ func loadRooms() {
 		}
 	*/
 	// Debug: uncomment to show that JSON data is now a struct in rooms array
-	//fmt.Printf("length=%d capacity=%d %v\n", len(rooms), cap(rooms), rooms)
+	// fmt.Printf("length=%d capacity=%d %v\n", len(rooms), cap(rooms), rooms)
 }
 
 func main() {

@@ -1,0 +1,9 @@
+{
+  "name": "Family Room",
+  "features": {
+	"desk": "The desk is covered in papers and office supplies.",
+	"feature2": "description2"
+  },
+  "longDesc": "",
+  "shortDesc": "You are in the family room."
+}

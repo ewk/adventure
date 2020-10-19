@@ -1,0 +1,9 @@
+{
+  "name": "Bathroom",
+  "features": {
+	"leaky faucet": "",
+	"feature2": "description2"
+  },
+  "longDesc": "",
+  "shortDesc": "You are in the bathroom."
+}
