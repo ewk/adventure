@@ -1,9 +1,8 @@
 package main
 
 import (
-	//"fmt"
+//	"fmt"
 	"encoding/json"
-	// "fmt"
 	"io/ioutil"
 	"log"
 	"regexp"
