@@ -87,6 +87,7 @@ func playGame() {
 	inventory["candle"] = &Object{Name: "candle", ShortDesc: "To light the way"}
 
 	input := bufio.NewScanner(os.Stdin)
+	fmt.Print("> ")
 
 	for input.Scan() {
 		// split user input at whitespace and match known commands
@@ -158,5 +159,6 @@ func playGame() {
 		default:
 			fmt.Println("Not a valid command:", action)
 		}
+		fmt.Print("> ")
 	}
 }
