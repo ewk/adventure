@@ -93,11 +93,20 @@ func playGame() {
 		action := input.Text()
 		s := strings.Fields(action)
 
+		if cap(s) == 0 {
+			continue
+		}
+
 		switch s[0] {
 		case "look":
 			if len(s) > 1 && s[1] == "at" {
-				obj := s[2]
-				lookAtObject(obj)
+				if len(s) < 3 {
+					fmt.Println("What would you like to look at?")
+					break
+				} else {
+					obj := s[2]
+					lookAtObject(obj)
+				}
 			} else {
 				lookAtRoom(curRoom)
 			}
