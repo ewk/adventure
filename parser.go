@@ -92,16 +92,13 @@ func playGame() {
 		// split user input at whitespace and match known commands
 		action := input.Text()
 		s := strings.Fields(action)
-		//fmt.Println(s) // TODO remove
 
 		switch s[0] {
 		case "look":
 			if len(s) > 1 && s[1] == "at" {
 				obj := s[2]
-				fmt.Println("You said \"look at\"", obj)
 				lookAtObject(obj)
 			} else {
-				fmt.Println("You said \"look\".")
 				lookAtRoom(curRoom)
 			}
 		case "north":
@@ -135,13 +132,11 @@ func playGame() {
 		case "drop":
 			if len(s) > 1 {
 				item := s[1]
-				fmt.Println("You said \"drop\"", item)
 				dropObject(item)
 			} else {
 				fmt.Println("Drop what?")
 			}
 		case "inventory":
-			fmt.Println("You said \"inventory\".")
 			listInventory()
 		case "savegame":
 			fmt.Println("You said \"savegame\".")
@@ -150,7 +145,6 @@ func playGame() {
 			fmt.Println("You said \"loadgame\".")
 			// TODO implement load state
 		case "help":
-			fmt.Println("You said \"help\".")
 			help()
 		default:
 			fmt.Println("Not a valid command:", action)
