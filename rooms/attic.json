@@ -1,7 +1,7 @@
 {
   "name": "Attic",
   "longDesc": "Long description of attic",
-  "shortDesc": "Short description of attic",
+  "description": "Short description of attic",
   "items": {
 	"desk": {
 		"name": "desk",
@@ -10,7 +10,7 @@
 		"discovered": true,
 		"containsHiddenObject": true,
 		"discoveryStatment": "You've found a pencil hidden in the desk.",
-		"hiddenObject": "sneakyObject"
+		"hiddenObject": "pencil"
 	},
 	"chair": {
 		"name": "chair",
