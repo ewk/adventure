@@ -1,9 +1,0 @@
-{
-  "name": "Living Room",
-  "features": {
-	"couch": "The large, comfortable-looking couch against the wall has always been too heavy for your parents to move easily. From your vantage point so close to the ground, you see various objects under the couch.",
-	"feature2": "description2"
-  },
-  "longDesc": "",
-  "shortDesc": "You are in the living room."
-}

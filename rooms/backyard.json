@@ -1,9 +1,0 @@
-{
-  "name": "Backyard",
-  "features": {
-	"eagle": "The eagle seems to have noticed you.  You wonder if it will swoop down to grab you if you step into the yard.",
-	"feature2": "description2"
-  },
-  "longDesc": "",
-  "shortDesc": "You are in the backyard. If you turn east and face the house, a basement hatch is on the southern corner, and a door to the dining room is on the northern corner."
-}

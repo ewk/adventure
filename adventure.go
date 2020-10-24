@@ -13,24 +13,28 @@ const MaxConnections = 6
 const MaxRooms = 15
 const MaxObjects = 8
 
-var rooms []Room                         // graph of rooms
-var inventory = make(map[string]*Object) // player inventory
+var rooms []Room                       // graph of rooms
+var inventory = make(map[string]*Item) // player inventory
 
 // definition of a room
 type Room struct {
-	Name      string
-	Features  map[string]string
-	LongDesc  string
-	ShortDesc string
-	Visited   bool
-	Out       [MaxConnections]*Room // outbound connections
-	Objects   map[string]*Object    // objects in this room
+	Name        string
+	LongDesc    string
+	Description string
+	Items       map[string]*Item
+	Visited     bool
+	Out         [MaxConnections]*Room // outbound connections
 }
 
-// game play object
-type Object struct {
-	Name      string
-	ShortDesc string
+// struct used for both features and objects
+type Item struct {
+	Name                 string
+	Description          string
+	Portable             bool   // False for features, true for objects
+	Discovered           bool   // True for features. For some objects this starts as true, for other objects it starts as false.
+	ContainsHiddenObject bool   // This is false for all objects. For some features this starts as true.
+	DiscoveryStatment    string // If there's a hidden object, this described the connection. "Underneath the couch, you see a cat toy."
+	HiddenObject         string // Name of hidden object if there is one
 }
 
 // loadRooms reads room definitions from local storage and creates a

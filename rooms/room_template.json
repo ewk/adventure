@@ -1,0 +1,53 @@
+{
+  "name": "Attic",
+  "longDesc": "Long description of attic",
+  "shortDesc": "Short description of attic",
+  "items": {
+	"desk": {
+		"name": "desk",
+		"description": "A wooden desk is in the middle of the room.",
+		"portable": false,
+		"discovered": true,
+		"containsHiddenObject": true,
+		"discoveryStatment": "You've found a pencil hidden in the desk.",
+		"hiddenObject": "sneakyObject"
+	},
+	"chair": {
+		"name": "chair",
+		"description": "A metal chair is next to the desk.",
+		"portable": false,
+		"discovered": true,
+		"containsHiddenObject": false,
+		"discoveryStatment": "",
+		"hiddenObject": ""
+	},
+	"toy": {
+		"name": "toy",
+		"description": "The toy is a yellow truck.",
+		"portable": true,
+		"discovered": true,
+		"containsHiddenObject": false,
+		"discoveryStatment": "",
+		"hiddenObject": ""
+	},
+	"pencil": {
+		"name": "pencil",
+		"description": "The pencil has a sharp tip.",
+		"portable": true,
+		"discovered": false,
+		"containsHiddenObject": false,
+		"discoveryStatment": "",
+		"hiddenObject": ""
+	}
+  }
+}
+
+type Item struct {
+	Name                 string
+	Description          string
+	Portable             bool   // False for features, true for objects
+	Discovered           bool   // True for features. For some objects this starts as true, for other objects it starts as false.
+	ContainsHiddenObject bool   // This is false for all objects. For some features this starts as true.
+	DiscoveryStatment    string // If there's a hidden object, this described the connection. "Underneath the couch, you see a cat toy."
+	HiddenObject         string // Name of hidden object if there is one
+}
