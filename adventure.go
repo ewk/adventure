@@ -2,7 +2,7 @@ package main
 
 import (
 	"encoding/json"
-	// "fmt"
+	//"fmt"
 	"io/ioutil"
 	"log"
 	"regexp"
@@ -68,8 +68,13 @@ func loadRooms() {
 			panic("The game must have at least 15 rooms")
 		}
 	*/
-	// Debug: uncomment to show that JSON data is now a struct in rooms array
-	// fmt.Printf("length=%d capacity=%d %v\n", len(rooms), cap(rooms), rooms)
+	// Debug: uncomment to show imported JSON data
+	//fmt.Printf("length=%d capacity=%d %v\n", len(rooms), cap(rooms), rooms)
+	//for _, i := range rooms {
+	//	for _, j := range i.Items {
+	//		fmt.Println(j)
+	//	}
+	//}
 }
 
 func main() {
