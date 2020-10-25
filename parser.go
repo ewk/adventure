@@ -12,22 +12,34 @@ func lookAtRoom(cur Room) {
 	fmt.Println(cur.LongDesc)
 }
 
-// lookAtObject prints the description of an object or feature
-func lookAtObject(obj string) {
+// lookAtItem prints the description of an object or feature
+func lookAtItem(item string) {
 	// This is a fairly generic function. It needs to not only describe
 	// an inventory object, but also any feature that has a text description
-	if val, ok := inventory[obj]; ok {
-		fmt.Println(val.ShortDesc)
+
+	// TODO updates for new Item approach
+	// The item's description is printed.
+	// If ContainsHiddenObject == true:
+	//    print DiscoveryStatement
+	//    set ContainsHiddenObject = false
+	//    get the HiddenObject name
+	//    look up that name in the room's Items map
+	//    print that object's Description
+	//    set that object's Discovered bool to true
+
+	if val, ok := inventory[item]; ok {
+		fmt.Println(val.Description)
 	} else {
-		fmt.Printf("%s not in inventory\n", obj)
+		fmt.Printf("%s not in inventory\n", item)
 	}
 	// TODO same check for rooms
 }
 
 // takeObject puts an item into the player's inventory
-func takeObject(itemName string) {
-	// TODO add object to player inventory and remove it from room objects hash
-	//inventory[itemName] = &Object{Name: itemName}
+func takeItem(itemName string) {
+	// TODO add object to player inventory and remove it from room items hash
+	// inventory[itemName] = &Item{Name: itemName}
+	// can't take item if portable == false
 }
 
 // dropObject removes an item from the player's inventory
@@ -83,8 +95,8 @@ func help() {
 func playGame() {
 	// TODO remove dummy data
 	curRoom := rooms[0]
-	inventory["spoon"] = &Object{Name: "spoon", ShortDesc: "A utensil"}
-	inventory["candle"] = &Object{Name: "candle", ShortDesc: "To light the way"}
+	inventory["spoon"] = &Item{Name: "spoon", Description: "A utensil"}
+	inventory["candle"] = &Item{Name: "candle", Description: "To light the way"}
 
 	input := bufio.NewScanner(os.Stdin)
 	fmt.Print("> ")
@@ -105,8 +117,8 @@ func playGame() {
 					fmt.Println("What would you like to look at?")
 					break
 				} else {
-					obj := s[2]
-					lookAtObject(obj)
+					item := s[2]
+					lookAtItem(item)
 				}
 			} else {
 				lookAtRoom(curRoom)
