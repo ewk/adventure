@@ -1,9 +1,43 @@
 {
   "name": "Backyard",
-  "features": {
-	"eagle": "The eagle seems to have noticed you.  You wonder if it will swoop down to grab you if you step into the yard.",
-	"feature2": "description2"
-  },
   "longDesc": "",
-  "shortDesc": "You are in the backyard. If you turn east and face the house, a basement hatch is on the southern corner, and a door to the dining room is on the northern corner."
+  "description": "",
+  "items": {
+	"feature1": {
+		"name": "feature1",
+		"description": "",
+		"portable": false,
+		"discovered": true,
+		"containsHiddenObject": true,
+		"discoveryStatment": "",
+		"hiddenObject": ""
+	},
+	"feature2": {
+		"name": "feature2",
+		"description": "",
+		"portable": false,
+		"discovered": true,
+		"containsHiddenObject": false,
+		"discoveryStatment": "",
+		"hiddenObject": ""
+	},
+	"object1": {
+		"name": "object1",
+		"description": "",
+		"portable": true,
+		"discovered": true,
+		"containsHiddenObject": false,
+		"discoveryStatment": "",
+		"hiddenObject": ""
+	},
+	"object2": {
+		"name": "object2",
+		"description": "",
+		"portable": true,
+		"discovered": false,
+		"containsHiddenObject": false,
+		"discoveryStatment": "",
+		"hiddenObject": ""
+	}
+  }
 }

@@ -1,10 +1,43 @@
 {
   "name": "Master Bedroom",
-  "features": {
-	"fireplace": "Brick, covered in years of soot. Looks like a looooooong way down.",
-  "notebook": "The well-worn notebook is stuffed with extra pieces of paper.",
-  "bed":"The bed is old, heavy, and dark, with no fewer than three quilts, and six pillows piled on top of it."
-  },
-  "longDesc": "Uhoh your parents' bedroom. You are definitely not supposed to be in here! But you're doing a lot of stuff today that you're not supposed to do, so why stop now? You need to find the instructions for this shrinky thing! Maybe they're in that notebook hanging off the desk to your left on the south wall. But how are you going to get up there? Maybe there's a way to get the notebook down here. The bed is pushed agains the far wall from the doorway, on the west wall. It's huge, wooden, and intricately carved. Want to guess whether or not it's an antique? Do you think there's anything useful to you up there, if only you could figure out a way to climb one of those intricately carved bed posts. Maybe you can jump and grab onto the quilt. What's that dirty black hole in the wall on the right? I didn't know the fireplace had an opening up here too. I thought it was just in the living room. Better be careful to not fall down there, who knows what will happen. ",
-  "shortDesc": "You are in the master bedroom. There is a tall bed against the west wall, a desk with a notebook on it on the south wall, and a fireplace on the north wall. "
+  "longDesc": "",
+  "description": "",
+  "items": {
+	"feature1": {
+		"name": "feature1",
+		"description": "",
+		"portable": false,
+		"discovered": true,
+		"containsHiddenObject": true,
+		"discoveryStatment": "",
+		"hiddenObject": ""
+	},
+	"feature2": {
+		"name": "feature2",
+		"description": "",
+		"portable": false,
+		"discovered": true,
+		"containsHiddenObject": false,
+		"discoveryStatment": "",
+		"hiddenObject": ""
+	},
+	"object1": {
+		"name": "object1",
+		"description": "",
+		"portable": true,
+		"discovered": true,
+		"containsHiddenObject": false,
+		"discoveryStatment": "",
+		"hiddenObject": ""
+	},
+	"object2": {
+		"name": "object2",
+		"description": "",
+		"portable": true,
+		"discovered": false,
+		"containsHiddenObject": false,
+		"discoveryStatment": "",
+		"hiddenObject": ""
+	}
+  }
 }

@@ -1,9 +1,43 @@
 {
   "name": "Living Room",
-  "features": {
-	"couch": "The large, comfortable-looking couch against the wall has always been too heavy for your parents to move easily. From your vantage point so close to the ground, you see various objects under the couch.",
-	"feature2": "description2"
-  },
   "longDesc": "",
-  "shortDesc": "You are in the living room."
+  "description": "",
+  "items": {
+	"feature1": {
+		"name": "feature1",
+		"description": "",
+		"portable": false,
+		"discovered": true,
+		"containsHiddenObject": true,
+		"discoveryStatment": "",
+		"hiddenObject": ""
+	},
+	"feature2": {
+		"name": "feature2",
+		"description": "",
+		"portable": false,
+		"discovered": true,
+		"containsHiddenObject": false,
+		"discoveryStatment": "",
+		"hiddenObject": ""
+	},
+	"object1": {
+		"name": "object1",
+		"description": "",
+		"portable": true,
+		"discovered": true,
+		"containsHiddenObject": false,
+		"discoveryStatment": "",
+		"hiddenObject": ""
+	},
+	"object2": {
+		"name": "object2",
+		"description": "",
+		"portable": true,
+		"discovered": false,
+		"containsHiddenObject": false,
+		"discoveryStatment": "",
+		"hiddenObject": ""
+	}
+  }
 }
