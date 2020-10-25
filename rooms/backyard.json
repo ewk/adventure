@@ -1,9 +1,12 @@
 {
   "name": "Backyard",
-  "features": {
-	"eagle": "The eagle seems to have noticed you.  You wonder if it will swoop down to grab you if you step into the yard.",
-	"feature2": "description2"
+  "items": {
+	  "eagle": "The eagle seems to have noticed you.  You wonder if it will swoop down to grab you if you step into the yard.",
+    "sandbox-feature": "There is a sandbox full of sand, toys, and buckets.",
+    "baseball": "It's a baseball.",
+    "umbrella": "There's a patio umbrella on the ground waiting to be put away.",
+    "sand" : "The sand is in the sandbox"
   },
-  "longDesc": "",
-  "shortDesc": "You are in the backyard. If you turn east and face the house, a basement hatch is on the southern corner, and a door to the dining room is on the northern corner."
+  "longDesc": "This is your first time in the backyard. If you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner. There is a patio umbrella folded on the ground next to this exit. To the west, there is a sandbox. There is an eagle circling overhead. You need to collect sand from the sandbox. You can use the umbrella to hide from the eagle.",
+  "shortDesc": "This is your first time in the backyard. If you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner. There is a patio umbrella folded on the ground next to this exit. To the west, there is a sandbox. There is an eagle circling overhead. "
 }

@@ -1,9 +1,11 @@
 {
   "name": "Downstairs Hallway",
-  "features": {
-	"feature1": "description1",
-	"feature2": "description2"
-  },
-  "longDesc": "",
-  "shortDesc": "You are in the downstairs hallway."
+  "items": {
+	  "skateboard": "description1",
+    "mail-feature": "There is a large pile of mail by the front door, on the south wall, at the end of the hallway.",
+    "coatHooks-feature" : "There are three coat hooks on the east wall at the south end of the hallway. Only one coat (the player's) is hung there now",
+    "playerCoat" : "Your coat is hanging on the coat hook, If you get it down and put it on, you can avoid the Eagle."
+  }, 
+  "longDesc": "You are in the downstairs hallway for the first time. The front door is on the south wall. It opens to the porch, which is outside. On your right, on the west wall, there is a door that leads to the dining room, but not the living room. The only way to get to the living room is through the dining room. On your left, on the east wall, there is a door for the kitchen, and the family room. There is a pantry in the kitchen but you it can only be accessed through the kitchen. By the front door, on the south end of the room, and the east wall, there are three coat hooks, but only one coat is hung there now. The player's coat. If the player gets their coat, they will be able to avoid the Eagle, they won't know this until they inspect the coat hooks. On the floor at the south wall, right by the front door, is a pile of mail. There is a letter with a clue for the password to their parents'c omputer on one of the envelopes.",
+  "shortDesc": "You are in the downstairs hallway for the first time. The front door is on the south wall. It opens to the porch, which is outside. On your right, on the west wall, there is a door that leads to the dining room, but not the living room. The only way to get to the living room is through the dining room. On your left, on the east wall, there is a door for the kitchen, and the family room. There is a pantry in the kitchen but you it can only be accessed through the kitchen."
 }

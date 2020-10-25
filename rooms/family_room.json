@@ -1,9 +1,12 @@
 {
   "name": "Family Room",
-  "features": {
-	"desk": "The desk is covered in papers and office supplies.",
-	"feature2": "description2"
+  "items": {
+	  "tv-feature": "The desk is covered in papers and office supplies.",
+    "toyBox-feature": "The toy box is empty now, just with a note saying your toys were taken away from the last time you stole an experiment.",
+    "beanBagChairs" : "Who ever thought these were comfy?",
+    "nintendo64" : "To accompany the aging relic of the tv, a classic gaming system",
+    "headphones" : "For drowning out the sound of science."
   },
-  "longDesc": "",
-  "shortDesc": "You are in the family room."
+  "longDesc": "You are in the family room for the first time. The door to the downstairs hallway is on the west wall, there are no other exits in thsi room. There is a large window on the east wall. On the north wall there is an entertainment system with an old tv, wires are popping out the back and sides, and only half of the picture works. The tv is on the entertainment system, away from the wall. You need to get a copper wire from the back of it.  ",
+  "shortDesc": "You are in the family room. there is only one exit, on the west wall, to the downstairs hallway."
 }

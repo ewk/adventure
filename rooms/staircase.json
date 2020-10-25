@@ -1,9 +1,9 @@
 {
   "name": "Main Staircase",
-  "features": {
-	"Pile of Books": "Precariously stacked pile of books halfway down the stairs, some look like they might be soft and flexible.",
-	"Peeling Wallpaper": "Some intricate wallpaper seems to be peeling from the wall here, I wonder if there are any deep dark secrets hidden underneadth."
+  "items": {
+	  "sleepingDog-feature": "Your dog is sleeping at the foot of the stairs. He can't hear you if you call him upstairs.",
+    "peelingWallpaper-feature": "Some wallpaper seems to be peeling from the wall here, I wonder if there are any deep dark secrets hidden underneadth."
   },
-  "longDesc": "Woah this staircase is a lot more imposing from this perspective. Twelve steps and you're not even half as tall as each step! Maybe if there were a way for you to get to that pile of books halfway down, you could make smaller steps, but how are you supposed to get down there? Would a broken leg at this size hurt as much as a broken leg normally? You could try jumping down the steps. Do you have anything that could slide down the banister? Maybe you should just go stare at the wall and await your punishment. What's going on with the wallpaper on the east wall, to your right? It looks like it might be peeling.",
-  "shortDesc": "You are on the staircase, there is a banister on either side, the wallpaper is peeling on the east wall at the top of the stairs. There are twelve stairs that are more than twice as tall as you are. There is a pile of books halfway down."
+  "longDesc": "This is your first time at the staircase. Woah this staircase is a lot more imposing from this perspective. Twelve steps and you're not even as tall as each step! Your dog is sleeping at the bottom of the stairs. He can't hear you if you yell but he can hear a dog whistle. The wallpaper is peeling, you can see a corner of writing underneath it.",
+  "shortDesc": "This is the staircase. Woah this staircase is a lot more imposing from this perspective. Twelve steps and you're not even as tall as each step! Your dog is sleeping at the bottom of the stairs. He can't hear you if you yell but he can hear a dog whistle. The wallpaper is peeling, you can see a corner of writing underneath it."
 }

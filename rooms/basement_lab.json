@@ -1,9 +1,13 @@
 {
   "name": "Basement Lab",
-  "features": {
-	"laundry chute": "",
-	"hatch": ""
+  "items": {
+	  "laundry chute-feature": "This leads up to your bedroom, but you can't climb up it, you can only slide down it.",
+    "desk-feature": "The computer is on the desk, you need to climb the desk to get to it",
+    "computer-feature" : "You need to enter the password: ",
+    "keyboard" : "Enter the password here",
+    "growRaySoftware" : "Hidden until you enter the computer password"
   },
-  "longDesc": "",
-  "shortDesc": "You are in the basement lab. To the west, a hatch leads up and out to the backyard."
+  "longDesc": "You are in the basement lab for the first time. To the west, a hatch leads up and out to the backyard. It is the only real exit. On the northern wall, in the corner to the east, there is a laundry chute which opens up to a laundry basket. You cannot climb up it, but you can slide down it if you know where the entrance is. There is a desk on the south wall, with a computer and a big, old fashioned, keyboard. You need a password to access the computer. The computer has the software for the shrink gun. ",
+  "shortDesc": "You are in the basement lab. To the west, a hatch leads up and out to the backyard. It is the only real exit. On the northern wall, in the corner to the east, there is a laundry chute which opens up to a laundry basket. You cannot climb up it, but you can slide down it if you know where the entrance is."
+
 }

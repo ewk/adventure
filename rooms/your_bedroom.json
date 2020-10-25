@@ -1,9 +1,11 @@
 {
   "name": "Your Bedroom",
-  "features": {
-	"closet": "The closet is full of toys.  At the back of the closet is a laundry chute leading to the basement.",
-	"sleeping dog": "description2"
+  "items": {
+	  "closet-feature": "The closet is full of toys.  At the back of the closet is a laundry chute leading to the basement.",
+    "underTheBed": "It's dark, it's smelly, but there are no monsters...you think",
+    "dogWhistle" : "Small but powerful, summon your mighty steed - hidden until you explore under the bed",
+    "dirtySocks": "These are stinky but also important"
   },
-  "longDesc": "",
-  "shortDesc": "You are in your bedroom."
+  "longDesc": "This is your first time in the bedroom. The exit it to the hallway, on the west wall. There is a bed against the north wall, you store your treasures underneath it. There is a bed side table with a lamp next to your bed, pushed up against the east wall at the head of the bed. On the south wall is your closet. It has a chute that leads to the basement where the laundry room is. There are diry socks on the floor of your closet. There is a dog whistle on the floor underneath the bed.",
+  "shortDesc": "This is your bedroom. The exit it to the hallway, on the west wall. There is a bed against the north wall, you store your treasures underneath it. There is a bed side table with a lamp next to your bed, pushed up against the east wall at the head of the bed. On the south wall is your closet. It has a chute that leads to the basement where the laundry room is."
 }

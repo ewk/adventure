@@ -1,9 +1,10 @@
 {
   "name": "Kitchen",
-  "features": {
-	"fruit basket": "",
-	"feature2": "description2"
+  "items": {
+  "refrigerator-feature": "Normal giant, side by side refrigerator. There should be a screw around here somewhere.",
+  "screw" : "You need this to fix the shrink ray, it is behind the refrigerator, it is hidden until the refrigerator is examined.",
+	"counterTop-feature": "Has a bowl of fruit, a notepad, a phone. There is large sink that is piled high with dirty dishes."
   },
-  "longDesc": "",
-  "shortDesc": "You are in the kitchen."
+  "longDesc": "You are in the kitchen for the first time. The pantry is behind a curtain on the north wall. There is a refrigerator, pulled a bit away from the wall, on the east wall. There is a counter with a giant inset sink on the south wall. There is a screw on the ground behing the fridge, it is hidden until you examine the refrigerator.",
+  "shortDesc": "You are in the kitchen. The pantry is behind a curtain on the north wall. There is a refrigerator, pulled a bit away from the wall, on the east wall. There is a counter with a giant inset sink on the south wall. There is a screw on the ground behing the fridge, it is hidden until you examine the refrigerator."
 }

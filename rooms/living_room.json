@@ -1,9 +1,14 @@
 {
   "name": "Living Room",
-  "features": {
-	"couch": "The large, comfortable-looking couch against the wall has always been too heavy for your parents to move easily. From your vantage point so close to the ground, you see various objects under the couch.",
-	"feature2": "description2"
+  "items": {
+	  "couch-feature": "Giant couch, well worn, visible tear with stuffing coming out. ",
+    "window-feature": "Window looks out over the backyard. You can see the eagle from the window",
+    "fireplace-feature" : "Fireplace connected to the master bedroom on the second floor.",
+    "couchStuffing": "You need to collect couch stuffing for the mission",
+    "coffeeTable": "Has a table top and a storage shelf underneath. Both are piled high with books",
+    "easyChair": "Don't get lost in the cushions."
   },
-  "longDesc": "",
-  "shortDesc": "You are in the living room."
+  "longDesc": "You are in the living room for the first time. The south wall is open to the dining room, there is no doorway to the hallway from the living room. There is a large window on the west wall that looks out onto the backyard. The large, comfortable-looking couch faces the north wall, where there is a fireplace. It has always been too heavy for your parents to move easily. There is a tear on the side of the couch facing the fireplace with stuffing coming out. There is a knob to the west of the fireplce opening that controls the fire. There is no door to the hallway from this room, you have to exit through the dining room.",
+  "shortDesc": "The south wall is open to the dining room, there is no doorway to the hallway from the living room. There is a large window on the west wall that looks out onto the backyard. There is no door on the east wall, you cannot get to the hallway directly from this room."
+
 }

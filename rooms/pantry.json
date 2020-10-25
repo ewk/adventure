@@ -1,9 +1,13 @@
 {
   "name": "Pantry",
-  "features": {
-	"hole in the wall": "",
-	"feature2": "description2"
+  "items": {
+	  "shelves-feature": "There are so many shelves and so many boxes on those shelves",
+    "cornFlakes": "On the top shelf",
+    "stacksOfPaperTowels": "Climb these bad boys to reach the bottom shelf",
+    "cansOfBeans": "Full of fiber",
+    "catTreats" : "To lure Fluffy away",
+    "dogTreats": "To reward Fido"
   },
-  "longDesc": "",
-  "shortDesc": "You are in the pantry."
+  "longDesc": "You are in the pantry for the first time. There is a lot of food in here, both for humans and pets. There are three shelves stuffed with food. There is a box of cornflakes on the top shelf, on the north wall, but you'll have to climb the shelves to get up there. You should grab the cat treats to distract the cat, and dog treats to reward the dog for coming when you call. ",
+  "shotDesc": "You are in the pantry. There is a lot of food in here, both for humans and pets. There are three shelves stuffed with food. There is a box of cornflakes on the top shelf, on the north wall, but you'll have to climb the shelves to get up there. You should grab the cat treats to distract the cat, and dog treats to reward the dog for coming when you call. "
 }

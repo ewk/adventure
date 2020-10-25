@@ -1,11 +1,11 @@
 {
   "name": "Attic",
-  "features": {
-	"chest of drawers": "",
-	"rug": "The rug is old and unraveling.",
-	"chimney": "",
-	"mirror": ""
+  "items": {
+	  "chestOfDrawers": "Old, matches mirror",
+	  "rug-feature": "The rug is old and unraveling.",
+	  "thread": "Loose thread from unraveling rug, hidden until rug is examined",
+	  "mirror-feature": "Old, gilded, cracked with scorch marks"
   },
-  "longDesc": "Woah! It's dark in here! And dusty! No wonder you never come up here. You have to pull down that rickety ladder from the ceiling downstairs, which is going to give out any day now, and there's barely anything fun to play with. On the wall opposite the ladder there's a giant antique mirror, it looks like it might be gilded or something. There's a matching antique chest of drawers, pushed almost all the way up against the wall to the left of the mirror. How did they even get those big heavy pieces of furniture up here? What are you standing on? Is that ANOTHER antique? What is it with old people and antique stuff? This is a cushy old rug though, even if it is starting to unravel. Woah what's that brick wall next to the mirror? That must be the chimney.",
-  "shortDesc": "This is the attic. There is an antique chest of drawers on the west wall, an antique mirror on the north wall, and an unraveling antique rug on the floor. You can touch the brick of the chimney from this room but you cannot get in or out of the chimney here. "
+  "longDesc" : "This is your first time in the attic. There is an exit in the floor on the south wall that drops down into the Upstairs Hallway. The chimney is on the north wall, you can't get inside it from the attic. There is a chest of drawers on the west wall, and the mirror on the east wall. There is an unraveling run underneath your feet, at the south wall. You need to look at the mirror, it has no hidden object. You need to look at the rug to reveal the string.",
+  "shortDesc" : "This is your first time in the attic. There is an exit in the floor on the south wall that drops down into the Upstairs Hallway. The chimney is on the north wall, you can't get inside it from the attic. There is a chest of drawers on the west wall, and the mirror on the east wall. There is an unraveling run underneath your feet, at the south wall."
 }
