@@ -4,7 +4,7 @@
 	"description": "You are in the family room. there is only one exit, on the west wall, to the downstairs hallway.",
 	"items": {
 		"tv": {
-			"name": "TV",
+			"name": "tv",
 			"description": "The tv is old, has wires popping out the sides and back, but it's all your parents will let you have",
 			"portable": false,
 			"discovered": true,
@@ -13,7 +13,7 @@
 			"hiddenObject": "copperWire"
 		},
 		"toyBox": {
-			"name": "Toy Box",
+			"name": "toyBox",
 			"description": "The toy box is empty now, just with a note saying your toys were taken away from the last time you stole an experiment.",
 			"portable": false,
 			"discovered": true,
@@ -22,7 +22,7 @@
 			"hiddenObject": ""
 		},
 		"copperWire": {
-			"name": "Copper Wire",
+			"name": "copperWire",
 			"description": "You have to pull this out of the tv, it is hidden until you inspect the tv",
 			"portable": true,
 			"discovered": false,
@@ -31,7 +31,7 @@
 			"hiddenObject": ""
 		},
 		"nintendo64": {
-			"name": "Nintendo 64",
+			"name": "nintendo64",
 			"description": "To accompany the aging relic of the tv, a classic gaming system",
 			"portable": true,
 			"discovered": true,

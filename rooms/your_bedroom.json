@@ -13,7 +13,7 @@
 			"hiddenObject": ""
 		},
 		"underYourBed": {
-			"name": "Under your Bed",
+			"name": "underYourBed",
 			"description": "It's dark, it's smelly, but there are no monsters...you think",
 			"portable": false,
 			"discovered": true,
@@ -22,7 +22,7 @@
 			"hiddenObject": "dogWhistle"
 		},
 		"dogWhistle": {
-			"name": "Dog Whistle",
+			"name": "dogWhistle",
 			"description": "Small but powerful, summon your mighty steed - hidden until you explore under the bed",
 			"portable": true,
 			"discovered": false,

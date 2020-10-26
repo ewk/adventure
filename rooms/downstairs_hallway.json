@@ -13,7 +13,7 @@
 			"hiddenObject": ""
 		},
 		"coatHooks": {
-			"name": "Coat Hooks",
+			"name": "coatHooks",
 			"description": "There are three coat hooks on the east wall at the south end of the hallway. Only one coat (the player's) is hung there now",
 			"portable": false,
 			"discovered": true,
@@ -22,7 +22,7 @@
 			"hiddenObject": ""
 		},
 		"yourCoat": {
-			"name": "Your Coat",
+			"name": "yourCoat",
 			"description": "",
 			"portable": true,
 			"discovered": true,

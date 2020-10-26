@@ -31,7 +31,7 @@
 			"hiddenObject": ""
 		},
 		"couchStuffing": {
-			"name": "couch stuffing",
+			"name": "couchStuffing",
 			"description": "You need to collect couch stuffing to fix the shrink ray",
 			"portable": true,
 			"discovered": true,

@@ -4,7 +4,7 @@
 	"description": "You are in the dining room. The exit to the downstairs hallway is on the east wall. There is an exit to the backyard on the west wall. There is a giant mahogany table which is fully set for a dinner partyy. There is a candelabra in the middle with three tall candles. There is a cabinet on the south wall, underneath a large window which looks out to the street. The north wall is open to the living room. There is no door, you can just keep walking through.",
   "items": {
 		"diningRoomTable": {
-			"name": "Dining Room Table",
+			"name": "diningRoomTable",
 			"description": "Tall, mahogany, set for a formal dinner party for no discernable reason",
 			"portable": false,
 			"discovered": true,

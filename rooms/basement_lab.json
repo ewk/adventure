@@ -4,7 +4,7 @@
   "description": "You are in the basement lab. To the west, a hatch leads up and out to the backyard. It is the only real exit. On the northern wall, in the corner to the east, there is a laundry chute which opens up to a laundry basket. You cannot climb up it, but you can slide down it if you know where the entrance is.",
   "items": {
     "laundryChute": {
-      "name": "laundry chute",
+      "name": "laundryChute",
       "description": "This leads up to your bedroom, but you can't climb up it, you can only slide down it.",
       "portable": false,
       "discovered": true,
@@ -31,7 +31,7 @@
       "hiddenObject": "growRaySoftware"
     },
     "growRaySoftware": {
-      "name": "grow ray software",
+      "name": "growRaySoftware",
       "description": "Hidden until you enter the computer password",
       "portable": true,
       "discovered": false,

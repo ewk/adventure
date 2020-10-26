@@ -31,7 +31,7 @@
 			"hiddenObject": ""
 		},
 		"squeekyToy": {
-			"name": "Dog's squeeky toy",
+			"name": "squeekyToy",
 			"description": "Your dog can hear this from a mile away and will come running, can serve a similar function to the dog whistle",
 			"portable": true,
 			"discovered": true,

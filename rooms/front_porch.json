@@ -4,7 +4,7 @@
 	"description": "You are on the front porch. It is covered, but open air. To the west there are stairs leading to the backyard. The front door to the house is to the north.  ",
 	"items": {
 		"flowerPot": {
-			"name": "Flower Pot",
+			"name": "flowerPot",
 			"description": "Some giant leafy green thing growing out of it. These leaves are huge!",
 			"portable": false,
 			"discovered": true,
@@ -13,7 +13,7 @@
 			"hiddenObject": ""
 		},
 		"wickerCouch": {
-			"name": "Wicker Couch",
+			"name": "wickerCouch",
 			"description": "It's old, weathered, and covered with bird seed.",  
 			"portable": false,
 			"discovered": true,
