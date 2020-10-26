@@ -1,43 +1,34 @@
 {
   "name": "Bathroom",
-  "longDesc": "",
-  "description": "",
-  "items": {
-	"feature1": {
-		"name": "feature1",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": true,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"feature2": {
-		"name": "feature2",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object1": {
-		"name": "object1",
-		"description": "",
-		"portable": true,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object2": {
-		"name": "object2",
-		"description": "",
-		"portable": true,
-		"discovered": false,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	}
+	"longDesc": "This is your first time in the bathroom. The exit is behind you, on the west wall. There is a shower to your left, on the north wall, with an opaque shower curtain, you cannot see through it. There is a sink in front of you, on the east wall, and a toilet with a stack of magazines on the tank, on the south wall. There is also a litter box next to the toilet, on the south wall. You need to look in the shower and see what is written on the wall. You need to look under the sink and take the shampoo. ",
+	"description": "You are in the bathroom. The exit is behind you, on the west wall. There is a shower to your left, on the north wall, with an opaque shower curtain, you cannot see through it. There is a sink in front of you, on the east wall, and a toilet with a stack of magazines on the tank, on the south wall. There is also a litter box next to the toilet, on the south wall. ",
+	"items": {
+		"shower": {
+			"name": "shower",
+			"description": "The shower has a notepad with a word written on it. ",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"cabinet": {
+			"name": "cabinet",
+			"description": "The cabinet under the sink has shampoo.",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": true,
+			"discoveryStatment": "You'll need that shampoo",
+			"hiddenObject": "shampoo"
+		},
+		"shampoo": {
+			"name": "shampoo",
+			"description": "You need this for the quest, hidden until the cabinet is examined",
+			"portable": true,
+			"discovered": false,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		}
   }
 }

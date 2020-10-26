@@ -1,43 +1,43 @@
 {
   "name": "Staircase",
-  "longDesc": "",
-  "description": "",
+  "longDesc": "This is your first time at the staircase. Woah this staircase is a lot more imposing from this perspective. Twelve steps and you're not even as tall as each step! Your dog is sleeping at the bottom of the stairs. He can't hear you if you yell but he can hear a dog whistle. The wallpaper is peeling, you can see a corner of writing underneath it.",
+  "description": "This is the staircase. Woah this staircase is a lot more imposing from this perspective. Twelve steps and you're not even as tall as each step! Your dog is sleeping at the bottom of the stairs. He can't hear you if you yell but he can hear a dog whistle. The wallpaper is peeling, you can see a corner of writing underneath it.",
   "items": {
-	"feature1": {
-		"name": "feature1",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": true,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"feature2": {
-		"name": "feature2",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object1": {
-		"name": "object1",
-		"description": "",
-		"portable": true,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object2": {
-		"name": "object2",
-		"description": "",
-		"portable": true,
-		"discovered": false,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	}
+		"sleepingDog": {
+			"name": "Sleeping Dog",
+			"description": "Your dog is sleeping at the foot of the stairs. He can't hear you if you call him upstairs.",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"peelingWallpaper": {
+			"name": "Peeling Wallpaper",
+			"description": "Some wallpaper seems to be peeling from the wall here, I wonder if there are any deep dark secrets hidden underneadth.",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"object1": {
+			"name": "object1",
+			"description": "",
+			"portable": true,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"object2": {
+			"name": "object2",
+			"description": "",
+			"portable": true,
+			"discovered": false,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		}
   }
 }

@@ -1,50 +1,44 @@
 {
   "name": "Your Bedroom",
-<<<<<<< HEAD
-  "features": {
-	"closet": "The closet is full of toys.  At the back of the closet is a laundry chute leading to the basement.",
-	"sleeping dog": "description2"
-  },
-=======
->>>>>>> 48e593c666f66869ba8c233281a08b7e4bfa5731
-  "longDesc": "",
-  "description": "",
+  "longDesc": "This is your first time in the bedroom. The exit it to the hallway, on the west wall. There is a bed against the north wall, you store your treasures underneath it. There is a bed side table with a lamp next to your bed, pushed up against the east wall at the head of the bed. On the south wall is your closet. It has a chute that leads to the basement where the laundry room is. There are diry socks on the floor of your closet. There is a dog whistle on the floor underneath the bed.",
+  "description": "This is your bedroom. The exit it to the hallway, on the west wall. There is a bed against the north wall, you store your treasures underneath it. There is a bed side table with a lamp next to your bed, pushed up against the east wall at the head of the bed. On the south wall is your closet. It has a chute that leads to the basement where the laundry room is.",
   "items": {
-	"feature1": {
-		"name": "feature1",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": true,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"feature2": {
-		"name": "feature2",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object1": {
-		"name": "object1",
-		"description": "",
-		"portable": true,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object2": {
-		"name": "object2",
-		"description": "",
-		"portable": true,
-		"discovered": false,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	}
+		"closet": {
+			"name": "closet",
+			"description": "The closet is full of toys.  At the back of the closet is a laundry chute leading to the basement.",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"underYourBed": {
+			"name": "Under your Bed",
+			"description": "It's dark, it's smelly, but there are no monsters...you think",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": true,
+			"discoveryStatment": "That's where the dog whistle went!",
+			"hiddenObject": "dogWhistle"
+		},
+		"dogWhistle": {
+			"name": "Dog Whistle",
+			"description": "Small but powerful, summon your mighty steed - hidden until you explore under the bed",
+			"portable": true,
+			"discovered": false,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"dirtySocks": {
+			"name": "dirtySocks",
+			"description": "These are stinky but also important",
+			"portable": true,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		}
   }
 }
+

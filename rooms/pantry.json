@@ -1,43 +1,52 @@
 {
   "name": "Pantry",
-  "longDesc": "",
-  "description": "",
-  "items": {
-	"feature1": {
-		"name": "feature1",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": true,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"feature2": {
-		"name": "feature2",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object1": {
-		"name": "object1",
-		"description": "",
-		"portable": true,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object2": {
-		"name": "object2",
-		"description": "",
-		"portable": true,
-		"discovered": false,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	}
+	"longDesc": "You are in the pantry for the first time. There is a lot of food in here, both for humans and pets. There are three shelves stuffed with food. There is a box of cornflakes on the top shelf, on the north wall, but you'll have to climb the shelves to get up there. You should grab the cat treats to distract the cat, and dog treats to reward the dog for coming when you call. ",
+	"description": "You are in the pantry. There is a lot of food in here, both for humans and pets. There are three shelves stuffed with food. There is a box of cornflakes on the top shelf, on the north wall, but you'll have to climb the shelves to get up there. You should grab the cat treats to distract the cat, and dog treats to reward the dog for coming when you call. ",
+	"items": {
+		"shelves": {
+			"name": "shelves",
+			"description": "There are so many shelves and so many boxes on those shelves",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"stackOfPaperTowels": {
+			"name": "stackOfPaperTowels",
+			"description": "Climb these bad boys to reach the bottom shelf",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"cornflakes": {
+			"name": "cornflakes",
+			"description":"On the top shelf, you need these to fix the shrink ray",
+			"portable": true,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"dogTreats": {
+			"name": "dogTreats",
+			"description": "To reward Fido",
+			"portable": true,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"catTreats": {
+			"name": "catTreats",
+			"description": "To distract Fluffy",
+			"portable": true,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		}
   }
 }

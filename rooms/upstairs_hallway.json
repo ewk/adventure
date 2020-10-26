@@ -1,43 +1,43 @@
 {
   "name": "Upstairs Hallway",
-  "longDesc": "",
-  "description": "",
+	"longDesc": "This is your first time in the upstairs hallway. When you exit the attic, you are on the south wall. There are stairs in front of you, on the north wall. To your left, on the west wall, is your parents' bedroom. On the east wall there is your bedroom, and the bathroom. Between your bedroom and the bathroom is a recycling bin filled to the top with seltzer cans. Next to the door to your parents' room is an exercise ball and your mom's purse. You need to distract the cat before you can get in the recycling bin. You need to look in the recycling bin to get the aluminum can. You need to bounce on the exercise ball to open your parents' door. You can look in your mom's purse, but you can't take anything out of it because she'll know you've been in there. ",
+	"description": "This is your first time in the upstairs hallway. When you exit the attic, you are on the south wall. There are stairs in front of you, on the north wall. To your left, on the west wall, is your parents' bedroom. On the east wall there is your bedroom, and the bathroom.",
   "items": {
-	"feature1": {
-		"name": "feature1",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": true,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"feature2": {
-		"name": "feature2",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object1": {
-		"name": "object1",
-		"description": "",
-		"portable": true,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object2": {
-		"name": "object2",
-		"description": "",
-		"portable": true,
-		"discovered": false,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	}
+		"recyclingBin": {
+			"name": "recyclingBin",
+			"description": "The recycling bin is full of seltzer cans.",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": true,
+			"discoveryStatment": "You'll need one of these cans",
+			"hiddenObject": "aluminumCan"
+		},
+		"purse": {
+			"name": "purse",
+			"description": "Your mom's purse is gigantic.",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"exerciseBall": {
+			"name": "exerciseBall",
+			"description": "Next to door for parent's bedroom",
+			"portable": true,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"aluminumCan": {
+			"name": "aluminumCan",
+			"description": "Hidden until the recycling bin feature is examined.",
+			"portable": true,
+			"discovered": false,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		}
   }
 }

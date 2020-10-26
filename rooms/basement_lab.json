@@ -1,43 +1,43 @@
 {
   "name": "Basement Lab",
-  "longDesc": "",
-  "description": "",
+  "longDesc": "You are in the basement lab for the first time. To the west, a hatch leads up and out to the backyard. It is the only real exit. On the northern wall, in the corner to the east, there is a laundry chute which opens up to a laundry basket. You cannot climb up it, but you can slide down it if you know where the entrance is. There is a desk on the south wall, with a computer and a big, old fashioned, keyboard. You need a password to access the computer. The computer has the software for the shrink gun. ",
+  "description": "You are in the basement lab. To the west, a hatch leads up and out to the backyard. It is the only real exit. On the northern wall, in the corner to the east, there is a laundry chute which opens up to a laundry basket. You cannot climb up it, but you can slide down it if you know where the entrance is.",
   "items": {
-	"feature1": {
-		"name": "feature1",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": true,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"feature2": {
-		"name": "feature2",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object1": {
-		"name": "object1",
-		"description": "",
-		"portable": true,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object2": {
-		"name": "object2",
-		"description": "",
-		"portable": true,
-		"discovered": false,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	}
+    "laundryChute": {
+      "name": "laundry chute",
+      "description": "This leads up to your bedroom, but you can't climb up it, you can only slide down it.",
+      "portable": false,
+      "discovered": true,
+      "containsHiddenObject": false,
+      "discoveryStatment": "",
+      "hiddenObject": ""
+    },
+    "desk": {
+      "name": "desk",
+      "description": "The computer is on the desk, you need to climb the desk to get to it",
+      "portable": false,
+      "discovered": true,
+      "containsHiddenObject": false,
+      "discoveryStatment": "",
+      "hiddenObject": ""
+    },
+    "computer": {
+      "name": "computer",
+      "description": "You need to enter a password to access the software to make the shrink ray reverse",
+      "portable": false,
+      "discovered": true,
+      "containsHiddenObject": true,
+      "discoveryStatment": "Welcome, here's that software you wanted.",
+      "hiddenObject": "growRaySoftware"
+    },
+    "growRaySoftware": {
+      "name": "grow ray software",
+      "description": "Hidden until you enter the computer password",
+      "portable": true,
+      "discovered": false,
+      "containsHiddenObject": false,
+      "discoveryStatment": "",
+      "hiddenObject": ""
+    }
   }
 }

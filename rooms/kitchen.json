@@ -1,43 +1,43 @@
 {
   "name": "Kitchen",
-  "longDesc": "",
-  "description": "",
+	"longDesc": "You are in the kitchen for the first time. The pantry is behind a curtain on the north wall. There is a refrigerator, pulled a bit away from the wall, on the east wall. There is a counter with a giant inset sink on the south wall. There is a screw on the ground behing the fridge, it is hidden until you examine the refrigerator.",
+	"description": "You are in the kitchen. The pantry is behind a curtain on the north wall. There is a refrigerator, pulled a bit away from the wall, on the east wall. There is a counter with a giant inset sink on the south wall. There is a screw on the ground behing the fridge, it is hidden until you examine the refrigerator.",
   "items": {
-	"feature1": {
-		"name": "feature1",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": true,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"feature2": {
-		"name": "feature2",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object1": {
-		"name": "object1",
-		"description": "",
-		"portable": true,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object2": {
-		"name": "object2",
-		"description": "",
-		"portable": true,
-		"discovered": false,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	}
+		"refrigerator": {
+			"name": "refrigerator",
+			"description": "Normal giant, side by side refrigerator. There should be a screw around here somewhere.",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": true,
+			"discoveryStatment": "That's the screw you need!",
+			"hiddenObject": "screw"
+		},
+		"countertop": {
+			"name": "countertop",
+			"description": "Has a bowl of fruit, a notepad, a phone. There is large sink that is piled high with dirty dishes.",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"screw": {
+			"name": "screw",
+			"description": "You need this to fix the shrink ray, it is behind the refrigerator, it is hidden until the refrigerator is examined.",
+			"portable": true,
+			"discovered": false,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"magnet": {
+			"name": "magnet",
+			"description": "It's shaped like a panda and it's a souvenir from the San Diego Zoo. They're members.",
+			"portable": true,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		}
   }
 }
