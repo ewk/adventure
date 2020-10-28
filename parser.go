@@ -57,6 +57,21 @@ func listInventory() {
 	}
 }
 
+// moveToRoom takes a requested exit and moves the player there if the exit exists
+func moveToRoom(exit string) {
+	for _, e := range curRoom.Exits {
+		if e == exit {
+			for i, j := range rooms {
+				if j.Name == exit {
+					curRoom = rooms[i]
+					return
+				}
+			}
+		}
+	}
+	fmt.Printf("%s is not a valid exit\n", exit)
+}
+
 // help prints a subset of verbs the game understands
 func help() {
 	m := fmt.Sprintf(`
@@ -121,9 +136,9 @@ func playGame() {
 			}
 		case "go":
 			if len(s) > 1 {
-				d := s[1]
-				fmt.Println("You said \"go\"", d)
-				// TODO use $ROOM.exit
+				loc := s[1:]
+				exit := strings.Join(loc, " ")
+				moveToRoom(exit)
 			} else {
 				fmt.Println("Go where?")
 			}
