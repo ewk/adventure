@@ -2,14 +2,12 @@ package main
 
 import (
 	"encoding/json"
-	//"fmt"
 	"io/ioutil"
 	"log"
 	"regexp"
 )
 
 // Some necessary globals
-const MaxConnections = 6
 const MaxRooms = 15
 const MaxObjects = 8
 
@@ -23,7 +21,7 @@ type Room struct {
 	Description string
 	Items       map[string]*Item
 	Visited     bool
-	Out         [MaxConnections]*Room // outbound connections
+	Exits       []string // outbound connection room names
 }
 
 // struct used for both features and objects
@@ -75,6 +73,16 @@ func loadRooms() {
 	//		fmt.Println(j)
 	//	}
 	//}
+
+	// Debug uncomment to print room exits
+	/*
+		for _, i := range rooms {
+			fmt.Printf("%s:\n", i.Name)
+			for _, j := range i.Exits {
+				fmt.Printf("\t%s\n", j)
+			}
+		}
+	*/
 }
 
 func main() {
