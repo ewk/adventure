@@ -8,8 +8,8 @@ import (
 )
 
 // lookAtRoom repeats the long form explanation of a room.
-func lookAtRoom(cur Room) {
-	fmt.Println(cur.LongDesc)
+func lookAtRoom() {
+	fmt.Println(curRoom.LongDesc)
 }
 
 // lookAtItem prints the description of an object or feature
@@ -94,7 +94,6 @@ func help() {
 
 func playGame() {
 	// TODO remove dummy data
-	curRoom := rooms[0]
 	inventory["spoon"] = &Item{Name: "spoon", Description: "A utensil"}
 	inventory["candle"] = &Item{Name: "candle", Description: "To light the way"}
 
@@ -121,7 +120,7 @@ func playGame() {
 					lookAtItem(item)
 				}
 			} else {
-				lookAtRoom(curRoom)
+				lookAtRoom()
 			}
 		case "north":
 			fmt.Println("You said \"north\".")

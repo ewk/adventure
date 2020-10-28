@@ -13,6 +13,7 @@ const MaxObjects = 8
 
 var rooms []Room                       // graph of rooms
 var inventory = make(map[string]*Item) // player inventory
+var curRoom Room
 
 // definition of a room
 type Room struct {
@@ -87,6 +88,8 @@ func loadRooms() {
 
 func main() {
 	loadRooms()
+
+	curRoom = rooms[0]
 
 	playGame()
 
