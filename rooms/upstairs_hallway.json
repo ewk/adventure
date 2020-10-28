@@ -39,5 +39,6 @@
 		"discoveryStatment": "",
 		"hiddenObject": ""
 	}
-  }
+  },
+  "exits": [ "Master Bedroom", "Bathroom", "Your Bedroom", "Attic" ]
 }

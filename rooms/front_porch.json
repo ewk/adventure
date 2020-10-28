@@ -39,5 +39,6 @@
 		"discoveryStatment": "",
 		"hiddenObject": ""
 	}
-  }
+  },
+  "exits": [ "Dining Room", "Downstairs Hallway", "Family Room" ]
 }
