@@ -71,11 +71,8 @@ func help() {
 	inventory, as well. If you describe something in your text descriptions, you
 	should be able to "look at" it to examine it.
 
-	"go north" OR "north" OR "go dank-smelling staircase" OR "dank-smelling
-	staircase" :: proceed through the indicated exit to the next room (note that ALL
-	FOUR of these forms of movement are required, and thus require you to describe
-	the exits appropriately). You might also decide to implement other room-travel
-	verbs such as "jump north" as appropriate.
+	"go Upstairs Hallway" or "go $EXIT" :: proceed through the indicated exit
+	to the next room.
 
 	take :: acquire an object, putting it into your inventory.
 
@@ -122,18 +119,6 @@ func playGame() {
 			} else {
 				lookAtRoom()
 			}
-		case "north":
-			fmt.Println("You said \"north\".")
-			// TODO use $ROOM.exit
-		case "south":
-			fmt.Println("You said \"south\".")
-			// TODO use $ROOM.exit
-		case "east":
-			fmt.Println("You said \"east\".")
-			// TODO use $ROOM.exit
-		case "west":
-			fmt.Println("You said \"west\".")
-			// TODO use $ROOM.exit
 		case "go":
 			if len(s) > 1 {
 				d := s[1]
