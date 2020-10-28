@@ -1,6 +1,6 @@
 {
   "name": "Bathroom",
-  "longDesc": "",
+  "longDesc": "Long description of Bathroom",
   "description": "",
   "items": {
 	"feature1": {
