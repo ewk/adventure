@@ -60,10 +60,19 @@ func listInventory() {
 // moveToRoom takes a requested exit and moves the player there if the exit exists
 func moveToRoom(exit string) {
 	for _, e := range curRoom.Exits {
-		if e == exit {
-			for i, j := range rooms {
+		if e == exit { // check that requested exit is valid
+			for i, j := range rooms { // find the room it leads to
 				if j.Name == exit {
-					curRoom = rooms[i]
+					curRoom = rooms[i] // if found, the exit is the new current room
+
+					if curRoom.Visited == false { // have we been here before?
+						curRoom.Visited = true
+						rooms[i] = curRoom
+						fmt.Println(curRoom.LongDesc)
+					} else {
+						fmt.Println(curRoom.Description)
+					}
+
 					return
 				}
 			}
