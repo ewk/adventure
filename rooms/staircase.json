@@ -1,6 +1,6 @@
 {
   "name": "Staircase",
-  "longDesc": "",
+  "longDesc": "Long description of Staircase",
   "description": "",
   "items": {
 	"feature1": {
@@ -39,5 +39,6 @@
 		"discoveryStatment": "",
 		"hiddenObject": ""
 	}
-  }
+  },
+  "exits": [ "Upstairs Hallway", "Downstairs Hallway" ]
 }

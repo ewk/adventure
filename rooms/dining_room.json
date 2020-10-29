@@ -1,6 +1,6 @@
 {
   "name": "Dining Room",
-  "longDesc": "",
+  "longDesc": "Long description of Dining Room",
   "description": "",
   "items": {
 	"feature1": {
@@ -39,5 +39,6 @@
 		"discoveryStatment": "",
 		"hiddenObject": ""
 	}
-  }
+  },
+  "exits": [ "Backyard", "Downstairs Hallway", "Front Porch" ]
 }

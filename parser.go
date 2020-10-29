@@ -8,8 +8,8 @@ import (
 )
 
 // lookAtRoom repeats the long form explanation of a room.
-func lookAtRoom(cur Room) {
-	fmt.Println(cur.LongDesc)
+func lookAtRoom() {
+	fmt.Println(curRoom.LongDesc)
 }
 
 // lookAtItem prints the description of an object or feature
@@ -57,6 +57,30 @@ func listInventory() {
 	}
 }
 
+// moveToRoom takes a requested exit and moves the player there if the exit exists
+func moveToRoom(exit string) {
+	for _, e := range curRoom.Exits {
+		if e == exit { // check that requested exit is valid
+			for i, j := range rooms { // find the room it leads to
+				if j.Name == exit {
+					curRoom = rooms[i] // if found, the exit is the new current room
+
+					if curRoom.Visited == false { // have we been here before?
+						curRoom.Visited = true
+						rooms[i] = curRoom
+						fmt.Println(curRoom.LongDesc)
+					} else {
+						fmt.Println(curRoom.Description)
+					}
+
+					return
+				}
+			}
+		}
+	}
+	fmt.Printf("%s is not a valid exit\n", exit)
+}
+
 // help prints a subset of verbs the game understands
 func help() {
 	m := fmt.Sprintf(`
@@ -71,11 +95,8 @@ func help() {
 	inventory, as well. If you describe something in your text descriptions, you
 	should be able to "look at" it to examine it.
 
-	"go north" OR "north" OR "go dank-smelling staircase" OR "dank-smelling
-	staircase" :: proceed through the indicated exit to the next room (note that ALL
-	FOUR of these forms of movement are required, and thus require you to describe
-	the exits appropriately). You might also decide to implement other room-travel
-	verbs such as "jump north" as appropriate.
+	"go Upstairs Hallway" or "go $EXIT" :: proceed through the indicated exit
+	to the next room.
 
 	take :: acquire an object, putting it into your inventory.
 
@@ -94,7 +115,6 @@ func help() {
 
 func playGame() {
 	// TODO remove dummy data
-	curRoom := rooms[0]
 	inventory["spoon"] = &Item{Name: "spoon", Description: "A utensil"}
 	inventory["candle"] = &Item{Name: "candle", Description: "To light the way"}
 
@@ -121,25 +141,13 @@ func playGame() {
 					lookAtItem(item)
 				}
 			} else {
-				lookAtRoom(curRoom)
+				lookAtRoom()
 			}
-		case "north":
-			fmt.Println("You said \"north\".")
-			// TODO use $ROOM.exit
-		case "south":
-			fmt.Println("You said \"south\".")
-			// TODO use $ROOM.exit
-		case "east":
-			fmt.Println("You said \"east\".")
-			// TODO use $ROOM.exit
-		case "west":
-			fmt.Println("You said \"west\".")
-			// TODO use $ROOM.exit
 		case "go":
 			if len(s) > 1 {
-				d := s[1]
-				fmt.Println("You said \"go\"", d)
-				// TODO use $ROOM.exit
+				loc := s[1:]
+				exit := strings.Join(loc, " ")
+				moveToRoom(exit)
 			} else {
 				fmt.Println("Go where?")
 			}

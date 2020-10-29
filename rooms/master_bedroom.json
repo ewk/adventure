@@ -1,6 +1,6 @@
 {
   "name": "Master Bedroom",
-  "longDesc": "",
+  "longDesc": "Long description of Master Bedroom",
   "description": "",
   "items": {
 	"feature1": {
@@ -39,5 +39,6 @@
 		"discoveryStatment": "",
 		"hiddenObject": ""
 	}
-  }
+  },
+  "exits": [ "Upstairs Hallway", "Basement Lab" ]
 }

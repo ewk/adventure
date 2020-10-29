@@ -1,6 +1,6 @@
 {
   "name": "Your Bedroom",
-  "longDesc": "",
+  "longDesc": "Long description of Your Bedroom",
   "description": "",
   "items": {
 	"feature1": {
@@ -39,5 +39,6 @@
 		"discoveryStatment": "",
 		"hiddenObject": ""
 	}
-  }
+  },
+  "exits": [ "Upstairs Hallway" ]
 }

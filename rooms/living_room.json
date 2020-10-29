@@ -1,6 +1,6 @@
 {
   "name": "Living Room",
-  "longDesc": "",
+  "longDesc": "Long description of Living Room",
   "description": "",
   "items": {
 	"feature1": {
@@ -39,5 +39,6 @@
 		"discoveryStatment": "",
 		"hiddenObject": ""
 	}
-  }
+  },
+  "exits": [ "Downstairs Hallway" ]
 }
