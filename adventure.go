@@ -11,9 +11,9 @@ import (
 const MinRooms = 15
 const MinItems = 8
 
-var rooms []Room                       // graph of rooms
+var rooms = make(map[string]*Room)     // map of rooms
 var inventory = make(map[string]*Item) // player inventory
-var curRoom Room
+var curRoom *Room
 
 // definition of a room
 type Room struct {
@@ -56,7 +56,7 @@ func loadRooms() {
 
 			var r Room
 			json.Unmarshal([]byte(roomJson), &r)
-			rooms = append(rooms, r)
+			rooms[r.Name] = &r
 		}
 	}
 
