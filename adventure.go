@@ -60,28 +60,18 @@ func loadRooms() {
 		}
 	}
 
-	// Panic if fewer than 15 rooms are defined.
+	// Debug: uncomment to show imported JSON data
+	/*
+		for key, value := range rooms {
+			fmt.Println("Key:", key, "Value:", value)
+		}
+	*/
+
 	// TODO Disabled for now while development continues.
+	// Panic if fewer than 15 rooms are defined.
 	/*
 		if len(rooms) < MinRooms {
 			panic("The game must have at least 15 rooms")
-		}
-	*/
-	// Debug: uncomment to show imported JSON data
-	//fmt.Printf("length=%d capacity=%d %v\n", len(rooms), cap(rooms), rooms)
-	//for _, i := range rooms {
-	//	for _, j := range i.Items {
-	//		fmt.Println(j)
-	//	}
-	//}
-
-	// Debug uncomment to print room exits
-	/*
-		for _, i := range rooms {
-			fmt.Printf("%s:\n", i.Name)
-			for _, j := range i.Exits {
-				fmt.Printf("\t%s\n", j)
-			}
 		}
 	*/
 }
