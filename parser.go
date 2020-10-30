@@ -62,27 +62,23 @@ func listInventory() {
 func moveToRoom(exit string) {
 	for _, e := range curRoom.Exits {
 		if e == exit { // check that requested exit is valid
-			for i, j := range rooms { // find the room it leads to
-				if j.Name == exit {
-					curRoom = rooms[i] // if found, the exit is the new current room
+			if val, ok := rooms[exit]; ok {
+				curRoom = val // if found, the exit is the new current room
 
-					if curRoom.Visited == false { // have we been here before?
-						curRoom.Visited = true
-						rooms[i] = curRoom
-						fmt.Println(curRoom.LongDesc)
-					} else {
-						fmt.Println(curRoom.Description)
-					}
-
-
-					for _, item := range curRoom.Items {
-						if item.Discovered == true {
-							fmt.Println(item.Description)
-						}
-					}
-
-					return
+				if curRoom.Visited == false { // have we been here before?
+					curRoom.Visited = true
+					fmt.Println(curRoom.LongDesc)
+				} else {
+					fmt.Println(curRoom.Description)
 				}
+
+				for _, item := range curRoom.Items {
+					if item.Discovered == true {
+						fmt.Println(item.Description)
+					}
+				}
+
+				return
 			}
 		}
 	}
