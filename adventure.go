@@ -89,7 +89,7 @@ func loadRooms() {
 func main() {
 	loadRooms()
 
-	// TODO start room must be initialized with Visited = True
+	// TODO start room must be initialized
 	curRoom = rooms[0]
 
 	playGame()
