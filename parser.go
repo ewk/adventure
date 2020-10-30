@@ -73,6 +73,13 @@ func moveToRoom(exit string) {
 						fmt.Println(curRoom.Description)
 					}
 
+
+					for _, item := range curRoom.Items {
+						if item.Discovered == true {
+							fmt.Println(item.Description)
+						}
+					}
+
 					return
 				}
 			}
