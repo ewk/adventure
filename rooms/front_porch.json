@@ -5,7 +5,7 @@
 	"items": {
 		"flowerPot": {
 			"name": "flowerPot",
-			"description": "Some giant leafy green thing growing out of it. These leaves are huge!",
+			"description": "This is a giant flower pot with some giant leafy green thing growing out of it. These leaves are huge!",
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -14,7 +14,7 @@
 		},
 		"wickerCouch": {
 			"name": "wickerCouch",
-			"description": "It's old, weathered, and covered with bird seed.",  
+			"description": "The wicker couch is weathered and covered with bird seed.",  
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -23,7 +23,7 @@
 		},
 		"newspaper": {
 			"name": "newspaper",
-			"description": "Headline: Mads and Madeline Scientist do it again...",
+			"description": "Last Sunday's Newspaper. Headline: Mads and Madeline Scientist do it again...",
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,

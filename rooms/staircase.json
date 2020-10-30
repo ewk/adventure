@@ -21,18 +21,18 @@
 			"discoveryStatment": "",
 			"hiddenObject": ""
 		},
-		"object1": {
-			"name": "object1",
-			"description": "",
+		"scarf": {
+			"name": "scarf",
+			"description": "The scarf is silky and green, patterned with some sort of leaves. ",
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,
 			"discoveryStatment": "",
 			"hiddenObject": ""
 		},
-		"object2": {
-			"name": "object2",
-			"description": "",
+		"books": {
+			"name": "books",
+			"description": "The books are large and heavy looking, discussing subjects such as scaffolding design, waste water management, and some big book on computers with a fruit on it.",
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,

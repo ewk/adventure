@@ -23,7 +23,7 @@
 		},
 		"copperWire": {
 			"name": "copperWire",
-			"description": "You have to pull this out of the tv, it is hidden until you inspect the tv",
+			"description": "There is a loose copper wire wrapped in red rubber.  ",
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,
@@ -32,7 +32,7 @@
 		},
 		"nintendo64": {
 			"name": "nintendo64",
-			"description": "To accompany the aging relic of the tv, a classic gaming system",
+			"description": "This is an old, dusty Nintendo 64. To accompany the aging relic of the tv, a classic gaming system",
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,

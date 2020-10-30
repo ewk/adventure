@@ -23,7 +23,7 @@
 		},
 		"shampoo": {
 			"name": "shampoo",
-			"description": "You need this for the quest, hidden until the cabinet is examined",
+			"description": "The shampoo is purple and smells like grapes and flowers. You need this for the quest, hidden until the cabinet is examined",
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,

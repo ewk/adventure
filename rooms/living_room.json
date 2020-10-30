@@ -32,7 +32,7 @@
 		},
 		"couchStuffing": {
 			"name": "couchStuffing",
-			"description": "You need to collect couch stuffing to fix the shrink ray",
+			"description": "This is some stuffing from the couch. It's white a fluffy and looks softer than it feels. You need to collect it to fix the shrink ray",
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,

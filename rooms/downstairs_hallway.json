@@ -23,7 +23,7 @@
 		},
 		"yourCoat": {
 			"name": "yourCoat",
-			"description": "",
+			"description": "This is your coat. It is bright blue and very warm with a hood you can barely see out of.",
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,

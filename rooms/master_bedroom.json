@@ -5,7 +5,7 @@
   "items": {
 		"fireplace": {
 			"name": "fireplace",
-			"description": "Brick, covered in years of soot. Looks like a looooooong way down.",
+			"description": "The fireplace is brick, covered in years of soot. Looks like a looooooong way down.",
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,

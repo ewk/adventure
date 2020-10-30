@@ -5,7 +5,7 @@
   "items": {
 		"refrigerator": {
 			"name": "refrigerator",
-			"description": "Normal giant, side by side refrigerator. There should be a screw around here somewhere.",
+			"description": "This is the refrigerator, it is one of the few normal appliances in the house. There should be a screw around here somewhere.",
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
@@ -14,7 +14,7 @@
 		},
 		"countertop": {
 			"name": "countertop",
-			"description": "Has a bowl of fruit, a notepad, a phone. There is large sink that is piled high with dirty dishes.",
+			"description": "The countertop is made of plastic but look like marble. It has a bowl of fruit, a notepad, a phone. There is large sink that is piled high with dirty dishes.",
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -23,7 +23,7 @@
 		},
 		"screw": {
 			"name": "screw",
-			"description": "You need this to fix the shrink ray, it is behind the refrigerator, it is hidden until the refrigerator is examined.",
+			"description": "The screw is old and has a thin film of some sort of goo on it. You need this to fix the shrink ray. It sis hidden until the refrigerator is examined.",
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,
@@ -32,7 +32,7 @@
 		},
 		"magnet": {
 			"name": "magnet",
-			"description": "It's shaped like a panda and it's a souvenir from the San Diego Zoo. They're members.",
+			"description": "This magnet hangs on the refrigerator. It's shaped like a panda and it's a souvenir from the San Diego Zoo. They're members.",
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,

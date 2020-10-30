@@ -5,7 +5,7 @@
   "items": {
 		"diningRoomTable": {
 			"name": "diningRoomTable",
-			"description": "Tall, mahogany, set for a formal dinner party for no discernable reason",
+			"description": "The dining room table is tall, mahogany, set for a formal dinner party for no discernable reason",
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
@@ -32,7 +32,7 @@
 		},
 		"knife": {
 			"name": "knife",
-			"description": "Sharp, pointy, this could come in handy",
+			"description": "The knife is sharp, pointy, and could come in handy",
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,

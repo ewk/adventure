@@ -14,7 +14,7 @@
 		},
 		"stackOfPaperTowels": {
 			"name": "stackOfPaperTowels",
-			"description": "Climb these bad boys to reach the bottom shelf",
+			"description": "This is a very tall stack of paper towels. Who needs this many paper towels?Climb these bad boys to reach the bottom shelf",
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -23,7 +23,7 @@
 		},
 		"cornflakes": {
 			"name": "cornflakes",
-			"description":"On the top shelf, you need these to fix the shrink ray",
+			"description":"A box of generic Corn Flake brand corn flakes. You need these to fix the shrink ray",
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -32,7 +32,7 @@
 		},
 		"dogTreats": {
 			"name": "dogTreats",
-			"description": "To reward Fido",
+			"description": "A bag of dog treats. To reward Fido",
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -41,7 +41,7 @@
 		},
 		"catTreats": {
 			"name": "catTreats",
-			"description": "To distract Fluffy",
+			"description": "A bag of catnip laced cat treats. To distract Fluffy",
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,

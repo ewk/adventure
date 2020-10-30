@@ -5,7 +5,7 @@
   "items": {
     "chestOfDrawers": {
       "name": "chest of drawers",
-      "description": "Old, antique, matched mirror",
+      "description": "The chest of drawers is old, antique, matched mirror",
       "portable": false,
       "discovered": true,
       "containsHiddenObject": false,
@@ -23,7 +23,7 @@
     },
     "thread": {
       "name": "thread",
-      "description": "Long, loose thread from unraveling rug",
+      "description": "A long, loose thread from unraveling rug",
       "portable": true,
       "discovered": false,
       "containsHiddenObject": false,
@@ -32,7 +32,7 @@
     },
     "mirror": {
       "name": "mirror",
-      "description": "Old, gilded, cracked with scorch marks.",
+      "description": "The mirror is old, gilded, cracked with scorch marks.",
       "portable": false,
       "discovered": true,
       "containsHiddenObject": false,

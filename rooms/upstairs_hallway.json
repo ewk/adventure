@@ -14,7 +14,7 @@
 		},
 		"purse": {
 			"name": "purse",
-			"description": "Your mom's purse is gigantic.",
+			"description": "Your mom's purse is gigantic. If you jump in you might get lost. Better not take anything or you might get caught.",
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -23,7 +23,7 @@
 		},
 		"exerciseBall": {
 			"name": "exerciseBall",
-			"description": "Next to door for parent's bedroom",
+			"description": "The giant blue exercise ball that your dad uses instead of a desk chair.",
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -32,7 +32,7 @@
 		},
 		"aluminumCan": {
 			"name": "aluminumCan",
-			"description": "Hidden until the recycling bin feature is examined.",
+			"description": "Partially crushed seltzer can from a branch you cannot pronounce. There are 100 just like it in the recycling bin.",
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,
