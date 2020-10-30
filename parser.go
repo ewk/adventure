@@ -29,10 +29,11 @@ func lookAtItem(item string) {
 
 	if val, ok := inventory[item]; ok {
 		fmt.Println(val.Description)
+	} else if val, ok := curRoom.Items[item]; ok {
+		fmt.Println(val.Description)
 	} else {
-		fmt.Printf("%s not in inventory\n", item)
+		fmt.Printf("%s not found.\n", item)
 	}
-	// TODO same check for rooms
 }
 
 // takeObject puts an item into the player's inventory
