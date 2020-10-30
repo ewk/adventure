@@ -89,8 +89,7 @@ func loadRooms() {
 func main() {
 	loadRooms()
 
-	// TODO start room must be initialized
-	curRoom = rooms[0]
+	curRoom = rooms["Attic"]
 
 	playGame()
 
