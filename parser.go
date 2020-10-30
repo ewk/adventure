@@ -176,6 +176,18 @@ func playGame() {
 			}
 		case "inventory":
 			listInventory()
+			/* TODO
+			   case "shrink":
+			           help()
+			   case "whistle":
+			           help()
+			   case "jump":
+			           help()
+			   case "attach":
+			           help()
+			   case "call":
+			           help()
+			*/
 		case "savegame":
 			fmt.Println("You said \"savegame\".")
 			// TODO implement save state
