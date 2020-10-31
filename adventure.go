@@ -8,8 +8,8 @@ import (
 )
 
 // Some necessary globals
-const MaxRooms = 15
-const MaxObjects = 8
+const MinRooms = 15
+const MinItems = 8
 
 var rooms []Room                       // graph of rooms
 var inventory = make(map[string]*Item) // player inventory
@@ -63,7 +63,7 @@ func loadRooms() {
 	// Panic if fewer than 15 rooms are defined.
 	// TODO Disabled for now while development continues.
 	/*
-		if len(rooms) < 15 {
+		if len(rooms) < MinRooms {
 			panic("The game must have at least 15 rooms")
 		}
 	*/
@@ -89,7 +89,7 @@ func loadRooms() {
 func main() {
 	loadRooms()
 
-	// TODO start room must be initialized with Visited = True
+	// TODO start room must be initialized
 	curRoom = rooms[0]
 
 	playGame()
