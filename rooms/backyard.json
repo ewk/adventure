@@ -39,5 +39,6 @@
 			"discoveryStatment": "",
 			"hiddenObject": ""
 		}
-  }
+  },
+  "exits": [ "Basement Lab", "Dining Room" ]
 }

@@ -39,5 +39,13 @@
 			"discoveryStatment": "",
 			"hiddenObject": ""
 		}
-  }
+  },
+  "exits": [
+      "Front Porch",
+      "Dining Room",
+      "Family Room",
+      "Living Room",
+      "Kitchen",
+      "Staircase"
+  ]
 }

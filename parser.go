@@ -8,8 +8,8 @@ import (
 )
 
 // lookAtRoom repeats the long form explanation of a room.
-func lookAtRoom(cur Room) {
-	fmt.Println(cur.LongDesc)
+func lookAtRoom() {
+	fmt.Println(curRoom.LongDesc)
 }
 
 // lookAtItem prints the description of an object or feature
@@ -29,10 +29,11 @@ func lookAtItem(item string) {
 
 	if val, ok := inventory[item]; ok {
 		fmt.Println(val.Description)
+	} else if val, ok := curRoom.Items[item]; ok {
+		fmt.Println(val.Description)
 	} else {
-		fmt.Printf("%s not in inventory\n", item)
+		fmt.Printf("%s not found.\n", item)
 	}
-	// TODO same check for rooms
 }
 
 // takeObject puts an item into the player's inventory
@@ -57,6 +58,33 @@ func listInventory() {
 	}
 }
 
+// moveToRoom takes a requested exit and moves the player there if the exit exists
+func moveToRoom(exit string) {
+	for _, e := range curRoom.Exits {
+		if e == exit { // check that requested exit is valid
+			if val, ok := rooms[exit]; ok {
+				curRoom = val // if found, the exit is the new current room
+
+				if curRoom.Visited == false { // have we been here before?
+					curRoom.Visited = true
+					fmt.Println(curRoom.LongDesc)
+				} else {
+					fmt.Println(curRoom.Description)
+				}
+
+				for _, item := range curRoom.Items {
+					if item.Discovered == true {
+						fmt.Println(item.Description)
+					}
+				}
+
+				return
+			}
+		}
+	}
+	fmt.Printf("%s is not a valid exit\n", exit)
+}
+
 // help prints a subset of verbs the game understands
 func help() {
 	m := fmt.Sprintf(`
@@ -71,11 +99,8 @@ func help() {
 	inventory, as well. If you describe something in your text descriptions, you
 	should be able to "look at" it to examine it.
 
-	"go north" OR "north" OR "go dank-smelling staircase" OR "dank-smelling
-	staircase" :: proceed through the indicated exit to the next room (note that ALL
-	FOUR of these forms of movement are required, and thus require you to describe
-	the exits appropriately). You might also decide to implement other room-travel
-	verbs such as "jump north" as appropriate.
+	"go Upstairs Hallway" or "go $EXIT" :: proceed through the indicated exit
+	to the next room.
 
 	take :: acquire an object, putting it into your inventory.
 
@@ -93,13 +118,7 @@ func help() {
 }
 
 func playGame() {
-	
-	openingMessage := "It was a bright and sunny afternoon. Everything was going fine. Your parents were developing new semi-legal technology in their lab, and you were watching them. They've told you 100 times to not watch them while they work, but what are they going to do? You're curious. The shrink ray! What a cool invention. You can take anything and make it...like...smaller. They've told you not to PLAY with the inventions 101 times, but what are they going to do? You're curious. So yeah, they did kick you out of the lab when they left to go run errands, telling you 102 times to not play with the inventions, but you smuggled that shrink ray out anyway. That's the last thing you remember...where are you? Why don't you try LOOKing around." 
-
-	fmt.Println(openingMessage)
-
 	// TODO remove dummy data
-	curRoom := rooms[0]
 	inventory["spoon"] = &Item{Name: "spoon", Description: "A utensil"}
 	inventory["candle"] = &Item{Name: "candle", Description: "To light the way"}
 
@@ -126,25 +145,13 @@ func playGame() {
 					lookAtItem(item)
 				}
 			} else {
-				lookAtRoom(curRoom)
+				lookAtRoom()
 			}
-		case "north":
-			fmt.Println("You said \"north\".")
-			// TODO use $ROOM.exit
-		case "south":
-			fmt.Println("You said \"south\".")
-			// TODO use $ROOM.exit
-		case "east":
-			fmt.Println("You said \"east\".")
-			// TODO use $ROOM.exit
-		case "west":
-			fmt.Println("You said \"west\".")
-			// TODO use $ROOM.exit
 		case "go":
 			if len(s) > 1 {
-				d := s[1]
-				fmt.Println("You said \"go\"", d)
-				// TODO use $ROOM.exit
+				loc := s[1:]
+				exit := strings.Join(loc, " ")
+				moveToRoom(exit)
 			} else {
 				fmt.Println("Go where?")
 			}
@@ -165,6 +172,18 @@ func playGame() {
 			}
 		case "inventory":
 			listInventory()
+			/* TODO
+			   case "shrink":
+			           help()
+			   case "whistle":
+			           help()
+			   case "jump":
+			           help()
+			   case "attach":
+			           help()
+			   case "call":
+			           help()
+			*/
 		case "savegame":
 			fmt.Println("You said \"savegame\".")
 			// TODO implement save state

@@ -39,7 +39,7 @@
       "discoveryStatment": "",
       "hiddenObject": ""
     }
-  }
+  },
+  "visited": true,
+  "exits": [ "Upstairs Hallway" ]
 }
-
-

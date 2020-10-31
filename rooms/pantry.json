@@ -48,5 +48,6 @@
 			"discoveryStatment": "",
 			"hiddenObject": ""
 		}
-  }
+	},
+  "exits": [ "Kitchen" ]
 }

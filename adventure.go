@@ -2,19 +2,18 @@ package main
 
 import (
 	"encoding/json"
-	//"fmt"
 	"io/ioutil"
 	"log"
 	"regexp"
 )
 
 // Some necessary globals
-const MaxConnections = 6
-const MaxRooms = 15
-const MaxObjects = 8
+const MinRooms = 15
+const MinItems = 8
 
-var rooms []Room                       // graph of rooms
+var rooms = make(map[string]*Room)     // map of rooms
 var inventory = make(map[string]*Item) // player inventory
+var curRoom *Room
 
 // definition of a room
 type Room struct {
@@ -23,7 +22,7 @@ type Room struct {
 	Description string
 	Items       map[string]*Item
 	Visited     bool
-	Out         [MaxConnections]*Room // outbound connections
+	Exits       []string // outbound connection room names
 }
 
 // struct used for both features and objects
@@ -57,28 +56,30 @@ func loadRooms() {
 
 			var r Room
 			json.Unmarshal([]byte(roomJson), &r)
-			rooms = append(rooms, r)
+			rooms[r.Name] = &r
 		}
 	}
 
-	// Panic if fewer than 15 rooms are defined.
-	// TODO Disabled for now while development continues.
+	// Debug: uncomment to show imported JSON data
 	/*
-		if len(rooms) < 15 {
+		for key, value := range rooms {
+			fmt.Println("Key:", key, "Value:", value)
+		}
+	*/
+
+	// TODO Disabled for now while development continues.
+	// Panic if fewer than 15 rooms are defined.
+	/*
+		if len(rooms) < MinRooms {
 			panic("The game must have at least 15 rooms")
 		}
 	*/
-	// Debug: uncomment to show imported JSON data
-	//fmt.Printf("length=%d capacity=%d %v\n", len(rooms), cap(rooms), rooms)
-	//for _, i := range rooms {
-	//	for _, j := range i.Items {
-	//		fmt.Println(j)
-	//	}
-	//}
 }
 
 func main() {
 	loadRooms()
+
+	curRoom = rooms["Attic"]
 
 	playGame()
 
