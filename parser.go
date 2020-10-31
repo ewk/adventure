@@ -118,6 +118,10 @@ func help() {
 }
 
 func playGame() {
+	openingMessage := "It was a bright and sunny afternoon. Everything was going fine. Your parents were developing new semi-legal technology in their lab, and you were watching them. They've told you 100 times to not watch them while they work, but what are they going to do? You're curious. The shrink ray! What a cool invention. You can take anything and make it...like...smaller. They've told you not to PLAY with the inventions 101 times, but what are they going to do? You're curious. So yeah, they did kick you out of the lab when they left to go run errands, telling you 102 times to not play with the inventions, but you smuggled that shrink ray out anyway. That's the last thing you remember...where are you? Why don't you try LOOKing around."
+
+	fmt.Println(openingMessage)
+
 	// TODO remove dummy data
 	inventory["spoon"] = &Item{Name: "spoon", Description: "A utensil"}
 	inventory["candle"] = &Item{Name: "candle", Description: "To light the way"}
