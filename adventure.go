@@ -11,9 +11,9 @@ import (
 const MinRooms = 15
 const MinItems = 8
 
-var rooms []Room                       // graph of rooms
+var rooms = make(map[string]*Room)     // map of rooms
 var inventory = make(map[string]*Item) // player inventory
-var curRoom Room
+var curRoom *Room
 
 // definition of a room
 type Room struct {
@@ -56,32 +56,22 @@ func loadRooms() {
 
 			var r Room
 			json.Unmarshal([]byte(roomJson), &r)
-			rooms = append(rooms, r)
+			rooms[r.Name] = &r
 		}
 	}
 
-	// Panic if fewer than 15 rooms are defined.
+	// Debug: uncomment to show imported JSON data
+	/*
+		for key, value := range rooms {
+			fmt.Println("Key:", key, "Value:", value)
+		}
+	*/
+
 	// TODO Disabled for now while development continues.
+	// Panic if fewer than 15 rooms are defined.
 	/*
 		if len(rooms) < MinRooms {
 			panic("The game must have at least 15 rooms")
-		}
-	*/
-	// Debug: uncomment to show imported JSON data
-	//fmt.Printf("length=%d capacity=%d %v\n", len(rooms), cap(rooms), rooms)
-	//for _, i := range rooms {
-	//	for _, j := range i.Items {
-	//		fmt.Println(j)
-	//	}
-	//}
-
-	// Debug uncomment to print room exits
-	/*
-		for _, i := range rooms {
-			fmt.Printf("%s:\n", i.Name)
-			for _, j := range i.Exits {
-				fmt.Printf("\t%s\n", j)
-			}
 		}
 	*/
 }
@@ -89,8 +79,7 @@ func loadRooms() {
 func main() {
 	loadRooms()
 
-	// TODO start room must be initialized
-	curRoom = rooms[0]
+	curRoom = rooms["Attic"]
 
 	playGame()
 
