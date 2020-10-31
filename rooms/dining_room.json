@@ -39,6 +39,7 @@
 			"discoveryStatment": "",
 			"hiddenObject": ""
 		}
-  },
+	},
+	"visited" :false,
   "exits": [ "Backyard", "Downstairs Hallway", "Front Porch" ]
 }

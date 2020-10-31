@@ -31,5 +31,6 @@
 			"hiddenObject": ""
 		}
 	},
+	"visited" : false,
 	"exits": [ "Dining Room", "Downstairs Hallway", "Family Room" ]
 }

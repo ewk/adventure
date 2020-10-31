@@ -49,5 +49,6 @@
 			"hiddenObject": ""
 		}
 	},
+	"visited" : false,
   "exits": [ "Kitchen" ]
 }

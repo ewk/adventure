@@ -40,6 +40,7 @@
 			"hiddenObject": ""
 		}
 	},
+	"visited" : false,
 	"exits": [ "Upstairs Hallway" ]
 }
 

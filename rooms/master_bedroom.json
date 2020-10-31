@@ -40,5 +40,6 @@
 			"hiddenObject": ""
 		}
 	},
+	"visited" : false,
 	"exits": [ "Upstairs Hallway", "Basement Lab" ]
 }

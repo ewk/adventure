@@ -39,7 +39,8 @@
 			"discoveryStatment": "",
 			"hiddenObject": ""
 		}
-  },
+	},
+	"visited" : false,
   "exits": [
       "Front Porch",
       "Dining Room",

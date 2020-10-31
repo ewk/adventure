@@ -40,5 +40,6 @@
 			"hiddenObject": ""
 		}
 	},
+	"visited" : false,
 	"exits": [ "Front Porch", "Downstairs Hallway" ]
 }
