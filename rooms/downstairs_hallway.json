@@ -1,45 +1,46 @@
 {
   "name": "Downstairs Hallway",
-  "longDesc": "Long description of Downstairs Hallway",
-  "description": "",
-  "items": {
-	"feature1": {
-		"name": "feature1",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": true,
-		"discoveryStatment": "",
-		"hiddenObject": ""
+	"longDesc": "You are in the downstairs hallway for the first time. The front door is on the south wall. It opens to the porch, which is outside. On your right, on the west wall, there is a door that leads to the dining room, but not the living room. The only way to get to the living room is through the dining room. On your left, on the east wall, there is a door for the kitchen, and the family room. There is a pantry in the kitchen but you it can only be accessed through the kitchen. By the front door, on the south end of the room, and the east wall, there are three coat hooks, but only one coat is hung there now. The player's coat. If the player gets their coat, they will be able to avoid the Eagle, they won't know this until they inspect the coat hooks. On the floor at the south wall, right by the front door, is a pile of mail. There is a letter with a clue for the password to their parents'c omputer on one of the envelopes.",
+	"description": "You are in the downstairs hallway. The front door is on the south wall. It opens to the porch, which is outside. On your right, on the west wall, there is a door that leads to the dining room, but not the living room. The only way to get to the living room is through the dining room. On your left, on the east wall, there is a door for the kitchen, and the family room. There is a pantry in the kitchen but you it can only be accessed through the kitchen.",
+	"items": {
+		"mail": {
+			"name": "mail",
+			"description": "There is a large pile of mail by the front door, on the south wall, at the end of the hallway.",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"coatHooks": {
+			"name": "coatHooks",
+			"description": "There are three coat hooks on the east wall at the south end of the hallway. Only one coat (the player's) is hung there now",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": true,
+			"discoveryStatment": "Hey that's your coat!",
+			"hiddenObject": ""
+		},
+		"yourCoat": {
+			"name": "yourCoat",
+			"description": "This is your coat. It is bright blue and very warm with a hood you can barely see out of.",
+			"portable": true,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"skateboard": {
+			"name": "skateboard",
+			"description": "Your mom's skateboard, she left it in the middle of the hallway AGAIN!",
+			"portable": true,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		}
 	},
-	"feature2": {
-		"name": "feature2",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object1": {
-		"name": "object1",
-		"description": "",
-		"portable": true,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object2": {
-		"name": "object2",
-		"description": "",
-		"portable": true,
-		"discovered": false,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	}
-  },
+	"visited" : false,
   "exits": [
       "Front Porch",
       "Dining Room",

@@ -1,44 +1,45 @@
 {
-  "name": "Backyard",
-  "longDesc": "Long description of Backyard",
-  "description": "",
-  "items": {
-	"feature1": {
-		"name": "feature1",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": true,
-		"discoveryStatment": "",
-		"hiddenObject": ""
+  "name": "Backyard",	
+	"longDesc": "This is your first time in the backyard. If you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner. There is a patio umbrella folded on the ground next to this exit. To the west, there is a sandbox. There is an eagle circling overhead. You need to collect sand from the sandbox. You can use the umbrella to hide from the eagle.",
+	"description": "You are in the backyard. If you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner. There is a patio umbrella folded on the ground next to this exit. To the west, there is a sandbox. There is an eagle circling overhead. ",
+	"items": {
+		"eagle": {
+			"name": "eagle",
+			"description": "The eagle seems to have noticed you.  You wonder if it will swoop down to grab you if you step into the yard.",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"sandbox": {
+			"name": "sandbox",
+			"description": "There is a sandbox full of sand, toys, and buckets.",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"sand": {
+			"name": "sand",
+			"description": "The sand is in the sandbox, you need it for the quest",
+			"portable": true,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"squeekyToy": {
+			"name": "squeekyToy",
+			"description": "This is a red ball squeeky toy. Your dog can hear this from a mile away and will come running, can serve a similar function to the dog whistle",
+			"portable": true,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		}
 	},
-	"feature2": {
-		"name": "feature2",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object1": {
-		"name": "object1",
-		"description": "",
-		"portable": true,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object2": {
-		"name": "object2",
-		"description": "",
-		"portable": true,
-		"discovered": false,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	}
-  },
+	"visited" : false,
   "exits": [ "Basement Lab", "Dining Room" ]
 }

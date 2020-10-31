@@ -1,44 +1,45 @@
 {
   "name": "Family Room",
-  "longDesc": "Long description of Family Room",
-  "description": "",
-  "items": {
-	"feature1": {
-		"name": "feature1",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": true,
-		"discoveryStatment": "",
-		"hiddenObject": ""
+	"longDesc": "You are in the family room for the first time. The door to the downstairs hallway is on the west wall, there are no other exits in thsi room. There is a large window on the east wall. On the north wall there is an entertainment system with an old tv, wires are popping out the back and sides, and only half of the picture works. The tv is on the entertainment system, away from the wall. You need to get a copper wire from the back of it.  ",
+	"description": "You are in the family room. there is only one exit, on the west wall, to the downstairs hallway.",
+	"items": {
+		"tv": {
+			"name": "tv",
+			"description": "The tv is old, has wires popping out the sides and back, but it's all your parents will let you have",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": true,
+			"discoveryStatment": "",
+			"hiddenObject": "copperWire"
+		},
+		"toyBox": {
+			"name": "toyBox",
+			"description": "The toy box is empty now, just with a note saying your toys were taken away from the last time you stole an experiment.",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"copperWire": {
+			"name": "copperWire",
+			"description": "There is a loose copper wire wrapped in red rubber.  ",
+			"portable": true,
+			"discovered": false,
+			"containsHiddenObject": false,
+			"discoveryStatment": "Perfect this is just what you need, some copper wire is on the list",
+			"hiddenObject": ""
+		},
+		"nintendo64": {
+			"name": "nintendo64",
+			"description": "This is an old, dusty Nintendo 64. To accompany the aging relic of the tv, a classic gaming system",
+			"portable": true,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		}
 	},
-	"feature2": {
-		"name": "feature2",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object1": {
-		"name": "object1",
-		"description": "",
-		"portable": true,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object2": {
-		"name": "object2",
-		"description": "",
-		"portable": true,
-		"discovered": false,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	}
-  },
-  "exits": [ "Front Porch", "Downstairs Hallway" ]
+	"visited" : false,
+	"exits": [ "Front Porch", "Downstairs Hallway" ]
 }

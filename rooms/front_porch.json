@@ -1,44 +1,36 @@
 {
   "name": "Front Porch",
-  "longDesc": "Long description of Front Porch",
-  "description": "",
-  "items": {
-	"feature1": {
-		"name": "feature1",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": true,
-		"discoveryStatment": "",
-		"hiddenObject": ""
+	"longDesc": "You are on the front porch for the first time. It is covered, but open air. To the west there are stairs leading to the backyard. On the eastern edge there is a wicker couch covered in bird seed detritus. The front door to the house is to the north. There is a skateboard next to the front door, on the western side of the north wall. There is a large plant in the south west corner of the porch. There is something written on the flower pot but you can't see what it says from the front door. ",
+	"description": "You are on the front porch. It is covered, but open air. To the west there are stairs leading to the backyard. The front door to the house is to the north.  ",
+	"items": {
+		"flowerPot": {
+			"name": "flowerPot",
+			"description": "This is a giant flower pot with some giant leafy green thing growing out of it. These leaves are huge!",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"wickerCouch": {
+			"name": "wickerCouch",
+			"description": "The wicker couch is weathered and covered with bird seed.",  
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"newspaper": {
+			"name": "newspaper",
+			"description": "Last Sunday's Newspaper. Headline: Mads and Madeline Scientist do it again...",
+			"portable": true,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		}
 	},
-	"feature2": {
-		"name": "feature2",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object1": {
-		"name": "object1",
-		"description": "",
-		"portable": true,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object2": {
-		"name": "object2",
-		"description": "",
-		"portable": true,
-		"discovered": false,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	}
-  },
-  "exits": [ "Dining Room", "Downstairs Hallway", "Family Room" ]
+	"visited" : false,
+	"exits": [ "Dining Room", "Downstairs Hallway", "Family Room" ]
 }

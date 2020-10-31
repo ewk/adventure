@@ -1,44 +1,45 @@
 {
   "name": "Dining Room",
-  "longDesc": "Long description of Dining Room",
-  "description": "",
+	"longDesc": "This if your first time in the dining room. The exit to the downstairs hallway is on the east wall. There is an exit to the backyard on the west wall. There is a giant mahogany table which is fully set for a dinner partyy. There is a candelabra in the middle with three tall candles. There is a cabinet on the south wall, underneath a large window which looks out to the street. The north wall is open to the living room. There is no door, you can just keep walking through. There is a painting on the east wall next to the door, it shows a bowl of fruit. It has a clue about the game. You need to climb onto the table and collect a candle.",
+	"description": "You are in the dining room. The exit to the downstairs hallway is on the east wall. There is an exit to the backyard on the west wall. There is a giant mahogany table which is fully set for a dinner partyy. There is a candelabra in the middle with three tall candles. There is a cabinet on the south wall, underneath a large window which looks out to the street. The north wall is open to the living room. There is no door, you can just keep walking through.",
   "items": {
-	"feature1": {
-		"name": "feature1",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": true,
-		"discoveryStatment": "",
-		"hiddenObject": ""
+		"diningRoomTable": {
+			"name": "diningRoomTable",
+			"description": "The dining room table is tall, mahogany, set for a formal dinner party for no discernable reason",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": true,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"painting": {
+			"name": "painting",
+			"description": "Wall sized painting of a bowl of fruit. There is a clue hidden in the painting. Clue tbd",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"candles": {
+			"name": "candles",
+			"description": "On the dining room table in an ornate candleabra",
+			"portable": true,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"knife": {
+			"name": "knife",
+			"description": "The knife is sharp, pointy, and could come in handy",
+			"portable": true,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		}
 	},
-	"feature2": {
-		"name": "feature2",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object1": {
-		"name": "object1",
-		"description": "",
-		"portable": true,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object2": {
-		"name": "object2",
-		"description": "",
-		"portable": true,
-		"discovered": false,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	}
-  },
+	"visited" :false,
   "exits": [ "Backyard", "Downstairs Hallway", "Front Porch" ]
 }

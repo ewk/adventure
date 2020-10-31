@@ -1,44 +1,46 @@
 {
   "name": "Your Bedroom",
-  "longDesc": "Long description of Your Bedroom",
-  "description": "",
+  "longDesc": "This is your first time in the bedroom. The exit it to the hallway, on the west wall. There is a bed against the north wall, you store your treasures underneath it. There is a bed side table with a lamp next to your bed, pushed up against the east wall at the head of the bed. On the south wall is your closet. It has a chute that leads to the basement where the laundry room is. There are diry socks on the floor of your closet. There is a dog whistle on the floor underneath the bed.",
+  "description": "This is your bedroom. The exit it to the hallway, on the west wall. There is a bed against the north wall, you store your treasures underneath it. There is a bed side table with a lamp next to your bed, pushed up against the east wall at the head of the bed. On the south wall is your closet. It has a chute that leads to the basement where the laundry room is.",
   "items": {
-	"feature1": {
-		"name": "feature1",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": true,
-		"discoveryStatment": "",
-		"hiddenObject": ""
+		"closet": {
+			"name": "closet",
+			"description": "The closet is full of toys.  At the back of the closet is a laundry chute leading to the basement.",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"underYourBed": {
+			"name": "underYourBed",
+			"description": " Under your bed is dark, it's smelly, but there are no monsters...you think",
+			"portable": false,
+			"discovered": true,
+			"containsHiddenObject": true,
+			"discoveryStatment": "That's where the dog whistle went!",
+			"hiddenObject": "dogWhistle"
+		},
+		"dogWhistle": {
+			"name": "dogWhistle",
+			"description": "The dog whistle is small and silver. Use it to summon your mighty steed",
+			"portable": true,
+			"discovered": false,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		},
+		"dirtySocks": {
+			"name": "dirtySocks",
+			"description": "Your socks are all identical black, crew cut socks that can be bought in ten packs at the store. These ones are stinky but also important",
+			"portable": true,
+			"discovered": true,
+			"containsHiddenObject": false,
+			"discoveryStatment": "",
+			"hiddenObject": ""
+		}
 	},
-	"feature2": {
-		"name": "feature2",
-		"description": "",
-		"portable": false,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object1": {
-		"name": "object1",
-		"description": "",
-		"portable": true,
-		"discovered": true,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	},
-	"object2": {
-		"name": "object2",
-		"description": "",
-		"portable": true,
-		"discovered": false,
-		"containsHiddenObject": false,
-		"discoveryStatment": "",
-		"hiddenObject": ""
-	}
-  },
-  "exits": [ "Upstairs Hallway" ]
+	"visited" : false,
+	"exits": [ "Upstairs Hallway" ]
 }
+
