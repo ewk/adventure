@@ -125,6 +125,7 @@ func playGame() {
 	// TODO remove dummy data
 	inventory["spoon"] = &Item{Name: "spoon", Description: "A utensil"}
 	inventory["candle"] = &Item{Name: "candle", Description: "To light the way"}
+	inventory["box of cookies"] = &Item{Name: "box of cookies", Description: "C is for cookie"}
 
 	input := bufio.NewScanner(os.Stdin)
 	fmt.Print("> ")
@@ -145,7 +146,8 @@ func playGame() {
 					fmt.Println("What would you like to look at?")
 					break
 				} else {
-					item := s[2]
+					tmp := s[2:]
+					item := strings.Join(tmp, " ")
 					lookAtItem(item)
 				}
 			} else {
@@ -161,7 +163,8 @@ func playGame() {
 			}
 		case "take":
 			if len(s) > 1 {
-				item := s[1]
+				tmp := s[1:]
+				item := strings.Join(tmp, " ")
 				fmt.Println("You said \"take\"", item)
 				//TODO takeObject(item)
 			} else {
@@ -169,7 +172,8 @@ func playGame() {
 			}
 		case "drop":
 			if len(s) > 1 {
-				item := s[1]
+				tmp := s[1:]
+				item := strings.Join(tmp, " ")
 				dropObject(item)
 			} else {
 				fmt.Println("Drop what?")
