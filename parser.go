@@ -50,10 +50,14 @@ func takeItem(item string) {
 	}
 }
 
-// dropObject removes an item from the player's inventory
-func dropObject(itemName string) {
-	delete(inventory, itemName)
-	// TODO save object in room where it was dropped and print output
+// dropItem drops an item in the current room and removes the item from the player's inventory
+func dropObject(item string) {
+	if val, ok := inventory[item]; ok {
+		curRoom.Items[item] = val
+		delete(inventory, item)
+	} else {
+		fmt.Printf("%s not found.\n", item)
+	}
 }
 
 // listInventory lists the contents of your inventory.
