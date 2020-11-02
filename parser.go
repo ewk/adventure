@@ -36,17 +36,28 @@ func lookAtItem(item string) {
 	}
 }
 
-// takeObject puts an item into the player's inventory
-func takeItem(itemName string) {
-	// TODO add object to player inventory and remove it from room items hash
-	// inventory[itemName] = &Item{Name: itemName}
-	// can't take item if portable == false
+// takeItem place a portable item into the player's inventory
+func takeItem(item string) {
+	if val, ok := curRoom.Items[item]; ok {
+		if val.Portable == true {
+			inventory[item] = val
+			delete(curRoom.Items, item) // remove item from room after picking it up
+		} else {
+			fmt.Printf("%s is too big to pick up!\n", item)
+		}
+	} else {
+		fmt.Printf("%s not found.\n", item)
+	}
 }
 
-// dropObject removes an item from the player's inventory
-func dropObject(itemName string) {
-	delete(inventory, itemName)
-	// TODO save object in room where it was dropped and print output
+// dropItem drops an item in the current room and removes the item from the player's inventory
+func dropObject(item string) {
+	if val, ok := inventory[item]; ok {
+		curRoom.Items[item] = val
+		delete(inventory, item)
+	} else {
+		fmt.Printf("%s not found.\n", item)
+	}
 }
 
 // listInventory lists the contents of your inventory.
@@ -125,6 +136,7 @@ func playGame() {
 	// TODO remove dummy data
 	inventory["spoon"] = &Item{Name: "spoon", Description: "A utensil"}
 	inventory["candle"] = &Item{Name: "candle", Description: "To light the way"}
+	inventory["box of cookies"] = &Item{Name: "box of cookies", Description: "C is for cookie"}
 
 	input := bufio.NewScanner(os.Stdin)
 	fmt.Print("> ")
@@ -145,7 +157,8 @@ func playGame() {
 					fmt.Println("What would you like to look at?")
 					break
 				} else {
-					item := s[2]
+					tmp := s[2:]
+					item := strings.Join(tmp, " ")
 					lookAtItem(item)
 				}
 			} else {
@@ -161,15 +174,16 @@ func playGame() {
 			}
 		case "take":
 			if len(s) > 1 {
-				item := s[1]
-				fmt.Println("You said \"take\"", item)
-				//TODO takeObject(item)
+				tmp := s[1:]
+				item := strings.Join(tmp, " ")
+				takeItem(item)
 			} else {
 				fmt.Println("Take what?")
 			}
 		case "drop":
 			if len(s) > 1 {
-				item := s[1]
+				tmp := s[1:]
+				item := strings.Join(tmp, " ")
 				dropObject(item)
 			} else {
 				fmt.Println("Drop what?")
