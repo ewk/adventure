@@ -36,11 +36,18 @@ func lookAtItem(item string) {
 	}
 }
 
-// takeObject puts an item into the player's inventory
-func takeItem(itemName string) {
-	// TODO add object to player inventory and remove it from room items hash
-	// inventory[itemName] = &Item{Name: itemName}
-	// can't take item if portable == false
+// takeItem place a portable item into the player's inventory
+func takeItem(item string) {
+	if val, ok := curRoom.Items[item]; ok {
+		if val.Portable == true {
+			inventory[item] = val
+			delete(curRoom.Items, item) // remove item from room after picking it up
+		} else {
+			fmt.Printf("%s is too big to pick up!\n", item)
+		}
+	} else {
+		fmt.Printf("%s not found.\n", item)
+	}
 }
 
 // dropObject removes an item from the player's inventory
@@ -165,8 +172,7 @@ func playGame() {
 			if len(s) > 1 {
 				tmp := s[1:]
 				item := strings.Join(tmp, " ")
-				fmt.Println("You said \"take\"", item)
-				//TODO takeObject(item)
+				takeItem(item)
 			} else {
 				fmt.Println("Take what?")
 			}
