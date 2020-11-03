@@ -203,8 +203,7 @@ func playGame() {
 			           help()
 			*/
 		case "savegame":
-			fmt.Println("You said \"savegame\".")
-			// TODO implement save state
+			saveGame()
 		case "loadgame":
 			fmt.Println("You said \"loadgame\".")
 			// TODO implement load state

@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"log"
 	"regexp"
+	"time"
 )
 
 // Some necessary globals
@@ -34,6 +35,13 @@ type Item struct {
 	ContainsHiddenObject bool   // This is false for all objects. For some features this starts as true.
 	DiscoveryStatment    string // If there's a hidden object, this described the connection. "Underneath the couch, you see a cat toy."
 	HiddenObject         string // Name of hidden object if there is one
+}
+
+// struct to store game state
+type Game struct {
+	CurRoom   string
+	Rooms     map[string]*Room
+	Inventory map[string]*Item
 }
 
 // loadRooms reads room definitions from local storage and creates a
@@ -74,6 +82,23 @@ func loadRooms() {
 			panic("The game must have at least 15 rooms")
 		}
 	*/
+
+// saveGame dumps the current game state to a timestamped JSON file
+func saveGame() {
+	g := Game{
+		CurRoom:   curRoom.Name,
+		Rooms:     rooms,
+		Inventory: inventory,
+	}
+
+	b, e := json.MarshalIndent(g, "", " ")
+	if e != nil {
+		log.Fatal(e)
+	}
+
+	t := time.Now()
+	f := "adventure-" + t.Format(time.RFC3339) + ".json"
+	_ = ioutil.WriteFile(f, b, 0644)
 }
 
 func main() {
