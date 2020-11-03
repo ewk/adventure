@@ -122,6 +122,8 @@ func help() {
 	loadgame :: confirms with the user that this really is desired, then loads
 	the game state from the file.
 
+	exit :: save game and then exit.
+
 	help :: Print this message
 	`)
 
@@ -204,6 +206,9 @@ func playGame() {
 			*/
 		case "savegame":
 			saveGame()
+		case "exit":
+			saveGame()
+			return
 		case "loadgame":
 			fmt.Println("You said \"loadgame\".")
 			// TODO implement load state
