@@ -1,11 +1,14 @@
 package main
 
 import (
+	"bufio"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
+	"os"
 	"regexp"
+	"strings"
 	"time"
 )
 
@@ -103,6 +106,52 @@ func saveGame() {
 	_ = ioutil.WriteFile(f, b, 0644)
 
 	fmt.Printf("Saved game %s\n", f)
+}
+
+// loadGame loads a saved game from the file 's'
+func loadGame(s string) {
+	gameJson, e := ioutil.ReadFile(s)
+
+	if e != nil {
+		log.Fatal(e) // TODO panic may be too extreme here
+	}
+
+	// player must confirm they want to load a saved game
+	fmt.Printf("Load game '%s'. Are you sure? ('y' or 'n')\n", s)
+	input := bufio.NewScanner(os.Stdin)
+
+Goto:
+	for input.Scan() {
+		action := input.Text()
+		s := strings.Fields(action)
+
+		if cap(s) == 0 {
+			continue
+		}
+
+		switch s[0] {
+		case "y":
+			break Goto // considered convenient
+		case "n":
+			return
+		default:
+			fmt.Println("Please type 'y' or 'n'.")
+		}
+	}
+
+	// proceed to load JSON saved state from file
+	var g Game
+	json.Unmarshal([]byte(gameJson), &g)
+
+	// in the interest of catching errors early, wipe the current game data
+	rooms = nil
+	rooms = g.Rooms
+
+	inventory = nil
+	inventory = g.Inventory
+
+	curRoom = nil
+	curRoom = rooms[g.CurRoom] // must be set after loading rooms!
 }
 
 func main() {

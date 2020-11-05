@@ -210,8 +210,13 @@ func playGame() {
 			saveGame()
 			return
 		case "loadgame":
-			fmt.Println("You said \"loadgame\".")
-			// TODO implement load state
+			if len(s) > 1 {
+				f := s[1:]
+				g := strings.Join(f, " ")
+				loadGame(g)
+			} else {
+				fmt.Println("Please specify a saved game to load.")
+			}
 		case "help":
 			help()
 		default:
