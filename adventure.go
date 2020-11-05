@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"regexp"
@@ -100,6 +101,8 @@ func saveGame() {
 	t := time.Now()
 	f := "adventure-" + t.Format(time.RFC3339) + ".json"
 	_ = ioutil.WriteFile(f, b, 0644)
+
+	fmt.Printf("Saved game %s\n", f)
 }
 
 func main() {
