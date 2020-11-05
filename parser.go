@@ -14,23 +14,20 @@ func lookAtRoom() {
 
 // lookAtItem prints the description of an object or feature
 func lookAtItem(item string) {
-	// This is a fairly generic function. It needs to not only describe
-	// an inventory object, but also any feature that has a text description
-
-	// TODO updates for new Item approach
-	// The item's description is printed.
-	// If ContainsHiddenObject == true:
-	//    print DiscoveryStatement
-	//    set ContainsHiddenObject = false
-	//    get the HiddenObject name
-	//    look up that name in the room's Items map
-	//    print that object's Description
-	//    set that object's Discovered bool to true
-
 	if val, ok := inventory[item]; ok {
 		fmt.Println(val.Description)
 	} else if val, ok := curRoom.Items[item]; ok {
 		fmt.Println(val.Description)
+		if val.ContainsHiddenObject == true {
+			if hiddenThing, ok := inventory[val.HiddenObject]; ok {
+				fmt.Println(val.DiscoveryStatment)
+				fmt.Println(hiddenThing.Description)
+				hiddenThing.Discovered = true
+			} else {
+				fmt.Println("Oops, we forgot to hide something there.\n")
+			}
+			val.ContainsHiddenObject = false
+		}
 	} else {
 		fmt.Printf("%s not found.\n", item)
 	}
