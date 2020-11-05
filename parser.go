@@ -20,7 +20,7 @@ func lookAtItem(item string) {
 		fmt.Println(val.Description)
 		if val.ContainsHiddenObject == true {
 			if hiddenThing, ok := inventory[val.HiddenObject]; ok {
-				fmt.Println(val.DiscoveryStatment)
+				fmt.Println(val.DiscoveryStatement)
 				fmt.Println(hiddenThing.Description)
 				hiddenThing.Discovered = true
 			} else {

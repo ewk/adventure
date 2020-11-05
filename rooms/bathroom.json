@@ -9,7 +9,7 @@
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
 		"cabinet": {
@@ -18,7 +18,7 @@
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatment": "You'll need that shampoo",
+			"discoveryStatement": "You'll need that shampoo",
 			"hiddenObject": "shampoo"
 		},
 		"shampoo": {
@@ -27,7 +27,7 @@
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		}
 	},

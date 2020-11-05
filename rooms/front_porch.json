@@ -9,7 +9,7 @@
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
 		"wickerCouch": {
@@ -18,7 +18,7 @@
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
 		"newspaper": {
@@ -27,7 +27,7 @@
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		}
 	},
