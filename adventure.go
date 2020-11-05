@@ -82,6 +82,7 @@ func loadRooms() {
 			panic("The game must have at least 15 rooms")
 		}
 	*/
+}
 
 // saveGame dumps the current game state to a timestamped JSON file
 func saveGame() {
