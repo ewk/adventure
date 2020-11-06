@@ -3,8 +3,8 @@
 	"longDesc": "This is your first time in the upstairs hallway. When you exit the attic, you are on the south wall. There are stairs in front of you, on the north wall. To your left, on the west wall, is your parents' bedroom. On the east wall there is your bedroom, and the bathroom. Between your bedroom and the bathroom is a recycling bin filled to the top with seltzer cans. Next to the door to your parents' room is an exercise ball and your mom's purse. You need to distract the cat before you can get in the recycling bin. You need to look in the recycling bin to get the aluminum can. You need to bounce on the exercise ball to open your parents' door. You can look in your mom's purse, but you can't take anything out of it because she'll know you've been in there. ",
 	"description": "This is your first time in the upstairs hallway. When you exit the attic, you are on the south wall. There are stairs in front of you, on the north wall. To your left, on the west wall, is your parents' bedroom. On the east wall there is your bedroom, and the bathroom.",
   "items": {
-		"recyclingBin": {
-			"name": "recyclingBin",
+		"recycling bin": {
+			"name": "recycling bin",
 			"description": "The recycling bin is full of seltzer cans.",
 			"portable": false,
 			"discovered": true,
@@ -21,8 +21,8 @@
 			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"exerciseBall": {
-			"name": "exerciseBall",
+		"exercise ball": {
+			"name": "exercise ball",
 			"description": "The giant blue exercise ball that your dad uses instead of a desk chair.",
 			"portable": true,
 			"discovered": true,
@@ -30,8 +30,8 @@
 			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"aluminumCan": {
-			"name": "aluminumCan",
+		"aluminum can": {
+			"name": "aluminum can",
 			"description": "Partially crushed seltzer can from a branch you cannot pronounce. There are 100 just like it in the recycling bin.",
 			"portable": true,
 			"discovered": false,

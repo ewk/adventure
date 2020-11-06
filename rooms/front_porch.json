@@ -3,8 +3,8 @@
 	"longDesc": "You are on the front porch for the first time. It is covered, but open air. To the west there are stairs leading to the backyard. On the eastern edge there is a wicker couch covered in bird seed detritus. The front door to the house is to the north. There is a skateboard next to the front door, on the western side of the north wall. There is a large plant in the south west corner of the porch. There is something written on the flower pot but you can't see what it says from the front door. ",
 	"description": "You are on the front porch. It is covered, but open air. To the west there are stairs leading to the backyard. The front door to the house is to the north.  ",
 	"items": {
-		"flowerPot": {
-			"name": "flowerPot",
+		"flower pot": {
+			"name": "flower pot",
 			"description": "This is a giant flower pot with some giant leafy green thing growing out of it. These leaves are huge!",
 			"portable": false,
 			"discovered": true,
@@ -12,8 +12,8 @@
 			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"wickerCouch": {
-			"name": "wickerCouch",
+		"wicker couch": {
+			"name": "wicker couch",
 			"description": "The wicker couch is weathered and covered with bird seed.",  
 			"portable": false,
 			"discovered": true,

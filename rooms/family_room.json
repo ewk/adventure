@@ -9,11 +9,11 @@
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "",
-			"hiddenObject": "copperWire"
+			"discoveryStatement": "That copper wire looks like it'll be the easiest to cut.",
+			"hiddenObject": "copper wire"
 		},
-		"toyBox": {
-			"name": "toyBox",
+		"toy box": {
+			"name": "toy box",
 			"description": "The toy box is empty now, just with a note saying your toys were taken away from the last time you stole an experiment.",
 			"portable": false,
 			"discovered": true,
@@ -21,17 +21,17 @@
 			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"copperWire": {
-			"name": "copperWire",
+		"copper wire": {
+			"name": "copper wire",
 			"description": "There is a loose copper wire wrapped in red rubber.  ",
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,
-			"discoveryStatement": "Perfect this is just what you need, some copper wire is on the list",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"nintendo64": {
-			"name": "nintendo64",
+		"nintendo 64": {
+			"name": "nintendo 64",
 			"description": "This is an old, dusty Nintendo 64. To accompany the aging relic of the tv, a classic gaming system",
 			"portable": true,
 			"discovered": true,

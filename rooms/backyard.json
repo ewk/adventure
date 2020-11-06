@@ -17,15 +17,15 @@
 			"description": "There is a sandbox full of sand, toys, and buckets.",
 			"portable": false,
 			"discovered": true,
-			"containsHiddenObject": false,
-			"discoveryStatement": "",
-			"hiddenObject": ""
+			"containsHiddenObject": true,
+			"discoveryStatement": "There's still sand in here",
+			"hiddenObject": "sand"
 		},
 		"sand": {
 			"name": "sand",
-			"description": "The sand is in the sandbox, you need it for the quest",
+			"description": "The sand is from the sandbox, you need it for the quest",
 			"portable": true,
-			"discovered": true,
+			"discovered": false,
 			"containsHiddenObject": false,
 			"discoveryStatement": "",
 			"hiddenObject": ""

@@ -8,9 +8,9 @@
 			"description": "Giant couch, well worn, visible tear with stuffing coming out. ",
 			"portable": false,
 			"discovered": true,
-			"containsHiddenObject": false,
-			"discoveryStatement": "",
-			"hiddenObject": ""
+			"containsHiddenObject": true,
+			"discoveryStatement": "You should be able to pull that stuffing out.",
+			"hiddenObject": "couch stuffing"
 		},
 		"window": {
 			"name": "window",
@@ -30,11 +30,11 @@
 			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"couchStuffing": {
-			"name": "couchStuffing",
+		"couch stuffing": {
+			"name": "couch stuffing",
 			"description": "This is some stuffing from the couch. It's white a fluffy and looks softer than it feels. You need to collect it to fix the shrink ray",
 			"portable": true,
-			"discovered": true,
+			"discovered": false,
 			"containsHiddenObject": false,
 			"discoveryStatement": "",
 			"hiddenObject": ""

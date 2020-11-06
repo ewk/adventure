@@ -18,7 +18,7 @@
       "portable": false,
       "discovered": true,
       "containsHiddenObject": true,
-      "discoveryStatement": "",
+      "discoveryStatement": "There is a thread you can pull, that might come in handy. ",
       "hiddenObject": "thread"
     },
     "thread": {
@@ -27,7 +27,7 @@
       "portable": true,
       "discovered": false,
       "containsHiddenObject": false,
-      "discoveryStatement": "I think I can use this thread to get out of here, if I just give it a yank",
+      "discoveryStatement": "",
       "hiddenObject": ""
     },
     "mirror": {

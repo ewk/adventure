@@ -3,8 +3,8 @@
   "longDesc": "You are in the basement lab for the first time. To the west, a hatch leads up and out to the backyard. It is the only real exit. On the northern wall, in the corner to the east, there is a laundry chute which opens up to a laundry basket. You cannot climb up it, but you can slide down it if you know where the entrance is. There is a desk on the south wall, with a computer and a big, old fashioned, keyboard. You need a password to access the computer. The computer has the software for the shrink gun. ",
   "description": "You are in the basement lab. To the west, a hatch leads up and out to the backyard. It is the only real exit. On the northern wall, in the corner to the east, there is a laundry chute which opens up to a laundry basket. You cannot climb up it, but you can slide down it if you know where the entrance is.",
   "items": {
-    "laundryChute": {
-      "name": "laundryChute",
+    "laundry chute": {
+      "name": "laundry chute",
       "description": "The laundry chute leads up to your bedroom, but you can't climb up it, you can only slide down it.",
       "portable": false,
       "discovered": true,
@@ -28,9 +28,9 @@
       "discovered": true,
       "containsHiddenObject": true,
       "discoveryStatement": "Welcome, here's that software you wanted.",
-      "hiddenObject": "growRaySoftware"
+      "hiddenObject": "grow ray software"
     },
-    "growRaySoftware": {
+    "grow ray software": {
       "name": "growRaySoftware",
       "description": "You need to enter the password to get the grow ray software. ",
       "portable": true,

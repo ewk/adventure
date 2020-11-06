@@ -3,14 +3,14 @@
 	"longDesc": "This if your first time in the dining room. The exit to the downstairs hallway is on the east wall. There is an exit to the backyard on the west wall. There is a giant mahogany table which is fully set for a dinner partyy. There is a candelabra in the middle with three tall candles. There is a cabinet on the south wall, underneath a large window which looks out to the street. The north wall is open to the living room. There is no door, you can just keep walking through. There is a painting on the east wall next to the door, it shows a bowl of fruit. It has a clue about the game. You need to climb onto the table and collect a candle.",
 	"description": "You are in the dining room. The exit to the downstairs hallway is on the east wall. There is an exit to the backyard on the west wall. There is a giant mahogany table which is fully set for a dinner partyy. There is a candelabra in the middle with three tall candles. There is a cabinet on the south wall, underneath a large window which looks out to the street. The north wall is open to the living room. There is no door, you can just keep walking through.",
   "items": {
-		"diningRoomTable": {
-			"name": "diningRoomTable",
+		"dining room table": {
+			"name": "dining room table",
 			"description": "The dining room table is tall, mahogany, set for a formal dinner party for no discernable reason",
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "",
-			"hiddenObject": ""
+			"discoveryStatement": "There's three candles in this candelabra and wax everywhere.",
+			"hiddenObject": "candles"
 		},
 		"painting": {
 			"name": "painting",
@@ -25,7 +25,7 @@
 			"name": "candles",
 			"description": "On the dining room table in an ornate candleabra",
 			"portable": true,
-			"discovered": true,
+			"discovered": false,
 			"containsHiddenObject": false,
 			"discoveryStatement": "",
 			"hiddenObject": ""

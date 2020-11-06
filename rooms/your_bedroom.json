@@ -12,17 +12,17 @@
 			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"underYourBed": {
-			"name": "underYourBed",
-			"description": " Under your bed is dark, it's smelly, but there are no monsters...you think",
+		"under the bed": {
+			"name": "under the bed",
+			"description": " Under the bed is dark, it's smelly, but there are no monsters...you think",
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
 			"discoveryStatement": "That's where the dog whistle went!",
-			"hiddenObject": "dogWhistle"
+			"hiddenObject": "dog whistle"
 		},
-		"dogWhistle": {
-			"name": "dogWhistle",
+		"dog whistle": {
+			"name": "dog whistle",
 			"description": "The dog whistle is small and silver. Use it to summon your mighty steed",
 			"portable": true,
 			"discovered": false,
@@ -30,8 +30,8 @@
 			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"dirtySocks": {
-			"name": "dirtySocks",
+		"dirty socks": {
+			"name": "dirty socks",
 			"description": "Your socks are all identical black, crew cut socks that can be bought in ten packs at the store. These ones are stinky but also important",
 			"portable": true,
 			"discovered": true,

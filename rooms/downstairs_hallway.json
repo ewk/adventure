@@ -12,20 +12,20 @@
 			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"coatHooks": {
-			"name": "coatHooks",
+		"coat hooks": {
+			"name": "coat hooks",
 			"description": "There are three coat hooks on the east wall at the south end of the hallway. Only one coat (the player's) is hung there now",
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
 			"discoveryStatement": "Hey that's your coat!",
-			"hiddenObject": ""
+			"hiddenObject": "your coat"
 		},
-		"yourCoat": {
-			"name": "yourCoat",
+		"your coat": {
+			"name": "your coat",
 			"description": "This is your coat. It is bright blue and very warm with a hood you can barely see out of.",
 			"portable": true,
-			"discovered": true,
+			"discovered": false,
 			"containsHiddenObject": false,
 			"discoveryStatement": "",
 			"hiddenObject": ""

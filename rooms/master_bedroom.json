@@ -17,9 +17,9 @@
 			"description": "Your parents' desk, littered with papers and the notebook with all of their secrets.",
 			"portable": false,
 			"discovered": true,
-			"containsHiddenObject": false,
-			"discoveryStatement": "",
-			"hiddenObject": ""
+			"containsHiddenObject": true,
+			"discoveryStatement": "There's the notebook!",
+			"hiddenObject": "notebook"
 		},
 		"bed": {
 			"name": "bed",
@@ -34,7 +34,7 @@
 			"name": "notebook",
 			"description": "The well-worn notebook is stuffed with extra pieces of paper. Hidden until you examine the desk",
 			"portable": true,
-			"discovered": true,
+			"discovered": false,
 			"containsHiddenObject": false,
 			"discoveryStatement": "",
 			"hiddenObject": ""
