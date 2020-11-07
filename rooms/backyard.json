@@ -1,7 +1,7 @@
 {
   "name": "Backyard",	
-	"longDesc": "This is your first time in the backyard. If you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner. There is a patio umbrella folded on the ground next to this exit. To the west, there is a sandbox. There is an eagle circling overhead. You need to collect sand from the sandbox. You can use the umbrella to hide from the eagle.",
-	"description": "You are in the backyard. If you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner. There is a patio umbrella folded on the ground next to this exit. To the west, there is a sandbox. There is an eagle circling overhead. ",
+	"longDesc": "This is your first time in the backyard.\nIf you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner.\nThere is a patio umbrella folded on the ground next to this exit.\nTo the west, there is a sandbox.\nThere is an eagle circling overhead.\nYou need to collect sand from the sandbox.\nYou can use the umbrella to hide from the eagle.\n",
+	"description": "You are in the backyard.\nIf you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner.\nThere is a patio umbrella folded on the ground next to this exit.\nTo the west, there is a sandbox.\nThere is an eagle circling overhead.\n",
 	"items": {
 		"eagle": {
 			"name": "eagle",

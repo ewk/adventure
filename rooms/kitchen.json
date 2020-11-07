@@ -1,7 +1,7 @@
 {
   "name": "Kitchen",
-	"longDesc": "You are in the kitchen for the first time. The pantry is behind a curtain on the north wall. There is a refrigerator, pulled a bit away from the wall, on the east wall. There is a counter with a giant inset sink on the south wall. There is a screw on the ground behing the fridge, it is hidden until you examine the refrigerator.",
-	"description": "You are in the kitchen. The pantry is behind a curtain on the north wall. There is a refrigerator, pulled a bit away from the wall, on the east wall. There is a counter with a giant inset sink on the south wall. There is a screw on the ground behing the fridge, it is hidden until you examine the refrigerator.",
+	"longDesc": "You are in the kitchen for the first time.\nThe pantry is behind a curtain on the north wall.\nThere is a refrigerator, pulled a bit away from the wall, on the east wall.\nThere is a counter with a giant inset sink on the south wall.\nThere is a screw on the ground behing the fridge, it is hidden until you examine the refrigerator.\n",
+	"description": "You are in the kitchen.\nThe pantry is behind a curtain on the north wall.\nThere is a refrigerator, pulled a bit away from the wall, on the east wall.\nThere is a counter with a giant inset sink on the south wall.\nThere is a screw on the ground behing the fridge, it is hidden until you examine the refrigerator.\n",
   "items": {
 		"refrigerator": {
 			"name": "refrigerator",

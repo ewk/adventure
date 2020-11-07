@@ -1,7 +1,7 @@
 {
   "name": "Family Room",
-	"longDesc": "You are in the family room for the first time. The door to the downstairs hallway is on the west wall, there are no other exits in thsi room. There is a large window on the east wall. On the north wall there is an entertainment system with an old tv, wires are popping out the back and sides, and only half of the picture works. The tv is on the entertainment system, away from the wall. You need to get a copper wire from the back of it.  ",
-	"description": "You are in the family room. there is only one exit, on the west wall, to the downstairs hallway.",
+	"longDesc": "You are in the family room for the first time.\nThe door to the downstairs hallway is on the west wall, there are no other exits in thsi room.\nThere is a large window on the east wall.\nOn the north wall there is an entertainment system with an old tv, wires are popping out the back and sides, and only half of the picture works.\nThe tv is on the entertainment system, away from the wall.\nYou need to get a copper wire from the back of it.\n",
+	"description": "You are in the family room.\nThere is only one exit, on the west wall, to the downstairs hallway.\n",
 	"items": {
 		"tv": {
 			"name": "tv",

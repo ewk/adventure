@@ -1,7 +1,7 @@
 {
   "name": "Bathroom",
-	"longDesc": "This is your first time in the bathroom. The exit is behind you, on the west wall. There is a shower to your left, on the north wall, with an opaque shower curtain, you cannot see through it. There is a sink in front of you, on the east wall, and a toilet with a stack of magazines on the tank, on the south wall. There is also a litter box next to the toilet, on the south wall. You need to look in the shower and see what is written on the wall. You need to look under the sink and take the shampoo. ",
-	"description": "You are in the bathroom. The exit is behind you, on the west wall. There is a shower to your left, on the north wall, with an opaque shower curtain, you cannot see through it. There is a sink in front of you, on the east wall, and a toilet with a stack of magazines on the tank, on the south wall. There is also a litter box next to the toilet, on the south wall. ",
+	"longDesc": "This is your first time in the bathroom.\nThe exit is behind you, on the west wall.\nThere is a shower to your left, on the north wall, with an opaque shower curtain, you cannot see through it.\nThere is a sink in front of you, on the east wall, and a toilet with a stack of magazines on the tank, on the south wall.\nThere is also a litter box next to the toilet, on the south wall.\nYou need to look in the shower and see what is written on the wall.\nYou need to look under the sink and take the shampoo.\n",
+	"description": "You are in the bathroom.\nThe exit is behind you, on the west wall.\nThere is a shower to your left, on the north wall, with an opaque shower curtain, you cannot see through it.\nThere is a sink in front of you, on the east wall, and a toilet with a stack of magazines on the tank, on the south wall.\nThere is also a litter box next to the toilet, on the south wall.\n",
 	"items": {
 		"shower": {
 			"name": "shower",

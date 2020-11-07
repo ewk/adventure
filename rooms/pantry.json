@@ -1,7 +1,7 @@
 {
   "name": "Pantry",
-	"longDesc": "You are in the pantry for the first time. There is a lot of food in here, both for humans and pets. There are three shelves stuffed with food. There is a box of cornflakes on the top shelf, on the north wall, but you'll have to climb the shelves to get up there. You should grab the cat treats to distract the cat, and dog treats to reward the dog for coming when you call. ",
-	"description": "You are in the pantry. There is a lot of food in here, both for humans and pets. There are three shelves stuffed with food. There is a box of cornflakes on the top shelf, on the north wall, but you'll have to climb the shelves to get up there. You should grab the cat treats to distract the cat, and dog treats to reward the dog for coming when you call. ",
+	"longDesc": "You are in the pantry for the first time.\nThere is a lot of food in here, both for humans and pets.\nThere are three shelves stuffed with food.\nThere is a box of cornflakes on the top shelf, on the north wall, but you'll have to climb the shelves to get up there.\nYou should grab the cat treats to distract the cat, and dog treats to reward the dog for coming when you call.\n",
+	"description": "You are in the pantry.\nThere is a lot of food in here, both for humans and pets.\nThere are three shelves stuffed with food.\nThere is a box of cornflakes on the top shelf, on the north wall, but you'll have to climb the shelves to get up there.\nYou should grab the cat treats to distract the cat, and dog treats to reward the dog for coming when you call.\n",
 	"items": {
 		"shelves": {
 			"name": "shelves",
