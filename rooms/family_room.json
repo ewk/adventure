@@ -1,7 +1,7 @@
 {
   "name": "Family Room",
-	"longDesc": "You are in the family room for the first time. The door to the downstairs hallway is on the west wall, there are no other exits in thsi room. There is a large window on the east wall. On the north wall there is an entertainment system with an old tv, wires are popping out the back and sides, and only half of the picture works. The tv is on the entertainment system, away from the wall. You need to get a copper wire from the back of it.  ",
-	"description": "You are in the family room. there is only one exit, on the west wall, to the downstairs hallway.",
+	"longDesc": "You are in the family room for the first time.\nThe door to the downstairs hallway is on the west wall, there are no other exits in thsi room.\nThere is a large window on the east wall.\nOn the north wall there is an entertainment system with an old tv, wires are popping out the back and sides, and only half of the picture works.\nThe tv is on the entertainment system, away from the wall.\nYou need to get a copper wire from the back of it.\n",
+	"description": "You are in the family room.\nThere is only one exit, on the west wall, to the downstairs hallway.\n",
 	"items": {
 		"tv": {
 			"name": "tv",
@@ -9,34 +9,34 @@
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatment": "",
-			"hiddenObject": "copperWire"
+			"discoveryStatement": "That copper wire looks like it'll be the easiest to cut.",
+			"hiddenObject": "copper wire"
 		},
-		"toyBox": {
-			"name": "toyBox",
+		"toy box": {
+			"name": "toy box",
 			"description": "The toy box is empty now, just with a note saying your toys were taken away from the last time you stole an experiment.",
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"copperWire": {
-			"name": "copperWire",
+		"copper wire": {
+			"name": "copper wire",
 			"description": "There is a loose copper wire wrapped in red rubber.  ",
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,
-			"discoveryStatment": "Perfect this is just what you need, some copper wire is on the list",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"nintendo64": {
-			"name": "nintendo64",
+		"nintendo 64": {
+			"name": "nintendo 64",
 			"description": "This is an old, dusty Nintendo 64. To accompany the aging relic of the tv, a classic gaming system",
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		}
 	},

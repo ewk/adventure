@@ -1,7 +1,7 @@
 {
   "name": "Your Bedroom",
-  "longDesc": "This is your first time in the bedroom. The exit it to the hallway, on the west wall. There is a bed against the north wall, you store your treasures underneath it. There is a bed side table with a lamp next to your bed, pushed up against the east wall at the head of the bed. On the south wall is your closet. It has a chute that leads to the basement where the laundry room is. There are diry socks on the floor of your closet. There is a dog whistle on the floor underneath the bed.",
-  "description": "This is your bedroom. The exit it to the hallway, on the west wall. There is a bed against the north wall, you store your treasures underneath it. There is a bed side table with a lamp next to your bed, pushed up against the east wall at the head of the bed. On the south wall is your closet. It has a chute that leads to the basement where the laundry room is.",
+  "longDesc": "This is your first time in the bedroom.\nThe exit is to the hallway, on the west wall.\nThere is a bed against the north wall, you store your treasures underneath it.\nThere is a bed side table with a lamp next to your bed, pushed up against the east wall at the head of the bed.\nOn the south wall is your closet.\nIt has a chute that leads to the basement where the laundry room is.\nThere are diry socks on the floor of your closet.\nThere is a dog whistle on the floor underneath the bed.\n",
+  "description": "This is your bedroom.\nThe exit is to the hallway, on the west wall.\nThere is a bed against the north wall, you store your treasures underneath it.\nThere is a bed side table with a lamp next to your bed, pushed up against the east wall at the head of the bed.\nOn the south wall is your closet.\nIt has a chute that leads to the basement where the laundry room is.\n",
   "items": {
 		"closet": {
 			"name": "closet",
@@ -9,34 +9,34 @@
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"underYourBed": {
-			"name": "underYourBed",
-			"description": " Under your bed is dark, it's smelly, but there are no monsters...you think",
+		"under the bed": {
+			"name": "under the bed",
+			"description": " Under the bed is dark, it's smelly, but there are no monsters...you think",
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatment": "That's where the dog whistle went!",
-			"hiddenObject": "dogWhistle"
+			"discoveryStatement": "That's where the dog whistle went!",
+			"hiddenObject": "dog whistle"
 		},
-		"dogWhistle": {
-			"name": "dogWhistle",
+		"dog whistle": {
+			"name": "dog whistle",
 			"description": "The dog whistle is small and silver. Use it to summon your mighty steed",
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"dirtySocks": {
-			"name": "dirtySocks",
+		"dirty socks": {
+			"name": "dirty socks",
 			"description": "Your socks are all identical black, crew cut socks that can be bought in ten packs at the store. These ones are stinky but also important",
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		}
 	},

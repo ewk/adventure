@@ -1,7 +1,7 @@
 {
   "name": "Attic",
-  "longDesc" : "This is your first time in the attic. There is an exit in the floor on the south wall that drops down into the Upstairs Hallway. The chimney is on the north wall, you can't get inside it from the attic. There is a chest of drawers on the west wall, and the mirror on the east wall. There is an unraveling run underneath your feet, at the south wall. You need to look at the mirror, it has no hidden object. You need to look at the rug to reveal the string.",
-  "description" : "You are in the attic. There is an exit in the floor on the south wall that drops down into the Upstairs Hallway. The chimney is on the north wall, you can't get inside it from the attic. There is a chest of drawers on the west wall, and the mirror on the east wall. There is an unraveling run underneath your feet, at the south wall.",
+  "longDesc" : "This is your first time in the attic.\nThere is an exit in the floor on the south wall that drops down into the Upstairs Hallway.\nThe chimney is on the north wall, you can't get inside it from the attic.\nThere is a chest of drawers on the west wall, and the mirror on the east wall.\nThere is an unraveling rug underneath your feet, at the south wall.\nYou need to look at the mirror, it has no hidden object.\nYou need to look at the rug to reveal the string.\n",
+  "description" : "You are in the attic.\nThere is an exit in the floor on the south wall that drops down into the Upstairs Hallway.\nThe chimney is on the north wall, you can't get inside it from the attic.\nThere is a chest of drawers on the west wall, and the mirror on the east wall.\nThere is an unraveling rug underneath your feet, at the south wall.\n",
   "items": {
     "chest of drawers": {
       "name": "chest of drawers",
@@ -9,7 +9,7 @@
       "portable": false,
       "discovered": true,
       "containsHiddenObject": false,
-      "discoveryStatment": "",
+      "discoveryStatement": "",
       "hiddenObject": ""
     },
     "rug": {
@@ -18,7 +18,7 @@
       "portable": false,
       "discovered": true,
       "containsHiddenObject": true,
-      "discoveryStatment": "",
+      "discoveryStatement": "There is a thread you can pull, that might come in handy. ",
       "hiddenObject": "thread"
     },
     "thread": {
@@ -27,7 +27,7 @@
       "portable": true,
       "discovered": false,
       "containsHiddenObject": false,
-      "discoveryStatment": "I think I can use this thread to get out of here, if I just give it a yank",
+      "discoveryStatement": "",
       "hiddenObject": ""
     },
     "mirror": {
@@ -36,7 +36,7 @@
       "portable": false,
       "discovered": true,
       "containsHiddenObject": false,
-      "discoveryStatment": "",
+      "discoveryStatement": "",
       "hiddenObject": ""
     }
   },

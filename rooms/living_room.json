@@ -1,16 +1,16 @@
 {
   "name": "Living Room",
-	"longDesc": "You are in the living room for the first time. The south wall is open to the dining room, there is no doorway to the hallway from the living room. There is a large window on the west wall that looks out onto the backyard. The large, comfortable-looking couch faces the north wall, where there is a fireplace. It has always been too heavy for your parents to move easily. There is a tear on the side of the couch facing the fireplace with stuffing coming out. There is a knob to the west of the fireplce opening that controls the fire. There is no door to the hallway from this room, you have to exit through the dining room.",
-	"description": "You are in the living room.The south wall is open to the dining room, there is no doorway to the hallway from the living room. There is a large window on the west wall that looks out onto the backyard. There is no door on the east wall, you cannot get to the hallway directly from this room.",
+	"longDesc": "You are in the living room for the first time.\nThe south wall is open to the dining room, there is no doorway to the hallway from the living room.\nThere is a large window on the west wall that looks out onto the backyard.\nThe large, comfortable-looking couch faces the north wall, where there is a fireplace.\nIt has always been too heavy for your parents to move easily.\nThere is a tear on the side of the couch facing the fireplace with stuffing coming out.\nThere is a knob to the west of the fireplce opening that controls the fire.\nThere is no door to the hallway from this room, you have to exit through the dining room.\n",
+	"description": "You are in the living room.\nThe south wall is open to the dining room, there is no doorway to the hallway from the living room.\nThere is a large window on the west wall that looks out onto the backyard.\nThere is no door on the east wall, you cannot get to the hallway directly from this room.\n",
 	"items": {
 		"couch": {
 			"name": "couch",
 			"description": "Giant couch, well worn, visible tear with stuffing coming out. ",
 			"portable": false,
 			"discovered": true,
-			"containsHiddenObject": false,
-			"discoveryStatment": "",
-			"hiddenObject": ""
+			"containsHiddenObject": true,
+			"discoveryStatement": "You should be able to pull that stuffing out.",
+			"hiddenObject": "couch stuffing"
 		},
 		"window": {
 			"name": "window",
@@ -18,7 +18,7 @@
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
 		"fireplace": {
@@ -27,16 +27,16 @@
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"couchStuffing": {
-			"name": "couchStuffing",
+		"couch stuffing": {
+			"name": "couch stuffing",
 			"description": "This is some stuffing from the couch. It's white a fluffy and looks softer than it feels. You need to collect it to fix the shrink ray",
 			"portable": true,
-			"discovered": true,
+			"discovered": false,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		}
 	},

@@ -1,7 +1,7 @@
 {
   "name": "Backyard",	
-	"longDesc": "This is your first time in the backyard. If you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner. There is a patio umbrella folded on the ground next to this exit. To the west, there is a sandbox. There is an eagle circling overhead. You need to collect sand from the sandbox. You can use the umbrella to hide from the eagle.",
-	"description": "You are in the backyard. If you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner. There is a patio umbrella folded on the ground next to this exit. To the west, there is a sandbox. There is an eagle circling overhead. ",
+	"longDesc": "This is your first time in the backyard.\nIf you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner.\nThere is a patio umbrella folded on the ground next to this exit.\nTo the west, there is a sandbox.\nThere is an eagle circling overhead.\nYou need to collect sand from the sandbox.\nYou can use the umbrella to hide from the eagle.\n",
+	"description": "You are in the backyard.\nIf you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner.\nThere is a patio umbrella folded on the ground next to this exit.\nTo the west, there is a sandbox.\nThere is an eagle circling overhead.\n",
 	"items": {
 		"eagle": {
 			"name": "eagle",
@@ -9,7 +9,7 @@
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
 		"sandbox": {
@@ -17,17 +17,17 @@
 			"description": "There is a sandbox full of sand, toys, and buckets.",
 			"portable": false,
 			"discovered": true,
-			"containsHiddenObject": false,
-			"discoveryStatment": "",
-			"hiddenObject": ""
+			"containsHiddenObject": true,
+			"discoveryStatement": "There's still sand in here",
+			"hiddenObject": "sand"
 		},
 		"sand": {
 			"name": "sand",
-			"description": "The sand is in the sandbox, you need it for the quest",
+			"description": "The sand is from the sandbox, you need it for the quest",
 			"portable": true,
-			"discovered": true,
+			"discovered": false,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
 		"squeekyToy": {
@@ -36,7 +36,7 @@
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		}
 	},

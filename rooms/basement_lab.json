@@ -1,15 +1,15 @@
 {
   "name": "Basement Lab",
-  "longDesc": "You are in the basement lab for the first time. To the west, a hatch leads up and out to the backyard. It is the only real exit. On the northern wall, in the corner to the east, there is a laundry chute which opens up to a laundry basket. You cannot climb up it, but you can slide down it if you know where the entrance is. There is a desk on the south wall, with a computer and a big, old fashioned, keyboard. You need a password to access the computer. The computer has the software for the shrink gun. ",
-  "description": "You are in the basement lab. To the west, a hatch leads up and out to the backyard. It is the only real exit. On the northern wall, in the corner to the east, there is a laundry chute which opens up to a laundry basket. You cannot climb up it, but you can slide down it if you know where the entrance is.",
+  "longDesc": "You are in the basement lab for the first time.\nTo the west, a hatch leads up and out to the backyard.\nIt is the only real exit.\nOn the northern wall, in the corner to the east, there is a laundry chute which opens up to a laundry basket.\nYou cannot climb up it, but you can slide down it if you know where the entrance is.\nThere is a desk on the south wall, with a computer and a big, old fashioned, keyboard.\nYou need a password to access the computer.\nThe computer has the software for the shrink gun.\n ",
+  "description": "You are in the basement lab.\nTo the west, a hatch leads up and out to the backyard.\nIt is the only real exit.\nOn the northern wall, in the corner to the east, there is a laundry chute which opens up to a laundry basket.\nYou cannot climb up it, but you can slide down it if you know where the entrance is.\n",
   "items": {
-    "laundryChute": {
-      "name": "laundryChute",
+    "laundry chute": {
+      "name": "laundry chute",
       "description": "The laundry chute leads up to your bedroom, but you can't climb up it, you can only slide down it.",
       "portable": false,
       "discovered": true,
       "containsHiddenObject": false,
-      "discoveryStatment": "",
+      "discoveryStatement": "",
       "hiddenObject": ""
     },
     "desk": {
@@ -18,7 +18,7 @@
       "portable": false,
       "discovered": true,
       "containsHiddenObject": false,
-      "discoveryStatment": "",
+      "discoveryStatement": "",
       "hiddenObject": ""
     },
     "computer": {
@@ -27,16 +27,16 @@
       "portable": false,
       "discovered": true,
       "containsHiddenObject": true,
-      "discoveryStatment": "Welcome, here's that software you wanted.",
-      "hiddenObject": "growRaySoftware"
+      "discoveryStatement": "Welcome, here's that software you wanted.",
+      "hiddenObject": "grow ray software"
     },
-    "growRaySoftware": {
+    "grow ray software": {
       "name": "growRaySoftware",
       "description": "You need to enter the password to get the grow ray software. ",
       "portable": true,
       "discovered": false,
       "containsHiddenObject": false,
-      "discoveryStatment": "",
+      "discoveryStatement": "",
       "hiddenObject": ""
     }
   },

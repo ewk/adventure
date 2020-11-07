@@ -14,23 +14,20 @@ func lookAtRoom() {
 
 // lookAtItem prints the description of an object or feature
 func lookAtItem(item string) {
-	// This is a fairly generic function. It needs to not only describe
-	// an inventory object, but also any feature that has a text description
-
-	// TODO updates for new Item approach
-	// The item's description is printed.
-	// If ContainsHiddenObject == true:
-	//    print DiscoveryStatement
-	//    set ContainsHiddenObject = false
-	//    get the HiddenObject name
-	//    look up that name in the room's Items map
-	//    print that object's Description
-	//    set that object's Discovered bool to true
-
 	if val, ok := inventory[item]; ok {
 		fmt.Println(val.Description)
 	} else if val, ok := curRoom.Items[item]; ok {
 		fmt.Println(val.Description)
+		if val.ContainsHiddenObject == true {
+			if hiddenThing, ok := curRoom.Items[val.HiddenObject]; ok {
+				fmt.Println(val.DiscoveryStatement)
+				fmt.Println(hiddenThing.Description)
+				hiddenThing.Discovered = true
+			} else {
+				fmt.Println("Oops, we forgot to hide something there.\n")
+			}
+			val.ContainsHiddenObject = false
+		}
 	} else {
 		fmt.Printf("%s not found.\n", item)
 	}
@@ -131,7 +128,7 @@ func help() {
 }
 
 func playGame() {
-	openingMessage := "It was a bright and sunny afternoon. Everything was going fine. Your parents were developing new semi-legal technology in their lab, and you were watching them. They've told you 100 times to not watch them while they work, but what are they going to do? You're curious. The shrink ray! What a cool invention. You can take anything and make it...like...smaller. They've told you not to PLAY with the inventions 101 times, but what are they going to do? You're curious. So yeah, they did kick you out of the lab when they left to go run errands, telling you 102 times to not play with the inventions, but you smuggled that shrink ray out anyway. That's the last thing you remember...where are you? Why don't you try LOOKing around."
+	openingMessage := "It was a bright and sunny afternoon. Everything was going fine.\nYour parents were developing new semi-legal technology in their lab, and you were watching them.\nThey've told you 100 times to not watch them while they work, but what are they going to do?\nYou're curious. The shrink ray! What a cool invention.\nYou can take anything and make it...like...smaller.\nThey've told you not to PLAY with the inventions 101 times, but what are they going to do?\nYou're curious.\nSo yeah, they did kick you out of the lab when they left to go run errands, telling you 102 times to not play with the inventions,\nbut you smuggled that shrink ray out anyway.That's the last thing you remember...\nWhere are you?\nWhy don't you try LOOKing around.\n"
 
 	fmt.Println(openingMessage)
 

@@ -1,7 +1,7 @@
 {
   "name": "Downstairs Hallway",
-	"longDesc": "You are in the downstairs hallway for the first time. The front door is on the south wall. It opens to the porch, which is outside. On your right, on the west wall, there is a door that leads to the dining room, but not the living room. The only way to get to the living room is through the dining room. On your left, on the east wall, there is a door for the kitchen, and the family room. There is a pantry in the kitchen but you it can only be accessed through the kitchen. By the front door, on the south end of the room, and the east wall, there are three coat hooks, but only one coat is hung there now. The player's coat. If the player gets their coat, they will be able to avoid the Eagle, they won't know this until they inspect the coat hooks. On the floor at the south wall, right by the front door, is a pile of mail. There is a letter with a clue for the password to their parents'c omputer on one of the envelopes.",
-	"description": "You are in the downstairs hallway. The front door is on the south wall. It opens to the porch, which is outside. On your right, on the west wall, there is a door that leads to the dining room, but not the living room. The only way to get to the living room is through the dining room. On your left, on the east wall, there is a door for the kitchen, and the family room. There is a pantry in the kitchen but you it can only be accessed through the kitchen.",
+	"longDesc": "You are in the downstairs hallway for the first time.\nThe front door is on the south wall.\nIt opens to the porch, which is outside.\nOn your right, on the west wall, there is a door that leads to the dining room, but not the living room.\nThe only way to get to the living room is through the dining room. On your left, on the east wall, there is a door for the kitchen, and the family room.\nThere is a pantry in the kitchen but you it can only be accessed through the kitchen.\nBy the front door, on the south end of the room, and the east wall, there are three coat hooks, but only one coat is hung there now.\nThe player's coat.\nIf the player gets their coat, they will be able to avoid the Eagle, they won't know this until they inspect the coat hooks.\nOn the floor at the south wall, right by the front door, is a pile of mail.\nThere is a letter with a clue for the password to their parents'c omputer on one of the envelopes.\n",
+	"description": "You are in the downstairs hallway.\nThe front door is on the south wall.\nIt opens to the porch, which is outside.\nOn your right, on the west wall, there is a door that leads to the dining room, but not the living room.\nThe only way to get to the living room is through the dining room.\nOn your left, on the east wall, there is a door for the kitchen, and the family room.\nThere is a pantry in the kitchen but you it can only be accessed through the kitchen.\n",
 	"items": {
 		"mail": {
 			"name": "mail",
@@ -9,25 +9,25 @@
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"coatHooks": {
-			"name": "coatHooks",
+		"coat hooks": {
+			"name": "coat hooks",
 			"description": "There are three coat hooks on the east wall at the south end of the hallway. Only one coat (the player's) is hung there now",
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatment": "Hey that's your coat!",
-			"hiddenObject": ""
+			"discoveryStatement": "Hey that's your coat!",
+			"hiddenObject": "your coat"
 		},
-		"yourCoat": {
-			"name": "yourCoat",
+		"your coat": {
+			"name": "your coat",
 			"description": "This is your coat. It is bright blue and very warm with a hood you can barely see out of.",
 			"portable": true,
-			"discovered": true,
+			"discovered": false,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
 		"skateboard": {
@@ -36,7 +36,7 @@
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,
-			"discoveryStatment": "",
+			"discoveryStatement": "",
 			"hiddenObject": ""
 		}
 	},
