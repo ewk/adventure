@@ -36,6 +36,10 @@ func lookAtItem(item string) {
 // takeItem place a portable item into the player's inventory
 func takeItem(item string) {
 	if val, ok := curRoom.Items[item]; ok {
+		if val.Discovered == false {
+			fmt.Printf("%s not found.\n", item)
+			return
+		}
 		if val.Portable == true {
 			inventory[item] = val
 			delete(curRoom.Items, item) // remove item from room after picking it up
