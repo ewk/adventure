@@ -45,5 +45,5 @@
 		}
 	},
 	"visited" : false,
-  "exits": [ "Master Bedroom", "Bathroom", "Your Bedroom", "Attic" ]
+  "exits": [ "Master Bedroom", "Bathroom", "Your Bedroom", "Attic", "Staircase" ]
 }
