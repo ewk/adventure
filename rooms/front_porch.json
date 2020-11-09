@@ -6,6 +6,7 @@
 		"flower pot": {
 			"name": "flower pot",
 			"description": "This is a giant flower pot with some giant leafy green thing growing out of it. These leaves are huge!",
+			"tooBig":true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -15,6 +16,7 @@
 		"wicker couch": {
 			"name": "wicker couch",
 			"description": "The wicker couch is weathered and covered with bird seed.",  
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -24,6 +26,7 @@
 		"newspaper": {
 			"name": "newspaper",
 			"description": "Last Sunday's Newspaper. Headline: Mads and Madeline Scientist do it again...",
+			"tooBig": true,
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,

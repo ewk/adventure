@@ -6,6 +6,7 @@
 		"tv": {
 			"name": "tv",
 			"description": "The tv is old, has wires popping out the sides and back, but it's all your parents will let you have",
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
@@ -15,6 +16,7 @@
 		"toy box": {
 			"name": "toy box",
 			"description": "The toy box is empty now, just with a note saying your toys were taken away from the last time you stole an experiment.",
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -24,6 +26,7 @@
 		"copper wire": {
 			"name": "copper wire",
 			"description": "There is a loose copper wire wrapped in red rubber.  ",
+			"tooBig": false,
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,
@@ -33,6 +36,7 @@
 		"nintendo 64": {
 			"name": "nintendo 64",
 			"description": "This is an old, dusty Nintendo 64. To accompany the aging relic of the tv, a classic gaming system",
+			"tooBig": true,
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,

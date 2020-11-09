@@ -6,6 +6,7 @@
 		"fireplace": {
 			"name": "fireplace",
 			"description": "The fireplace is brick, covered in years of soot. Looks like a looooooong way down.",
+			"tooBig" : true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -15,6 +16,7 @@
 		"desk": {
 			"name": "desk",
 			"description": "Your parents' desk, littered with papers and the notebook with all of their secrets.",
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
@@ -24,6 +26,7 @@
 		"bed": {
 			"name": "bed",
 			"description": "The bed is old, heavy, and dark, with no fewer than three quilts, and six pillows piled on top of it.",
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -33,6 +36,7 @@
 		"notebook": {
 			"name": "notebook",
 			"description": "The well-worn notebook is stuffed with extra pieces of paper. Hidden until you examine the desk",
+			"tooBig": true,
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,

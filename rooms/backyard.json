@@ -6,6 +6,7 @@
 		"eagle": {
 			"name": "eagle",
 			"description": "The eagle seems to have noticed you.  You wonder if it will swoop down to grab you if you step into the yard.",
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -15,6 +16,7 @@
 		"sandbox": {
 			"name": "sandbox",
 			"description": "There is a sandbox full of sand, toys, and buckets.",
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
@@ -24,6 +26,7 @@
 		"sand": {
 			"name": "sand",
 			"description": "The sand is from the sandbox, you need it for the quest",
+			"tooBig": false,
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,
@@ -33,6 +36,7 @@
 		"squeekyToy": {
 			"name": "squeekyToy",
 			"description": "This is a red ball squeeky toy. Your dog can hear this from a mile away and will come running, can serve a similar function to the dog whistle",
+			"tooBig":false,
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,

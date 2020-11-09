@@ -6,6 +6,7 @@
 		"recycling bin": {
 			"name": "recycling bin",
 			"description": "The recycling bin is full of seltzer cans.",
+			"tooBig" : "true",
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
@@ -15,6 +16,7 @@
 		"purse": {
 			"name": "purse",
 			"description": "Your mom's purse is gigantic. If you jump in you might get lost. Better not take anything or you might get caught.",
+			"tooBig" : true, 
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -24,6 +26,7 @@
 		"exercise ball": {
 			"name": "exercise ball",
 			"description": "The giant blue exercise ball that your dad uses instead of a desk chair.",
+			"tooBig": true,
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -32,7 +35,8 @@
 		},
 		"aluminum can": {
 			"name": "aluminum can",
-			"description": "Partially crushed seltzer can from a branch you cannot pronounce. There are 100 just like it in the recycling bin.",
+			"description": "Partially crushed seltzer can from a brand you cannot pronounce. There are 100 just like it in the recycling bin.",
+			"tooBig" : true,
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,

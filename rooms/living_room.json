@@ -6,6 +6,7 @@
 		"couch": {
 			"name": "couch",
 			"description": "Giant couch, well worn, visible tear with stuffing coming out. ",
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
@@ -15,6 +16,7 @@
 		"window": {
 			"name": "window",
 			"description": "Window looks out over the backyard. You can see the eagle from the window",
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -24,6 +26,7 @@
 		"fireplace": {
 			"name": "fireplace",
 			"description": "Fireplace connected to the master bedroom on the second floor.",
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -33,6 +36,7 @@
 		"couch stuffing": {
 			"name": "couch stuffing",
 			"description": "This is some stuffing from the couch. It's white a fluffy and looks softer than it feels. You need to collect it to fix the shrink ray",
+			"tooBig": false,
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,

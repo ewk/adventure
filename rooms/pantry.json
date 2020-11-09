@@ -6,6 +6,7 @@
 		"shelves": {
 			"name": "shelves",
 			"description": "There are so many shelves and so many boxes on those shelves",
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -15,6 +16,7 @@
 		"paper towels": {
 			"name": "paper towels",
 			"description": "This is a very tall stack of paper towels. Who needs this many paper towels?Climb these bad boys to reach the bottom shelf",
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -24,6 +26,7 @@
 		"cornflakes": {
 			"name": "cornflakes",
 			"description":"A box of generic Corn Flake brand corn flakes. You need these to fix the shrink ray",
+			"tooBig": false,
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -33,6 +36,7 @@
 		"dog treats": {
 			"name": "dog treats",
 			"description": "A bag of dog treats. To reward Fido",
+			"tooBig": false,
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -42,6 +46,7 @@
 		"cat treats": {
 			"name": "cat treats",
 			"description": "A bag of catnip laced cat treats. To distract Fluffy",
+			"tooBig": false,
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,

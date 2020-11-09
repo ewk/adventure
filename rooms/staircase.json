@@ -6,6 +6,7 @@
 		"sleeping dog": {
 			"name": "sleeping dog",
 			"description": "Your dog is sleeping at the foot of the stairs. He can't hear you if you call him upstairs.",
+			"tooBig" : true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -15,6 +16,7 @@
 		"peeling wallpaper": {
 			"name": "peeling wallpaper",
 			"description": "Some wallpaper seems to be peeling from the wall here, I wonder if there are any deep dark secrets hidden underneadth.",
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -24,6 +26,7 @@
 		"scarf": {
 			"name": "scarf",
 			"description": "The scarf is silky and green, patterned with some sort of leaves. ",
+			"tooBig" : true,
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -33,6 +36,7 @@
 		"books": {
 			"name": "books",
 			"description": "The books are large and heavy looking, discussing subjects such as scaffolding design, waste water management, and some big book on computers with a fruit on it.",
+			"tooBig" : true,
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,

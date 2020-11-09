@@ -6,6 +6,7 @@
 		"shower": {
 			"name": "shower",
 			"description": "The shower has a notepad with a word written on it. ",
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -15,6 +16,7 @@
 		"cabinet": {
 			"name": "cabinet",
 			"description": "The cabinet under the sink has shampoo.",
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
@@ -24,6 +26,7 @@
 		"shampoo": {
 			"name": "shampoo",
 			"description": "The shampoo is purple and smells like grapes and flowers. You need this for the quest, hidden until the cabinet is examined",
+			"tooBig": true,
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,

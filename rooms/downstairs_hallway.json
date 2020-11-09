@@ -6,6 +6,7 @@
 		"mail": {
 			"name": "mail",
 			"description": "There is a large pile of mail by the front door, on the south wall, at the end of the hallway.",
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -15,6 +16,7 @@
 		"coat hooks": {
 			"name": "coat hooks",
 			"description": "There are three coat hooks on the east wall at the south end of the hallway. Only one coat (the player's) is hung there now",
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
@@ -24,6 +26,7 @@
 		"your coat": {
 			"name": "your coat",
 			"description": "This is your coat. It is bright blue and very warm with a hood you can barely see out of.",
+			"tooBig": true,
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,
@@ -33,6 +36,7 @@
 		"skateboard": {
 			"name": "skateboard",
 			"description": "Your mom's skateboard, she left it in the middle of the hallway AGAIN!",
+			"tooBig": true,
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,

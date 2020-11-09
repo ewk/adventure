@@ -6,6 +6,7 @@
 		"closet": {
 			"name": "closet",
 			"description": "The closet is full of toys.  At the back of the closet is a laundry chute leading to the basement.",
+			"tooBig" : true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -15,6 +16,7 @@
 		"under the bed": {
 			"name": "under the bed",
 			"description": " Under the bed is dark, it's smelly, but there are no monsters...you think",
+			"tooBig" : true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
@@ -24,6 +26,7 @@
 		"dog whistle": {
 			"name": "dog whistle",
 			"description": "The dog whistle is small and silver. Use it to summon your mighty steed",
+			"tooBig" : false,
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,
@@ -33,6 +36,7 @@
 		"dirty socks": {
 			"name": "dirty socks",
 			"description": "Your socks are all identical black, crew cut socks that can be bought in ten packs at the store. These ones are stinky but also important",
+			"tooBig" : true, 
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,
