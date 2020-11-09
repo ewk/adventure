@@ -24,7 +24,7 @@ func lookAtItem(item string) {
 				fmt.Println(hiddenThing.Description)
 				hiddenThing.Discovered = true
 			} else {
-				fmt.Println("Oops, we forgot to hide something there.\n")
+				fmt.Println("Oops, we forgot to hide something there.")
 			}
 			val.ContainsHiddenObject = false
 		}
@@ -43,7 +43,7 @@ func takeItem(item string) {
 		if val.Portable == true && val.TooBig == false {
 			inventory[item] = val
 			delete(curRoom.Items, item) // remove item from room after picking it up
-			fmt.Printf("You have picked up the %s.\n It is now in your inventory\n", item)
+			fmt.Printf("You have picked up the %s.\nIt is now in your inventory\n", item)
 		} else if val.TooBig == true {
 			fmt.Printf("%s is too big to pick up!\nWhy don't you try shrinking it first?\n", item)
 		}
