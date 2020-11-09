@@ -35,7 +35,7 @@
 		},
 		"squeeky toy": {
 			"name": "squeeky toy",
-			"description": "This is a red ball squeeky toy. Your dog can hear this from a mile away and will come running, can serve a similar function to the dog whistle",
+			"description": "This is a red ball squeeky toy. Your dog can hear this from a mile away and will come running, can serve a similar function to the dog whistle. To use say squeek",
 			"tooBig":false,
 			"portable": true,
 			"discovered": true,
