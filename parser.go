@@ -104,6 +104,8 @@ func help() {
 
 	inventory :: Lists the contents of your inventory.
 
+	mystuff :: see take
+
 	look :: Print the long form explanation of the current room.
 
 	look at <feature or object> :: gives a fictionally interesting explanation of
@@ -116,6 +118,8 @@ func help() {
 
 	take :: acquire an object, putting it into your inventory.
 
+	grab: see take
+
 	drop:: remove an object from your inventory, dropping it in the current room.
 
 	savegame :: saves the state of the game to a file.
@@ -124,6 +128,8 @@ func help() {
 	the game state from the file.
 
 	exit :: save game and then exit.
+
+	quit :: see exit
 
 	help :: Print this message
 	`)
@@ -200,7 +206,7 @@ Why don't you try LOOKing around.
 			}
 		case "goto":
 			fmt.Println("Go To Statement Considered Harmful!  https://xkcd.com/292")
-		case "take":
+		case "take", "grab":
 			if len(s) > 1 {
 				tmp := s[1:]
 				item := strings.Join(tmp, " ")
@@ -216,7 +222,7 @@ Why don't you try LOOKing around.
 			} else {
 				fmt.Println("Drop what?")
 			}
-		case "inventory":
+		case "inventory", "mystuff":
 			listInventory()
 			/* TODO
 			   case "shrink":
@@ -232,7 +238,7 @@ Why don't you try LOOKing around.
 			*/
 		case "savegame":
 			saveGame()
-		case "exit":
+		case "exit", "quit":
 			saveGame()
 			return
 		case "loadgame":
