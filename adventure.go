@@ -34,10 +34,11 @@ type Room struct {
 type Item struct {
 	Name                 string
 	Description          string
+	TooBig               bool   //Fale for objects that do not need to be shrunk before they can be taken
 	Portable             bool   // False for features, true for objects
 	Discovered           bool   // True for features. For some objects this starts as true, for other objects it starts as false.
 	ContainsHiddenObject bool   // This is false for all objects. For some features this starts as true.
-	DiscoveryStatement    string // If there's a hidden object, this described the connection. "Underneath the couch, you see a cat toy."
+	DiscoveryStatement   string // If there's a hidden object, this described the connection. "Underneath the couch, you see a cat toy."
 	HiddenObject         string // Name of hidden object if there is one
 }
 

@@ -6,6 +6,7 @@
     "laundry chute": {
       "name": "laundry chute",
       "description": "The laundry chute leads up to your bedroom, but you can't climb up it, you can only slide down it.",
+      "tooBig": true,
       "portable": false,
       "discovered": true,
       "containsHiddenObject": false,
@@ -15,6 +16,7 @@
     "desk": {
       "name": "desk",
       "description": "The computer is on the desk, you need to climb the desk to get to it",
+      "tooBig":true,
       "portable": false,
       "discovered": true,
       "containsHiddenObject": false,
@@ -24,6 +26,7 @@
     "computer": {
       "name": "computer",
       "description": "This is the computer. You need to enter a password to access the software to make the shrink ray reverse",
+      "tooBig": true,
       "portable": false,
       "discovered": true,
       "containsHiddenObject": true,
@@ -33,6 +36,7 @@
     "grow ray software": {
       "name": "growRaySoftware",
       "description": "You need to enter the password to get the grow ray software. ",
+      "tooBig": false,
       "portable": true,
       "discovered": false,
       "containsHiddenObject": false,

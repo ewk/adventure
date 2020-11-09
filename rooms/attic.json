@@ -6,6 +6,7 @@
     "chest of drawers": {
       "name": "chest of drawers",
       "description": "The chest of drawers is old, antique, matched mirror",
+      "tooBig": true,
       "portable": false,
       "discovered": true,
       "containsHiddenObject": false,
@@ -15,6 +16,7 @@
     "rug": {
       "name": "rug",
       "description": "The rug is old and unraveling.",
+      "tooBig": true,
       "portable": false,
       "discovered": true,
       "containsHiddenObject": true,
@@ -24,6 +26,7 @@
     "thread": {
       "name": "thread",
       "description": "A long, loose thread from unraveling rug",
+      "tooBig": false, 
       "portable": true,
       "discovered": false,
       "containsHiddenObject": false,
@@ -33,6 +36,7 @@
     "mirror": {
       "name": "mirror",
       "description": "The mirror is old, gilded, cracked with scorch marks.",
+      "tooBig": true,
       "portable": false,
       "discovered": true,
       "containsHiddenObject": false,

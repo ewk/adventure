@@ -3,18 +3,20 @@
   "longDesc": "This is your first time at the staircase.\nWoah this staircase is a lot more imposing from this perspective.\nTwelve steps and you're not even as tall as each step!\nYour dog is sleeping at the bottom of the stairs.\nHe can't hear you if you yell but he can hear a dog whistle.\nThe wallpaper is peeling, you can see a corner of writing underneath it.\n",
   "description": "This is the staircase.\nWoah this staircase is a lot more imposing from this perspective.\nTwelve steps and you're not even as tall as each step!\nYour dog is sleeping at the bottom of the stairs.\nHe can't hear you if you yell but he can hear a dog whistle.\nThe wallpaper is peeling, you can see a corner of writing underneath it.\n",
   "items": {
-		"sleeping dog": {
-			"name": "sleeping dog",
-			"description": "Your dog is sleeping at the foot of the stairs. He can't hear you if you call him upstairs.",
+		"dog": {
+			"name": "dog",
+			"description": "Your dog is your most loyal companion, especially if you give him treats. You can summon him with the dog whistle or with the squeeky toy",
+			"tooBig" : true,
 			"portable": false,
-			"discovered": true,
-			"containsHiddenObject": false,
-			"discoveryStatement": "",
-			"hiddenObject": ""
+			"discovered": false,
+			"containsHiddenObject": true,
+			"discoveryStatement": "the dog is awake",
+			"hiddenObject": "dog"
 		},
 		"peeling wallpaper": {
 			"name": "peeling wallpaper",
 			"description": "Some wallpaper seems to be peeling from the wall here, I wonder if there are any deep dark secrets hidden underneadth.",
+			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -24,6 +26,7 @@
 		"scarf": {
 			"name": "scarf",
 			"description": "The scarf is silky and green, patterned with some sort of leaves. ",
+			"tooBig" : true,
 			"portable": true,
 			"discovered": true,
 			"containsHiddenObject": false,
@@ -33,6 +36,7 @@
 		"books": {
 			"name": "books",
 			"description": "The books are large and heavy looking, discussing subjects such as scaffolding design, waste water management, and some big book on computers with a fruit on it.",
+			"tooBig" : true,
 			"portable": true,
 			"discovered": false,
 			"containsHiddenObject": false,
