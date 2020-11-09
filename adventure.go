@@ -79,13 +79,21 @@ func loadRooms() {
 		}
 	*/
 
-	// TODO Disabled for now while development continues.
 	// Panic if fewer than 15 rooms are defined.
-	/*
-		if len(rooms) < MinRooms {
-			panic("The game must have at least 15 rooms")
-		}
-	*/
+	if len(rooms) < MinRooms {
+		panic("The game must have at least 15 rooms")
+	}
+
+	//  Panic if fewer than 8 items are defined.
+	var sum int
+
+	for _, r := range rooms {
+		sum += len(r.Items)
+	}
+
+	if sum < MinItems {
+		panic("The game must have at least 8 items")
+	}
 }
 
 // saveGame dumps the current game state to a timestamped JSON file
