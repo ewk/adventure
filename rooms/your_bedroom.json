@@ -1,6 +1,6 @@
 {
   "name": "Your Bedroom",
-  "longDesc": "This is your first time in the bedroom.\nThe exit is to the hallway, on the west wall.\nThere is a bed against the north wall, you store your treasures underneath it.\nThere is a bed side table with a lamp next to your bed, pushed up against the east wall at the head of the bed.\nOn the south wall is your closet.\nIt has a chute that leads to the basement where the laundry room is.\nThere are diry socks on the floor of your closet.\nThere is a dog whistle on the floor underneath the bed.\n",
+  "longDesc": "This is your first time in the bedroom.\nThe exit is to the hallway, on the west wall.\nThere is a bed against the north wall, you store your treasures underneath it.\nThere is a bed side table with a lamp next to your bed, pushed up against the east wall at the head of the bed.\nOn the south wall is your closet.\nIt has a chute that leads to the basement where the laundry room is.\nThere are dirty socks on the floor of your closet.\nThere is a dog whistle on the floor underneath the bed.\n",
   "description": "This is your bedroom.\nThe exit is to the hallway, on the west wall.\nThere is a bed against the north wall, you store your treasures underneath it.\nThere is a bed side table with a lamp next to your bed, pushed up against the east wall at the head of the bed.\nOn the south wall is your closet.\nIt has a chute that leads to the basement where the laundry room is.\n",
   "items": {
 		"closet": {
