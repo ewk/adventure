@@ -154,6 +154,32 @@ func shrinkObject(item string) {
 	}
 }
 
+func callTheDog(item string) {
+	if val, ok := inventory[item]; ok {
+		fmt.Printf("Yeah you have the %s, but you don't know how to use it yet\n", item)
+		if val.Name == "dog whistle" {
+			fmt.Println("Whistle for the dog")
+		}
+		if val.Name == "squeeky toy" {
+			fmt.Println("Squeek that ball")
+		}
+	} else {
+		fmt.Println("The dog can't hear you")
+	}
+}
+
+func playerJump(currentRoom string) {
+	if currentRoom == "Pantry" || currentRoom == "Upstairs Hallway" || currentRoom == "Basement Lab" {
+		fmt.Println("You need to jump here")
+	} else {
+		fmt.Println("Jump all you want it's not going to do you any good")
+	}
+}
+
+func callYourParents() {
+	fmt.Println("Are you sure you want to do that? You'll be grounded forever")
+}
+
 func playGame() {
 	openingMessage := fmt.Sprintf(`
 It was a bright and sunny afternoon. Everything was going fine.
@@ -246,13 +272,15 @@ Why don't you try LOOKing around.
 				fmt.Println("Shrink what?")
 			}
 		case "whistle":
-			help()
+			callTheDog("dog whistle")
+		case "squeek":
+			callTheDog("squeeky toy")
 		case "jump":
-			help()
+			playerJump(curRoom.Name)
 		case "attach":
 			help()
 		case "call":
-			help()
+			callYourParents()
 
 		case "savegame":
 			saveGame()
