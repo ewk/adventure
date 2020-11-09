@@ -111,8 +111,8 @@ func help() {
 	inventory, as well. If you describe something in your text descriptions, you
 	should be able to "look at" it to examine it.
 
-	"go Upstairs Hallway" or "go $EXIT" :: proceed through the indicated exit
-	to the next room.
+	"go Upstairs Hallway" or "go $EXIT" or "go to $ROOM" :: proceed through
+	the indicated exit to the next room.
 
 	take :: acquire an object, putting it into your inventory.
 
@@ -180,13 +180,26 @@ Why don't you try LOOKing around.
 				lookAtRoom()
 			}
 		case "go":
-			if len(s) > 1 {
+			// if the word after "go" is "to" ...
+			if len(s) > 1 && s[1] == "to" {
+				// ... but no destination is provided
+				if len(s) < 3 {
+					fmt.Println("Go where?")
+					break
+				} else { // I want to go there!
+					loc := s[2:]
+					exit := strings.Join(loc, " ")
+					moveToRoom(exit)
+				}
+			} else if len(s) > 1 { // If player says "go" ...
 				loc := s[1:]
 				exit := strings.Join(loc, " ")
 				moveToRoom(exit)
 			} else {
 				fmt.Println("Go where?")
 			}
+		case "goto":
+			fmt.Println("Go To Statement Considered Harmful!  https://xkcd.com/292")
 		case "take":
 			if len(s) > 1 {
 				tmp := s[1:]
