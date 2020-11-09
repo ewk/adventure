@@ -167,6 +167,15 @@ func main() {
 
 	curRoom = rooms["Attic"]
 
-	playGame()
+	// the player always starts with the shrink gun
+	s := Item{
+		Name:        "shrink ray",
+		Description: "makes things smaller",
+		Portable:    true,
+		Discovered:  true,
+	}
 
+	inventory[s.Name] = &s
+
+	playGame()
 }
