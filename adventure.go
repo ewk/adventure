@@ -72,20 +72,21 @@ func loadRooms() {
 		}
 	}
 
-	// Debug: uncomment to show imported JSON data
-	/*
-		for key, value := range rooms {
-			fmt.Println("Key:", key, "Value:", value)
-		}
-	*/
-
-	// TODO Disabled for now while development continues.
 	// Panic if fewer than 15 rooms are defined.
-	/*
-		if len(rooms) < MinRooms {
-			panic("The game must have at least 15 rooms")
-		}
-	*/
+	if len(rooms) < MinRooms {
+		panic("The game must have at least 15 rooms")
+	}
+
+	//  Panic if fewer than 8 items are defined.
+	var sum int
+
+	for _, r := range rooms {
+		sum += len(r.Items)
+	}
+
+	if sum < MinItems {
+		panic("The game must have at least 8 items")
+	}
 }
 
 // saveGame dumps the current game state to a timestamped JSON file
@@ -113,7 +114,7 @@ func loadGame(s string) {
 	gameJson, e := ioutil.ReadFile(s)
 
 	if e != nil {
-		log.Fatal(e) // TODO panic may be too extreme here
+		log.Fatal(e)
 	}
 
 	// player must confirm they want to load a saved game
@@ -159,6 +160,15 @@ func main() {
 
 	curRoom = rooms["Attic"]
 
-	playGame()
+	// the player always starts with the shrink gun
+	s := Item{
+		Name:        "shrink ray",
+		Description: "makes things smaller",
+		Portable:    true,
+		Discovered:  true,
+	}
 
+	inventory[s.Name] = &s
+
+	playGame()
 }

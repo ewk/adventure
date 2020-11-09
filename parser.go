@@ -36,6 +36,10 @@ func lookAtItem(item string) {
 // takeItem place a portable item into the player's inventory
 func takeItem(item string) {
 	if val, ok := curRoom.Items[item]; ok {
+		if val.Discovered == false {
+			fmt.Printf("%s not found.\n", item)
+			return
+		}
 		if val.Portable == true {
 			inventory[item] = val
 			delete(curRoom.Items, item) // remove item from room after picking it up
@@ -100,6 +104,8 @@ func help() {
 
 	inventory :: Lists the contents of your inventory.
 
+	mystuff :: see take
+
 	look :: Print the long form explanation of the current room.
 
 	look at <feature or object> :: gives a fictionally interesting explanation of
@@ -107,10 +113,12 @@ func help() {
 	inventory, as well. If you describe something in your text descriptions, you
 	should be able to "look at" it to examine it.
 
-	"go Upstairs Hallway" or "go $EXIT" :: proceed through the indicated exit
-	to the next room.
+	"go Upstairs Hallway" or "go $EXIT" or "go to $ROOM" :: proceed through
+	the indicated exit to the next room.
 
 	take :: acquire an object, putting it into your inventory.
+
+	grab: see take
 
 	drop:: remove an object from your inventory, dropping it in the current room.
 
@@ -121,6 +129,8 @@ func help() {
 
 	exit :: save game and then exit.
 
+	quit :: see exit
+
 	help :: Print this message
 	`)
 
@@ -128,14 +138,21 @@ func help() {
 }
 
 func playGame() {
-	openingMessage := "It was a bright and sunny afternoon. Everything was going fine.\nYour parents were developing new semi-legal technology in their lab, and you were watching them.\nThey've told you 100 times to not watch them while they work, but what are they going to do?\nYou're curious. The shrink ray! What a cool invention.\nYou can take anything and make it...like...smaller.\nThey've told you not to PLAY with the inventions 101 times, but what are they going to do?\nYou're curious.\nSo yeah, they did kick you out of the lab when they left to go run errands, telling you 102 times to not play with the inventions,\nbut you smuggled that shrink ray out anyway.That's the last thing you remember...\nWhere are you?\nWhy don't you try LOOKing around.\n"
+	openingMessage := fmt.Sprintf(`
+It was a bright and sunny afternoon. Everything was going fine.
+Your parents were developing new semi-legal technology in their lab, and you were watching them.
+They've told you 100 times to not watch them while they work, but what are they going to do?
+You're curious. The shrink ray! What a cool invention.
+You can take anything and make it...like...smaller.
+They've told you not to PLAY with the inventions 101 times, but what are they going to do?
+You're curious.
+So yeah, they did kick you out of the lab when they left to go run errands, telling you 102 times to not play with the inventions,
+but you smuggled that shrink ray out anyway. That's the last thing you remember...
+Where are you?
+Why don't you try LOOKing around.
+	`)
 
 	fmt.Println(openingMessage)
-
-	// TODO remove dummy data
-	inventory["spoon"] = &Item{Name: "spoon", Description: "A utensil"}
-	inventory["candle"] = &Item{Name: "candle", Description: "To light the way"}
-	inventory["box of cookies"] = &Item{Name: "box of cookies", Description: "C is for cookie"}
 
 	input := bufio.NewScanner(os.Stdin)
 	fmt.Print("> ")
@@ -164,14 +181,27 @@ func playGame() {
 				lookAtRoom()
 			}
 		case "go":
-			if len(s) > 1 {
+			// if the word after "go" is "to" ...
+			if len(s) > 1 && s[1] == "to" {
+				// ... but no destination is provided
+				if len(s) < 3 {
+					fmt.Println("Go where?")
+					break
+				} else { // I want to go there!
+					loc := s[2:]
+					exit := strings.Join(loc, " ")
+					moveToRoom(exit)
+				}
+			} else if len(s) > 1 { // If player says "go" ...
 				loc := s[1:]
 				exit := strings.Join(loc, " ")
 				moveToRoom(exit)
 			} else {
 				fmt.Println("Go where?")
 			}
-		case "take":
+		case "goto":
+			fmt.Println("Go To Statement Considered Harmful!  https://xkcd.com/292")
+		case "take", "grab":
 			if len(s) > 1 {
 				tmp := s[1:]
 				item := strings.Join(tmp, " ")
@@ -187,7 +217,7 @@ func playGame() {
 			} else {
 				fmt.Println("Drop what?")
 			}
-		case "inventory":
+		case "inventory", "mystuff":
 			listInventory()
 			/* TODO
 			   case "shrink":
@@ -203,7 +233,7 @@ func playGame() {
 			*/
 		case "savegame":
 			saveGame()
-		case "exit":
+		case "exit", "quit":
 			saveGame()
 			return
 		case "loadgame":
