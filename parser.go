@@ -33,14 +33,15 @@ func lookAtItem(item string) {
 	}
 }
 
-// takeItem place a portable item into the player's inventory
+// takeItem place a portable item, which is small enough, into the player's inventory
 func takeItem(item string) {
 	if val, ok := curRoom.Items[item]; ok {
-		if val.Portable == true {
+		if val.Portable == true && val.TooBig == false {
 			inventory[item] = val
 			delete(curRoom.Items, item) // remove item from room after picking it up
-		} else {
-			fmt.Printf("%s is too big to pick up!\n", item)
+			fmt.Printf("You have picked up the %s.\n It is now in your inventory\n", item)
+		} else if val.TooBig == true {
+			fmt.Printf("%s is too big to pick up!\nWhy don't you try shrinking it first?\n", item)
 		}
 	} else {
 		fmt.Printf("%s not found.\n", item)
@@ -127,6 +128,22 @@ func help() {
 	fmt.Println(m)
 }
 
+func shrinkObject(item string) {
+	if val, ok := curRoom.Items[item]; ok {
+		if val.Portable == true {
+			if val.TooBig == true {
+				fmt.Println("SHRINKING!")
+				val.TooBig = false
+				fmt.Println("This item is now small enough to collect, pick it up to add it to inventory")
+			} else {
+				fmt.Println("I don't think that can get any smaller, did you try just picking it up?")
+			}
+		} else {
+			fmt.Println("You can't shrink this, Mom and Dad might notice.")
+		}
+	}
+}
+
 func playGame() {
 	openingMessage := "It was a bright and sunny afternoon. Everything was going fine.\nYour parents were developing new semi-legal technology in their lab, and you were watching them.\nThey've told you 100 times to not watch them while they work, but what are they going to do?\nYou're curious. The shrink ray! What a cool invention.\nYou can take anything and make it...like...smaller.\nThey've told you not to PLAY with the inventions 101 times, but what are they going to do?\nYou're curious.\nSo yeah, they did kick you out of the lab when they left to go run errands, telling you 102 times to not play with the inventions,\nbut you smuggled that shrink ray out anyway.That's the last thing you remember...\nWhere are you?\nWhy don't you try LOOKing around.\n"
 
@@ -189,18 +206,24 @@ func playGame() {
 			}
 		case "inventory":
 			listInventory()
-			/* TODO
-			   case "shrink":
-			           help()
-			   case "whistle":
-			           help()
-			   case "jump":
-			           help()
-			   case "attach":
-			           help()
-			   case "call":
-			           help()
-			*/
+
+		case "shrink":
+			if len(s) > 1 {
+				tmp := s[1:]
+				item := strings.Join(tmp, " ")
+				shrinkObject(item)
+			} else {
+				fmt.Println("Shrink what?")
+			}
+		case "whistle":
+			help()
+		case "jump":
+			help()
+		case "attach":
+			help()
+		case "call":
+			help()
+
 		case "savegame":
 			saveGame()
 		case "exit":
