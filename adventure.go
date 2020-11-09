@@ -114,7 +114,7 @@ func loadGame(s string) {
 	gameJson, e := ioutil.ReadFile(s)
 
 	if e != nil {
-		log.Fatal(e) // TODO panic may be too extreme here
+		log.Fatal(e)
 	}
 
 	// player must confirm they want to load a saved game
