@@ -154,11 +154,6 @@ Why don't you try LOOKing around.
 
 	fmt.Println(openingMessage)
 
-	// TODO remove dummy data
-	inventory["spoon"] = &Item{Name: "spoon", Description: "A utensil"}
-	inventory["candle"] = &Item{Name: "candle", Description: "To light the way"}
-	inventory["box of cookies"] = &Item{Name: "box of cookies", Description: "C is for cookie"}
-
 	input := bufio.NewScanner(os.Stdin)
 	fmt.Print("> ")
 
