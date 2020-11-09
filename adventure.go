@@ -72,13 +72,6 @@ func loadRooms() {
 		}
 	}
 
-	// Debug: uncomment to show imported JSON data
-	/*
-		for key, value := range rooms {
-			fmt.Println("Key:", key, "Value:", value)
-		}
-	*/
-
 	// Panic if fewer than 15 rooms are defined.
 	if len(rooms) < MinRooms {
 		panic("The game must have at least 15 rooms")
