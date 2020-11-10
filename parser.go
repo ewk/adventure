@@ -107,12 +107,15 @@ func moveToRoom(exit string) {
 
 // checkExit verifies the player has the item necessary to exit a room
 func checkExit() bool {
-	if len(curRoom.ExitItems) != 0 {
-		obj := curRoom.ExitItems[0]
-		if _, ok := inventory[obj]; ok {
-			return true
-		}
+	if len(curRoom.ExitItems) == 0 {
+		return true
 	}
+
+	obj := curRoom.ExitItems[0]
+	if _, ok := inventory[obj]; ok {
+		return true
+	}
+
 	return false
 }
 
