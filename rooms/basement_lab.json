@@ -45,5 +45,6 @@
     }
   },
   "visited" : false,
-  "exits": [ "Yard" ]
+  "exits": [ "Yard" ],
+  "exitItems": [ "dog whistle" ]
 }

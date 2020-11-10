@@ -73,6 +73,13 @@ func listInventory() {
 
 // moveToRoom takes a requested exit and moves the player there if the exit exists
 func moveToRoom(exit string) {
+	b := checkExit() // verify we have items needed to leave
+	if !b {
+		// TODO rooms with exit restrictions each have a unique restriction
+		fmt.Println("You need to find an item before you can leave.")
+		return
+	}
+
 	for _, e := range curRoom.Exits {
 		if e == exit { // check that requested exit is valid
 			if val, ok := rooms[exit]; ok {
@@ -96,6 +103,17 @@ func moveToRoom(exit string) {
 		}
 	}
 	fmt.Printf("%s is not a valid exit\n", exit)
+}
+
+// checkExit verifies the player has the item necessary to exit a room
+func checkExit() bool {
+	if len(curRoom.ExitItems) != 0 {
+		obj := curRoom.ExitItems[0]
+		if _, ok := inventory[obj]; ok {
+			return true
+		}
+	}
+	return false
 }
 
 // help prints a subset of verbs the game understands

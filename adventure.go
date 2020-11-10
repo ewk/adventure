@@ -28,6 +28,7 @@ type Room struct {
 	Items       map[string]*Item
 	Visited     bool
 	Exits       []string // outbound connection room names
+	ExitItems   []string // items required to exit a room
 }
 
 // struct used for both features and objects
