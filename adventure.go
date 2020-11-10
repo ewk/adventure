@@ -41,6 +41,7 @@ type Item struct {
 	ContainsHiddenObject bool   // This is false for all objects. For some features this starts as true.
 	DiscoveryStatement   string // If there's a hidden object, this described the connection. "Underneath the couch, you see a cat toy."
 	HiddenObject         string // Name of hidden object if there is one
+	IsEdible             bool
 }
 
 // struct to store game state
@@ -168,6 +169,7 @@ func main() {
 		Description: "makes things smaller",
 		Portable:    true,
 		Discovered:  true,
+		IsEdible:    false,
 	}
 
 	inventory[s.Name] = &s
