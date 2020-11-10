@@ -73,6 +73,13 @@ func listInventory() {
 
 // moveToRoom takes a requested exit and moves the player there if the exit exists
 func moveToRoom(exit string) {
+	b := checkExit() // verify we have items needed to leave
+	if !b {
+		// TODO rooms with exit restrictions each have a unique restriction
+		fmt.Println("You need to find an item before you can leave.")
+		return
+	}
+
 	for _, e := range curRoom.Exits {
 		if e == exit { // check that requested exit is valid
 			if val, ok := rooms[exit]; ok {
@@ -96,6 +103,17 @@ func moveToRoom(exit string) {
 		}
 	}
 	fmt.Printf("%s is not a valid exit\n", exit)
+}
+
+// checkExit verifies the player has the item necessary to exit a room
+func checkExit() bool {
+	if len(curRoom.ExitItems) != 0 {
+		obj := curRoom.ExitItems[0]
+		if _, ok := inventory[obj]; ok {
+			return true
+		}
+	}
+	return false
 }
 
 // help prints a subset of verbs the game understands
@@ -122,6 +140,8 @@ func help() {
 	grab: see take
 
 	drop:: remove an object from your inventory, dropping it in the current room.
+
+	eat: restore your strength by eating an item
 
 	savegame :: saves the state of the game to a file.
 
@@ -178,6 +198,20 @@ func playerJump(currentRoom string) {
 
 func callYourParents() {
 	fmt.Println("Are you sure you want to do that? You'll be grounded forever")
+}
+
+// eatItem searches the player's inventory for an edible item and consumes it
+func eatItem(item string) {
+	if val, ok := inventory[item]; ok {
+		if val.IsEdible {
+			fmt.Println("That was delicious! Your strength has been restored.")
+			delete(inventory, item)
+		} else {
+			fmt.Printf("I know you're hangry. But %s is not food!\n", item)
+		}
+	} else {
+		fmt.Printf("%s is not in your backpack.\n", item)
+	}
 }
 
 func playGame() {
@@ -281,7 +315,14 @@ Why don't you try LOOKing around.
 			help()
 		case "call":
 			callYourParents()
-
+		case "eat":
+			if len(s) > 1 {
+				tmp := s[1:]
+				item := strings.Join(tmp, " ")
+				eatItem(item)
+			} else {
+				fmt.Println("Eat what?")
+			}
 		case "savegame":
 			saveGame()
 		case "exit", "quit":

@@ -45,5 +45,6 @@
     }
   },
   "visited": true,
-  "exits": [ "Upstairs Hallway" ]
+  "exits": [ "Upstairs Hallway" ],
+  "exitItems": [ "thread" ]
 }

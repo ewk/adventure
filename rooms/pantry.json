@@ -31,7 +31,8 @@
 			"discovered": true,
 			"containsHiddenObject": false,
 			"discoveryStatement": "",
-			"hiddenObject": ""
+			"hiddenObject": "",
+			"isEdible": true
 		},
 		"dog treats": {
 			"name": "dog treats",
@@ -41,7 +42,8 @@
 			"discovered": true,
 			"containsHiddenObject": false,
 			"discoveryStatement": "",
-			"hiddenObject": ""
+			"hiddenObject": "",
+			"isEdible": true
 		},
 		"cat treats": {
 			"name": "cat treats",
@@ -51,7 +53,8 @@
 			"discovered": true,
 			"containsHiddenObject": false,
 			"discoveryStatement": "",
-			"hiddenObject": ""
+			"hiddenObject": "",
+			"isEdible": true
 		}
 	},
 	"visited" : false,
