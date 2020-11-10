@@ -45,5 +45,5 @@
 		}
 	},
 	"visited" : false,
-	"exits": [ "Front Porch", "Downstairs Hallway" ]
+	"exits": [ "Downstairs Hallway" ]
 }

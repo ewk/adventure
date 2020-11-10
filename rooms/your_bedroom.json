@@ -45,6 +45,6 @@
 		}
 	},
 	"visited" : false,
-	"exits": [ "Upstairs Hallway" ]
+	"exits": [ "Upstairs Hallway", "Basement Lab" ]
 }
 

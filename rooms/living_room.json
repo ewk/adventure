@@ -1,7 +1,7 @@
 {
   "name": "Living Room",
-	"longDesc": "You are in the living room for the first time.\nThe south wall is open to the dining room, there is no doorway to the hallway from the living room.\nThere is a large window on the west wall that looks out onto the backyard.\nThe large, comfortable-looking couch faces the north wall, where there is a fireplace.\nIt has always been too heavy for your parents to move easily.\nThere is a tear on the side of the couch facing the fireplace with stuffing coming out.\nThere is a knob to the west of the fireplce opening that controls the fire.\nThere is no door to the hallway from this room, you have to exit through the dining room.\n",
-	"description": "You are in the living room.\nThe south wall is open to the dining room, there is no doorway to the hallway from the living room.\nThere is a large window on the west wall that looks out onto the backyard.\nThere is no door on the east wall, you cannot get to the hallway directly from this room.\n",
+	"longDesc": "You are in the living room for the first time.\nThe south wall is open to the dining room, there is no doorway to the hallway from the living room.\nThere is a large window on the west wall that looks out onto the yard.\nThe large, comfortable-looking couch faces the north wall, where there is a fireplace.\nIt has always been too heavy for your parents to move easily.\nThere is a tear on the side of the couch facing the fireplace with stuffing coming out.\nThere is a knob to the west of the fireplce opening that controls the fire.\nThere is no door to the hallway from this room, you have to exit through the dining room.\n",
+	"description": "You are in the living room.\nThe south wall is open to the dining room, there is no doorway to the hallway from the living room.\nThere is a large window on the west wall that looks out onto the yard.\nThere is no door on the east wall, you cannot get to the hallway directly from this room.\n",
 	"items": {
 		"couch": {
 			"name": "couch",
@@ -15,7 +15,7 @@
 		},
 		"window": {
 			"name": "window",
-			"description": "Window looks out over the backyard. You can see the eagle from the window",
+			"description": "Window looks out over the yard. You can see the eagle from the window",
 			"tooBig": true,
 			"portable": false,
 			"discovered": true,
@@ -45,5 +45,5 @@
 		}
 	},
 	"visited" : false,
-	"exits": [ "Downstairs Hallway" ]
+	"exits": [ "Downstairs Hallway", "Master Bedroom" ]
 }
