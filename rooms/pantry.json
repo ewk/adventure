@@ -1,11 +1,11 @@
 {
   "name": "Pantry",
-	"longDesc": "You are in the pantry for the first time.\nThere is a lot of food in here, both for humans and pets.\nThere are three shelves stuffed with food.\nThere is a box of cornflakes on the top shelf, on the north wall, but you'll have to climb the shelves to get up there.\nYou should grab the cat treats to distract the cat, and dog treats to reward the dog for coming when you call.\n",
-	"description": "You are in the pantry.\nThere is a lot of food in here, both for humans and pets.\nThere are three shelves stuffed with food.\nThere is a box of cornflakes on the top shelf, on the north wall, but you'll have to climb the shelves to get up there.\nYou should grab the cat treats to distract the cat, and dog treats to reward the dog for coming when you call.\n",
+	"longDesc": "You are in the pantry.\nThere is a lot of food in here, both for humans and pets.\nThere are three shelves stuffed with food.\nThere is a box of cornflakes on the top shelf, but you'll have to climb the shelves to get up there.\nYou should grab the cat treats to distract the cat, and dog treats to reward the dog for coming when you call.\nThe only exit leads back out to the kitchen\n",
+	"description": "You are in the pantry.\nThe only exit leads back out to the kitchen\n",
 	"items": {
 		"shelves": {
 			"name": "shelves",
-			"description": "There are so many shelves and so many boxes on those shelves",
+			"description": "There are so many shelves and so many boxes on those shelves.",
 			"tooBig": true,
 			"portable": false,
 			"discovered": true,
@@ -15,7 +15,7 @@
 		},
 		"paper towels": {
 			"name": "paper towels",
-			"description": "This is a very tall stack of paper towels. Who needs this many paper towels?Climb these bad boys to reach the bottom shelf",
+			"description": "This is a very tall stack of paper towels. Who needs this many paper towels?\n You could probably reach the bottom shelf by climbing them.",
 			"tooBig": true,
 			"portable": false,
 			"discovered": true,
@@ -25,7 +25,7 @@
 		},
 		"cornflakes": {
 			"name": "cornflakes",
-			"description":"A box of generic Corn Flake brand corn flakes. You need these to fix the shrink ray",
+			"description":"A box of generic corn flakes. You need these to fix the shrink ray.",
 			"tooBig": false,
 			"portable": true,
 			"discovered": true,
@@ -36,7 +36,7 @@
 		},
 		"dog treats": {
 			"name": "dog treats",
-			"description": "A bag of dog treats. To reward Fido",
+			"description": "A bag of dog treats. To reward Fido.",
 			"tooBig": false,
 			"portable": true,
 			"discovered": true,
@@ -47,7 +47,7 @@
 		},
 		"cat treats": {
 			"name": "cat treats",
-			"description": "A bag of catnip laced cat treats. To distract Fluffy",
+			"description": "A bag of catnip-laced cat treats. To distract Fluffy.",
 			"tooBig": false,
 			"portable": true,
 			"discovered": true,

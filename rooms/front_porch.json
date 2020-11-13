@@ -1,6 +1,6 @@
 {
   "name": "Front Porch",
-	"longDesc": "You are on the front porch for the first time.\nIt is covered, but open air.\nTo the west there are stairs leading to the yard.\nOn the eastern edge there is a wicker couch covered in bird seed detritus.\nThe front door to the house is to the north.\nThere is a skateboard next to the front door, on the western side of the north wall.\nThere is a large plant in the south west corner of the porch.\nThere is something written on the flower pot but you can't see what it says from the front door.\n",
+	"longDesc": "You are on the front porch.\nIt is covered, but open air.\nTo the west there are stairs leading to the yard.\nOn the eastern edge there is a wicker couch covered in bird seed detritus.\nThe front door to the house is to the north.\nThere is a skateboard next to the front door, on the western side of the north wall.\nThere is a large plant in the south west corner of the porch.\nThere is something written on the flower pot but you can't see what it says from the front door.\n",
 	"description": "You are on the front porch.\nIt is covered, but open air.\nTo the west there are stairs leading to the yard.\nThe front door to the house is to the north.\n",
 	"items": {
 		"flower pot": {

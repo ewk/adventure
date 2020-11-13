@@ -1,11 +1,11 @@
 {
   "name": "Family Room",
-	"longDesc": "You are in the family room for the first time.\nThe door to the downstairs hallway is on the west wall, there are no other exits in thsi room.\nThere is a large window on the east wall.\nOn the north wall there is an entertainment system with an old tv, wires are popping out the back and sides, and only half of the picture works.\nThe tv is on the entertainment system, away from the wall.\nYou need to get a copper wire from the back of it.\n",
-	"description": "You are in the family room.\nThere is only one exit, on the west wall, to the downstairs hallway.\n",
+	"longDesc": "You are in the family room.\nThe only exit in the room goes to the downstairs hallway.\nThere is a large window on one of the walls.\nThe room contains an entertainment system with an old TV and a Nintendo 64.\nA toy box is in the far corner of the room.\n",
+	"description": "You are in the family room.\nThere is only one exit, which goes to the downstairs hallway.\n",
 	"items": {
-		"tv": {
-			"name": "tv",
-			"description": "The tv is old, has wires popping out the sides and back, but it's all your parents will let you have",
+		"TV": {
+			"name": "TV",
+			"description": "The TV is old and has wires popping out of the sides and back,\n but it's all your parents will let you have",
 			"tooBig": true,
 			"portable": false,
 			"discovered": true,
@@ -15,7 +15,7 @@
 		},
 		"toy box": {
 			"name": "toy box",
-			"description": "The toy box is empty now, just with a note saying your toys were taken away from the last time you stole an experiment.",
+			"description": "The toy box is empty now, with a note taped inside saying your toys were\n taken away the last time you stole an experiment.",
 			"tooBig": true,
 			"portable": false,
 			"discovered": true,
@@ -25,7 +25,7 @@
 		},
 		"copper wire": {
 			"name": "copper wire",
-			"description": "There is a loose copper wire wrapped in red rubber.  ",
+			"description": "There is a loose copper wire wrapped in red rubber.",
 			"tooBig": false,
 			"portable": true,
 			"discovered": false,
@@ -33,9 +33,9 @@
 			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"nintendo 64": {
-			"name": "nintendo 64",
-			"description": "This is an old, dusty Nintendo 64. To accompany the aging relic of the tv, a classic gaming system",
+		"Nintendo 64": {
+			"name": "Nintendo 64",
+			"description": "This is an old, dusty Nintendo 64, a classic gaming system to accompany the aging relic of the TV.",
 			"tooBig": true,
 			"portable": true,
 			"discovered": true,

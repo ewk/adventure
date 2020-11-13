@@ -1,11 +1,11 @@
 {
   "name": "Living Room",
-	"longDesc": "You are in the living room for the first time.\nThe south wall is open to the dining room, there is no doorway to the hallway from the living room.\nThere is a large window on the west wall that looks out onto the yard.\nThe large, comfortable-looking couch faces the north wall, where there is a fireplace.\nIt has always been too heavy for your parents to move easily.\nThere is a tear on the side of the couch facing the fireplace with stuffing coming out.\nThere is a knob to the west of the fireplce opening that controls the fire.\nThere is no door to the hallway from this room, you have to exit through the dining room.\n",
-	"description": "You are in the living room.\nThe south wall is open to the dining room, there is no doorway to the hallway from the living room.\nThere is a large window on the west wall that looks out onto the yard.\nThere is no door on the east wall, you cannot get to the hallway directly from this room.\n",
+	"longDesc": "You are in the living room.\nThere is a window that looks out onto the yard.\nA large, comfortable-looking couch faces a fireplace.\nThere is no door to the hallway from this room, just a door to the dining room.\n",
+	"description": "You are in the living room.\nThere is a fireplace and a doorway to the dining room.\n",
 	"items": {
 		"couch": {
 			"name": "couch",
-			"description": "Giant couch, well worn, visible tear with stuffing coming out. ",
+			"description": "The couch is large and well-worn, with a visible tear with stuffing coming out.",
 			"tooBig": true,
 			"portable": false,
 			"discovered": true,
@@ -15,7 +15,7 @@
 		},
 		"window": {
 			"name": "window",
-			"description": "Window looks out over the yard. You can see the eagle from the window",
+			"description": "The window looks out over the yard. Through the window, you can see an eagle flying.",
 			"tooBig": true,
 			"portable": false,
 			"discovered": true,
@@ -25,7 +25,7 @@
 		},
 		"fireplace": {
 			"name": "fireplace",
-			"description": "Fireplace connected to the master bedroom on the second floor.",
+			"description": "The fireplace is connected to the master bedroom on the second floor.",
 			"tooBig": true,
 			"portable": false,
 			"discovered": true,
@@ -35,7 +35,7 @@
 		},
 		"couch stuffing": {
 			"name": "couch stuffing",
-			"description": "This is some stuffing from the couch. It's white a fluffy and looks softer than it feels. You need to collect it to fix the shrink ray",
+			"description": "This is some stuffing from the couch. It's white a fluffy and looks softer than it feels.",
 			"tooBig": false,
 			"portable": true,
 			"discovered": false,
@@ -45,5 +45,5 @@
 		}
 	},
 	"visited" : false,
-	"exits": [ "Downstairs Hallway", "Master Bedroom" ]
+	"exits": [ "Dining Room", "Master Bedroom" ]
 }

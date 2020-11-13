@@ -1,21 +1,21 @@
 {
   "name": "Kitchen",
-	"longDesc": "You are in the kitchen for the first time.\nThe pantry is behind a curtain on the north wall.\nThere is a refrigerator, pulled a bit away from the wall, on the east wall.\nThere is a counter with a giant inset sink on the south wall.\nThere is a screw on the ground behing the fridge, it is hidden until you examine the refrigerator.\n",
-	"description": "You are in the kitchen.\nThe pantry is behind a curtain on the north wall.\nThere is a refrigerator, pulled a bit away from the wall, on the east wall.\nThere is a counter with a giant inset sink on the south wall.\nThere is a screw on the ground behing the fridge, it is hidden until you examine the refrigerator.\n",
+	"longDesc": "You are in the kitchen.\nThe pantry is behind a curtain on the north wall.\nThere is a refrigerator, pulled a bit away from the wall.\nThere is a counter with a giant sink.\n",
+	"description": "You are in the kitchen.\nFrom the kitchen, you can go to the pantry or to the downstairs hallway.",
   "items": {
 		"refrigerator": {
 			"name": "refrigerator",
-			"description": "This is the refrigerator, it is one of the few normal appliances in the house. There should be a screw around here somewhere.",
+			"description": "This is the refrigerator. It is one of the few normal appliances in the house.",
 			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "That's the screw you need!",
+			"discoveryStatement": "That's the screw you need, on the ground behind the fridge!",
 			"hiddenObject": "screw"
 		},
 		"countertop": {
 			"name": "countertop",
-			"description": "The countertop is made of plastic but look like marble. It has a bowl of fruit, a notepad, a phone. There is large sink that is piled high with dirty dishes.",
+			"description": "The countertop is made of fake marble. It has a bowl of fruit, a notepad, a phone.\nThere is large sink that is piled high with dirty dishes.",
 			"tooBig": true,
 			"portable": false,
 			"discovered": true,
@@ -25,7 +25,7 @@
 		},
 		"screw": {
 			"name": "screw",
-			"description": "The screw is old and has a thin film of some sort of goo on it. You need this to fix the shrink ray. It sis hidden until the refrigerator is examined.",
+			"description": "The screw is old and has a thin film of some sort of goo on it.",
 			"tooBig": false,
 			"portable": true,
 			"discovered": false,
@@ -35,7 +35,7 @@
 		},
 		"magnet": {
 			"name": "magnet",
-			"description": "This magnet hangs on the refrigerator. It's shaped like a panda and it's a souvenir from the San Diego Zoo. They're members.",
+			"description": "This magnet hangs on the refrigerator. It's shaped like a panda and\nit's a souvenir from the San Diego Zoo. Your family has a membership there.",
 			"tooBig": true,
 			"portable": true,
 			"discovered": true,
