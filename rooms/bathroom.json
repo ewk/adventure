@@ -1,11 +1,11 @@
 {
   "name": "Bathroom",
-	"longDesc": "This is your first time in the bathroom.\nThe exit is behind you, on the west wall.\nThere is a shower to your left, on the north wall, with an opaque shower curtain, you cannot see through it.\nThere is a sink in front of you, on the east wall, and a toilet with a stack of magazines on the tank, on the south wall.\nThere is also a litter box next to the toilet, on the south wall.\nYou need to look in the shower and see what is written on the wall.\nYou need to look under the sink and take the shampoo.\n",
-	"description": "You are in the bathroom.\nThe exit is behind you, on the west wall.\nThere is a shower to your left, on the north wall, with an opaque shower curtain, you cannot see through it.\nThere is a sink in front of you, on the east wall, and a toilet with a stack of magazines on the tank, on the south wall.\nThere is also a litter box next to the toilet, on the south wall.\n",
+	"longDesc": "You are in the bathroom.\nThe exit to the upstairs hallway is behind you.\nThere is a shower to your left with a shower curtain you can't see through.\nThere is a sink with a cabinet under it, and a toilet with a stack of magazines on the tank.\nThere is also a litter box next to the toilet.\n",
+	"description": "You are in the bathroom.\nThe exit to the upstairs hallway is behind you.\n",
 	"items": {
 		"shower": {
 			"name": "shower",
-			"description": "The shower has a notepad with a word written on it. ",
+			"description": "The shower has a notepad with a word written on it.",
 			"tooBig": true,
 			"portable": false,
 			"discovered": true,
@@ -15,17 +15,17 @@
 		},
 		"cabinet": {
 			"name": "cabinet",
-			"description": "The cabinet under the sink has shampoo.",
+			"description": "The wooden cabinet under the sink is full of medicine and bathroom supplies.",
 			"tooBig": true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "You'll need that shampoo",
+			"discoveryStatement": "A bottle of shampoo is tucked into the corner of the cabinet.",
 			"hiddenObject": "shampoo"
 		},
 		"shampoo": {
 			"name": "shampoo",
-			"description": "The shampoo is purple and smells like grapes and flowers. You need this for the quest, hidden until the cabinet is examined",
+			"description": "The shampoo is purple and smells like grapes and flowers.",
 			"tooBig": true,
 			"portable": true,
 			"discovered": false,

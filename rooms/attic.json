@@ -1,6 +1,6 @@
 {
   "name": "Attic",
-  "longDesc" : "This is your first time in the attic.\nThere is an exit in the floor on the south wall that drops down into the Upstairs Hallway.\nThe chimney is on the north wall, you can't get inside it from the attic.\nThere is a chest of drawers on the west wall, and the mirror on the east wall.\nThere is an unraveling rug underneath your feet, at the south wall.\nYou need to look at the mirror, it has no hidden object.\nYou need to look at the rug to reveal the string.\n",
+  "longDesc" : "You are in the attic.\nThere is an exit in the floor on the south wall that drops down into the Upstairs Hallway.\nThe chimney is on the north wall, you can't get inside it from the attic.\nThere is a chest of drawers on the west wall, and the mirror on the east wall.\nThere is an unraveling rug underneath your feet, at the south wall.\nYou need to look at the mirror, it has no hidden object.\nYou need to look at the rug to reveal the string.\n",
   "description" : "You are in the attic.\nThere is an exit in the floor on the south wall that drops down into the Upstairs Hallway.\nThe chimney is on the north wall, you can't get inside it from the attic.\nThere is a chest of drawers on the west wall, and the mirror on the east wall.\nThere is an unraveling rug underneath your feet, at the south wall.\n",
   "items": {
     "chest of drawers": {

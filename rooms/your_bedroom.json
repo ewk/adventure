@@ -1,7 +1,7 @@
 {
   "name": "Your Bedroom",
-  "longDesc": "This is your first time in the bedroom.\nThe exit is to the hallway, on the west wall.\nThere is a bed against the north wall, you store your treasures underneath it.\nThere is a bed side table with a lamp next to your bed, pushed up against the east wall at the head of the bed.\nOn the south wall is your closet.\nIt has a chute that leads to the basement where the laundry room is.\nThere are dirty socks on the floor of your closet.\nThere is a dog whistle on the floor underneath the bed.\n",
-  "description": "This is your bedroom.\nThe exit is to the hallway, on the west wall.\nThere is a bed against the north wall, you store your treasures underneath it.\nThere is a bed side table with a lamp next to your bed, pushed up against the east wall at the head of the bed.\nOn the south wall is your closet.\nIt has a chute that leads to the basement where the laundry room is.\n",
+  "longDesc": "You are in your bedroom.\nThere is an exit to the upstairs hallway.\nThere is a bed against the wall. You store your treasures underneath it.\nThere is a bedside table with a lamp next next to the head of your bed.\nYour closet is on the wall.\nIt has a chute that leads to the basement where the laundry room is.\nThere are dirty socks on the floor of your closet.\n",
+  "description": "This is your bedroom.\nThere is an exit to the upstairs hallway.\nYour closet has a chute that leads to the basement.\n",
   "items": {
 		"closet": {
 			"name": "closet",
@@ -15,17 +15,17 @@
 		},
 		"under the bed": {
 			"name": "under the bed",
-			"description": " Under the bed is dark, it's smelly, but there are no monsters...you think",
+			"description": " Under the bed is dark and smelly, but there are no monsters...you think.",
 			"tooBig" : true,
 			"portable": false,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "That's where the dog whistle went!",
+			"discoveryStatement": "That's where the dog whistle went! You see it against the wall under the bed.",
 			"hiddenObject": "dog whistle"
 		},
 		"dog whistle": {
 			"name": "dog whistle",
-			"description": "The dog whistle is small and silver. Use it to summon your mighty steed",
+			"description": "The dog whistle is small and silver. Use it to summon your mighty steed.",
 			"tooBig" : false,
 			"portable": true,
 			"discovered": false,
@@ -35,7 +35,7 @@
 		},
 		"dirty socks": {
 			"name": "dirty socks",
-			"description": "Your socks are all identical black, crew cut socks that can be bought in ten packs at the store. These ones are stinky but also important",
+			"description": "Your socks are all identical black crew cut socks that can be bought in ten packs at the store. These ones are stinky but also important.",
 			"tooBig" : true, 
 			"portable": true,
 			"discovered": true,

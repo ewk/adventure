@@ -1,6 +1,6 @@
 {
   "name": "Basement Lab",
-  "longDesc": "You are in the basement lab for the first time.\nTo the west, a hatch leads up and out to the yard.\nIt is the only real exit.\nOn the northern wall, in the corner to the east, there is a laundry chute which opens up to a laundry basket.\nYou cannot climb up it, but you can slide down it if you know where the entrance is.\nThere is a desk on the south wall, with a computer and a big, old fashioned, keyboard.\nYou need a password to access the computer.\nThe computer has the software for the shrink gun.\n ",
+  "longDesc": "You are in the basement lab.\nTo the west, a hatch leads up and out to the yard.\nIt is the only real exit.\nOn the northern wall, in the corner to the east, there is a laundry chute which opens up to a laundry basket.\nYou cannot climb up it, but you can slide down it if you know where the entrance is.\nThere is a desk on the south wall, with a computer and a big, old fashioned, keyboard.\nYou need a password to access the computer.\nThe computer has the software for the shrink gun.\n ",
   "description": "You are in the basement lab.\nTo the west, a hatch leads up and out to the yard.\nIt is the only real exit.\nOn the northern wall, in the corner to the east, there is a laundry chute which opens up to a laundry basket.\nYou cannot climb up it, but you can slide down it if you know where the entrance is.\n",
   "items": {
     "laundry chute": {

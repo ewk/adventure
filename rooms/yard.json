@@ -1,6 +1,6 @@
 {
   "name": "Yard",	
-	"longDesc": "This is your first time in the yard.\nIf you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner.\nThere is a patio umbrella folded on the ground next to this exit.\nTo the west, there is a sandbox.\nThere is an eagle circling overhead.\nYou need to collect sand from the sandbox.\nYou can use the umbrella to hide from the eagle.\n",
+	"longDesc": "You are in the yard.\nIf you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner.\nThere is a patio umbrella folded on the ground next to this exit.\nTo the west, there is a sandbox.\nThere is an eagle circling overhead.\nYou need to collect sand from the sandbox.\nYou can use the umbrella to hide from the eagle.\n",
 	"description": "You are in the yard.\nIf you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner.\nThere is a patio umbrella folded on the ground next to this exit.\nTo the west, there is a sandbox.\nThere is an eagle circling overhead.\n",
 	"items": {
 		"eagle": {
@@ -25,7 +25,7 @@
 		},
 		"sand": {
 			"name": "sand",
-			"description": "The sand is from the sandbox, you need it for the quest",
+			"description": "The sand is from the sandbox. You need it for the quest",
 			"tooBig": false,
 			"portable": true,
 			"discovered": false,
@@ -33,9 +33,9 @@
 			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"squeeky toy": {
+		"squeaky toy": {
 			"name": "squeeky toy",
-			"description": "This is a red ball squeeky toy. Your dog can hear this from a mile away and will come running, can serve a similar function to the dog whistle. To use say squeek",
+			"description": "This is a red ball squeaky toy. Your dog can hear this from a mile away and will come running, can serve a similar function to the dog whistle. To use say squeak",
 			"tooBig":false,
 			"portable": true,
 			"discovered": true,
