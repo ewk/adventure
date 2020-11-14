@@ -33,14 +33,14 @@ func lookAtItem(item string) {
 	}
 }
 
-// takeItem place a portable item, which is small enough, into the player's inventory
+// takeItem places an object which is small enough into the player's inventory
 func takeItem(item string) {
 	if val, ok := curRoom.Items[item]; ok {
 		if val.Discovered == false {
 			fmt.Printf("%s not found.\n", item)
 			return
 		}
-		if val.Portable == true && val.TooBig == false {
+		if val.IsFeature == false && val.TooBig == false {
 			inventory[item] = val
 			delete(curRoom.Items, item) // remove item from room after picking it up
 			fmt.Printf("You have picked up the %s.\nIt is now in your inventory\n", item)
@@ -163,7 +163,7 @@ func help() {
 
 func shrinkObject(item string) {
 	if val, ok := curRoom.Items[item]; ok {
-		if val.Portable == true {
+		if val.IsFeature == false {
 			if val.TooBig == true {
 				fmt.Println("SHRINKING!")
 				val.TooBig = false
