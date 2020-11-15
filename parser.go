@@ -57,6 +57,7 @@ func dropObject(item string) {
 	if val, ok := inventory[item]; ok {
 		curRoom.Items[item] = val
 		delete(inventory, item)
+		fmt.Printf("You dropped the %s in the %s.\n", item, curRoom.Name)
 	} else {
 		fmt.Printf("%s not found.\n", item)
 	}
