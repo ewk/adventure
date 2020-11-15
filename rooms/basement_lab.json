@@ -15,7 +15,7 @@
     },
     "desk": {
       "name": "desk",
-      "description": "The computer is on the desk, you need to climb the desk to get to it",
+      "description": "The computer is on the desk, but you can't see it from here, you have to CLIMB DESK to look at it.",
       "tooBig":true,
       "isFeature": true,
       "discovered": true,
