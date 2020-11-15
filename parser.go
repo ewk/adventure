@@ -226,8 +226,7 @@ You're curious.
 So yeah, they did kick you out of the lab when they left to go run errands, telling you 102 times to not play with the inventions,
 but you smuggled that shrink ray out anyway. That's the last thing you remember...
 Where are you?
-Why don't you try LOOKing around.
-	`)
+Why don't you try LOOKing around.`)
 
 	fmt.Println(openingMessage)
 

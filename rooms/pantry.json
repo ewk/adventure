@@ -1,7 +1,7 @@
 {
   "name": "Pantry",
-	"longDesc": "You are in the pantry.\nThere is a lot of food in here, both for humans and pets.\nThere are three shelves stuffed with food.\nThere is a box of cornflakes on the top shelf, but you'll have to climb the shelves to get up there.\nThe only exit leads back out to the kitchen\n",
-	"description": "You are in the pantry.\nThe only exit leads back out to the kitchen\n",
+	"longDesc": "You are in the pantry.\nThere is a lot of food in here, both for humans and pets.\nThere are three shelves stuffed with food.\nThere is a box of cornflakes on the top shelf, but you'll have to climb the shelves to get up there.\nThe only exit leads back out to the kitchen.",
+	"description": "You are in the pantry.\nThe only exit leads back out to the kitchen.",
 	"items": {
 		"shelves": {
 			"name": "shelves",
