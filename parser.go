@@ -140,11 +140,11 @@ func help() {
 
 	take :: acquire an object, putting it into your inventory.
 
-	grab: see take
+	grab :: see take
 
-	drop:: remove an object from your inventory, dropping it in the current room.
+	drop :: remove an object from your inventory, dropping it in the current room.
 
-	eat: restore your strength by eating an item
+	eat :: restore your strength by eating an item
 
 	savegame :: saves the state of the game to a file.
 
