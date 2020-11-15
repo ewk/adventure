@@ -21,7 +21,7 @@ func lookAtItem(item string) {
 		if val.ContainsHiddenObject == true {
 			if hiddenThing, ok := curRoom.Items[val.HiddenObject]; ok {
 				fmt.Println(val.DiscoveryStatement)
-				fmt.Println(hiddenThing.Description)
+				//fmt.Println(hiddenThing.Description)
 				hiddenThing.Discovered = true
 			} else {
 				fmt.Println("Oops, we forgot to hide something there.")
@@ -214,11 +214,12 @@ func eatItem(item string) {
 	}
 }
 
-func enterThePassword(password string){
-	if val, ok := inventory[password]; ok {
-		fmt.Println(val.Description)
-		if curRoom.Name == "Basement Lab"{
+func enterThePassword(password string) {
+	if _, ok := inventory[password]; ok {
+		if curRoom.Name == "Basement Lab" {
 			fmt.Println("TAKE the software you need")
+			curRoom.Items["software"].Discovered = true
+
 		} else {
 			fmt.Println("There's nothing that needs a password here")
 		}
@@ -226,6 +227,40 @@ func enterThePassword(password string){
 		fmt.Println("I don't think you know the password")
 	}
 
+}
+
+func climbTheDesk() {
+	if curRoom.Name == "Basement Lab" {
+		curRoom.Items["computer"].Discovered = true
+	} else if curRoom.Name == "Large Bedroom" {
+		fmt.Println("You can't climb on your parent's desk!")
+	} else {
+		fmt.Println("There is no desk to climb here")
+	}
+}
+
+func lookAtEagle() {
+	if curRoom.Items["eagle"].Discovered == true {
+		if _, ok := inventory["umbrella"]; ok {
+			fmt.Println("If you want to use the umbrella to hide from the eagle say: use umbrella")
+			fmt.Println("If you want to be taken by the eagle say: taunt eagle")
+		} else {
+			fmt.Println("The eagle swoops down and picks you up, you manage to wriggle free and drop down the chimney into the master bedroom")
+			curRoom = rooms["Large Bedroom"]
+			lookAtRoom()
+		}
+	} else {
+		fmt.Println("Hmm...the eagle doesn't seem to be here right now")
+	}
+
+}
+
+func useTheUmbrella() {
+	if curRoom.Name == "Yard" {
+		fmt.Println("You open the umbrella and are completely hidden from the eagle")
+		fmt.Println("Not finding lunch the eagle flies away")
+		curRoom.Items["eagle"].Discovered = false
+	}
 }
 
 func playGame() {
@@ -266,7 +301,11 @@ Why don't you try LOOKing around.
 				} else {
 					tmp := s[2:]
 					item := strings.Join(tmp, " ")
-					lookAtItem(item)
+					if curRoom.Name == "Yard" && item == "eagle" {
+						lookAtEagle()
+					} else {
+						lookAtItem(item)
+					}
 				}
 			} else {
 				lookAtRoom()
@@ -292,7 +331,7 @@ Why don't you try LOOKing around.
 			}
 		case "goto":
 			fmt.Println("Go To Statement Considered Harmful!  https://xkcd.com/292")
-		case "take", "grab":
+		case "take", "grab", "pull":
 			if len(s) > 1 {
 				tmp := s[1:]
 				item := strings.Join(tmp, " ")
@@ -323,8 +362,6 @@ Why don't you try LOOKing around.
 			callTheDog("dog whistle")
 		case "jump":
 			playerJump(curRoom.Name)
-		case "attach":
-			help()
 		case "call":
 			callYourParents()
 		case "eat":
@@ -340,6 +377,25 @@ Why don't you try LOOKing around.
 				enterThePassword("password")
 			} else {
 				fmt.Println("Not a valid command:", action)
+			}
+		case "climb":
+			if len(s) > 1 && s[1] == "desk" {
+				climbTheDesk()
+			} else {
+				fmt.Println("Not a valid command:", action)
+			}
+		case "use":
+			if s[1] == "umbrella" {
+				if _, ok := inventory["umbrella"]; ok {
+					useTheUmbrella()
+				}
+			}
+		case "taunt":
+			if s[1] == "eagle" {
+				curRoom = rooms["Large Bedroom"]
+				lookAtRoom()
+			} else {
+				fmt.Println("There's nobody hear to taunt but yourself")
 			}
 		case "savegame":
 			saveGame()
