@@ -126,7 +126,7 @@ func help() {
 
 	inventory :: Lists the contents of your inventory.
 
-	mystuff :: see take
+	mystuff :: see inventory
 
 	look :: Print the long form explanation of the current room.
 
