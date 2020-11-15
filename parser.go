@@ -64,10 +64,8 @@ func dropObject(item string) {
 
 // listInventory lists the contents of your inventory.
 func listInventory() {
-	fmt.Printf("length=%d %v\n", len(inventory), inventory)
-
-	for key, value := range inventory {
-		fmt.Println("Key:", key, "Value:", value)
+	for key := range inventory {
+		fmt.Println(key)
 	}
 }
 
