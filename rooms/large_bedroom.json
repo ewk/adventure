@@ -20,7 +20,7 @@
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "There's the notebook!",
+			"discoveryStatement": "There's the notebook! You should look at it.",
 			"hiddenObject": "notebook"
 		},
 		"bed": {
@@ -35,8 +35,18 @@
 		},
 		"notebook": {
 			"name": "notebook",
-			"description": "The well-worn notebook is stuffed with extra pieces of paper. Hidden until you examine the desk",
+			"description": "The well-worn notebook is stuffed with extra pieces of paper.",
 			"tooBig": true,
+			"isFeature": false,
+			"discovered": false,
+			"containsHiddenObject": true,
+			"discoveryStatement": "A crumpled sticky note falls from the notebook's pages",
+			"hiddenObject": "password"
+		},
+		"password": {
+			"name": "password",
+			"description": "The password to the basement lab computer",
+			"tooBig": false,
 			"isFeature": false,
 			"discovered": false,
 			"containsHiddenObject": false,

@@ -1,7 +1,7 @@
 {
   "name": "Yard",	
-	"longDesc": "You are in the yard.\nIf you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner.\nThere is a patio umbrella folded on the ground next to this exit.\nTo the west, there is a sandbox.\nThere is an eagle circling overhead.\nYou need to collect sand from the sandbox.\nYou can use the umbrella to hide from the eagle.\n",
-	"description": "You are in the yard.\nIf you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner.\nThere is a patio umbrella folded on the ground next to this exit.\nTo the west, there is a sandbox.\nThere is an eagle circling overhead.\n",
+	"longDesc": "You are in the yard.\nIf you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner.\nThere is a patio umbrella folded on the ground next to this exit.\nTo the west, there is a sandbox.\nThere is an eagle that likes to hang out here sometimes.\nYou need to collect sand from the sandbox.\nYou can use the umbrella to hide from the eagle.\n",
+	"description": "You are in the yard.\nIf you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner.\nThere is a patio umbrella folded on the ground next to this exit.\nTo the west, there is a sandbox.\nThere is an eagle that likes to hang out here sometimes.\n",
 	"items": {
 		"eagle": {
 			"name": "eagle",
