@@ -217,6 +217,20 @@ func eatItem(item string) {
 	}
 }
 
+func enterThePassword(password string){
+	if val, ok := inventory[password]; ok {
+		fmt.Println(val.Description)
+		if curRoom.Name == "Basement Lab"{
+			fmt.Println("TAKE the software you need")
+		} else {
+			fmt.Println("There's nothing that needs a password here")
+		}
+	} else {
+		fmt.Println("I don't think you know the password")
+	}
+
+}
+
 func playGame() {
 	openingMessage := fmt.Sprintf(`
 It was a bright and sunny afternoon. Everything was going fine.
@@ -325,6 +339,12 @@ Why don't you try LOOKing around.
 				eatItem(item)
 			} else {
 				fmt.Println("Eat what?")
+			}
+		case "enter":
+			if len(s) > 1 && s[1] == "password" {
+				enterThePassword("password")
+			} else {
+				fmt.Println("Not a valid command:", action)
 			}
 		case "savegame":
 			saveGame()
