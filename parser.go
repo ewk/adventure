@@ -17,7 +17,9 @@ func lookAtItem(item string) {
 	if val, ok := inventory[item]; ok {
 		fmt.Println(val.Description)
 	} else if val, ok := curRoom.Items[item]; ok {
-		fmt.Println(val.Description)
+		if val.Discovered == true {
+			fmt.Println(val.Description)
+		}
 		if val.ContainsHiddenObject == true {
 			if hiddenThing, ok := curRoom.Items[val.HiddenObject]; ok {
 				fmt.Println(val.DiscoveryStatement)
@@ -288,7 +290,7 @@ func specialSlideAndJump(userInput []string) {
 	} else {
 		if userInput[0] == "slide" {
 			fmt.Println("Sliiiiiide to the left *clap* Sliiiiiide to the right.")
-			fmt.Println("You can't remmeber and more of the dance.")
+			fmt.Println("You can't remmeber any more of the dance.")
 		}
 		if userInput[0] == "jump" {
 			playerJump(curRoom.Name)
@@ -430,7 +432,7 @@ Why don't you try LOOKing around.
 				fmt.Println("There's nobody hear to taunt but yourself")
 			}
 		case "slide", "jump":
-			if len(s) > 1 {
+			if len(s) > 1 && (curRoom.Name == "Large Bedroom" || curRoom.Name == "Small Bedroom") {
 				specialSlideAndJump(s)
 			} else {
 				if s[0] == "slide" {
