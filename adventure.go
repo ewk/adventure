@@ -23,6 +23,7 @@ var curRoom *Room
 // definition of a room
 type Room struct {
 	Name        string
+	Alias       string // regex for room name alias
 	LongDesc    string
 	Description string
 	Items       map[string]*Item
@@ -73,6 +74,12 @@ func loadRooms() {
 			var r Room
 			json.Unmarshal([]byte(roomJson), &r)
 			rooms[r.Name] = &r
+		}
+	}
+
+	for _, r := range rooms {
+		if r.Alias != "" {
+			roomAliases[r.Alias] = r.Name
 		}
 	}
 
