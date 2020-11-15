@@ -25,7 +25,7 @@
 		},
 		"fireplace": {
 			"name": "fireplace",
-			"description": "The fireplace is connected to the master bedroom on the second floor.",
+			"description": "The fireplace is connected to the large bedroom on the second floor.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
@@ -45,5 +45,5 @@
 		}
 	},
 	"visited" : false,
-	"exits": [ "Dining Room", "Master Bedroom" ]
+	"exits": [ "Dining Room" ]
 }
