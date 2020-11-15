@@ -263,6 +263,40 @@ func useTheUmbrella() {
 	}
 }
 
+func specialSlideAndJump(userInput []string) {
+	if curRoom.Name == "Large Bedroom" || curRoom.Name == "Small Bedroom" {
+		if userInput[1] == "fireplace" {
+			fmt.Println("GERONIMO!!!!")
+			curRoom = rooms["Living Room"]
+			lookAtRoom()
+		} else if userInput[1] == "laundry" {
+			fmt.Println("HERE GOES NOTHING")
+			curRoom = rooms["Basement Lab"]
+			lookAtRoom()
+		}
+		if len(userInput) > 2 {
+			if userInput[2] == "fireplace" {
+				fmt.Println("GERONIMO!!!!")
+				curRoom = rooms["Living Room"]
+				lookAtRoom()
+			} else if userInput[2] == "laundry" {
+				fmt.Println("HERE GOES NOTHING")
+				curRoom = rooms["Basement Lab"]
+				lookAtRoom()
+			}
+		}
+	} else {
+		if userInput[0] == "slide" {
+			fmt.Println("Sliiiiiide to the left *clap* Sliiiiiide to the right.")
+			fmt.Println("You can't remmeber and more of the dance.")
+		}
+		if userInput[0] == "jump" {
+			playerJump(curRoom.Name)
+		}
+
+	}
+}
+
 func playGame() {
 	openingMessage := fmt.Sprintf(`
 It was a bright and sunny afternoon. Everything was going fine.
@@ -360,8 +394,6 @@ Why don't you try LOOKing around.
 			}
 		case "whistle":
 			callTheDog("dog whistle")
-		case "jump":
-			playerJump(curRoom.Name)
 		case "call":
 			callYourParents()
 		case "eat":
@@ -397,6 +429,18 @@ Why don't you try LOOKing around.
 			} else {
 				fmt.Println("There's nobody hear to taunt but yourself")
 			}
+		case "slide", "jump":
+			if len(s) > 1 {
+				specialSlideAndJump(s)
+			} else {
+				if s[0] == "slide" {
+					fmt.Println("Sliiiiiide to the left *clap* Sliiiiiide to the right.")
+					fmt.Println("You can't remmeber and more of the dance.")
+				} else if s[0] == "jump" {
+					playerJump(curRoom.Name)
+				}
+			}
+
 		case "savegame":
 			saveGame()
 		case "exit", "quit":
