@@ -74,8 +74,7 @@ func listInventory() {
 func moveToRoom(exit string) {
 	b := checkExit() // verify we have items needed to leave
 	if !b {
-		// TODO rooms with exit restrictions each have a unique restriction
-		fmt.Println("You need to find an item before you can leave.")
+		fmt.Printf("You cannot leave because %s.\n", curRoom.ExitBlock)
 		return
 	}
 

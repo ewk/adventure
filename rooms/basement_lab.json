@@ -46,5 +46,6 @@
   },
   "visited" : false,
   "exits": [ "Yard" ],
-  "exitItems": [ "dog whistle" ]
+  "exitItems": [ "dog whistle" ],
+  "exitBlock": "there is an eagle outside circling for a bite size snack, and you are currently bite size"
 }

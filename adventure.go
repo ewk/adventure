@@ -29,6 +29,7 @@ type Room struct {
 	Visited     bool
 	Exits       []string // outbound connection room names
 	ExitItems   []string // items required to exit a room
+	ExitBlock   string   // describe why the player cannot exit a room
 }
 
 // struct used for both features and objects
