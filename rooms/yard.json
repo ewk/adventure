@@ -32,16 +32,6 @@
 			"containsHiddenObject": false,
 			"discoveryStatement": "",
 			"hiddenObject": ""
-		},
-		"squeaky toy": {
-			"name": "squeeky toy",
-			"description": "This is a red ball squeaky toy. Your dog can hear this from a mile away and will come running, can serve a similar function to the dog whistle. To use say squeak",
-			"tooBig":false,
-			"isFeature": false,
-			"discovered": true,
-			"containsHiddenObject": false,
-			"discoveryStatement": "",
-			"hiddenObject": ""
 		}
 	},
 	"visited" : false,

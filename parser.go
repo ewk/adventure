@@ -183,9 +183,6 @@ func callTheDog(item string) {
 		if val.Name == "dog whistle" {
 			fmt.Println("Whistle for the dog")
 		}
-		if val.Name == "squeeky toy" {
-			fmt.Println("Squeek that ball")
-		}
 	} else {
 		fmt.Println("The dog can't hear you")
 	}
@@ -324,8 +321,6 @@ Why don't you try LOOKing around.
 			}
 		case "whistle":
 			callTheDog("dog whistle")
-		case "squeek":
-			callTheDog("squeeky toy")
 		case "jump":
 			playerJump(curRoom.Name)
 		case "attach":
