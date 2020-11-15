@@ -214,6 +214,15 @@ func eatItem(item string) {
 	}
 }
 
+// capInput is a helper function to capitalize case insensitive input
+func capInput(input []string) []string {
+	for i, w := range input {
+		input[i] = strings.Title(strings.ToLower(w))
+	}
+
+	return input
+}
+
 func playGame() {
 	openingMessage := fmt.Sprintf(`
 It was a bright and sunny afternoon. Everything was going fine.
@@ -266,11 +275,13 @@ Why don't you try LOOKing around.
 					break
 				} else { // I want to go there!
 					loc := s[2:]
+					loc = capInput(loc)
 					exit := strings.Join(loc, " ")
 					moveToRoom(exit)
 				}
 			} else if len(s) > 1 { // If player says "go" ...
 				loc := s[1:]
+				loc = capInput(loc)
 				exit := strings.Join(loc, " ")
 				moveToRoom(exit)
 			} else {
