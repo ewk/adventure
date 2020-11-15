@@ -59,6 +59,7 @@ func dropObject(item string) {
 	if val, ok := inventory[item]; ok {
 		curRoom.Items[item] = val
 		delete(inventory, item)
+		fmt.Printf("You dropped the %s in the %s.\n", item, curRoom.Name)
 	} else {
 		fmt.Printf("%s not found.\n", item)
 	}
@@ -66,10 +67,8 @@ func dropObject(item string) {
 
 // listInventory lists the contents of your inventory.
 func listInventory() {
-	fmt.Printf("length=%d %v\n", len(inventory), inventory)
-
-	for key, value := range inventory {
-		fmt.Println("Key:", key, "Value:", value)
+	for key := range inventory {
+		fmt.Println(key)
 	}
 }
 
@@ -77,8 +76,7 @@ func listInventory() {
 func moveToRoom(exit string) {
 	b := checkExit() // verify we have items needed to leave
 	if !b {
-		// TODO rooms with exit restrictions each have a unique restriction
-		fmt.Println("You need to find an item before you can leave.")
+		fmt.Printf("You cannot leave because %s.\n", curRoom.ExitBlock)
 		return
 	}
 
@@ -128,7 +126,7 @@ func help() {
 
 	inventory :: Lists the contents of your inventory.
 
-	mystuff :: see take
+	mystuff :: see inventory
 
 	look :: Print the long form explanation of the current room.
 
@@ -142,11 +140,11 @@ func help() {
 
 	take :: acquire an object, putting it into your inventory.
 
-	grab: see take
+	grab :: see take
 
-	drop:: remove an object from your inventory, dropping it in the current room.
+	drop :: remove an object from your inventory, dropping it in the current room.
 
-	eat: restore your strength by eating an item
+	eat :: restore your strength by eating an item
 
 	savegame :: saves the state of the game to a file.
 
@@ -216,6 +214,7 @@ func eatItem(item string) {
 	}
 }
 
+<<<<<<< HEAD
 func enterThePassword(password string) {
 	if _, ok := inventory[password]; ok {
 		if curRoom.Name == "Basement Lab" {
@@ -297,6 +296,15 @@ func specialSlideAndJump(userInput []string) {
 		}
 
 	}
+=======
+// capInput is a helper function to capitalize case insensitive input
+func capInput(input []string) []string {
+	for i, w := range input {
+		input[i] = strings.Title(strings.ToLower(w))
+	}
+
+	return input
+>>>>>>> 0f997577c9a46cf4abe0fb62c3b490681b25065d
 }
 
 func playGame() {
@@ -355,11 +363,13 @@ Why don't you try LOOKing around.
 					break
 				} else { // I want to go there!
 					loc := s[2:]
+					loc = capInput(loc)
 					exit := strings.Join(loc, " ")
 					moveToRoom(exit)
 				}
 			} else if len(s) > 1 { // If player says "go" ...
 				loc := s[1:]
+				loc = capInput(loc)
 				exit := strings.Join(loc, " ")
 				moveToRoom(exit)
 			} else {
