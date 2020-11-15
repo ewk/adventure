@@ -29,6 +29,7 @@ type Room struct {
 	Visited     bool
 	Exits       []string // outbound connection room names
 	ExitItems   []string // items required to exit a room
+	ExitBlock   string   // describe why the player cannot exit a room
 }
 
 // struct used for both features and objects
@@ -117,7 +118,8 @@ func loadGame(s string) {
 	gameJson, e := ioutil.ReadFile(s)
 
 	if e != nil {
-		log.Fatal(e)
+		fmt.Printf("File '%s' not found!\n", s)
+		return
 	}
 
 	// player must confirm they want to load a saved game
