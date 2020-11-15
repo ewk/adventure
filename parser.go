@@ -425,11 +425,15 @@ Why don't you try LOOKing around.
 				}
 			}
 		case "taunt":
-			if s[1] == "eagle" {
+			if s[1] == "eagle" && curRoom.Items["eagle"].Discovered == true {
+				curRoom = rooms["Large Bedroom"]
+				lookAtRoom()
+			} else if curRoom.Items["eagle"].Discovered == false {
+				fmt.Println("The eagle has heard your taunts and it has made him mad!")
 				curRoom = rooms["Large Bedroom"]
 				lookAtRoom()
 			} else {
-				fmt.Println("There's nobody hear to taunt but yourself")
+				fmt.Println("There's nobody here to taunt but yourself")
 			}
 		case "slide", "jump":
 			if len(s) > 1 && (curRoom.Name == "Large Bedroom" || curRoom.Name == "Small Bedroom") {
