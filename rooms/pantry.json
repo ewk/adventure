@@ -1,6 +1,6 @@
 {
   "name": "Pantry",
-	"longDesc": "You are in the pantry.\nThere is a lot of food in here, both for humans and pets.\nThere are three shelves stuffed with food.\nThere is a box of cornflakes on the top shelf, but you'll have to climb the shelves to get up there.\nYou should grab the cat treats to distract the cat, and dog treats to reward the dog for coming when you call.\nThe only exit leads back out to the kitchen\n",
+	"longDesc": "You are in the pantry.\nThere is a lot of food in here, both for humans and pets.\nThere are three shelves stuffed with food.\nThere is a box of cornflakes on the top shelf, but you'll have to climb the shelves to get up there.\nThe only exit leads back out to the kitchen\n",
 	"description": "You are in the pantry.\nThe only exit leads back out to the kitchen\n",
 	"items": {
 		"shelves": {
@@ -26,28 +26,6 @@
 		"cornflakes": {
 			"name": "cornflakes",
 			"description":"A box of generic corn flakes. You need these to fix the shrink ray.",
-			"tooBig": false,
-			"isFeature": false,
-			"discovered": true,
-			"containsHiddenObject": false,
-			"discoveryStatement": "",
-			"hiddenObject": "",
-			"isEdible": true
-		},
-		"dog treats": {
-			"name": "dog treats",
-			"description": "A bag of dog treats. To reward Fido.",
-			"tooBig": false,
-			"isFeature": false,
-			"discovered": true,
-			"containsHiddenObject": false,
-			"discoveryStatement": "",
-			"hiddenObject": "",
-			"isEdible": true
-		},
-		"cat treats": {
-			"name": "cat treats",
-			"description": "A bag of catnip-laced cat treats. To distract Fluffy.",
 			"tooBig": false,
 			"isFeature": false,
 			"discovered": true,

@@ -5,7 +5,7 @@
   "items": {
     "laundry chute": {
       "name": "laundry chute",
-      "description": "The laundry chute leads up to your bedroom, but you can't climb up it, you can only slide down it.",
+      "description": "The laundry chute leads up to the small bedroom, but you can't climb up it.\nYou can only slide down it.",
       "tooBig": true,
       "isFeature": true,
       "discovered": true,

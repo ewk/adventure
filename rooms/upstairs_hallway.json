@@ -1,6 +1,6 @@
 {
   "name": "Upstairs Hallway",
-	"longDesc": "You are in the upstairs hallway.\nWhen you exit the attic, you are on the south wall.\nThere are stairs in front of you, on the north wall.\nTo your left, on the west wall, is your parents' bedroom.\nOn the east wall there is your bedroom, and the bathroom.\nBetween your bedroom and the bathroom is a recycling bin filled to the top with seltzer cans.\nNext to the door to your parents' room is an exercise ball and your mom's purse.\nYou need to distract the cat before you can get in the recycling bin.\nYou need to look in the recycling bin to get the aluminum can.\nYou need to bounce on the exercise ball to open your parents' door.\nYou can look in your mom's purse, but you can't take anything out of it because she'll know you've been in there.\n",
+	"longDesc": "You are in the upstairs hallway.\nWhen you exit the attic, you are on the south wall.\nThere are stairs in front of you, on the north wall.\nTo your left, on the west wall, is your parents' bedroom.\nOn the east wall there is your bedroom, and the bathroom.\nBetween your bedroom and the bathroom is a recycling bin filled to the top with seltzer cans.\nNext to the door to your parents' room is an exercise ball and your mom's purse.\nYou need to look in the recycling bin to get the aluminum can.\nYou need to bounce on the exercise ball to open your parents' door.\nYou can look in your mom's purse, but you can't take anything out of it because she'll know you've been in there.\n",
 	"description": "You are in the upstairs hallway.\nWhen you exit the attic, you are on the south wall.\nThere are stairs in front of you, on the north wall.\nTo your left, on the west wall, is your parents' bedroom.\nOn the east wall there is your bedroom, and the bathroom.\n",
   "items": {
 		"recycling bin": {
@@ -45,5 +45,5 @@
 		}
 	},
 	"visited" : false,
-  "exits": [ "Master Bedroom", "Bathroom", "Your Bedroom", "Attic", "Staircase" ]
+  "exits": [ "Large Bedroom", "Bathroom", "Small Bedroom", "Attic", "Staircase" ]
 }

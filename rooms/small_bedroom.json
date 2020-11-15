@@ -1,7 +1,7 @@
 {
-  "name": "Your Bedroom",
-  "longDesc": "You are in your bedroom.\nThere is an exit to the upstairs hallway.\nThere is a bed against the wall. You store your treasures underneath it.\nThere is a bedside table with a lamp next next to the head of your bed.\nYour closet is on the wall.\nIt has a chute that leads to the basement where the laundry room is.\nThere are dirty socks on the floor of your closet.\n",
-  "description": "This is your bedroom.\nThere is an exit to the upstairs hallway.\nYour closet has a chute that leads to the basement.\n",
+  "name": "Small Bedroom",
+  "longDesc": "You are in the small bedroom, which belongs to you.\nThere is an exit to the upstairs hallway.\nThere is a bed against the wall. You store your treasures underneath it.\nThere is a bedside table with a lamp next next to the head of your bed.\nYour closet is on the wall.\nIt has a chute that leads to the basement where the laundry room is.\nThere are dirty socks on the floor of your closet.\n",
+  "description": "You are in the small bedroom, which belongs to you.\nThere is an exit to the upstairs hallway.\nYour closet has a chute that leads to the basement.\n",
   "items": {
 		"closet": {
 			"name": "closet",
@@ -45,6 +45,6 @@
 		}
 	},
 	"visited" : false,
-	"exits": [ "Upstairs Hallway", "Basement Lab" ]
+	"exits": [ "Upstairs Hallway" ]
 }
 
