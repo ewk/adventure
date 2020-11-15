@@ -5,7 +5,7 @@
 	"items": {
 		"eagle": {
 			"name": "eagle",
-			"description": "The eagle seems to have noticed you.  You wonder if it will swoop down to grab you if you step into the yard.",
+			"description": "The eagle seems to have noticed you. Don't look at it unless you want it to notice you.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
