@@ -295,6 +295,8 @@ func specialSlideAndJump(userInput []string) {
 		}
 
 	}
+}
+
 // capInput is a helper function to capitalize case insensitive input
 func capInput(input []string) []string {
 	for i, w := range input {
