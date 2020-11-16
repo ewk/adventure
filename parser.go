@@ -214,7 +214,6 @@ func eatItem(item string) {
 	}
 }
 
-<<<<<<< HEAD
 func enterThePassword(password string) {
 	if _, ok := inventory[password]; ok {
 		if curRoom.Name == "Basement Lab" {
@@ -296,7 +295,6 @@ func specialSlideAndJump(userInput []string) {
 		}
 
 	}
-=======
 // capInput is a helper function to capitalize case insensitive input
 func capInput(input []string) []string {
 	for i, w := range input {
@@ -304,7 +302,6 @@ func capInput(input []string) []string {
 	}
 
 	return input
->>>>>>> 0f997577c9a46cf4abe0fb62c3b490681b25065d
 }
 
 func playGame() {
