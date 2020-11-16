@@ -16,8 +16,9 @@ import (
 const MinRooms = 15
 const MinItems = 8
 
-var rooms = make(map[string]*Room)     // map of rooms
-var inventory = make(map[string]*Item) // player inventory
+var rooms = make(map[string]*Room)        // map of rooms
+var roomAliases = make(map[string]string) // map of room name aliases
+var inventory = make(map[string]*Item)    // player inventory
 var curRoom *Room
 
 // definition of a room
