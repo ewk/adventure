@@ -188,8 +188,8 @@ func callTheDog(item string) {
 	}
 }
 
-func playerJump(currentRoom string) {
-	if currentRoom == "Pantry" || currentRoom == "Upstairs Hallway" || currentRoom == "Basement Lab" {
+func playerJump() {
+	if curRoom.Name == "Pantry" || curRoom.Name == "Upstairs Hallway" || curRoom.Name == "Basement Lab" {
 		fmt.Println("You need to jump here")
 	} else {
 		fmt.Println("Jump all you want it's not going to do you any good")
@@ -256,14 +256,31 @@ func lookAtEagle() {
 }
 
 func useTheUmbrella() {
-	if curRoom.Name == "Yard" {
+	if _, ok := inventory["umbrella"]; ok && curRoom.Name == "Yard" {
 		fmt.Println("You open the umbrella and are completely hidden from the eagle")
 		fmt.Println("Not finding lunch the eagle flies away")
 		curRoom.Items["eagle"].Discovered = false
+	} else if _, ok := inventory["umbrella"]; ok && curRoom.Name != "Yard" {
+		fmt.Println("You can't open the umbrella inside!")
+	} else {
+		fmt.Println("You don't have an umbrella")
 	}
 }
 
-func specialSlideAndJump(userInput []string) {
+func tauntTheEagle() {
+	if curRoom.Items["eagle"].Discovered == true {
+		curRoom = rooms["Large Bedroom"]
+		lookAtRoom()
+	} else if curRoom.Items["eagle"].Discovered == false {
+		fmt.Println("The eagle has heard your taunts and it has made him mad!")
+		curRoom.Items["eagle"].Discovered = true
+		curRoom = rooms["Large Bedroom"]
+		lookAtRoom()
+	}
+
+}
+
+func slideDownJumpIn(userInput []string) {
 	if curRoom.Name == "Large Bedroom" || curRoom.Name == "Small Bedroom" {
 		if userInput[1] == "fireplace" {
 			fmt.Println("GERONIMO!!!!")
@@ -291,7 +308,7 @@ func specialSlideAndJump(userInput []string) {
 			fmt.Println("You can't remmeber any more of the dance.")
 		}
 		if userInput[0] == "jump" {
-			playerJump(curRoom.Name)
+			playerJump()
 		}
 
 	}
@@ -419,41 +436,39 @@ Why don't you try LOOKing around.
 			if len(s) > 1 && s[1] == "password" {
 				enterThePassword("password")
 			} else {
-				fmt.Println("Not a valid command:", action)
+				fmt.Println("Nothing to enter here")
 			}
 		case "climb":
 			if len(s) > 1 && s[1] == "desk" {
 				climbTheDesk()
 			} else {
-				fmt.Println("Not a valid command:", action)
+				fmt.Println("There's nothing to climb")
 			}
 		case "use":
-			if s[1] == "umbrella" {
-				if _, ok := inventory["umbrella"]; ok {
-					useTheUmbrella()
-				}
+			if len(s) > 1 && s[1] == "umbrella" {
+				useTheUmbrella()
+			} else {
+				fmt.Println("Use what?")
 			}
 		case "taunt":
-			if s[1] == "eagle" && curRoom.Items["eagle"].Discovered == true {
-				curRoom = rooms["Large Bedroom"]
-				lookAtRoom()
-			} else if curRoom.Items["eagle"].Discovered == false {
-				fmt.Println("The eagle has heard your taunts and it has made him mad!")
-				curRoom = rooms["Large Bedroom"]
-				lookAtRoom()
+			if len(s) > 1 && s[1] == "eagle" {
+				tauntTheEagle()
 			} else {
 				fmt.Println("There's nobody here to taunt but yourself")
 			}
-		case "slide", "jump":
-			if len(s) > 1 && (curRoom.Name == "Large Bedroom" || curRoom.Name == "Small Bedroom") {
-				specialSlideAndJump(s)
+		case "slide":
+			if len(s) > 1 {
+				slideDownJumpIn(s)
 			} else {
-				if s[0] == "slide" {
-					fmt.Println("Sliiiiiide to the left *clap* Sliiiiiide to the right.")
-					fmt.Println("You can't remmeber and more of the dance.")
-				} else if s[0] == "jump" {
-					playerJump(curRoom.Name)
-				}
+				fmt.Println("Sliiiiiide to the left *clap* Sliiiiiide to the right.")
+				fmt.Println("You can't remmeber and more of the dance.")
+			}
+
+		case "jump":
+			if len(s) > 1 {
+				slideDownJumpIn(s)
+			} else {
+				playerJump()
 			}
 
 		case "savegame":
