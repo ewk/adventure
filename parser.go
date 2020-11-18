@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"regexp"
 	"strings"
 )
 
@@ -78,6 +79,15 @@ func moveToRoom(exit string) {
 	if !b {
 		fmt.Printf("You cannot leave because %s.\n", curRoom.ExitBlock)
 		return
+	}
+
+	// If the exit requested by a user matches an entry in the list of
+	// room aliases, then the room name becomes the requested exit.
+	for key, val := range roomAliases {
+		matched, _ := regexp.MatchString(key, exit)
+		if matched == true {
+			exit = val
+		}
 	}
 
 	for _, e := range curRoom.Exits {
@@ -346,7 +356,7 @@ Why don't you try LOOKing around.
 	for input.Scan() {
 		// split user input at whitespace and match known commands
 		action := input.Text()
-		s := strings.Fields(action)
+		s := strings.Fields(strings.ToLower(action))
 
 		if cap(s) == 0 {
 			continue
