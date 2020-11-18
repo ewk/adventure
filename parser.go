@@ -244,7 +244,7 @@ Why don't you try LOOKing around.
 	for input.Scan() {
 		// split user input at whitespace and match known commands
 		action := input.Text()
-		s := strings.Fields(action)
+		s := strings.Fields(strings.ToLower(action))
 
 		if cap(s) == 0 {
 			continue
