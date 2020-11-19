@@ -10,9 +10,19 @@
 			"tooBig" : true,
 			"isFeature": true,
 			"discovered": true,
-			"containsHiddenObject": false,
+			"containsHiddenObject": true,
+			"discoveryStatement": "The laundry chute goes straight to the basement. Jump in if you're feeling lucky.",
+			"hiddenObject": "laundry chute"
+		},
+		"laundry chute": {
+			"name": "laundry chute",
+			"description": "The laundry chute leads straight to the basement, you can jump or slide down it if you want",
+			"tooBig" : true,
+			"isFeature": true,
+			"discovered": false,
+			"containsHiddenObject": true,
 			"discoveryStatement": "",
-			"hiddenObject": ""
+			"hiddenObject": "laundry chute"
 		},
 		"under the bed": {
 			"name": "under the bed",
