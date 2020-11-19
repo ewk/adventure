@@ -156,6 +156,24 @@ func help() {
 
 	eat :: restore your strength by eating an item
 
+	pull :: see take
+
+	whistle :: With the right item at hand, you can whistle to summon the family pet.
+
+	call :: Call your parents to come get you.
+
+	enter :: Type a secret password into a computer.
+
+	climb :: Climb a mountain, climb the furniture ...
+
+	use :: Make use of an item in your inventory.
+
+	taunt :: Pick a fight!
+
+	jump :: Get vertical!
+
+	slide :: Travel quickly
+
 	savegame :: saves the state of the game to a file.
 
 	loadgame :: confirms with the user that this really is desired, then loads
