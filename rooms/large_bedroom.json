@@ -15,13 +15,13 @@
 		},
 		"desk": {
 			"name": "desk",
-			"description": "Your parents' desk is covered in scraps of paper.",
+			"description": "Your parents' desk is covered in post-it notes, not just on the top of the desk but also down the sides.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "On the top of the pile is a post-it note.",
-			"hiddenObject": "post-it note"
+			"discoveryStatement": "On one side of the desk, near the floor, is a yellow post-it note with 'PASSWORD' written at the top",
+			"hiddenObject": "password"
 		},
 		"bed": {
 			"name": "bed",
@@ -33,9 +33,9 @@
 			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"post-it note": {
-			"name": "post-it note",
-			"description": "The yellow post-it note has the words 'Password: 2F957uu' written on it.",
+		"password": {
+			"name": "password",
+			"description": "This post-it note contains the password to the computer in the basement lab.",
 			"tooBig": false,
 			"isFeature": false,
 			"discovered": false,
