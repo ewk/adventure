@@ -15,27 +15,27 @@
     },
     "desk": {
       "name": "desk",
-      "description": "The computer is on the desk, you need to climb the desk to get to it",
+      "description": "The computer is on the desk, but you can't see it from here, you have to CLIMB DESK to look at it.",
       "tooBig":true,
       "isFeature": true,
       "discovered": true,
+      "containsHiddenObject": true,
+      "discoveryStatement": "",
+      "hiddenObject": "computer"
+    },
+    "computer": {
+      "name": "computer",
+      "description": "You must ENTER PASSWORD to access this computer",
+      "tooBig": true,
+      "isFeature": true,
+      "discovered": false,
       "containsHiddenObject": false,
       "discoveryStatement": "",
       "hiddenObject": ""
     },
-    "computer": {
-      "name": "computer",
-      "description": "This is the computer. You need to enter a password to access the software to make the shrink ray reverse",
-      "tooBig": true,
-      "isFeature": true,
-      "discovered": true,
-      "containsHiddenObject": true,
-      "discoveryStatement": "Welcome, here's that software you wanted.",
-      "hiddenObject": "grow ray software"
-    },
-    "grow ray software": {
-      "name": "growRaySoftware",
-      "description": "You need to enter the password to get the grow ray software. ",
+    "software": {
+      "name": "software",
+      "description": "All the code you need to program the shrink ray to make things big again. ",
       "tooBig": false,
       "isFeature": false,
       "discovered": false,
@@ -45,6 +45,5 @@
     }
   },
   "visited" : false,
-  "exits": [ "Yard" ],
-  "exitItems": [ "dog whistle" ]
+  "exits": [ "Yard" ]
 }

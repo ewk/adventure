@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"regexp"
 	"strings"
 )
 
@@ -17,11 +18,13 @@ func lookAtItem(item string) {
 	if val, ok := inventory[item]; ok {
 		fmt.Println(val.Description)
 	} else if val, ok := curRoom.Items[item]; ok {
-		fmt.Println(val.Description)
+		if val.Discovered == true {
+			fmt.Println(val.Description)
+		}
 		if val.ContainsHiddenObject == true {
 			if hiddenThing, ok := curRoom.Items[val.HiddenObject]; ok {
 				fmt.Println(val.DiscoveryStatement)
-				fmt.Println(hiddenThing.Description)
+				//fmt.Println(hiddenThing.Description)
 				hiddenThing.Discovered = true
 			} else {
 				fmt.Println("Oops, we forgot to hide something there.")
@@ -57,6 +60,7 @@ func dropObject(item string) {
 	if val, ok := inventory[item]; ok {
 		curRoom.Items[item] = val
 		delete(inventory, item)
+		fmt.Printf("You dropped the %s in the %s.\n", item, curRoom.Name)
 	} else {
 		fmt.Printf("%s not found.\n", item)
 	}
@@ -64,10 +68,8 @@ func dropObject(item string) {
 
 // listInventory lists the contents of your inventory.
 func listInventory() {
-	fmt.Printf("length=%d %v\n", len(inventory), inventory)
-
-	for key, value := range inventory {
-		fmt.Println("Key:", key, "Value:", value)
+	for key := range inventory {
+		fmt.Println(key)
 	}
 }
 
@@ -75,9 +77,17 @@ func listInventory() {
 func moveToRoom(exit string) {
 	b := checkExit() // verify we have items needed to leave
 	if !b {
-		// TODO rooms with exit restrictions each have a unique restriction
-		fmt.Println("You need to find an item before you can leave.")
+		fmt.Printf("You cannot leave because %s.\n", curRoom.ExitBlock)
 		return
+	}
+
+	// If the exit requested by a user matches an entry in the list of
+	// room aliases, then the room name becomes the requested exit.
+	for key, val := range roomAliases {
+		matched, _ := regexp.MatchString(key, exit)
+		if matched == true {
+			exit = val
+		}
 	}
 
 	for _, e := range curRoom.Exits {
@@ -126,7 +136,7 @@ func help() {
 
 	inventory :: Lists the contents of your inventory.
 
-	mystuff :: see take
+	mystuff :: see inventory
 
 	look :: Print the long form explanation of the current room.
 
@@ -140,11 +150,29 @@ func help() {
 
 	take :: acquire an object, putting it into your inventory.
 
-	grab: see take
+	grab :: see take
 
-	drop:: remove an object from your inventory, dropping it in the current room.
+	drop :: remove an object from your inventory, dropping it in the current room.
 
-	eat: restore your strength by eating an item
+	eat :: restore your strength by eating an item
+
+	pull :: see take
+
+	whistle :: With the right item at hand, you can whistle to summon the family pet.
+
+	call :: Call your parents to come get you.
+
+	enter :: Type a secret password into a computer.
+
+	climb :: Climb a mountain, climb the furniture ...
+
+	use :: Make use of an item in your inventory.
+
+	taunt :: Pick a fight!
+
+	jump :: Get vertical!
+
+	slide :: Travel quickly
 
 	savegame :: saves the state of the game to a file.
 
@@ -188,8 +216,8 @@ func callTheDog(item string) {
 	}
 }
 
-func playerJump(currentRoom string) {
-	if currentRoom == "Pantry" || currentRoom == "Upstairs Hallway" || currentRoom == "Basement Lab" {
+func playerJump() {
+	if curRoom.Name == "Pantry" || curRoom.Name == "Upstairs Hallway" || curRoom.Name == "Basement Lab" {
 		fmt.Println("You need to jump here")
 	} else {
 		fmt.Println("Jump all you want it's not going to do you any good")
@@ -214,6 +242,115 @@ func eatItem(item string) {
 	}
 }
 
+func enterThePassword(password string) {
+	if _, ok := inventory[password]; ok {
+		if curRoom.Name == "Basement Lab" {
+			fmt.Println("TAKE the software you need")
+			curRoom.Items["software"].Discovered = true
+
+		} else {
+			fmt.Println("There's nothing that needs a password here")
+		}
+	} else {
+		fmt.Println("I don't think you know the password")
+	}
+
+}
+
+func climbTheDesk() {
+	if curRoom.Name == "Basement Lab" {
+		curRoom.Items["computer"].Discovered = true
+	} else if curRoom.Name == "Large Bedroom" {
+		fmt.Println("You can't climb on your parent's desk!")
+	} else {
+		fmt.Println("There is no desk to climb here")
+	}
+}
+
+func lookAtEagle() {
+	if curRoom.Items["eagle"].Discovered == true {
+		if _, ok := inventory["umbrella"]; ok {
+			fmt.Println("If you want to use the umbrella to hide from the eagle say: use umbrella")
+			fmt.Println("If you want to be taken by the eagle say: taunt eagle")
+		} else {
+			fmt.Println("The eagle swoops down and picks you up, you manage to wriggle free and drop down the chimney into the master bedroom")
+			curRoom = rooms["Large Bedroom"]
+			lookAtRoom()
+		}
+	} else {
+		fmt.Println("Hmm...the eagle doesn't seem to be here right now")
+	}
+
+}
+
+func useTheUmbrella() {
+	if _, ok := inventory["umbrella"]; ok && curRoom.Name == "Yard" {
+		fmt.Println("You open the umbrella and are completely hidden from the eagle")
+		fmt.Println("Not finding lunch the eagle flies away")
+		curRoom.Items["eagle"].Discovered = false
+	} else if _, ok := inventory["umbrella"]; ok && curRoom.Name != "Yard" {
+		fmt.Println("You can't open the umbrella inside!")
+	} else {
+		fmt.Println("You don't have an umbrella")
+	}
+}
+
+func tauntTheEagle() {
+	if curRoom.Items["eagle"].Discovered == true {
+		curRoom = rooms["Large Bedroom"]
+		lookAtRoom()
+	} else if curRoom.Items["eagle"].Discovered == false {
+		fmt.Println("The eagle has heard your taunts and it has made him mad!")
+		curRoom.Items["eagle"].Discovered = true
+		curRoom = rooms["Large Bedroom"]
+		lookAtRoom()
+	}
+
+}
+
+func slideDownJumpIn(userInput []string) {
+	if curRoom.Name == "Large Bedroom" || curRoom.Name == "Small Bedroom" {
+		if userInput[1] == "fireplace" {
+			fmt.Println("GERONIMO!!!!")
+			curRoom = rooms["Living Room"]
+			lookAtRoom()
+		} else if userInput[1] == "laundry" {
+			fmt.Println("HERE GOES NOTHING")
+			curRoom = rooms["Basement Lab"]
+			lookAtRoom()
+		}
+		if len(userInput) > 2 {
+			if userInput[2] == "fireplace" {
+				fmt.Println("GERONIMO!!!!")
+				curRoom = rooms["Living Room"]
+				lookAtRoom()
+			} else if userInput[2] == "laundry" {
+				fmt.Println("HERE GOES NOTHING")
+				curRoom = rooms["Basement Lab"]
+				lookAtRoom()
+			}
+		}
+	} else {
+		if userInput[0] == "slide" {
+			fmt.Println("Sliiiiiide to the left *clap* Sliiiiiide to the right.")
+			fmt.Println("You can't remmeber any more of the dance.")
+		}
+		if userInput[0] == "jump" {
+			playerJump()
+		}
+
+	}
+}
+
+// capInput is a helper function to capitalize case insensitive input
+func capInput(input []string) []string {
+	for i, w := range input {
+		input[i] = strings.Title(strings.ToLower(w))
+	}
+
+	return input
+}
+
 func playGame() {
 	openingMessage := fmt.Sprintf(`
 It was a bright and sunny afternoon. Everything was going fine.
@@ -236,7 +373,7 @@ Why don't you try LOOKing around.`)
 	for input.Scan() {
 		// split user input at whitespace and match known commands
 		action := input.Text()
-		s := strings.Fields(action)
+		s := strings.Fields(strings.ToLower(action))
 
 		if cap(s) == 0 {
 			continue
@@ -251,7 +388,11 @@ Why don't you try LOOKing around.`)
 				} else {
 					tmp := s[2:]
 					item := strings.Join(tmp, " ")
-					lookAtItem(item)
+					if curRoom.Name == "Yard" && item == "eagle" {
+						lookAtEagle()
+					} else {
+						lookAtItem(item)
+					}
 				}
 			} else {
 				lookAtRoom()
@@ -265,11 +406,13 @@ Why don't you try LOOKing around.`)
 					break
 				} else { // I want to go there!
 					loc := s[2:]
+					loc = capInput(loc)
 					exit := strings.Join(loc, " ")
 					moveToRoom(exit)
 				}
 			} else if len(s) > 1 { // If player says "go" ...
 				loc := s[1:]
+				loc = capInput(loc)
 				exit := strings.Join(loc, " ")
 				moveToRoom(exit)
 			} else {
@@ -277,7 +420,7 @@ Why don't you try LOOKing around.`)
 			}
 		case "goto":
 			fmt.Println("Go To Statement Considered Harmful!  https://xkcd.com/292")
-		case "take", "grab":
+		case "take", "grab", "pull":
 			if len(s) > 1 {
 				tmp := s[1:]
 				item := strings.Join(tmp, " ")
@@ -306,10 +449,6 @@ Why don't you try LOOKing around.`)
 			}
 		case "whistle":
 			callTheDog("dog whistle")
-		case "jump":
-			playerJump(curRoom.Name)
-		case "attach":
-			help()
 		case "call":
 			callYourParents()
 		case "eat":
@@ -320,6 +459,45 @@ Why don't you try LOOKing around.`)
 			} else {
 				fmt.Println("Eat what?")
 			}
+		case "enter":
+			if len(s) > 1 && s[1] == "password" {
+				enterThePassword("password")
+			} else {
+				fmt.Println("Nothing to enter here")
+			}
+		case "climb":
+			if len(s) > 1 && s[1] == "desk" {
+				climbTheDesk()
+			} else {
+				fmt.Println("There's nothing to climb")
+			}
+		case "use":
+			if len(s) > 1 && s[1] == "umbrella" {
+				useTheUmbrella()
+			} else {
+				fmt.Println("Use what?")
+			}
+		case "taunt":
+			if len(s) > 1 && s[1] == "eagle" {
+				tauntTheEagle()
+			} else {
+				fmt.Println("There's nobody here to taunt but yourself")
+			}
+		case "slide":
+			if len(s) > 1 {
+				slideDownJumpIn(s)
+			} else {
+				fmt.Println("Sliiiiiide to the left *clap* Sliiiiiide to the right.")
+				fmt.Println("You can't remmeber and more of the dance.")
+			}
+
+		case "jump":
+			if len(s) > 1 {
+				slideDownJumpIn(s)
+			} else {
+				playerJump()
+			}
+
 		case "savegame":
 			saveGame()
 		case "exit", "quit":

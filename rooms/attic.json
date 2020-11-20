@@ -66,5 +66,6 @@
   },
   "visited": true,
   "exits": [ "Upstairs Hallway" ],
-  "exitItems": [ "thread" ]
+  "exitItems": [ "thread" ],
+  "exitBlock": "it is too far from the attic door in the hallway ceiling to the hallway floor"
 }

@@ -16,19 +16,22 @@ import (
 const MinRooms = 15
 const MinItems = 8
 
-var rooms = make(map[string]*Room)     // map of rooms
-var inventory = make(map[string]*Item) // player inventory
+var rooms = make(map[string]*Room)        // map of rooms
+var roomAliases = make(map[string]string) // map of room name aliases
+var inventory = make(map[string]*Item)    // player inventory
 var curRoom *Room
 
 // definition of a room
 type Room struct {
 	Name        string
+	Alias       string // regex for room name alias
 	LongDesc    string
 	Description string
 	Items       map[string]*Item
 	Visited     bool
 	Exits       []string // outbound connection room names
 	ExitItems   []string // items required to exit a room
+	ExitBlock   string   // describe why the player cannot exit a room
 }
 
 // struct used for both features and objects
@@ -75,6 +78,12 @@ func loadRooms() {
 		}
 	}
 
+	for _, r := range rooms {
+		if r.Alias != "" {
+			roomAliases[r.Alias] = r.Name
+		}
+	}
+
 	// Panic if fewer than 15 rooms are defined.
 	if len(rooms) < MinRooms {
 		panic("The game must have at least 15 rooms")
@@ -117,7 +126,8 @@ func loadGame(s string) {
 	gameJson, e := ioutil.ReadFile(s)
 
 	if e != nil {
-		log.Fatal(e)
+		fmt.Printf("File '%s' not found!\n", s)
+		return
 	}
 
 	// player must confirm they want to load a saved game
