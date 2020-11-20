@@ -1,6 +1,6 @@
 {
   "name": "Kitchen",
-	"longDesc": "You are in the kitchen.\nThe pantry is behind a curtain on the north wall.\nThere is a refrigerator, pulled a bit away from the wall.\nThere is a counter with a giant sink.\n",
+	"longDesc": "You are in the kitchen.\nThe pantry is behind a curtain on the north wall.\nThere is a refrigerator, pulled a bit away from the wall.\nThere is a counter with a giant sink.",
 	"description": "You are in the kitchen.\nFrom the kitchen, you can go to the pantry or to the downstairs hallway.",
   "items": {
 		"refrigerator": {

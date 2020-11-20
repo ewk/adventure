@@ -1,7 +1,7 @@
 {
   "name": "Attic",
-  "longDesc" : "You are in the attic.\nThere is an exit in the floor on the south wall that drops down into the Upstairs Hallway.\nThe chimney is on the north wall, you can't get inside it from the attic.\nThere is a chest of drawers on the west wall, and the mirror on the east wall.\nThere is an unraveling rug underneath your feet, at the south wall.\nYou need to look at the mirror, it has no hidden object.\nYou need to look at the rug to reveal the string.\n",
-  "description" : "You are in the attic.\nThere is an exit in the floor on the south wall that drops down into the Upstairs Hallway.\nThe chimney is on the north wall, you can't get inside it from the attic.\nThere is a chest of drawers on the west wall, and the mirror on the east wall.\nThere is an unraveling rug underneath your feet, at the south wall.\n",
+  "longDesc" : "You are in the attic.\nThere is an exit in the floor that drops down into the UPSTAIRS HALLWAY.\nOn the opposite wall, a chimney for the fireplace in the living room\ngoes up through the roof.",
+  "description" : "You are in the attic.\nThere is an exit in the floor that drops down into the UPSTAIRS HALLWAY.",
   "items": {
     "chest of drawers": {
       "name": "chest of drawers",
@@ -35,14 +35,34 @@
     },
     "mirror": {
       "name": "mirror",
-      "description": "The mirror is old, gilded, cracked with scorch marks.",
+      "description": "The mirror is old, gilded, and cracked, with scorch marks running across it.",
       "tooBig": true,
       "isFeature": true,
       "discovered": true,
       "containsHiddenObject": false,
       "discoveryStatement": "",
       "hiddenObject": ""
-    }
+    },
+	"notebook": {
+		"name": "notebook",
+		"description": "The well-worn notebook is stuffed with extra pieces of paper.",
+		"tooBig" : true,
+		"isFeature": true,
+		"discovered": true,
+		"containsHiddenObject": true,
+		"discoveryStatement": "A green piece of paper has slid almost all the way out of the notebook.",
+		"hiddenObject": "paper"
+	},
+	"paper": {
+		"name": "paper",
+		"description": "The top of the paper says 'TO DO - FIX DE-SHRINK FUNCTION ON SHRINK RAY!!!'.\nUnderneath that is a list of random things:\n     shampoo, two old socks, crushed aluminum can, stuffing from couch,\n     dirt from yard, screw from back of refrigerator, corn flakes,\n     copper wire from the back of TV, candle wax,\n     'de-shrink' software from the computer in basement lab",
+		"tooBig": true,
+		"isFeature": false,
+		"discovered": false,
+		"containsHiddenObject": false,
+		"discoveryStatement": "",
+		"hiddenObject": ""
+	}
   },
   "visited": true,
   "exits": [ "Upstairs Hallway" ],
