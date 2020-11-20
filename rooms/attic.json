@@ -1,7 +1,7 @@
 {
   "name": "Attic",
-  "longDesc" : "You are in the attic.\nThere is an exit in the floor on the south wall that drops down into the Upstairs Hallway.\nThe chimney is on the north wall, you can't get inside it from the attic.\nThere is a chest of drawers on and a mirror.\nThere is an unraveling rug underneath your feet.\nIn the corner there is a notebook.",
-  "description" : "You are in the attic.\nThere is an exit in the floor on the south wall that drops down into the Upstairs Hallway.\nThe chimney is on the north wall, you can't get inside it from the attic.\nThere is a chest of drawers on the west wall, and the mirror on the east wall.\nThere is an unraveling rug underneath your feet, at the south wall.",
+  "longDesc" : "You are in the attic.\nThere is an exit in the floor that drops down into the UPSTAIRS HALLWAY.\nOn the opposite wall, a chimney for the fireplace in the living room\ngoes up through the roof.",
+  "description" : "You are in the attic.\nThere is an exit in the floor that drops down into the UPSTAIRS HALLWAY.",
   "items": {
     "chest of drawers": {
       "name": "chest of drawers",
