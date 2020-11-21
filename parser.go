@@ -313,9 +313,9 @@ func climbTheStairs() {
 }
 func downTheBanister() {
 	if _, ok := inventory["scarf"]; ok {
-		fmt.Println("You use the scarf to slide quickly and safely down the banister")
+		fmt.Println("\nYou use the scarf to slide quickly and safely down the banister")
 	} else {
-		fmt.Println("You try to slide down the banister but your jeans don't slide down easily so it's more of a scooch.")
+		fmt.Println("\nYou try to slide down the banister but your jeans don't slide down easily so it's more of a scooch.")
 		fmt.Println("After a couple of minutes of struggling you're sweaty and have worn a hole down in the seat of your pants.")
 		fmt.Println("You fall off the banister halfway down and tumble down the rest of the stairs.")
 		fmt.Println("The dog just raises his head and looks at you while you flail helplessly.")
