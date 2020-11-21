@@ -55,7 +55,7 @@
 	},
 	"paper": {
 		"name": "paper",
-		"description": "The top of the paper says 'TO DO - FIX DE-SHRINK FUNCTION ON SHRINK RAY!!!'.\nUnderneath that is a list of random things:\n     shampoo, two old socks, crushed aluminum can, stuffing from couch,\n     dirt from yard, screw from back of refrigerator, corn flakes,\n     copper wire from the back of TV, candle wax,\n     'de-shrink' software from the computer in basement lab",
+		"description": "The top of the paper says 'TO DO - FIX DE-SHRINK FUNCTION ON SHRINK RAY!!!'.\nUnderneath that is a list of random things:\n     shampoo, three old socks, crushed aluminum can, stuffing from couch,\n     dirt from yard, screw from back of refrigerator, corn flakes,\n     copper wire from the back of TV, candle wax,\n     'de-shrink' software from the computer in basement lab",
 		"tooBig": true,
 		"isFeature": false,
 		"discovered": false,

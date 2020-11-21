@@ -25,7 +25,7 @@
 		},
 		"exercise ball": {
 			"name": "exercise ball",
-			"description": "The giant blue exercise ball that your dad uses instead of a desk chair.\nYou need to bounce on the exercise ball to open your parents' door.(??)",
+			"description": "The giant blue exercise ball that your dad uses instead of a desk chair.",
 			"tooBig": true,
 			"isFeature": false,
 			"discovered": true,

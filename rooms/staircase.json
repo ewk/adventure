@@ -5,7 +5,7 @@
   "items": {
 		"dog": {
 			"name": "dog",
-			"description": "Your dog is your most loyal companion, especially if you give him treats. You can summon him with the dog whistle or with the squeeky toy",
+			"description": "Your dog is your most loyal companion, especially if you give him treats. You can summon him with the dog whistle and he will bring you to his favorite place to sleep.",
 			"tooBig" : true,
 			"isFeature": true,
 			"discovered": false,
