@@ -19,9 +19,9 @@
       "tooBig":true,
       "isFeature": true,
       "discovered": true,
-      "containsHiddenObject": true,
+      "containsHiddenObject": false,
       "discoveryStatement": "",
-      "hiddenObject": "computer"
+      "hiddenObject": ""
     },
     "computer": {
       "name": "computer",
