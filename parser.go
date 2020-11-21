@@ -108,6 +108,12 @@ func moveToRoom(exit string) {
 				if curRoom.Name == "Upstairs Hallway" && val.Name == "Large Bedroom" && val.Visited == false {
 					bounceEnterLargeBedroom()
 				}
+				if curRoom.Name == "Staircase" && val.Name == "Downstairs Hallway" {
+					downTheBanister()
+				}
+				if curRoom.Name == "Downstairs Hallway" && val.Name == "Staircase" {
+					climbTheStairs()
+				}
 				curRoom = val // if found, the exit is the new current room
 
 				if curRoom.Visited == false { // have we been here before?
@@ -240,7 +246,7 @@ func callTheDog(item string) {
 			curRoom = rooms["Staircase"]
 		}
 	} else {
-		fmt.Println("The dog can't hear you")
+		fmt.Println("The dog can't hear you without the dog whistle")
 	}
 }
 
@@ -292,6 +298,29 @@ func climbTheDesk() {
 		fmt.Println("You can't climb on your parent's desk!")
 	} else {
 		fmt.Println("There is no desk to climb here")
+	}
+}
+func climbTheStairs() {
+	fmt.Println("Oof that's a lot of stairs to climb")
+	if _, ok := inventory["dog whistle"]; ok {
+		fmt.Println("But you have the dog whistle!")
+		callTheDog("dog whistle")
+	} else {
+		fmt.Println("You scream in frustration and your wailing wakes the dog up.")
+		fmt.Println("He takes pity on you and picks you up by the scruff and drops you off at the top of the stairs.")
+		fmt.Println("You're drenched and smell terrible now but at least you didn't have to climb those stairs")
+	}
+}
+func downTheBanister() {
+	if _, ok := inventory["scarf"]; ok {
+		fmt.Println("You use the scarf to slide quickly and safely down the banister")
+	} else {
+		fmt.Println("You try to slide down the banister but your jeans don't slide down easily so it's more of a scooch.")
+		fmt.Println("After a couple of minutes of struggling you're sweaty and have worn a hole down in the seat of your pants.")
+		fmt.Println("You fall off the banister halfway down and tumble down the rest of the stairs.")
+		fmt.Println("The dog just raises his head and looks at you while you flail helplessly.")
+		fmt.Println("You land with another thud, thankfully nothing seems broken.")
+		fmt.Println("You should have grabbed that silky scarf.")
 	}
 }
 
