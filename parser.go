@@ -328,8 +328,10 @@ func cutStuff(item string) {
 	if curRoom.Name == "Family Room" && item == "copper wire" || curRoom.Name == "Living Room" && item == "couch stuffing" {
 		fmt.Println("snip snip")
 		takeItem(item)
+	} else if _, ok := curRoom.Items[item]; !ok {
+		takeItem(item)
 	} else {
-		fmt.Println("Please don't cut that")
+		fmt.Println("Please don't cut that.")
 	}
 }
 func downTheBanister() {
