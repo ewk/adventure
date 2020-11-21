@@ -1,7 +1,7 @@
 {
   "name": "Staircase",
-  "longDesc": "This is the STAIRCASE.\nWoah, it's a lot more imposing from this perspective.\nTwelve steps and you're not even as tall as each step!\nYour dog is sleeping at the bottom of the stairs.\nHe can't hear you if you yell but he can hear a dog whistle.\nThe staircase connects the UPSTAIRS HALLWAY and the DOWNSTAIRS HALLWAY.",
-  "description": "This is the STAIRCASE.\nIt connects the UPSTAIRS HALLWAY and the DOWNSTAIRS HALLWAY.",
+  "longDesc": "\nThis is the STAIRCASE.\nWoah, it's a lot more imposing from this perspective.\nTwelve steps and you're not even as tall as each step!\nYour dog is sleeping at the bottom of the stairs.\nHe can't hear you if you yell but he can hear a dog whistle.\nThe staircase connects the UPSTAIRS HALLWAY and the DOWNSTAIRS HALLWAY.",
+  "description": "\nThis is the STAIRCASE.\nIt connects the UPSTAIRS HALLWAY and the DOWNSTAIRS HALLWAY.",
   "items": {
 		"dog": {
 			"name": "dog",
