@@ -25,7 +25,7 @@
 		},
 		"exercise ball": {
 			"name": "exercise ball",
-			"description": "The giant blue exercise ball that your dad uses instead of a desk chair.",
+			"description": "The giant blue exercise ball that your dad uses instead of a desk chair. It is very bouncy",
 			"tooBig": true,
 			"isFeature": false,
 			"discovered": true,
