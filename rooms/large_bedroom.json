@@ -20,12 +20,12 @@
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "On one side of the desk, near the floor, is a yellow post-it with some writing on it.",
+			"discoveryStatement": "On one side of the desk, near the floor, is a yellow post-it with some writing on it.\nMaybe you should LOOK more closely at it.",
 			"hiddenObject": "post-it"
 		},
 		"post-it": {
 			"name": "post-it",
-			"description": "The post-it is old and crumpled and might be structurally supporting the desk.\nMaybe you should LOOK more closely at it.",
+			"description": "The post-it is old and crumpled and might be structurally supporting the desk.",
 			"tooBig": false,
 			"isFeature": true,
 			"discovered": false,
