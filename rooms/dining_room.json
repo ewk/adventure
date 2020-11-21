@@ -42,16 +42,6 @@
 			"containsHiddenObject": false,
 			"discoveryStatement": "",
 			"hiddenObject": ""
-		},
-		"knife": {
-			"name": "knife",
-			"description": "The knife is sharp, pointy, and could come in handy.",
-			"tooBig": true,
-			"isFeature": false,
-			"discovered": true,
-			"containsHiddenObject": false,
-			"discoveryStatement": "",
-			"hiddenObject": ""
 		}
 	},
   "visited" :false,
