@@ -302,7 +302,6 @@ func enterThePassword() {
 	}
 }
 
-// climbStuff only climbs desks, but someday the player may be able to climb other things
 func climbStuff(feature string) {
 	if curRoom.Name == "Basement Lab" && feature == "desk" {
 		fmt.Println("You climb up the desk and are face to face with the computer. It seems locked, why don't you take a LOOK?")
