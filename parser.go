@@ -52,9 +52,9 @@ func takeItem(item string) {
 		if val.IsFeature == false && val.TooBig == false {
 			inventory[item] = val
 			delete(curRoom.Items, item) // remove item from room after picking it up
-			fmt.Printf("You have picked up the %s.\nIt is now in your inventory.\n", item)
+			fmt.Printf("You have picked up the %s.\nIt is now in your INVENTORY.\n", item)
 		} else if val.TooBig == true {
-			fmt.Printf("%s is too big to pick up!\nWhy don't you try shrinking it first?\n", item)
+			fmt.Printf("%s is too big to pick up!\nWhy don't you try to SHRINK it first?\n", item)
 		}
 	} else {
 		fmt.Printf("%s not found.\n", item)
@@ -203,12 +203,12 @@ func shrinkObject(item string) {
 			if val.TooBig == true {
 				fmt.Println("SHRINKING!")
 				val.TooBig = false
-				fmt.Println("This item is now small enough to collect, pick it up to add it to inventory")
+				fmt.Println("This item is now small enough to collect. You can TAKE it now.")
 			} else {
-				fmt.Println("I don't think that can get any smaller, did you try just picking it up?")
+				fmt.Println("I don't think that can get any smaller. Did you try to just TAKE it?")
 			}
 		} else {
-			fmt.Println("You can't shrink this, Mom and Dad might notice.")
+			fmt.Println("You can't shrink this. Mom and Dad might notice!")
 		}
 	}
 }
@@ -362,24 +362,19 @@ func capInput(input []string) []string {
 func playGame() {
 	openingMessage := fmt.Sprintf(`
 It was a bright and sunny afternoon. Everything was going fine.
-
 Your parents were developing new semi-legal technology in their lab,
 and you were watching them. They've told you 100 times to not watch them
 while they work, but what are they going to do? You're curious.
-
-The shrink ray! What a cool invention. You can take anything and make it, well,
-smaller.
-
-They've told you not to PLAY with the inventions 101 times, but what are they
+The shrink ray! What a cool invention. Now anything can be made smaller!
+They've told you not to play with the inventions 101 times, but what are they
 going to do? You're curious.
-
 So yeah, they did kick you out of the lab when they left to go run errands,
-telling you 102 times to not play with the inventions, but you smuggled the
+telling you 102 times to not touch anything, but you smuggled the
 shrink ray out anyway.
-
-That's the last thing you remember...
-
-Where are you? Why don't you try LOOKing around.`)
+That's the last thing you remember. You open your eyes and seem to be in a
+giant cavern. Everything is so big! Wait...you're so small!
+Where are you? How will you fix this? Is there anywhere you could GO TO?
+Is there anything you could TAKE to help you? Why don't you try to LOOK around?`)
 
 	fmt.Println(openingMessage)
 
