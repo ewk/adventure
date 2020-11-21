@@ -1,11 +1,11 @@
 {
   "name": "Attic",
-  "longDesc" : "You are in the attic.\nThere is an exit in the floor that drops down into the UPSTAIRS HALLWAY.\nOn the opposite wall, a chimney for the fireplace in the living room\ngoes up through the roof.",
-  "description" : "You are in the attic.\nThere is an exit in the floor that drops down into the UPSTAIRS HALLWAY.",
+  "longDesc" : "You are in the ATTIC.\nThere is an exit in the floor that drops down into the UPSTAIRS HALLWAY.\nOn the opposite wall, a chimney for the living room fireplace\ngoes up through the roof.",
+  "description" : "You are in the ATTIC.\nThere is an exit in the floor that drops down into the UPSTAIRS HALLWAY.",
   "items": {
     "chest of drawers": {
       "name": "chest of drawers",
-      "description": "The chest of drawers is old, antique, matched mirror",
+      "description": "The chest of drawers is an antique with a matching mirror above it.",
       "tooBig": true,
       "isFeature": true,
       "discovered": true,
@@ -20,7 +20,7 @@
       "isFeature": true,
       "discovered": true,
       "containsHiddenObject": true,
-      "discoveryStatement": "There is a thread you can pull, that might come in handy. ",
+      "discoveryStatement": "There is a THREAD you can pull. That might come in handy. ",
       "hiddenObject": "thread"
     },
     "thread": {
@@ -50,7 +50,7 @@
 		"isFeature": true,
 		"discovered": true,
 		"containsHiddenObject": true,
-		"discoveryStatement": "A green piece of paper has slid almost all the way out of the notebook.",
+		"discoveryStatement": "A green piece of PAPER has slid almost all the way out of the notebook.",
 		"hiddenObject": "paper"
 	},
 	"paper": {

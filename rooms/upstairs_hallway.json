@@ -1,21 +1,21 @@
 {
   "name": "Upstairs Hallway",
-	"longDesc": "You are in the upstairs hallway.\nWhen you exit the attic, you are on the south wall.\nThere are stairs in front of you, on the north wall.\nTo your left, on the west wall, is your parents' bedroom.\nOn the east wall there is your bedroom, and the bathroom.\nBetween your bedroom and the bathroom is a recycling bin filled to the top with seltzer cans.\nNext to the door to your parents' room is an exercise ball and your mom's purse.\nYou need to look in the recycling bin to get the aluminum can.\nYou need to bounce on the exercise ball to open your parents' door.\nYou can look in your mom's purse, but you can't take anything out of it because she'll know you've been in there.",
-	"description": "You are in the upstairs hallway.\nWhen you exit the attic, you are on the south wall.\nThere are stairs in front of you, on the north wall.\nTo your left, on the west wall, is your parents' bedroom.\nOn the east wall there is your bedroom, and the bathroom.",
+	"longDesc": "You are in the UPSTAIRS HALLWAY.\nThere are stairs leading to the DOWNSTAIRS HALLWAY and a sturdy-looking thread leading to the ATTIC.\nIn this hallway, there are doors to a LARGE BEDROOM which belongs to your parents,\na SMALL BEDROOM which belongs to you, and a BATHROOM shared by everyone.",
+	"description": "You are in the UPSTAIRS HALLWAY.\nThere are stairs leading to the DOWNSTAIRS HALLWAY and a thread leading to the ATTIC.\nThere are doors to a LARGE BEDROOM,\na SMALL BEDROOM, and a BATHROOM.",
   "items": {
 		"recycling bin": {
 			"name": "recycling bin",
-			"description": "The recycling bin is full of seltzer cans.",
+			"description": "The recycling bin is filled to the top with aluminum seltzer cans.",
 			"tooBig" : "true",
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "You'll need one of these cans",
-			"hiddenObject": "aluminumCan"
+			"discoveryStatement": "You'll need one an ALUMINUM CAN for the shrink ray.",
+			"hiddenObject": "aluminum can"
 		},
 		"purse": {
 			"name": "purse",
-			"description": "Your mom's purse is gigantic. If you jump in you might get lost. Better not take anything or you might get caught.",
+			"description": "Your mom's purse is gigantic. If you jump in you might get lost!\nBetter not take anything or you might get caught.",
 			"tooBig" : true, 
 			"isFeature": true,
 			"discovered": true,
@@ -25,7 +25,7 @@
 		},
 		"exercise ball": {
 			"name": "exercise ball",
-			"description": "The giant blue exercise ball that your dad uses instead of a desk chair.",
+			"description": "The giant blue exercise ball that your dad uses instead of a desk chair.\nYou need to bounce on the exercise ball to open your parents' door.(??)",
 			"tooBig": true,
 			"isFeature": false,
 			"discovered": true,
@@ -35,7 +35,7 @@
 		},
 		"aluminum can": {
 			"name": "aluminum can",
-			"description": "Partially crushed seltzer can from a brand you cannot pronounce. There are 100 just like it in the recycling bin.",
+			"description": "Partially crushed seltzer can from a brand you cannot pronounce.",
 			"tooBig" : true,
 			"isFeature": false,
 			"discovered": false,
