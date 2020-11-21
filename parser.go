@@ -105,6 +105,9 @@ func moveToRoom(exit string) {
 				if curRoom.Name == "Upstairs Hallway" && val.Name == "Attic" {
 					useTheThread()
 				}
+				if curRoom.Name == "Upstairs Hallway" && val.Name == "Large Bedroom" && val.Visited == false {
+					bounceEnterLargeBedroom()
+				}
 				curRoom = val // if found, the exit is the new current room
 
 				if curRoom.Visited == false { // have we been here before?
@@ -321,6 +324,14 @@ func useTheThread() {
 	} else {
 		fmt.Println("You don't have the thread")
 	}
+}
+
+func bounceEnterLargeBedroom() {
+	fmt.Println("\nThe door to the large bedroom is closed and you can't reach it at this size.")
+	fmt.Println("You take a running start and hurl yourself at your dad's exercise ball.")
+	fmt.Println("You bounce off of it with a loud *VWOMP* and grab onto the door handle.")
+	fmt.Println("You're just heavy enough to make the handle turn and the door creaks open.")
+	fmt.Println("You drop to the floor and walk right in.")
 }
 
 func useTheUmbrella() {
