@@ -198,6 +198,9 @@ func help() {
 }
 
 func shrinkObject(item string) {
+	if item == "shrink ray" {
+		fmt.Println("You can't shrink the shrink ray.")
+	}
 	if val, ok := curRoom.Items[item]; ok {
 		if val.IsFeature == false {
 			if val.TooBig == true {
