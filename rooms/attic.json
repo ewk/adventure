@@ -20,7 +20,7 @@
       "isFeature": true,
       "discovered": true,
       "containsHiddenObject": true,
-      "discoveryStatement": "There is a thread you can pull, that might come in handy. ",
+      "discoveryStatement": "There is a thread you can pull. That might come in handy. ",
       "hiddenObject": "thread"
     },
     "thread": {

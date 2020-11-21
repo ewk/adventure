@@ -11,6 +11,12 @@ import (
 // lookAtRoom repeats the long form explanation of a room.
 func lookAtRoom() {
 	fmt.Println(curRoom.LongDesc)
+	fmt.Println("Some of the things that you see in this room include:")
+	for _, item := range curRoom.Items {
+		if item.Discovered == true {
+			fmt.Println(item.Name)
+		}
+	}
 }
 
 // lookAtItem prints the description of an object or feature
@@ -46,7 +52,7 @@ func takeItem(item string) {
 		if val.IsFeature == false && val.TooBig == false {
 			inventory[item] = val
 			delete(curRoom.Items, item) // remove item from room after picking it up
-			fmt.Printf("You have picked up the %s.\nIt is now in your inventory\n", item)
+			fmt.Printf("You have picked up the %s.\nIt is now in your inventory.\n", item)
 		} else if val.TooBig == true {
 			fmt.Printf("%s is too big to pick up!\nWhy don't you try shrinking it first?\n", item)
 		}
@@ -102,9 +108,11 @@ func moveToRoom(exit string) {
 					fmt.Println(curRoom.Description)
 				}
 
+				fmt.Println("Some of the things that you see in this room include:")
+
 				for _, item := range curRoom.Items {
 					if item.Discovered == true {
-						fmt.Println(item.Description)
+						fmt.Println(item.Name)
 					}
 				}
 
