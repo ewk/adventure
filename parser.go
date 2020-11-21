@@ -329,7 +329,7 @@ func cutStuff(item string) {
 		fmt.Println("snip snip")
 		takeItem(item)
 	} else if _, ok := curRoom.Items[item]; !ok {
-		takeItem(item)
+		fmt.Printf("%s not found.\n", item)
 	} else {
 		fmt.Println("Please don't cut that.")
 	}
