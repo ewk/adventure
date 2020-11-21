@@ -99,6 +99,12 @@ func moveToRoom(exit string) {
 	for _, e := range curRoom.Exits {
 		if e == exit { // check that requested exit is valid
 			if val, ok := rooms[exit]; ok {
+				if curRoom.Name == "Attic" && val.Name == "Upstairs Hallway" {
+					useTheThread()
+				}
+				if curRoom.Name == "Upstairs Hallway" && val.Name == "Attic" {
+					useTheThread()
+				}
 				curRoom = val // if found, the exit is the new current room
 
 				if curRoom.Visited == false { // have we been here before?
@@ -298,6 +304,25 @@ func lookAtEagle() {
 
 }
 
+func useTheThread() {
+	if _, ok := inventory["thread"]; ok {
+		if curRoom.Name == "Upstairs Hallway" {
+			fmt.Println("\nYou throw the thread up like a lasso and it attaches to the bottom of the ladder to the attic.")
+			fmt.Println("You free climb up it like the Man in Black from the Princess Bride on the Cliffs of Insanity.")
+			fmt.Println("You look so cool.")
+		} else if curRoom.Name == "Attic" {
+			fmt.Println("\nYou tie one end of the thread around your waist and the other around the top rung of the attic ladder.")
+			fmt.Println("Here goes nothing!")
+			fmt.Println("You leap out of the attic door and the thread acts as a bungee")
+			fmt.Println("It catches you right before you smash into the upstairs hallway.")
+			fmt.Println("As you're hanging, catching your breath, it unravels from the ladder and you drop with a small thud")
+			fmt.Println("You gather up the thread and put it in your backpack.")
+		}
+	} else {
+		fmt.Println("You don't have the thread")
+	}
+}
+
 func useTheUmbrella() {
 	if _, ok := inventory["umbrella"]; ok && curRoom.Name == "Yard" {
 		fmt.Println("You open the umbrella and are completely hidden from the eagle")
@@ -492,8 +517,12 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 				fmt.Println("There's nothing to climb")
 			}
 		case "use":
-			if len(s) > 1 && s[1] == "umbrella" {
-				useTheUmbrella()
+			if len(s) > 1 {
+				if s[1] == "umbrella" {
+					useTheUmbrella()
+				} else {
+					fmt.Println("I don't know how to USE that, can you use a more specific action?")
+				}
 			} else {
 				fmt.Println("Use what?")
 			}
