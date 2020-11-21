@@ -5,12 +5,12 @@
   "items": {
 		"dog": {
 			"name": "dog",
-			"description": "Your dog is your most loyal companion, especially if you give him treats. You can summon him with the dog whistle and he will bring you to his favorite place to sleep.",
+			"description": "Your dog is your most loyal companion, especially if you give him treats.\nYou can summon him with the dog whistle and he will bring you to his favorite place to sleep.",
 			"tooBig" : true,
 			"isFeature": true,
 			"discovered": false,
 			"containsHiddenObject": true,
-			"discoveryStatement": "the dog is awake",
+			"discoveryStatement": "You have awoken the sleeping beast. He runs up the stairs excitedly.\nHe sniffs your tiny frame and drools all over you.\nWith one small bark of acknowledgement, and something you can swear is a nod,\nhe goes back to sleep on the stairs.",
 			"hiddenObject": "dog"
 		},
 		"peeling wallpaper": {
@@ -38,7 +38,7 @@
 			"description": "The books are large and heavy looking, discussing subjects such as scaffolding design, waste water management, and some big book on computers with a fruit on it.",
 			"tooBig" : true,
 			"isFeature": false,
-			"discovered": false,
+			"discovered": true,
 			"containsHiddenObject": false,
 			"discoveryStatement": "",
 			"hiddenObject": ""

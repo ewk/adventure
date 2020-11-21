@@ -230,10 +230,14 @@ func shrinkObject(item string) {
 }
 
 func callTheDog(item string) {
-	if val, ok := inventory[item]; ok {
-		fmt.Printf("Yeah you have the %s, but you don't know how to use it yet\n", item)
-		if val.Name == "dog whistle" {
-			fmt.Println("Whistle for the dog")
+	if _, ok := inventory[item]; ok {
+		if curRoom.Name == "Staircase" {
+			fmt.Println(curRoom.Items["dog"].DiscoveryStatement)
+		} else {
+			fmt.Printf("You hear the padding footsteps of your loyal steed.\nHe comes loping into the %s.\n", strings.ToLower(curRoom.Name))
+			fmt.Println("You grab onto him and he starts running.")
+			fmt.Println("When he finally slows down at the top of the stairs you jump off.")
+			curRoom = rooms["Staircase"]
 		}
 	} else {
 		fmt.Println("The dog can't hear you")
