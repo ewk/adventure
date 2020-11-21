@@ -10,8 +10,8 @@
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "There are three CANDLES in a candelabra and wax everywhere.",
-			"hiddenObject": "candles"
+			"discoveryStatement": "They left the candelabra out but I can't see any candles from here.\nBetter climb the table to get a better look",
+			"hiddenObject": "candelabra"
 		},
 		"painting": {
 			"name": "painting",
@@ -23,10 +23,20 @@
 			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"candles": {
-			"name": "candles",
-			"description": "Wax candles.",
+		"candelabra": {
+			"name": "candelabra",
+			"description": "The candelabra has spots for three candles.",
 			"tooBig":true,
+			"isFeature": false,
+			"discovered": false,
+			"containsHiddenObject": false,
+			"discoveryStatement": "",
+			"hiddenObject": ""
+		},
+		"candle": {
+			"name": "candle",
+			"description": "The tiniest nub of a candle that could still be considered a candle",
+			"tooBig":false,
 			"isFeature": false,
 			"discovered": false,
 			"containsHiddenObject": false,
