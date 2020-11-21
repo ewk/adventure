@@ -516,7 +516,7 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 			}
 		case "goto":
 			fmt.Println("Go To Statement Considered Harmful!  https://xkcd.com/292")
-		case "take", "grab", "pull":
+		case "take", "grab", "pull", "yank":
 			if len(s) > 1 {
 				tmp := s[1:]
 				item := strings.Join(tmp, " ")
