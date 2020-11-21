@@ -398,6 +398,8 @@ Where are you? Why don't you try LOOKing around.`)
 					item := strings.Join(tmp, " ")
 					if curRoom.Name == "Yard" && item == "eagle" {
 						lookAtEagle()
+					} else if item == "inventory" {
+						listInventory()
 					} else {
 						lookAtItem(item)
 					}
