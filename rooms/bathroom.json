@@ -1,7 +1,7 @@
 {
   "name": "Bathroom",
-	"longDesc": "You are in the bathroom.\nThe exit to the upstairs hallway is behind you.\nThere is a shower to your left with a shower curtain you can't see through.\nThere is a sink with a cabinet under it, and a toilet with a stack of magazines on the tank.\nThere is also a litter box next to the toilet.",
-	"description": "You are in the bathroom.\nThe exit to the upstairs hallway is behind you.",
+	"longDesc": "You are in the BATHROOM.\nThe exit to the UPSTAIRS HALLWAY is behind you.\nThere is a sink with a cabinet under it, and a toilet with a stack of magazines on the tank.",
+	"description": "You are in the BATHROOM.\nThe exit to the UPSTAIRS HALLWAY is behind you.",
 	"items": {
 		"shower": {
 			"name": "shower",
@@ -20,7 +20,7 @@
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "A bottle of shampoo is tucked into the corner of the cabinet.",
+			"discoveryStatement": "A bottle of SHAMPOO is tucked into the corner of the cabinet.",
 			"hiddenObject": "shampoo"
 		},
 		"shampoo": {

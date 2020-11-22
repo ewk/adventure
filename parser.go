@@ -11,7 +11,7 @@ import (
 // lookAtRoom repeats the long form explanation of a room.
 func lookAtRoom() {
 	fmt.Println(curRoom.LongDesc)
-	fmt.Println("Some of the things that you see in this room include:")
+	fmt.Println("Some of the things that you see include:")
 	for _, item := range curRoom.Items {
 		if item.Discovered == true {
 			fmt.Println(item.Name)
@@ -108,7 +108,7 @@ func moveToRoom(exit string) {
 					fmt.Println(curRoom.Description)
 				}
 
-				fmt.Println("Some of the things that you see in this room include:")
+				fmt.Println("Some of the things that you see include:")
 
 				for _, item := range curRoom.Items {
 					if item.Discovered == true {

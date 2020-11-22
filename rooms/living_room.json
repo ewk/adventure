@@ -1,11 +1,11 @@
 {
   "name": "Living Room",
-	"longDesc": "You are in the living room.\nThere is a window that looks out onto the yard.\nA large, comfortable-looking couch faces a fireplace.\nThere is no door to the hallway from this room, just a door to the dining room.",
-	"description": "You are in the living room.\nThere is a fireplace and a doorway to the dining room.",
+	"longDesc": "You are in the LIVING ROOM.\nThere is a window that looks out onto the yard.\nA large, comfortable-looking couch faces a fireplace.\nThere is no door to the hallway from this room, just a door to the DINING ROOM.",
+	"description": "You are in the LIVING ROOM.\nThere is a door to the dining room.",
 	"items": {
 		"couch": {
 			"name": "couch",
-			"description": "The couch is large and well-worn, with a visible tear with stuffing coming out.",
+			"description": "The couch is large and well-worn, with a visible tear with STUFFING coming out.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
@@ -25,7 +25,7 @@
 		},
 		"fireplace": {
 			"name": "fireplace",
-			"description": "The fireplace is connected to the large bedroom on the second floor.",
+			"description": "The fireplace has a chimney that goes up through large bedroom and attic,\nout onto the roof.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
