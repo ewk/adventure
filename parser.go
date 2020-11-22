@@ -21,12 +21,24 @@ func lookAtRoom() {
 
 // lookAtItem prints the description of an object or feature
 func lookAtItem(item string) {
-	if val, ok := inventory[item]; ok {
+	// handle special cases first
+	if item == "inventory" {
+		listInventory()
+		return
+	}
+
+	if curRoom.Name == "Yard" && item == "eagle" {
+		lookAtEagle()
+		return
+	}
+
+	if val, ok := inventory[item]; ok { // check player inventory for requested item
 		fmt.Println(val.Description)
-	} else if val, ok := curRoom.Items[item]; ok {
+	} else if val, ok := curRoom.Items[item]; ok { // check the room for requested item
 		if val.Discovered == true {
 			fmt.Println(val.Description)
 		}
+
 		if val.ContainsHiddenObject == true {
 			if hiddenThing, ok := curRoom.Items[val.HiddenObject]; ok {
 				fmt.Println(val.DiscoveryStatement)
@@ -406,13 +418,7 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 				} else {
 					tmp := s[2:]
 					item := strings.Join(tmp, " ")
-					if curRoom.Name == "Yard" && item == "eagle" {
-						lookAtEagle()
-					} else if item == "inventory" {
-						listInventory()
-					} else {
-						lookAtItem(item)
-					}
+					lookAtItem(item)
 				}
 			} else {
 				lookAtRoom()
@@ -458,7 +464,6 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 			}
 		case "inventory", "mystuff":
 			listInventory()
-
 		case "shrink":
 			if len(s) > 1 {
 				tmp := s[1:]
@@ -510,14 +515,12 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 				fmt.Println("Sliiiiiide to the left *clap* Sliiiiiide to the right.")
 				fmt.Println("You can't remmeber and more of the dance.")
 			}
-
 		case "jump":
 			if len(s) > 1 {
 				slideDownJumpIn(s)
 			} else {
 				playerJump()
 			}
-
 		case "savegame":
 			saveGame()
 		case "exit", "quit":
