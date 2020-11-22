@@ -1,11 +1,11 @@
 {
   "name": "Yard",	
-	"longDesc": "You are in the yard.\nIf you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner.\nThere is a patio umbrella folded on the ground next to this exit.\nTo the west, there is a sandbox.\nThere is an eagle circling overhead.\nYou need to collect sand from the sandbox.\nYou can use the umbrella to hide from the eagle.",
-	"description": "You are in the yard.\nIf you turn east and face the house, a basement hatch is on the south-eastern corner, and a door to the dining room is on the north-eastern corner.\nThere is a patio umbrella folded on the ground next to this exit.\nTo the west, there is a sandbox.\nThere is an eagle circling overhead.",
+	"longDesc": "You are in the YARD.\nA hatch to the BASEMENT LAB is on the corner of the house,\nand a door to the DINING ROOM is on the side.\nYou can also step onto the FRONT PORCH from here.\nAn eagle flies overhead. Don't make eye contact with it if you don't want it to notice you!",
+	"description": "You are in the YARD.\nFrom here you can reach the BASEMENT LAB, DINING ROOM, and FRONT PORCH.",
 	"items": {
 		"eagle": {
 			"name": "eagle",
-			"description": "There is an eagle overhead. Don't look at it unless you want it to notice you.",
+			"description": "There is an eagle overhead.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
@@ -15,17 +15,17 @@
 		},
 		"sandbox": {
 			"name": "sandbox",
-			"description": "There is a sandbox full of sand, toys, and buckets.",
+			"description": "There is a sandbox full of beach toys and buckets.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "There's still sand in here",
+			"discoveryStatement": "There's lots of sand in here too.",
 			"hiddenObject": "sand"
 		},
 		"sand": {
 			"name": "sand",
-			"description": "The sand is from the sandbox. You need it for the quest",
+			"description": "The sand is a uniform light brown.",
 			"tooBig": false,
 			"isFeature": false,
 			"discovered": false,
@@ -35,5 +35,5 @@
 		}
 	},
 	"visited" : false,
-  "exits": [ "Basement Lab", "Dining Room" ]
+  "exits": [ "Basement Lab", "Dining Room", "Front Porch" ]
 }

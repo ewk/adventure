@@ -1,7 +1,7 @@
 {
   "name": "Small Bedroom",
-  "longDesc": "You are in the small bedroom, which belongs to you.\nThere is an exit to the upstairs hallway.\nThere is a bed against the wall. You store your treasures underneath it.\nThere is a bedside table with a lamp next next to the head of your bed.\nYour closet is on the wall.\nIt has a chute that leads to the basement where the laundry room is.\nThere are dirty socks on the floor of your closet.",
-  "description": "You are in the small bedroom, which belongs to you.\nThere is an exit to the upstairs hallway.\nYour closet has a chute that leads to the basement.",
+  "longDesc": "You are in the SMALL BEDROOM, which belongs to you.\nThere is a doorway to the UPSTAIRS HALLWAY.\nThere is a bed against the wall. You store your treasures UNDER THE BED.\nYour CLOSET has a laundry chute that leads to the basement.\nThere are DIRTY SOCKS on the floor of your closet.",
+  "description": "You are in the SMALL BEDROOM, which belongs to you.\nThere is a doorway to the UPSTAIRS HALLWAY.",
   "alias": "My|Your Bedroom",
   "items": {
 		"closet": {
@@ -11,18 +11,18 @@
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "The laundry chute goes straight to the basement. Jump in if you're feeling lucky.",
+			"discoveryStatement": "The LAUNDRY CHUTE goes straight to the basement. Jump in if you're feeling lucky.",
 			"hiddenObject": "laundry chute"
 		},
 		"laundry chute": {
 			"name": "laundry chute",
-			"description": "The laundry chute leads straight to the basement, you can jump or slide down it if you want",
+			"description": "The laundry chute leads straight to the basement.\nYou can jump or slide down it if you want",
 			"tooBig" : true,
 			"isFeature": true,
 			"discovered": false,
-			"containsHiddenObject": true,
+			"containsHiddenObject": false,
 			"discoveryStatement": "",
-			"hiddenObject": "laundry chute"
+			"hiddenObject": ""
 		},
 		"under the bed": {
 			"name": "under the bed",
@@ -46,7 +46,7 @@
 		},
 		"dirty socks": {
 			"name": "dirty socks",
-			"description": "Your socks are all identical black crew cut socks that can be bought in ten packs at the store. These ones are stinky but also important.",
+			"description": "Your socks are all identical black crew cut socks that can be bought\nin ten packs at the store. These ones are stinky but also important.",
 			"tooBig" : true, 
 			"isFeature": false,
 			"discovered": true,

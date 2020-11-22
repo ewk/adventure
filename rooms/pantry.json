@@ -1,11 +1,11 @@
 {
   "name": "Pantry",
-	"longDesc": "You are in the pantry.\nThere is a lot of food in here, both for humans and pets.\nThere are three shelves stuffed with food.\nThere is a box of cornflakes on the top shelf, but you'll have to climb the shelves to get up there.\nThe only exit leads back out to the kitchen.",
-	"description": "You are in the pantry.\nThe only exit leads back out to the kitchen.",
+	"longDesc": "You are in the PANTRY.\nThere is a lot of food in here, both for humans and pets.\nThe only exit leads back out to the KITCHEN.",
+	"description": "You are in the PANTRY.\nThe only exit leads back out to the KITCHEN.",
 	"items": {
 		"shelves": {
 			"name": "shelves",
-			"description": "There are so many shelves and so many boxes on those shelves.",
+			"description": "There are three shelves stuffed with food.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
@@ -25,8 +25,8 @@
 		},
 		"cornflakes": {
 			"name": "cornflakes",
-			"description":"A box of generic corn flakes. You need these to fix the shrink ray.",
-			"tooBig": false,
+			"description":"A box of generic corn flakes.",
+			"tooBig": true,
 			"isFeature": false,
 			"discovered": true,
 			"containsHiddenObject": false,

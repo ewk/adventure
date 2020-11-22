@@ -1,11 +1,11 @@
 {
   "name": "Kitchen",
-	"longDesc": "You are in the kitchen.\nThe pantry is behind a curtain on the north wall.\nThere is a refrigerator, pulled a bit away from the wall.\nThere is a counter with a giant sink.",
-	"description": "You are in the kitchen.\nFrom the kitchen, you can go to the pantry or to the downstairs hallway.",
+	"longDesc": "You are in the KITCHEN.\nThe PANTRY is behind a curtain on the wall.\nYou can also go to the DOWNSTAIRS HALLWAY from here.",
+	"description": "You are in the KITCHEN.\nFrom the kitchen, you can go to the PANTRY or to the DOWNSTAIRS HALLWAY.",
   "items": {
 		"refrigerator": {
 			"name": "refrigerator",
-			"description": "This is the refrigerator. It is one of the few normal appliances in the house.",
+			"description": "This is the refrigerator. It is one of the few normal appliances in the house.\nIt is pulled out a bit from the wall.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
@@ -15,7 +15,7 @@
 		},
 		"countertop": {
 			"name": "countertop",
-			"description": "The countertop is made of fake marble. It has a bowl of fruit, a notepad, a phone.\nThere is large sink that is piled high with dirty dishes.",
+			"description": "The countertop is made of fake marble.\nThere is large sink that is piled high with dirty dishes.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,

@@ -1,7 +1,7 @@
 {
   "name": "Front Porch",
-	"longDesc": "You are on the front porch.\nIt is covered, but open air.\nTo the west there are stairs leading to the yard.\nOn the eastern edge there is a wicker couch covered in bird seed detritus.\nThe front door to the house is to the north.\nThere is a skateboard next to the front door, on the western side of the north wall.\nThere is a large plant in the south west corner of the porch.\nThere is something written on the flower pot but you can't see what it says from the front door.",
-	"description": "You are on the front porch.\nIt is covered, but open air.\nTo the west there are stairs leading to the yard.\nThe front door to the house is to the north.",
+	"longDesc": "You are on the FRONT PORCH.\nIt is covered, but open air.\nThere are stairs leading to the YARD.\nThe front door to the house opens to the DOWNSTAIRS HALLWAY.",
+	"description": "You are on the FRONT PORCH.\nThere are stairs leading to the YARD.\nThe front door to the house opens to the DOWNSTAIRS HALLWAY.",
 	"items": {
 		"flower pot": {
 			"name": "flower pot",
@@ -15,7 +15,7 @@
 		},
 		"wicker couch": {
 			"name": "wicker couch",
-			"description": "The wicker couch is weathered and covered with bird seed.",  
+			"description": "The wicker couch is weathered and covered with bird seed detritus.",  
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,

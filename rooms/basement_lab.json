@@ -1,11 +1,11 @@
 {
   "name": "Basement Lab",
-  "longDesc": "You are in the basement lab.\nTo the west, a hatch leads up and out to the yard.\nIt is the only real exit.\nOn the northern wall, in the corner to the east, there is a laundry chute which opens up to a laundry basket.\nYou cannot climb up it, but you can slide down it if you know where the entrance is.\nThere is a desk on the south wall, with a computer and a big, old fashioned, keyboard.\nYou need a password to access the computer.\nThe computer has the software for the shrink gun.",
-  "description": "You are in the basement lab.\nTo the west, a hatch leads up and out to the yard.\nIt is the only real exit.\nOn the northern wall, in the corner to the east, there is a laundry chute which opens up to a laundry basket.\nYou cannot climb up it, but you can slide down it if you know where the entrance is.",
+  "longDesc": "You are in the BASEMENT LAB.\nA hatch leads up and out to the YARD. It is the only real exit.\nIf your parents find out you came down here you'll be grounded for months.",
+  "description": "You are in the BASEMENT LAB.\nA hatch leads up and out to the YARD.",
   "items": {
     "laundry chute": {
       "name": "laundry chute",
-      "description": "The laundry chute leads up to the small bedroom, but you can't climb up it.\nYou can only slide down it.",
+      "description": "The laundry chute opens up to a laundry basket.\nYou cannot climb up it, but you can slide down it if you know where the entrance is.",
       "tooBig": true,
       "isFeature": true,
       "discovered": true,
@@ -25,7 +25,7 @@
     },
     "computer": {
       "name": "computer",
-      "description": "You must ENTER PASSWORD to access this computer",
+      "description": "The computer has a big, old-fashioned keyboard. You must ENTER PASSWORD to access this computer",
       "tooBig": true,
       "isFeature": true,
       "discovered": false,

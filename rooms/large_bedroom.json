@@ -1,21 +1,11 @@
 {
   "name": "Large Bedroom",
-  "longDesc": "Uh-oh! You are in the large bedroom, which belongs to your parents. You are definitely not supposed to be in here!\nBut you're doing a lot of stuff today that you're not supposed to do, so why stop now?\nA bed is pushed against the far wall.\nIt's huge, wooden, and intricately carved.\nThe room also contains a fireplace and a desk with lots of papers on it.",
-  "description": "You are in the large bedroom, which belongs to your parents.\nIt contains a bed, a desk, and a fireplace.\nThe doorway leads to the Upstairs Hallway.",
+  "longDesc": "Uh-oh! You are in the LARGE BEDROOM, which belongs to your parents. You are definitely not supposed to be in here!\nBut you're doing a lot of stuff today\nthat you're not supposed to do, so why stop now?\nThe doorway leads to the UPSTAIRS HALLWAY.",
+  "description": "You are in the LARGE BEDROOM, which belongs to your parents.\nThe doorway leads to the UPSTAIRS HALLWAY.",
   "items": {
-		"fireplace": {
-			"name": "fireplace",
-			"description": "The fireplace is brick and covered in years of soot.\nThrough the grate, you can faintly see light coming up from the living room.",
-			"tooBig" : true,
-			"isFeature": true,
-			"discovered": true,
-			"containsHiddenObject": false,
-			"discoveryStatement": "",
-			"hiddenObject": ""
-		},
 		"bed": {
 			"name": "bed",
-			"description": "The bed is old, heavy, and dark, with no fewer than three quilts and six pillows piled on top of it.",
+			"description": "The wooden bed is old, heavy, and intricately carved.\nIt has no fewer than three quilts and six pillows piled on top of it.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
