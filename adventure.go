@@ -177,6 +177,7 @@ func main() {
 	s := Item{
 		Name:        "shrink ray",
 		Description: "makes things smaller",
+		TooBig:      false,
 		IsFeature:   false,
 		Discovered:  true,
 		IsEdible:    false,

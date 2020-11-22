@@ -3,8 +3,8 @@
 	"longDesc": "You are in the family room.\nThe only exit in the room goes to the downstairs hallway.\nThere is a large window on one of the walls.\nThe room contains an entertainment system with an old TV and a Nintendo 64.\nA toy box is in the far corner of the room.",
 	"description": "You are in the family room.\nThere is only one exit, which goes to the downstairs hallway.",
 	"items": {
-		"TV": {
-			"name": "TV",
+		"tv": {
+			"name": "tv",
 			"description": "The TV is old and has wires popping out of the sides and back,\n but it's all your parents will let you have",
 			"tooBig": true,
 			"isFeature": true,
