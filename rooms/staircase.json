@@ -1,11 +1,11 @@
 {
   "name": "Staircase",
-  "longDesc": "This is the STAIRCASE.\nWoah, it's a lot more imposing from this perspective.\nTwelve steps and you're not even as tall as each step!\nYour dog is sleeping at the bottom of the stairs.\nHe can't hear you if you yell but he can hear a dog whistle.\nThe staircase connects the UPSTAIRS HALLWAY and the DOWNSTAIRS HALLWAY.",
+  "longDesc": "This is the STAIRCASE.\nWhoa, it's a lot more imposing from this perspective.\nTwelve steps and you're not even as tall as each step!\nYour dog is sleeping at the bottom of the stairs.\nHe can't hear you if you yell but he can hear a dog whistle.\nThe staircase connects the UPSTAIRS HALLWAY and the DOWNSTAIRS HALLWAY.",
   "description": "This is the STAIRCASE.\nIt connects the UPSTAIRS HALLWAY and the DOWNSTAIRS HALLWAY.",
   "items": {
 		"dog": {
 			"name": "dog",
-			"description": "Your dog is your most loyal companion, especially if you give him treats. You can summon him with the dog whistle or with the squeeky toy",
+			"description": "Your dog is your most loyal companion, especially if you give him treats. You can summon him with the dog whistle or with the squeaky toy.",
 			"tooBig" : true,
 			"isFeature": true,
 			"discovered": false,
@@ -15,7 +15,7 @@
 		},
 		"peeling wallpaper": {
 			"name": "peeling wallpaper",
-			"description": "Some wallpaper seems to be peeling from the wall here, I wonder if there are any deep dark secrets hidden underneadth.",
+			"description": "Some wallpaper seems to be peeling from the wall here, I wonder if there are any deep dark secrets hidden underneath.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
@@ -25,7 +25,7 @@
 		},
 		"scarf": {
 			"name": "scarf",
-			"description": "The scarf is silky and green, patterned with some sort of leaves. ",
+			"description": "The scarf is silky and green, patterned with some sort of leaves.",
 			"tooBig" : true,
 			"isFeature": false,
 			"discovered": true,

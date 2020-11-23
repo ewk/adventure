@@ -35,7 +35,7 @@
 		},
 		"password": {
 			"name": "password",
-			"description": "You'll need a password to the computer in the basement lab, and this is it.",
+			"description": "You'll need a password to the computer in the basement lab, and this is it. The password is: '1234'.",
 			"tooBig": false,
 			"isFeature": false,
 			"discovered": false,
