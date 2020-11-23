@@ -26,7 +26,10 @@ func lookAtItem(item string) {
 	} else if val, ok := curRoom.Items[item]; ok {
 		if val.Discovered == true {
 			fmt.Println(val.Description)
+		} else {
+			fmt.Println("You cannot see that, at least not from here!")
 		}
+
 		if val.ContainsHiddenObject == true {
 			if hiddenThing, ok := curRoom.Items[val.HiddenObject]; ok {
 				fmt.Println(val.DiscoveryStatement)
