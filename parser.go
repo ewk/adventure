@@ -257,19 +257,18 @@ func eatItem(item string) {
 	}
 }
 
+// enterThePassword types the secret password into the computer
 func enterThePassword(password string) {
 	if _, ok := inventory[password]; ok {
-		if curRoom.Name == "Basement Lab" {
+		if curRoom.Name == "Basement Lab" && curRoom.Items["computer"].Discovered {
 			fmt.Println("TAKE the software you need")
 			curRoom.Items["software"].Discovered = true
-
 		} else {
 			fmt.Println("There's nothing that needs a password here")
 		}
 	} else {
 		fmt.Println("I don't think you know the password")
 	}
-
 }
 
 func climbTheDesk() {
