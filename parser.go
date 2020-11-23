@@ -26,7 +26,10 @@ func lookAtItem(item string) {
 	} else if val, ok := curRoom.Items[item]; ok {
 		if val.Discovered == true {
 			fmt.Println(val.Description)
+		} else {
+			fmt.Println("You cannot see that, at least not from here!")
 		}
+
 		if val.ContainsHiddenObject == true {
 			if hiddenThing, ok := curRoom.Items[val.HiddenObject]; ok {
 				fmt.Println(val.DiscoveryStatement)
@@ -172,7 +175,8 @@ func help() {
 
 	enter :: Type a secret password into a computer.
 
-	climb :: Climb a mountain, climb the furniture ...
+	climb :: Climb a desk. Maybe someday you can climb a mountain. Or even
+	climb on the rest of the furniture ...
 
 	use :: Make use of an item in your inventory.
 
@@ -257,28 +261,28 @@ func eatItem(item string) {
 	}
 }
 
-func enterThePassword(password string) {
-	if _, ok := inventory[password]; ok {
-		if curRoom.Name == "Basement Lab" {
+// enterThePassword types the secret password into the computer
+func enterThePassword() {
+	if _, ok := inventory["password"]; ok {
+		if curRoom.Name == "Basement Lab" && curRoom.Items["computer"].Discovered {
 			fmt.Println("TAKE the software you need")
 			curRoom.Items["software"].Discovered = true
-
 		} else {
-			fmt.Println("There's nothing that needs a password here")
+			fmt.Println("There's nothing that needs a password here.")
 		}
 	} else {
-		fmt.Println("I don't think you know the password")
+		fmt.Println("I don't think you know the password.")
 	}
-
 }
 
-func climbTheDesk() {
-	if curRoom.Name == "Basement Lab" {
+// climbTheDesk only climbs desks, but someday the player may be able to climb other things
+func climbTheDesk(feature string) {
+	if curRoom.Name == "Basement Lab" && feature == "desk" {
 		curRoom.Items["computer"].Discovered = true
-	} else if curRoom.Name == "Large Bedroom" {
-		fmt.Println("You can't climb on your parent's desk!")
+	} else if curRoom.Name == "Large Bedroom" && feature == "desk" {
+		fmt.Println("You had better not climb on your parent's desk!")
 	} else {
-		fmt.Println("There is no desk to climb here")
+		fmt.Println("You can't climb on that!")
 	}
 }
 
@@ -480,16 +484,14 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 				fmt.Println("Eat what?")
 			}
 		case "enter":
-			if len(s) > 1 && s[1] == "password" {
-				enterThePassword("password")
-			} else {
-				fmt.Println("Nothing to enter here")
-			}
+			enterThePassword()
 		case "climb":
-			if len(s) > 1 && s[1] == "desk" {
-				climbTheDesk()
+			if len(s) > 1 {
+				tmp := s[1:]
+				feature := strings.Join(tmp, " ")
+				climbTheDesk(feature)
 			} else {
-				fmt.Println("There's nothing to climb")
+				fmt.Println("Climb what? The corporate ladder?")
 			}
 		case "use":
 			if len(s) > 1 && s[1] == "umbrella" {
