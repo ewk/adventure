@@ -175,7 +175,8 @@ func help() {
 
 	enter :: Type a secret password into a computer.
 
-	climb :: Climb a mountain, climb the furniture ...
+	climb :: Climb a desk. Maybe someday you can climb a mountain. Or even
+	climb on the rest of the furniture ...
 
 	use :: Make use of an item in your inventory.
 
@@ -274,13 +275,14 @@ func enterThePassword(password string) {
 	}
 }
 
-func climbTheDesk() {
-	if curRoom.Name == "Basement Lab" {
+// climbTheDesk only climbs desks, but someday the player may be able to climb other things
+func climbTheDesk(feature string) {
+	if curRoom.Name == "Basement Lab" && feature == "desk" {
 		curRoom.Items["computer"].Discovered = true
-	} else if curRoom.Name == "Large Bedroom" {
-		fmt.Println("You can't climb on your parent's desk!")
+	} else if curRoom.Name == "Large Bedroom" && feature == "desk" {
+		fmt.Println("You had better not climb on your parent's desk!")
 	} else {
-		fmt.Println("There is no desk to climb here")
+		fmt.Println("You can't climb on that!")
 	}
 }
 
@@ -488,10 +490,12 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 				fmt.Println("Nothing to enter here")
 			}
 		case "climb":
-			if len(s) > 1 && s[1] == "desk" {
-				climbTheDesk()
+			if len(s) > 1 {
+				tmp := s[1:]
+				feature := strings.Join(tmp, " ")
+				climbTheDesk(feature)
 			} else {
-				fmt.Println("There's nothing to climb")
+				fmt.Println("Climb what? The corporate ladder?")
 			}
 		case "use":
 			if len(s) > 1 && s[1] == "umbrella" {
