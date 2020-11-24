@@ -490,7 +490,9 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 	for input.Scan() {
 		// split user input at whitespace and match known commands
 		action := input.Text()
-		s := strings.Fields(strings.ToLower(action))
+		action = strings.ToLower(action)
+
+		s := strings.Fields(action)
 
 		if cap(s) == 0 {
 			continue
