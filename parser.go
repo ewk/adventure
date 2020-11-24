@@ -302,13 +302,20 @@ func enterThePassword() {
 	}
 }
 
-// climbTheDesk only climbs desks, but someday the player may be able to climb other things
-func climbTheDesk(feature string) {
+func climbStuff(feature string) {
 	if curRoom.Name == "Basement Lab" && feature == "desk" {
 		fmt.Println("You climb up the desk and are face to face with the computer. It seems locked, why don't you take a LOOK?")
 		curRoom.Items["computer"].Discovered = true
 	} else if curRoom.Name == "Large Bedroom" && feature == "desk" {
 		fmt.Println("You had better not climb on your parent's desk!")
+	} else if curRoom.Name == "Pantry" && feature == "paper towels" {
+		fmt.Println("From up on the paper towels you can get a better look at the shelves.")
+		fmt.Println("There is a box of cornflakes pushed all the way back on one of the shelves.\nWeren't you looking for cornflakes?")
+		curRoom.Items["cornflakes"].Discovered = true
+	} else if curRoom.Name == "Dining Room" && feature == "dining room table" {
+		fmt.Println("From on top of the dining room table you can get a better look at the candelabra.")
+		curRoom.Items["candle"].Discovered = true
+		fmt.Println("There's wax everywhere but it looks like there might still be a bit of candle left. Is that a candle? Look closer")
 	} else {
 		fmt.Println("You can't climb on that!")
 	}
@@ -570,7 +577,7 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 			if len(s) > 1 {
 				tmp := s[1:]
 				feature := strings.Join(tmp, " ")
-				climbTheDesk(feature)
+				climbStuff(feature)
 			} else {
 				fmt.Println("Climb what? The corporate ladder?")
 			}
