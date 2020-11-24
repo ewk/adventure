@@ -496,12 +496,14 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 		r := strings.Title(action)
 		if _, ok := rooms[r]; ok {
 			moveToRoom(r)
+			fmt.Print("> ")
 			continue
 		}
 
 		s := strings.Fields(action)
 
 		if cap(s) == 0 {
+			fmt.Print("> ")
 			continue
 		}
 
