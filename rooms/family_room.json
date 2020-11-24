@@ -5,7 +5,7 @@
   "items": {
 		"tv": {
 			"name": "tv",
-			"description": "The TV is old and has wires popping out of the sides and back,\n but it's all your parents will let you have",
+			"description": "The TV is old and has wires popping out of the sides and back,\n but it's all your parents will let you have.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
