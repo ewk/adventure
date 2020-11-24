@@ -324,6 +324,16 @@ func climbTheStairs() {
 		fmt.Println("You're drenched and smell terrible now but at least you didn't have to climb those stairs")
 	}
 }
+func cutStuff(item string) {
+	if curRoom.Name == "Family Room" && item == "copper wire" || curRoom.Name == "Living Room" && item == "couch stuffing" {
+		fmt.Println("snip snip")
+		takeItem(item)
+	} else if _, ok := curRoom.Items[item]; !ok {
+		fmt.Printf("%s not found.\n", item)
+	} else {
+		fmt.Println("Please don't cut that.")
+	}
+}
 func downTheBanister() {
 	if _, ok := inventory["scarf"]; ok {
 		fmt.Println("\nYou use the scarf to slide quickly and safely down the banister")
@@ -516,7 +526,7 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 			}
 		case "goto":
 			fmt.Println("Go To Statement Considered Harmful!  https://xkcd.com/292")
-		case "take", "grab", "pull":
+		case "take", "grab", "pull", "yank":
 			if len(s) > 1 {
 				tmp := s[1:]
 				item := strings.Join(tmp, " ")
@@ -592,6 +602,14 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 				slideDownJumpIn(s)
 			} else {
 				playerJump()
+			}
+		case "cut":
+			if len(s) > 1 {
+				tmp := s[1:]
+				item := strings.Join(tmp, " ")
+				cutStuff(item)
+			} else {
+				fmt.Println("Cut what?")
 			}
 		case "savegame":
 			saveGame()

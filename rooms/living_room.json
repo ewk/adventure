@@ -5,7 +5,7 @@
 	"items": {
 		"couch": {
 			"name": "couch",
-			"description": "The couch is large and well-worn, with a visible tear with STUFFING coming out.",
+			"description": "The couch is large and well-worn, with a visible tear with COUCH STUFFING coming out.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
