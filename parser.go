@@ -492,6 +492,13 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 		action := input.Text()
 		action = strings.ToLower(action)
 
+		// accept just the room name as input
+		r := strings.Title(action)
+		if _, ok := rooms[r]; ok {
+			moveToRoom(r)
+			continue
+		}
+
 		s := strings.Fields(action)
 
 		if cap(s) == 0 {
