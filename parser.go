@@ -360,8 +360,8 @@ func lookAtEagle() {
 			fmt.Println("If you want to use the umbrella to hide from the eagle say: use umbrella")
 			fmt.Println("If you want to be taken by the eagle say: taunt eagle")
 		} else {
-			fmt.Println("The eagle swoops down and picks you up, you manage to wriggle free and drop down the chimney into the master bedroom")
-			curRoom = rooms["Large Bedroom"]
+			fmt.Println("The eagle swoops down and picks you up.\nYou manage to wriggle free and drop down the chimney into the attic.")
+			curRoom = rooms["Attic"]
 			lookAtRoom()
 		}
 	} else {
