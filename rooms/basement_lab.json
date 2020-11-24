@@ -25,7 +25,7 @@
     },
     "computer": {
       "name": "computer",
-      "description": "The computer has a big, old-fashioned keyboard. You must ENTER PASSWORD to access this computer",
+      "description": "The computer has a big, old-fashioned keyboard. You must ENTER PASSWORD to access this computer.",
       "tooBig": true,
       "isFeature": true,
       "discovered": false,
@@ -35,7 +35,7 @@
     },
     "software": {
       "name": "software",
-      "description": "All the code you need to program the shrink ray to make things big again. ",
+      "description": "All the code you need to program the shrink ray to make things big again.",
       "tooBig": false,
       "isFeature": false,
       "discovered": false,

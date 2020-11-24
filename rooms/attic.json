@@ -20,12 +20,12 @@
       "isFeature": true,
       "discovered": true,
       "containsHiddenObject": true,
-      "discoveryStatement": "There is a THREAD you can pull. That might come in handy. ",
+      "discoveryStatement": "There is a THREAD you can pull. That might come in handy.",
       "hiddenObject": "thread"
     },
     "thread": {
       "name": "thread",
-      "description": "A long, loose thread from unraveling rug",
+      "description": "A long, loose thread from the unraveling rug.",
       "tooBig": false, 
       "isFeature": false,
       "discovered": false,

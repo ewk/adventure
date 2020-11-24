@@ -5,7 +5,7 @@
   "items": {
 		"dining room table": {
 			"name": "dining room table",
-			"description": "The dining room table is tall, mahogany, and set for a formal dinner party for no discernable reason.",
+			"description": "The dining room table is tall, mahogany, and set for a formal dinner party for no discernible reason.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
