@@ -110,6 +110,21 @@ func moveToRoom(exit string) {
 	for _, e := range curRoom.Exits {
 		if e == exit { // check that requested exit is valid
 			if val, ok := rooms[exit]; ok {
+				if curRoom.Name == "Attic" && val.Name == "Upstairs Hallway" {
+					useTheThread()
+				}
+				if curRoom.Name == "Upstairs Hallway" && val.Name == "Attic" {
+					useTheThread()
+				}
+				if curRoom.Name == "Upstairs Hallway" && val.Name == "Large Bedroom" && val.Visited == false {
+					bounceEnterLargeBedroom()
+				}
+				if curRoom.Name == "Staircase" && val.Name == "Downstairs Hallway" {
+					downTheBanister()
+				}
+				if curRoom.Name == "Downstairs Hallway" && val.Name == "Staircase" {
+					climbTheStairs()
+				}
 				curRoom = val // if found, the exit is the new current room
 
 				if curRoom.Visited == false { // have we been here before?
@@ -233,13 +248,17 @@ func shrinkObject(item string) {
 }
 
 func callTheDog(item string) {
-	if val, ok := inventory[item]; ok {
-		fmt.Printf("Yeah you have the %s, but you don't know how to use it yet\n", item)
-		if val.Name == "dog whistle" {
-			fmt.Println("Whistle for the dog")
+	if _, ok := inventory[item]; ok {
+		if curRoom.Name == "Staircase" {
+			fmt.Println(curRoom.Items["dog"].DiscoveryStatement)
+		} else {
+			fmt.Printf("You hear the padding footsteps of your loyal steed.\nHe comes loping into the %s.\n", strings.ToLower(curRoom.Name))
+			fmt.Println("You grab onto him and he starts running.")
+			fmt.Println("When he finally slows down at the top of the stairs you jump off.")
+			curRoom = rooms["Staircase"]
 		}
 	} else {
-		fmt.Println("The dog can't hear you")
+		fmt.Println("The dog can't hear you without the dog whistle")
 	}
 }
 
@@ -286,11 +305,35 @@ func enterThePassword() {
 // climbTheDesk only climbs desks, but someday the player may be able to climb other things
 func climbTheDesk(feature string) {
 	if curRoom.Name == "Basement Lab" && feature == "desk" {
+		fmt.Println("You climb up the desk and are face to face with the computer. It seems locked, why don't you take a LOOK?")
 		curRoom.Items["computer"].Discovered = true
 	} else if curRoom.Name == "Large Bedroom" && feature == "desk" {
 		fmt.Println("You had better not climb on your parent's desk!")
 	} else {
 		fmt.Println("You can't climb on that!")
+	}
+}
+func climbTheStairs() {
+	fmt.Println("Oof that's a lot of stairs to climb")
+	if _, ok := inventory["dog whistle"]; ok {
+		fmt.Println("But you have the dog whistle!")
+		callTheDog("dog whistle")
+	} else {
+		fmt.Println("You scream in frustration and your wailing wakes the dog up.")
+		fmt.Println("He takes pity on you and picks you up by the scruff and drops you off at the top of the stairs.")
+		fmt.Println("You're drenched and smell terrible now but at least you didn't have to climb those stairs")
+	}
+}
+func downTheBanister() {
+	if _, ok := inventory["scarf"]; ok {
+		fmt.Println("\nYou use the scarf to slide quickly and safely down the banister")
+	} else {
+		fmt.Println("\nYou try to slide down the banister but your jeans don't slide down easily so it's more of a scooch.")
+		fmt.Println("After a couple of minutes of struggling you're sweaty and have worn a hole down in the seat of your pants.")
+		fmt.Println("You fall off the banister halfway down and tumble down the rest of the stairs.")
+		fmt.Println("The dog just raises his head and looks at you while you flail helplessly.")
+		fmt.Println("You land with another thud, thankfully nothing seems broken.")
+		fmt.Println("You should have grabbed that silky scarf.")
 	}
 }
 
@@ -308,6 +351,33 @@ func lookAtEagle() {
 		fmt.Println("Hmm...the eagle doesn't seem to be here right now")
 	}
 
+}
+
+func useTheThread() {
+	if _, ok := inventory["thread"]; ok {
+		if curRoom.Name == "Upstairs Hallway" {
+			fmt.Println("\nYou throw the thread up like a lasso and it attaches to the bottom of the ladder to the attic.")
+			fmt.Println("You free climb up it like the Man in Black from the Princess Bride on the Cliffs of Insanity.")
+			fmt.Println("You look so cool.")
+		} else if curRoom.Name == "Attic" {
+			fmt.Println("\nYou tie one end of the thread around your waist and the other around the top rung of the attic ladder.")
+			fmt.Println("Here goes nothing!")
+			fmt.Println("You leap out of the attic door and the thread acts as a bungee")
+			fmt.Println("It catches you right before you smash into the upstairs hallway.")
+			fmt.Println("As you're hanging, catching your breath, it unravels from the ladder and you drop with a small thud")
+			fmt.Println("You gather up the thread and put it in your backpack.")
+		}
+	} else {
+		fmt.Println("You don't have the thread")
+	}
+}
+
+func bounceEnterLargeBedroom() {
+	fmt.Println("\nThe door to the large bedroom is closed and you can't reach it at this size.")
+	fmt.Println("You take a running start and hurl yourself at your dad's exercise ball.")
+	fmt.Println("You bounce off of it with a loud *VWOMP* and grab onto the door handle.")
+	fmt.Println("You're just heavy enough to make the handle turn and the door creaks open.")
+	fmt.Println("You drop to the floor and walk right in.")
 }
 
 func useTheUmbrella() {
@@ -495,8 +565,12 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 				fmt.Println("Climb what? The corporate ladder?")
 			}
 		case "use":
-			if len(s) > 1 && s[1] == "umbrella" {
-				useTheUmbrella()
+			if len(s) > 1 {
+				if s[1] == "umbrella" {
+					useTheUmbrella()
+				} else {
+					fmt.Println("I don't know how to USE that, can you use a more specific action?")
+				}
 			} else {
 				fmt.Println("Use what?")
 			}

@@ -1,7 +1,7 @@
 {
   "name": "Upstairs Hallway",
-  "longDesc": "You are in the UPSTAIRS HALLWAY.\nThere are stairs leading to the DOWNSTAIRS HALLWAY and a sturdy-looking thread leading to the ATTIC.\nIn this hallway, there are doors to a LARGE BEDROOM which belongs to your parents,\na SMALL BEDROOM which belongs to you, and a BATHROOM shared by everyone.",
-  "description": "You are in the UPSTAIRS HALLWAY.\nThere are stairs leading to the DOWNSTAIRS HALLWAY and a thread leading to the ATTIC.\nThere are doors to a LARGE BEDROOM,\na SMALL BEDROOM, and a BATHROOM.",
+  "longDesc": "\nYou are in the UPSTAIRS HALLWAY.\nThere are stairs leading to the DOWNSTAIRS HALLWAY and a sturdy-looking thread leading to the ATTIC.\nIn this hallway, there are doors to a LARGE BEDROOM which belongs to your parents,\na SMALL BEDROOM which belongs to you, and a BATHROOM shared by everyone.",
+  "description": "\nYou are in the UPSTAIRS HALLWAY.\nThere are stairs leading to the DOWNSTAIRS HALLWAY and a thread leading to the ATTIC.\nThere are doors to a LARGE BEDROOM,\na SMALL BEDROOM, and a BATHROOM.",
   "items": {
 		"recycling bin": {
 			"name": "recycling bin",
@@ -25,7 +25,7 @@
 		},
 		"exercise ball": {
 			"name": "exercise ball",
-			"description": "The giant blue exercise ball that your dad uses instead of a desk chair.\nYou need to bounce on the exercise ball to open your parents' door.(??)",
+			"description": "The giant blue exercise ball that your dad uses instead of a desk chair. It is very bouncy",
 			"tooBig": true,
 			"isFeature": false,
 			"discovered": true,

@@ -1,7 +1,7 @@
 {
   "name": "Attic",
-  "longDesc" : "You are in the ATTIC.\nThere is an exit in the floor that drops down into the UPSTAIRS HALLWAY.\nOn the opposite wall, a chimney for the living room fireplace\ngoes up through the roof.",
-  "description" : "You are in the ATTIC.\nThere is an exit in the floor that drops down into the UPSTAIRS HALLWAY.",
+  "longDesc" : "\nYou are in the ATTIC.\nThere is an exit in the floor that drops down into the UPSTAIRS HALLWAY.\nOn the opposite wall, a chimney for the living room fireplace\ngoes up through the roof.",
+  "description" : "\nYou are in the ATTIC.\nThere is an exit in the floor that drops down into the UPSTAIRS HALLWAY.",
   "items": {
     "chest of drawers": {
       "name": "chest of drawers",
@@ -55,7 +55,7 @@
 	},
 	"paper": {
 		"name": "paper",
-		"description": "The top of the paper says 'TO DO - FIX DE-SHRINK FUNCTION ON SHRINK RAY!!!'.\nUnderneath that is a list of random things:\n     shampoo, two old socks, crushed aluminum can, stuffing from couch,\n     dirt from yard, screw from back of refrigerator, corn flakes,\n     copper wire from the back of TV, candle wax,\n     'de-shrink' software from the computer in basement lab",
+		"description": "The top of the paper says 'TO DO - FIX DE-SHRINK FUNCTION ON SHRINK RAY!!!'.\nUnderneath that is a list of random things:\n     shampoo, three old socks, crushed aluminum can, stuffing from couch,\n     dirt from yard, screw from back of refrigerator, corn flakes,\n     copper wire from the back of TV, candle wax,\n     'de-shrink' software from the computer in basement lab",
 		"tooBig": true,
 		"isFeature": false,
 		"discovered": false,

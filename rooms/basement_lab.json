@@ -1,7 +1,7 @@
 {
   "name": "Basement Lab",
-  "longDesc": "You are in the BASEMENT LAB.\nA hatch leads up and out to the YARD. It is the only real exit.\nIf your parents find out you came down here you'll be grounded for months.",
-  "description": "You are in the BASEMENT LAB.\nA hatch leads up and out to the YARD.",
+  "longDesc": "\nYou are in the BASEMENT LAB.\nA hatch leads up and out to the YARD. It is the only real exit.\nIf your parents find out you came down here you'll be grounded for months.",
+  "description": "\nYou are in the BASEMENT LAB.\nA hatch leads up and out to the YARD.",
   "items": {
     "laundry chute": {
       "name": "laundry chute",

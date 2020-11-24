@@ -1,7 +1,7 @@
 {
   "name": "Living Room",
-	"longDesc": "You are in the LIVING ROOM.\nThere is a window that looks out onto the yard.\nA large, comfortable-looking couch faces a fireplace.\nThere is no door to the hallway from this room, just a door to the DINING ROOM.",
-	"description": "You are in the LIVING ROOM.\nThere is a door to the dining room.",
+	"longDesc": "\nYou are in the LIVING ROOM.\nThere is a window that looks out onto the yard.\nA large, comfortable-looking couch faces a fireplace.\nThere is no door to the hallway from this room, just a door to the DINING ROOM.",
+	"description": "\nYou are in the LIVING ROOM.\nThere is a door to the dining room.",
 	"items": {
 		"couch": {
 			"name": "couch",

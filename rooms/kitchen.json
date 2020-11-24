@@ -1,7 +1,7 @@
 {
   "name": "Kitchen",
-	"longDesc": "You are in the KITCHEN.\nThe PANTRY is behind a curtain on the wall.\nYou can also go to the DOWNSTAIRS HALLWAY from here.",
-	"description": "You are in the KITCHEN.\nFrom the kitchen, you can go to the PANTRY or to the DOWNSTAIRS HALLWAY.",
+	"longDesc": "\nYou are in the KITCHEN.\nThe PANTRY is behind a curtain on the wall.\nYou can also go to the DOWNSTAIRS HALLWAY from here.",
+	"description": "\nYou are in the KITCHEN.\nFrom the kitchen, you can go to the PANTRY or to the DOWNSTAIRS HALLWAY.",
   "items": {
 		"refrigerator": {
 			"name": "refrigerator",

@@ -1,7 +1,7 @@
 {
   "name": "Small Bedroom",
-  "longDesc": "You are in the SMALL BEDROOM, which belongs to you.\nThere is a doorway to the UPSTAIRS HALLWAY.\nThere is a bed against the wall. You store your treasures UNDER THE BED.\nYour CLOSET has a laundry chute that leads to the basement.\nThere are DIRTY SOCKS on the floor of your closet.",
-  "description": "You are in the SMALL BEDROOM, which belongs to you.\nThere is a doorway to the UPSTAIRS HALLWAY.",
+  "longDesc": "\nYou are in the SMALL BEDROOM, which belongs to you.\nThere is a doorway to the UPSTAIRS HALLWAY.\nThere is a bed against the wall. You store your treasures UNDER THE BED.\nYour CLOSET has a laundry chute that leads to the basement.\nThere are DIRTY SOCKS on the floor of your closet.",
+  "description": "\nYou are in the SMALL BEDROOM, which belongs to you.\nThere is a doorway to the UPSTAIRS HALLWAY.",
   "alias": "My|Your Bedroom",
   "items": {
 		"closet": {
