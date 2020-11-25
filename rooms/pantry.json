@@ -15,7 +15,7 @@
 		},
 		"paper towels": {
 			"name": "paper towels",
-			"description": "This is a very tall stack of paper towels. Who needs this many paper towels?\nYou could probably reach the bottom shelf by climbing them.",
+			"description": "This is a very tall stack of paper towels. Who needs this many paper towels?\nYou could probably reach the bottom shelf by CLIMBing them.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
@@ -23,8 +23,8 @@
 			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"cornflakes": {
-			"name": "cornflakes",
+		"corn flakes": {
+			"name": "corn flakes",
 			"description":"A box of generic corn flakes.",
 			"tooBig": true,
 			"isFeature": false,

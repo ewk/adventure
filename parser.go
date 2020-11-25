@@ -91,11 +91,12 @@ func listInventory() {
 }
 
 // moveToRoom takes a requested exit and moves the player there if the exit exists
-func moveToRoom(exit string) {
+// returns true if game is won or lost, false if game is continuing
+func moveToRoom(exit string) bool {
 	b := checkExit() // verify we have items needed to leave
 	if !b {
 		fmt.Printf("You cannot leave because %s.\n", curRoom.ExitBlock)
-		return
+		return false
 	}
 
 	// If the exit requested by a user matches an entry in the list of
@@ -142,11 +143,16 @@ func moveToRoom(exit string) {
 					}
 				}
 
-				return
+				if curRoom.Name == "Attic" {
+					return checkForWin()
+				}
+
+				return false
 			}
 		}
 	}
 	fmt.Printf("%s is not a valid exit\n", exit)
+	return false
 }
 
 // checkExit verifies the player has the item necessary to exit a room
@@ -161,6 +167,21 @@ func checkExit() bool {
 	}
 
 	return false
+}
+
+// checks inventory for all items necessary to win
+// only called if player is entering attic
+func checkForWin() bool {
+	winningItems := [10]string{"shampoo", "dirty socks", "aluminum can", "couch stuffing",
+		"sand", "screw", "corn flakes", "copper wire", "candle", "software"}
+	for _, item := range winningItems {
+		_, ok := inventory[item]
+		if !ok {
+			return false
+		}
+	}
+	fmt.Println("\nYay, you have everything you need to fix the shrink ray!\nYou fix it and make yourself bigger.\nYou win!")
+	return true
 }
 
 // help prints a subset of verbs the game understands
@@ -310,8 +331,8 @@ func climbStuff(feature string) {
 		fmt.Println("You had better not climb on your parent's desk!")
 	} else if curRoom.Name == "Pantry" && feature == "paper towels" {
 		fmt.Println("From up on the paper towels you can get a better look at the shelves.")
-		fmt.Println("There is a box of cornflakes pushed all the way back on one of the shelves.\nWeren't you looking for cornflakes?")
-		curRoom.Items["cornflakes"].Discovered = true
+		fmt.Println("There is a box of CORN FLAKES pushed all the way back on one of the shelves.\nWeren't you looking for corn flakes?")
+		curRoom.Items["corn flakes"].Discovered = true
 	} else if curRoom.Name == "Dining Room" && feature == "dining room table" {
 		fmt.Println("From on top of the dining room table you can get a better look at the candelabra.")
 		curRoom.Items["candle"].Discovered = true
@@ -367,7 +388,6 @@ func lookAtEagle() {
 	} else {
 		fmt.Println("Hmm...the eagle doesn't seem to be here right now")
 	}
-
 }
 
 func useTheThread() {
@@ -419,7 +439,6 @@ func tauntTheEagle() {
 		curRoom = rooms["Large Bedroom"]
 		lookAtRoom()
 	}
-
 }
 
 func slideDownJumpIn(userInput []string) {
@@ -487,7 +506,9 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 	input := bufio.NewScanner(os.Stdin)
 	fmt.Print("> ")
 
-	for input.Scan() {
+	gameOver := false
+
+	for !gameOver && input.Scan() {
 		// split user input at whitespace and match known commands
 		action := input.Text()
 		action = strings.ToLower(action)
@@ -495,7 +516,7 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 		// accept just the room name as input
 		r := strings.Title(action)
 		if _, ok := rooms[r]; ok {
-			moveToRoom(r)
+			gameOver = moveToRoom(r)
 			fmt.Print("> ")
 			continue
 		}
@@ -532,13 +553,13 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 					loc := s[2:]
 					loc = capInput(loc)
 					exit := strings.Join(loc, " ")
-					moveToRoom(exit)
+					gameOver = moveToRoom(exit)
 				}
 			} else if len(s) > 1 { // If player says "go" ...
 				loc := s[1:]
 				loc = capInput(loc)
 				exit := strings.Join(loc, " ")
-				moveToRoom(exit)
+				gameOver = moveToRoom(exit)
 			} else {
 				fmt.Println("Go where?")
 			}
@@ -606,7 +627,7 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 			if len(s) > 1 && s[1] == "eagle" {
 				tauntTheEagle()
 			} else {
-				fmt.Println("There's nobody here to taunt but yourself")
+				fmt.Println("There's nobody here to taunt but yourself.")
 			}
 		case "slide":
 			if len(s) > 1 {
