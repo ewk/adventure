@@ -466,21 +466,7 @@ func capInput(input []string) []string {
 }
 
 func playGame() {
-	openingMessage := fmt.Sprintf(`
-It was a bright and sunny afternoon. Everything was going fine.
-Your parents were developing new semi-legal technology in their lab,
-and you were watching them. They've told you 100 times to not watch them
-while they work, but what are they going to do? You're curious.
-The shrink ray! What a cool invention. Now anything can be made smaller!
-They've told you not to play with the inventions 101 times, but what are they
-going to do? You're curious.
-So yeah, they did kick you out of the lab when they left to go run errands,
-telling you 102 times to not touch anything, but you smuggled the
-shrink ray out anyway.
-That's the last thing you remember. You open your eyes and seem to be in a
-giant cavern. Everything is so big! Wait...you're so small!
-Where are you? How will you fix this? Is there anywhere you could GO TO?
-Is there anything you could TAKE to help you? Why don't you try to LOOK around?`)
+	openingMessage := fmt.Sprintf("\n It was a bright and sunny afternoon. Everything was going fine.\n Your parents were developing new semi-legal technology in their lab,\n and you were watching them. They've told you 100 times to not watch them\n while they work, but what are they going to do? You're curious.\n The shrink ray! What a cool invention. Now anything can be made smaller!\n They've told you not to play with the inventions 101 times, but what are they\n going to do? You're curious.\n So yeah, they did kick you out of the lab when they left to go run errands,\n telling you 102 times to not touch anything, but you smuggled the\n shrink ray out anyway.\n That's the last thing you remember. You open your eyes and seem to be in a\n giant cavern. Everything is so big! Wait...you're so small!\n Where are you? How will you fix this? Is there anywhere you could \033[31m GO TO \033[0m?\n Is there anything you could \033[31m TAKE \033[0mto help you? Why don't you try to \033[31m LOOK \033[0m around?\n")
 
 	fmt.Println(openingMessage)
 
