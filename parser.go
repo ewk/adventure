@@ -381,8 +381,8 @@ func lookAtEagle() {
 			fmt.Println("If you want to use the umbrella to hide from the eagle say: use umbrella")
 			fmt.Println("If you want to be taken by the eagle say: taunt eagle")
 		} else {
-			fmt.Println("The eagle swoops down and picks you up.\nYou manage to wriggle free and drop down the chimney into the attic.")
-			curRoom = rooms["Attic"]
+			fmt.Println("The eagle swoops down and picks you up.\nYou can see your whole neighborhood from up here!\nYou manage to wriggle free and drop down the chimney.\nYou climb down towards a bit of sunlight, and exit through\n a small hole in the chimney into the large bedroom.")
+			curRoom = rooms["Large Bedroom"]
 			lookAtRoom()
 		}
 	} else {
@@ -401,11 +401,11 @@ func useTheThread() {
 			fmt.Println("Here goes nothing!")
 			fmt.Println("You leap out of the attic door and the thread acts as a bungee")
 			fmt.Println("It catches you right before you smash into the upstairs hallway.")
-			fmt.Println("As you're hanging, catching your breath, it unravels from the ladder and you drop with a small thud")
+			fmt.Println("As you're hanging, catching your breath, it unravels from the ladder and you drop with a small thud.")
 			fmt.Println("You gather up the thread and put it in your backpack.")
 		}
 	} else {
-		fmt.Println("You don't have the thread")
+		fmt.Println("You don't have the thread.")
 	}
 }
 
@@ -419,13 +419,13 @@ func bounceEnterLargeBedroom() {
 
 func useTheUmbrella() {
 	if _, ok := inventory["umbrella"]; ok && curRoom.Name == "Yard" {
-		fmt.Println("You open the umbrella and are completely hidden from the eagle")
-		fmt.Println("Not finding lunch the eagle flies away")
+		fmt.Println("You open the umbrella and are completely hidden from the eagle.")
+		fmt.Println("Not finding lunch, the eagle flies away.")
 		curRoom.Items["eagle"].Discovered = false
 	} else if _, ok := inventory["umbrella"]; ok && curRoom.Name != "Yard" {
 		fmt.Println("You can't open the umbrella inside!")
 	} else {
-		fmt.Println("You don't have an umbrella")
+		fmt.Println("You don't have an umbrella.")
 	}
 }
 
