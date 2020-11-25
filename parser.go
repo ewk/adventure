@@ -179,7 +179,7 @@ func help() {
 	inventory, as well. If you describe something in your text descriptions, you
 	should be able to "look at" it to examine it.
 
-	"go Upstairs Hallway" or "go $EXIT" or "go to $ROOM" :: proceed through
+	go :: "go Upstairs Hallway" or "go $EXIT" or "go to $ROOM" - proceed through
 	the indicated exit to the next room.
 
 	take :: acquire an object, putting it into your inventory.
@@ -208,6 +208,12 @@ func help() {
 	jump :: Get vertical!
 
 	slide :: Travel quickly
+
+	yank :: see take
+
+	shrink :: make a big thing a smaller thing
+
+	cut :: cut an item
 
 	savegame :: saves the state of the game to a file.
 
