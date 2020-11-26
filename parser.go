@@ -316,8 +316,8 @@ func climbStuff(feature string) {
 		fmt.Println("You had better not climb on your parent's desk!")
 	} else if curRoom.Name == "Pantry" && feature == "paper towels" {
 		fmt.Println("From up on the paper towels you can get a better look at the shelves.")
-		fmt.Println("There is a box of cornflakes pushed all the way back on one of the shelves.\nWeren't you looking for cornflakes?")
-		curRoom.Items["cornflakes"].Discovered = true
+		fmt.Println("There is a box of CORN FLAKES pushed all the way back on one of the shelves.\nWeren't you looking for corn flakes?")
+		curRoom.Items["corn flakes"].Discovered = true
 	} else if curRoom.Name == "Dining Room" && feature == "dining room table" {
 		fmt.Println("From on top of the dining room table you can get a better look at the candelabra.")
 		curRoom.Items["candle"].Discovered = true
@@ -366,14 +366,13 @@ func lookAtEagle() {
 			fmt.Println("If you want to use the umbrella to hide from the eagle say: use umbrella")
 			fmt.Println("If you want to be taken by the eagle say: taunt eagle")
 		} else {
-			fmt.Println("The eagle swoops down and picks you up.\nYou manage to wriggle free and drop down the chimney into the attic.")
-			curRoom = rooms["Attic"]
+			fmt.Println("The eagle swoops down and picks you up.\nYou can see your whole neighborhood from up here!\nYou manage to wriggle free and drop down the chimney.\nYou climb down towards a bit of sunlight, and exit through\n a small hole in the chimney into the large bedroom.")
+			curRoom = rooms["Large Bedroom"]
 			lookAtRoom()
 		}
 	} else {
 		fmt.Println("Hmm...the eagle doesn't seem to be here right now")
 	}
-
 }
 
 func useTheThread() {
@@ -387,11 +386,11 @@ func useTheThread() {
 			fmt.Println("Here goes nothing!")
 			fmt.Println("You leap out of the attic door and the thread acts as a bungee")
 			fmt.Println("It catches you right before you smash into the upstairs hallway.")
-			fmt.Println("As you're hanging, catching your breath, it unravels from the ladder and you drop with a small thud")
+			fmt.Println("As you're hanging, catching your breath, it unravels from the ladder and you drop with a small thud.")
 			fmt.Println("You gather up the thread and put it in your backpack.")
 		}
 	} else {
-		fmt.Println("You don't have the thread")
+		fmt.Println("You don't have the thread.")
 	}
 }
 
@@ -405,13 +404,13 @@ func bounceEnterLargeBedroom() {
 
 func useTheUmbrella() {
 	if _, ok := inventory["umbrella"]; ok && curRoom.Name == "Yard" {
-		fmt.Println("You open the umbrella and are completely hidden from the eagle")
-		fmt.Println("Not finding lunch the eagle flies away")
+		fmt.Println("You open the umbrella and are completely hidden from the eagle.")
+		fmt.Println("Not finding lunch, the eagle flies away.")
 		curRoom.Items["eagle"].Discovered = false
 	} else if _, ok := inventory["umbrella"]; ok && curRoom.Name != "Yard" {
 		fmt.Println("You can't open the umbrella inside!")
 	} else {
-		fmt.Println("You don't have an umbrella")
+		fmt.Println("You don't have an umbrella.")
 	}
 }
 
@@ -425,7 +424,6 @@ func tauntTheEagle() {
 		curRoom = rooms["Large Bedroom"]
 		lookAtRoom()
 	}
-
 }
 
 func slideDownJumpIn(userInput []string) {
@@ -612,7 +610,7 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 			if len(s) > 1 && s[1] == "eagle" {
 				tauntTheEagle()
 			} else {
-				fmt.Println("There's nobody here to taunt but yourself")
+				fmt.Println("There's nobody here to taunt but yourself.")
 			}
 		case "slide":
 			if len(s) > 1 {
