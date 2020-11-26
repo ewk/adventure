@@ -20,7 +20,7 @@
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "On one side of the desk, near the floor, is a yellow post-it with some writing on it.\nMaybe you should LOOK more closely at it.",
+			"discoveryStatement": "On one side of the desk, near the floor, is a yellow POST-IT with some writing on it.\nMaybe you should LOOK more closely at it.",
 			"hiddenObject": "post-it"
 		},
 		"post-it": {
@@ -30,7 +30,7 @@
 			"isFeature": true,
 			"discovered": false,
 			"containsHiddenObject": true,
-			"discoveryStatement": "Oooh, is that a password? Yes it is! You should probably TAKE that down.",
+			"discoveryStatement": "Oooh, is that a PASSWORD? Yes it is! You should probably TAKE that down.",
 			"hiddenObject": "password"
 		},
 		"password": {

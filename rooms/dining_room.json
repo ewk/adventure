@@ -10,7 +10,7 @@
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "They left the candelabra out but I can't see any candles from here.\nBetter climb the table to get a better look",
+			"discoveryStatement": "They left the candelabra out but you can't see any candles from here.\nBetter climb the table to get a better look",
 			"hiddenObject": "candelabra"
 		},
 		"painting": {

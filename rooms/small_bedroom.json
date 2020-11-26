@@ -11,7 +11,7 @@
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "The LAUNDRY CHUTE goes straight to the basement. Jump in if you're feeling lucky.",
+			"discoveryStatement": "The LAUNDRY CHUTE goes straight to the basement. JUMP IN if you're feeling lucky.",
 			"hiddenObject": "laundry chute"
 		},
 		"laundry chute": {
@@ -26,18 +26,18 @@
 		},
 		"under the bed": {
 			"name": "under the bed",
-			"description": " Under the bed is dark and smelly, but there are no monsters...you think.",
+			"description": "Under the bed is dark and smelly, but there are no monsters...you think.",
 			"tooBig" : true,
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "That's where the dog whistle went! You see it against the wall under the bed.",
+			"discoveryStatement": "That's where the DOG WHISTLE went! You see it against the wall under the bed.",
 			"hiddenObject": "dog whistle"
 		},
 		"dog whistle": {
 			"name": "dog whistle",
 			"description": "The dog whistle is small and silver. Use it to summon your mighty steed.",
-			"tooBig" : false,
+			"tooBig" : true,
 			"isFeature": false,
 			"discovered": false,
 			"containsHiddenObject": false,
