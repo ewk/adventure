@@ -513,8 +513,19 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 		r := strings.Title(action)
 		if _, ok := rooms[r]; ok {
 			moveToRoom(r)
-			fmt.Print("> ")
-			continue
+
+			// This is repetitive, but we must also check if the player returned
+			// to the attic without using the verb 'go'
+			if curRoom.Name == "Attic" {
+				gameOver = checkForWin()
+			}
+
+			if gameOver {
+				break
+			} else {
+				fmt.Print("> ")
+				continue
+			}
 		}
 
 		s := strings.Fields(action)
@@ -664,6 +675,17 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 		default:
 			fmt.Println("Not a valid command:", action)
 		}
+
+		if curRoom.Name == "Attic" {
+			gameOver = checkForWin()
+		}
+
+		if gameOver {
+			break
+		}
+
 		fmt.Print("> ")
 	}
+
+	fmt.Println("If you got here, you won!") // TODO
 }
