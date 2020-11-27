@@ -163,6 +163,19 @@ func checkExit() bool {
 	return false
 }
 
+// checkForWin checks if player's inventory has all the items needed to win
+// the game. Should only be called if player is in the attic.
+func checkForWin() bool {
+	for _, item := range winningItems {
+		_, ok := inventory[item]
+		if !ok {
+			return false
+		}
+	}
+
+	return true
+}
+
 // help prints a subset of verbs the game understands
 func help() {
 	m := fmt.Sprintf(`

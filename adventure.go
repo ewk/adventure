@@ -20,6 +20,7 @@ var rooms = make(map[string]*Room)        // map of rooms
 var roomAliases = make(map[string]string) // map of room name aliases
 var inventory = make(map[string]*Item)    // player inventory
 var curRoom *Room
+var gameOver bool
 
 // definition of a room
 type Room struct {
@@ -53,6 +54,10 @@ type Game struct {
 	Rooms     map[string]*Room
 	Inventory map[string]*Item
 }
+
+// items needed to win the game
+var winningItems = []string{"shampoo", "dirty socks", "aluminum can", "couch stuffing",
+	"sand", "screw", "corn flakes", "copper wire", "candle", "software"}
 
 // loadRooms reads room definitions from local storage and creates a
 // corresponding Room struct. Rooms must be defined as JSON and saved to the
