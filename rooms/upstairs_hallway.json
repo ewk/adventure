@@ -1,6 +1,6 @@
 {
   "name": "Upstairs Hallway",
-  "longDesc": "\nYou are in the UPSTAIRS HALLWAY.\nThere are stairs leading to the DOWNSTAIRS HALLWAY and a sturdy-looking thread leading to the ATTIC.\nIn this hallway, there are doors to a LARGE BEDROOM which belongs to your parents,\na SMALL BEDROOM which belongs to you, and a BATHROOM shared by everyone.",
+  "longDesc": "\nYou are in the UPSTAIRS HALLWAY.\nThere is a STAIRCASE leading downstairs and you can see the entrance to the ATTIC in the ceiling.\nIn this hallway, there are doors to a LARGE BEDROOM which belongs to your parents,\na SMALL BEDROOM which belongs to you, and a BATHROOM shared by everyone.",
   "description": "\nYou are in the UPSTAIRS HALLWAY.\nThere are stairs leading to the DOWNSTAIRS HALLWAY and a thread leading to the ATTIC.\nThere are doors to a LARGE BEDROOM,\na SMALL BEDROOM, and a BATHROOM.",
   "items": {
 		"recycling bin": {

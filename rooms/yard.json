@@ -20,7 +20,7 @@
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "There's lots of sand in here too.",
+			"discoveryStatement": "There's lots of SAND in here too.",
 			"hiddenObject": "sand"
 		},
 		"sand": {
