@@ -375,17 +375,13 @@ func downTheBanister() {
 }
 
 func lookAtEagle() {
-	if curRoom.Items["eagle"].Discovered == true {
-		if _, ok := inventory["umbrella"]; ok {
-			fmt.Println("If you want to use the umbrella to hide from the eagle say: use umbrella")
-			fmt.Println("If you want to be taken by the eagle say: taunt eagle")
-		} else {
-			fmt.Println("The eagle swoops down and picks you up. You can see your whole neighborhood\nfrom up here!\n\nYou manage to wriggle free and drop down the chimney. You climb down\ntowards a bit of sunlight, and exit through a small hole in the chimney\ninto the large bedroom.\n")
-			curRoom = rooms["Large Bedroom"]
-			lookAtRoom()
-		}
+	if _, ok := inventory["umbrella"]; ok {
+		fmt.Println("If you want to use the umbrella to hide from the eagle say: use umbrella")
+		fmt.Println("If you want to be taken by the eagle say: taunt eagle")
 	} else {
-		fmt.Println("Hmm...the eagle doesn't seem to be here right now")
+		fmt.Println("The eagle swoops down and picks you up. You can see your whole neighborhood\nfrom up here!\n\nYou manage to wriggle free and drop down the chimney. You climb down\ntowards a bit of sunlight, and exit through a small hole in the chimney\ninto the large bedroom.")
+		curRoom = rooms["Large Bedroom"]
+		lookAtRoom()
 	}
 }
 
@@ -437,15 +433,9 @@ func useTheUmbrella() {
 }
 
 func tauntTheEagle() {
-	if curRoom.Items["eagle"].Discovered == true {
-		curRoom = rooms["Large Bedroom"]
-		lookAtRoom()
-	} else if curRoom.Items["eagle"].Discovered == false {
-		fmt.Println("The eagle has heard your taunts and it has made him mad!")
-		curRoom.Items["eagle"].Discovered = true
-		curRoom = rooms["Large Bedroom"]
-		lookAtRoom()
-	}
+	fmt.Printf("The eagle has heard your taunts and it has made him mad!\n\n")
+	curRoom = rooms["Large Bedroom"]
+	lookAtRoom()
 }
 
 func slideDownJumpIn(userInput []string) {
