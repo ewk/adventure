@@ -337,9 +337,10 @@ func climbStuff(feature string) {
 		curRoom.Items["candle"].Discovered = true
 		fmt.Println("There's wax everywhere but it looks like there might still be a bit of candle left. Is that a candle? Look closer")
 	} else {
-		fmt.Println("You can't climb on that!")
+		fmt.Printf("You cannot climb '%s' because it doesn't exist!\n", feature)
 	}
 }
+
 func climbTheStairs() {
 	fmt.Println("Oof that's a lot of stairs to climb")
 	if _, ok := inventory["dog whistle"]; ok {
@@ -351,6 +352,7 @@ func climbTheStairs() {
 		fmt.Println("You're drenched and smell terrible now but at least you didn't have to climb those stairs")
 	}
 }
+
 func cutStuff(item string) {
 	if curRoom.Name == "Family Room" && item == "copper wire" || curRoom.Name == "Living Room" && item == "couch stuffing" {
 		fmt.Println("snip snip")
@@ -361,6 +363,7 @@ func cutStuff(item string) {
 		fmt.Println("Please don't cut that.")
 	}
 }
+
 func downTheBanister() {
 	if _, ok := inventory["scarf"]; ok {
 		fmt.Println("\nYou use the scarf to slide quickly and safely down the banister")
