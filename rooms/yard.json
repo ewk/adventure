@@ -1,7 +1,7 @@
 {
   "name": "Yard",	
-	"longDesc": "\nYou are in the YARD.\nA hatch to the BASEMENT LAB is on the corner of the house,\nand a door to the DINING ROOM is on the side.\nYou can also step onto the FRONT PORCH from here.\nAn eagle flies overhead. Don't make eye contact with it if you don't want it to notice you!",
-	"description": "\nYou are in the YARD.\nFrom here you can reach the BASEMENT LAB, DINING ROOM, and FRONT PORCH.",
+	"longDesc": "You are in the YARD.\nA hatch to the BASEMENT LAB is on the corner of the house,\nand a door to the DINING ROOM is on the side.\nYou can also step onto the FRONT PORCH from here.\nAn eagle flies overhead. Don't make eye contact with it if you don't want it\nto notice you!",
+	"description": "You are in the YARD.\nFrom here you can reach the BASEMENT LAB, DINING ROOM, and FRONT PORCH.",
 	"items": {
 		"eagle": {
 			"name": "eagle",

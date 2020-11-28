@@ -1,7 +1,7 @@
 {
   "name": "Bathroom",
-	"longDesc": "\nYou are in the BATHROOM.\nThe exit to the UPSTAIRS HALLWAY is behind you.\nThere is a sink with a cabinet under it, and a toilet with a stack of magazines on the tank.",
-	"description": "\nYou are in the BATHROOM.\nThe exit to the UPSTAIRS HALLWAY is behind you.",
+	"longDesc": "You are in the BATHROOM.\nThe exit to the UPSTAIRS HALLWAY is behind you.\nThere is a sink with a cabinet under it, and a toilet with a stack of magazines\non the tank.",
+	"description": "You are in the BATHROOM.\nThe exit to the UPSTAIRS HALLWAY is behind you.",
 	"items": {
 		"shower": {
 			"name": "shower",

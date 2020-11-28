@@ -1,7 +1,7 @@
 {
   "name": "Large Bedroom",
-  "longDesc": "\nUh-oh! You are in the LARGE BEDROOM, which belongs to your parents. You are definitely not supposed to be in here!\nBut you're doing a lot of stuff today\nthat you're not supposed to do, so why stop now?\nThe doorway leads to the UPSTAIRS HALLWAY.",
-  "description": "\nYou are in the LARGE BEDROOM, which belongs to your parents.\nThe doorway leads to the UPSTAIRS HALLWAY.",
+  "longDesc": "Uh-oh! You are in the LARGE BEDROOM, which belongs to your parents.\nYou are definitely not supposed to be in here!\nBut you're doing a lot of stuff today that you're not supposed to do,\nso why stop now? The doorway leads to the UPSTAIRS HALLWAY.",
+  "description": "You are in the LARGE BEDROOM, which belongs to your parents.\nThe doorway leads to the UPSTAIRS HALLWAY.",
   "items": {
 		"bed": {
 			"name": "bed",
@@ -15,12 +15,12 @@
 		},
 		"desk": {
 			"name": "desk",
-			"description": "Your parents' desk is covered in post-it notes, not just on the top of the desk but also down the sides.",
+			"description": "Your parents' desk is covered in post-it notes, not just on the top of the desk\nbut also down the sides.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "On one side of the desk, near the floor, is a yellow POST-IT with some writing on it.\nMaybe you should LOOK more closely at it.",
+			"discoveryStatement": "On one side of the desk, near the floor, is a yellow POST-IT with some writing\non it. Maybe you should LOOK more closely at it.",
 			"hiddenObject": "post-it"
 		},
 		"post-it": {

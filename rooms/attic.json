@@ -1,7 +1,7 @@
 {
   "name": "Attic",
-  "longDesc" : "\nYou are in the ATTIC.\nThere is an exit in the floor that drops down into the UPSTAIRS HALLWAY.\nOn the opposite wall, a chimney for the living room fireplace\ngoes up through the roof.",
-  "description" : "\nYou are in the ATTIC.\nThere is an exit in the floor that drops down into the UPSTAIRS HALLWAY.",
+  "longDesc" : "You are in the ATTIC.\nThere is an exit in the floor that drops down into the UPSTAIRS HALLWAY.\nOn the opposite wall, a chimney for the living room fireplace\ngoes up through the roof.",
+  "description" : "You are in the ATTIC.\nThere is an exit in the floor that drops down into the UPSTAIRS HALLWAY.",
   "items": {
     "chest of drawers": {
       "name": "chest of drawers",
@@ -35,7 +35,7 @@
     },
     "mirror": {
       "name": "mirror",
-      "description": "The mirror is old, gilded, and cracked, with scorch marks running across it.",
+      "description": "The mirror is old, gilded, and cracked, with scorch marks running across it.\nYou don't remember those being there before.",
       "tooBig": true,
       "isFeature": true,
       "discovered": true,
@@ -67,5 +67,5 @@
   "visited": true,
   "exits": [ "Upstairs Hallway" ],
   "exitItems": [ "thread" ],
-  "exitBlock": "it is too far from the attic door in the hallway ceiling to the hallway floor"
+  "exitBlock": "you would fall straight down to the hallway floor\nsince there are no stairs. You'll need to find a way to lower yourself down"
 }

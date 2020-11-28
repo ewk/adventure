@@ -1,17 +1,17 @@
 {
   "name": "Small Bedroom",
-  "longDesc": "\nYou are in the SMALL BEDROOM, which belongs to you.\nThere is a doorway to the UPSTAIRS HALLWAY.\nThere is a bed against the wall. You store your treasures UNDER THE BED.\nYour CLOSET has a laundry chute that leads to the basement.\nThere are DIRTY SOCKS on the floor of your closet.",
-  "description": "\nYou are in the SMALL BEDROOM, which belongs to you.\nThere is a doorway to the UPSTAIRS HALLWAY.",
+  "longDesc": "You are in the SMALL BEDROOM, which belongs to you.\nThere is a doorway to the UPSTAIRS HALLWAY.\nThere is a bed against the wall. You store your treasures UNDER THE BED.\nYour CLOSET has a laundry chute that leads to the basement.\nThere are DIRTY SOCKS on the floor of your closet.",
+  "description": "You are in the SMALL BEDROOM, which belongs to you.\nThere is a doorway to the UPSTAIRS HALLWAY.",
   "alias": "My|Your Bedroom",
   "items": {
 		"closet": {
 			"name": "closet",
-			"description": "The closet is full of toys.  At the back of the closet is a laundry chute leading to the basement.",
+			"description": "The closet is full of toys.  At the back of the closet is a laundry chute.",
 			"tooBig" : true,
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "The LAUNDRY CHUTE goes straight to the basement. JUMP IN if you're feeling lucky.",
+			"discoveryStatement": "The LAUNDRY CHUTE goes straight to the basement.\nJUMP IN if you're feeling lucky.",
 			"hiddenObject": "laundry chute"
 		},
 		"laundry chute": {
@@ -24,8 +24,8 @@
 			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"under the bed": {
-			"name": "under the bed",
+		"bed": {
+			"name": "bed",
 			"description": "Under the bed is dark and smelly, but there are no monsters...you think.",
 			"tooBig" : true,
 			"isFeature": true,

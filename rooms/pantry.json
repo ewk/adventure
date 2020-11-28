@@ -1,7 +1,7 @@
 {
   "name": "Pantry",
-	"longDesc": "\nYou are in the PANTRY.\nThere is a lot of food in here, both for humans and pets.\nThe only exit leads back out to the KITCHEN.",
-	"description": "\nYou are in the PANTRY.\nThe only exit leads back out to the KITCHEN.",
+	"longDesc": "You are in the PANTRY.\nThere is a lot of food in here, both for humans and pets.\nThe only exit leads back out to the KITCHEN.",
+	"description": "You are in the PANTRY.\nThe only exit leads back out to the KITCHEN.",
 	"items": {
 		"shelves": {
 			"name": "shelves",

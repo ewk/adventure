@@ -1,7 +1,7 @@
 {
   "name": "Upstairs Hallway",
-  "longDesc": "\nYou are in the UPSTAIRS HALLWAY.\nThere is a STAIRCASE leading downstairs and you can see the entrance to the ATTIC in the ceiling.\nIn this hallway, there are doors to a LARGE BEDROOM which belongs to your parents,\na SMALL BEDROOM which belongs to you, and a BATHROOM shared by everyone.",
-  "description": "\nYou are in the UPSTAIRS HALLWAY.\nThere are stairs leading to the DOWNSTAIRS HALLWAY and a thread leading to the ATTIC.\nThere are doors to a LARGE BEDROOM,\na SMALL BEDROOM, and a BATHROOM.",
+  "longDesc": "You are in the UPSTAIRS HALLWAY.\nThere is a STAIRCASE leading downstairs and you can see the entrance to the\nATTIC in the ceiling. In this hallway, there are doors to a LARGE BEDROOM\nwhich belongs to your parents, a SMALL BEDROOM which belongs to you,\nand a BATHROOM shared by everyone.",
+  "description": "You are in the UPSTAIRS HALLWAY.\nThere is a STAIRCASE leading downstairs and you can see the entrance to the\nATTIC in the ceiling. There are doors to a LARGE BEDROOM,\na SMALL BEDROOM, and a BATHROOM.",
   "items": {
 		"recycling bin": {
 			"name": "recycling bin",
@@ -10,7 +10,7 @@
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "You'll need one an ALUMINUM CAN for the shrink ray.",
+			"discoveryStatement": "You'll need an ALUMINUM CAN for the shrink ray.",
 			"hiddenObject": "aluminum can"
 		},
 		"purse": {
@@ -25,7 +25,7 @@
 		},
 		"exercise ball": {
 			"name": "exercise ball",
-			"description": "The giant blue exercise ball that your dad uses instead of a desk chair. It is very bouncy",
+			"description": "The giant blue exercise ball that your dad uses instead of a desk chair.\nIt is very bouncy.",
 			"tooBig": true,
 			"isFeature": false,
 			"discovered": true,
