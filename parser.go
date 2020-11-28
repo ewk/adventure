@@ -334,7 +334,7 @@ func climbStuff(feature string) {
 		curRoom.Items["corn flakes"].Discovered = true
 	} else if curRoom.Name == "Dining Room" && feature == "dining room table" {
 		fmt.Println("From on top of the dining room table you can get a better look at the candelabra.")
-		curRoom.Items["candle"].Discovered = true
+		curRoom.Items["candelabra"].Discovered = true
 		fmt.Println("There's wax everywhere but it looks like there might still be a bit of candle left. Is that a candle? Look closer")
 	} else {
 		fmt.Println("You can't climb on that!")
