@@ -19,6 +19,16 @@
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
+			"containsHiddenObject": true,
+			"discoveryStatement": "Is that writing on the WALL underneath?",
+			"hiddenObject": "wall"
+		},
+		"wall": {
+			"name": "wall",
+			"description": "Don't forget:\naluminum can\ncopper wire\nscrew\n",
+			"tooBig": true,
+			"isFeature": true,
+			"discovered": false,
 			"containsHiddenObject": false,
 			"discoveryStatement": "",
 			"hiddenObject": ""
