@@ -121,6 +121,7 @@ func saveGame() {
 
 	t := time.Now()
 	f := "adventure-" + t.Format(time.RFC3339) + ".json"
+	f = strings.ToLower(f)
 	_ = ioutil.WriteFile(f, b, 0644)
 
 	fmt.Printf("Saved game %s\n", f)
