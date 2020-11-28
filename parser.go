@@ -60,13 +60,17 @@ func takeItem(item string) {
 			fmt.Printf("%s not found.\n", item)
 			return
 		}
+
 		if val.IsFeature == false && val.TooBig == false {
 			inventory[item] = val
 			delete(curRoom.Items, item) // remove item from room after picking it up
 			fmt.Printf("You have picked up the %s.\nIt is now in your INVENTORY.\n", item)
 		} else if val.TooBig == true {
 			fmt.Printf("%s is too big to pick up!\nWhy don't you try to SHRINK it first?\n", item)
+		} else {
+			fmt.Println("You cannot pick that up!")
 		}
+
 	} else {
 		fmt.Printf("%s not found.\n", item)
 	}
