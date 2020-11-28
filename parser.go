@@ -11,10 +11,10 @@ import (
 // lookAtRoom repeats the long form explanation of a room.
 func lookAtRoom() {
 	fmt.Println(curRoom.LongDesc)
-	fmt.Println("Some of the things that you see include:")
+	fmt.Println("\nSome of the things that you see include:")
 	for _, item := range curRoom.Items {
 		if item.Discovered == true {
-			fmt.Println(item.Name)
+			fmt.Printf("     %s\n", item.Name)
 		}
 	}
 }
@@ -134,11 +134,11 @@ func moveToRoom(exit string) {
 					fmt.Println(curRoom.Description)
 				}
 
-				fmt.Println("Some of the things that you see include:")
+				fmt.Println("\nSome of the things that you see include:")
 
 				for _, item := range curRoom.Items {
 					if item.Discovered == true {
-						fmt.Println(item.Name)
+						fmt.Printf("     %s\n", item.Name)
 					}
 				}
 
@@ -311,7 +311,7 @@ func eatItem(item string) {
 func enterThePassword() {
 	if _, ok := inventory["password"]; ok {
 		if curRoom.Name == "Basement Lab" && curRoom.Items["computer"].Discovered {
-			fmt.Println("TAKE the software you need")
+			fmt.Println("TAKE the SOFTWARE you need.")
 			curRoom.Items["software"].Discovered = true
 		} else {
 			fmt.Println("There's nothing that needs a password here.")
@@ -323,7 +323,8 @@ func enterThePassword() {
 
 func climbStuff(feature string) {
 	if curRoom.Name == "Basement Lab" && feature == "desk" {
-		fmt.Println("You climb up the desk and are face to face with the computer. It seems locked, why don't you take a LOOK?")
+		fmt.Println("You climb up the desk and are face to face with the computer.")
+		fmt.Println("It seems locked. Why don't you take a LOOK?")
 		curRoom.Items["computer"].Discovered = true
 	} else if curRoom.Name == "Large Bedroom" && feature == "desk" {
 		fmt.Println("You had better not climb on your parent's desk!")
@@ -379,7 +380,7 @@ func lookAtEagle() {
 			fmt.Println("If you want to use the umbrella to hide from the eagle say: use umbrella")
 			fmt.Println("If you want to be taken by the eagle say: taunt eagle")
 		} else {
-			fmt.Println("The eagle swoops down and picks you up.\nYou can see your whole neighborhood from up here!\nYou manage to wriggle free and drop down the chimney.\nYou climb down towards a bit of sunlight, and exit through\n a small hole in the chimney into the large bedroom.")
+			fmt.Println("The eagle swoops down and picks you up. You can see your whole neighborhood\nfrom up here!\n\nYou manage to wriggle free and drop down the chimney. You climb down\ntowards a bit of sunlight, and exit through a small hole in the chimney\ninto the large bedroom.\n")
 			curRoom = rooms["Large Bedroom"]
 			lookAtRoom()
 		}
@@ -391,16 +392,24 @@ func lookAtEagle() {
 func useTheThread() {
 	if _, ok := inventory["thread"]; ok {
 		if curRoom.Name == "Upstairs Hallway" {
-			fmt.Println("\nYou throw the thread up like a lasso and it attaches to the bottom of the ladder to the attic.")
-			fmt.Println("You free climb up it like the Man in Black from the Princess Bride on the Cliffs of Insanity.")
-			fmt.Println("You look so cool.")
+			threadUp := fmt.Sprintf(`You throw the thread up like a lasso and it attaches to the bottom of the
+ladder to the attic. You free climb up it like the Man in Black from
+the Princess Bride on the Cliffs of Insanity.
+
+You look so cool.
+`)
+			fmt.Println(threadUp)
 		} else if curRoom.Name == "Attic" {
-			fmt.Println("\nYou tie one end of the thread around your waist and the other around the top rung of the attic ladder.")
-			fmt.Println("Here goes nothing!")
-			fmt.Println("You leap out of the attic door and the thread acts as a bungee")
-			fmt.Println("It catches you right before you smash into the upstairs hallway.")
-			fmt.Println("As you're hanging, catching your breath, it unravels from the ladder and you drop with a small thud.")
-			fmt.Println("You gather up the thread and put it in your backpack.")
+			threadDown := fmt.Sprintf(`You tie one end of the thread around your waist and the other around the top
+rung of the attic ladder. Here goes nothing!
+
+You leap out of the attic door and the thread acts as a bungee. It catches you
+right before you smash into the floor of the upstairs hallway.
+
+As you're hanging, catching your breath, it unravels from the ladder and you
+drop with a small thud. You gather up the thread and put it in your backpack.
+`)
+			fmt.Println(threadDown)
 		}
 	} else {
 		fmt.Println("You don't have the thread.")
@@ -408,11 +417,11 @@ func useTheThread() {
 }
 
 func bounceEnterLargeBedroom() {
-	fmt.Println("\nThe door to the large bedroom is closed and you can't reach it at this size.")
+	fmt.Println("The door to the large bedroom is closed and you can't reach it at this size.")
 	fmt.Println("You take a running start and hurl yourself at your dad's exercise ball.")
 	fmt.Println("You bounce off of it with a loud *VWOMP* and grab onto the door handle.")
 	fmt.Println("You're just heavy enough to make the handle turn and the door creaks open.")
-	fmt.Println("You drop to the floor and walk right in.")
+	fmt.Println("You drop to the floor and walk right in.\n")
 }
 
 func useTheUmbrella() {
@@ -488,26 +497,32 @@ It was a bright and sunny afternoon. Everything was going fine.
 Your parents were developing new semi-legal technology in their lab,
 and you were watching them. They've told you 100 times to not watch them
 while they work, but what are they going to do? You're curious.
+
 The shrink ray! What a cool invention. Now anything can be made smaller!
 They've told you not to play with the inventions 101 times, but what are they
 going to do? You're curious.
+
 So yeah, they did kick you out of the lab when they left to go run errands,
 telling you 102 times to not touch anything, but you smuggled the
 shrink ray out anyway.
+
 That's the last thing you remember. You open your eyes and seem to be in a
 giant cavern. Everything is so big! Wait...you're so small!
+
 Where are you? How will you fix this? Is there anywhere you could GO TO?
-Is there anything you could TAKE to help you? Why don't you try to LOOK around?`)
+Is there anything you could TAKE to help you? HELP! Why don't you try to
+LOOK around?`)
 
 	fmt.Println(openingMessage)
 
 	input := bufio.NewScanner(os.Stdin)
-	fmt.Print("> ")
+	fmt.Print("\n> ")
 
 	for input.Scan() {
 		// split user input at whitespace and match known commands
 		action := input.Text()
 		action = strings.ToLower(action)
+		fmt.Println("")
 
 		// accept just the room name as input
 		r := strings.Title(action)
@@ -523,7 +538,7 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 			if gameOver {
 				break
 			} else {
-				fmt.Print("> ")
+				fmt.Print("\n> ")
 				continue
 			}
 		}
@@ -531,7 +546,7 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 		s := strings.Fields(action)
 
 		if cap(s) == 0 {
-			fmt.Print("> ")
+			fmt.Print("\n> ")
 			continue
 		}
 
@@ -684,7 +699,7 @@ Is there anything you could TAKE to help you? Why don't you try to LOOK around?`
 			break
 		}
 
-		fmt.Print("> ")
+		fmt.Print("\n> ")
 	}
 
 	fmt.Println("If you got here, you won!") // TODO

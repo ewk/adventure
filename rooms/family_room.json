@@ -1,7 +1,7 @@
 {
   "name": "Family Room",
-  "longDesc": "\nYou are in the FAMILY ROOM.\nThe only exit in the room goes to the DOWNSTAIRS HALLWAY.\nThere is a large window on one of the walls.",
-  "description": "\nYou are in the FAMILY ROOM.\nThere is only one exit, which goes to the DOWNSTAIRS HALLWAY.",
+  "longDesc": "You are in the FAMILY ROOM.\nThe only exit in the room goes to the DOWNSTAIRS HALLWAY.\nThere is a large window on one of the walls.",
+  "description": "You are in the FAMILY ROOM.\nThere is only one exit, which goes to the DOWNSTAIRS HALLWAY.",
   "items": {
 		"tv": {
 			"name": "tv",

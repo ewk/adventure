@@ -1,7 +1,7 @@
 {
   "name": "Downstairs Hallway",
-  "longDesc": "\nYou are in the DOWNSTAIRS HALLWAY.\nThere are doors leading to the FRONT PORCH, DINING ROOM,\nFAMILY ROOM, and KITCHEN. The STAIRCASE is at the end of the hallway.\nA jumble of your family's possessions fills the space.",
-  "description": "\nYou are in the DOWNSTAIRS HALLWAY.\nThere are doors leading to the FRONT PORCH, DINING ROOM,\nFAMILY ROOM, and KITCHEN. The STAIRCASE is at the end of the hallway.",
+  "longDesc": "You are in the DOWNSTAIRS HALLWAY.\nThere are doors leading to the FRONT PORCH, DINING ROOM,\nFAMILY ROOM, and KITCHEN. The STAIRCASE is at the end of the hallway.\nA jumble of your family's possessions fills the space.",
+  "description": "You are in the DOWNSTAIRS HALLWAY.\nThere are doors leading to the FRONT PORCH, DINING ROOM,\nFAMILY ROOM, and KITCHEN. The STAIRCASE is at the end of the hallway.",
   "items": {
 		"mail": {
 			"name": "mail",

@@ -1,11 +1,11 @@
 {
   "name": "Basement Lab",
-  "longDesc": "\nYou are in the BASEMENT LAB.\nA hatch leads up and out to the YARD. It is the only real exit.\nIf your parents find out you came down here you'll be grounded for months.",
-  "description": "\nYou are in the BASEMENT LAB.\nA hatch leads up and out to the YARD.",
+  "longDesc": "You are in the BASEMENT LAB.\nA hatch leads up and out to the YARD. It is the only real exit.\nIf your parents find out you came down here you'll be grounded for months.",
+  "description": "You are in the BASEMENT LAB.\nA hatch leads up and out to the YARD.",
   "items": {
     "laundry chute": {
       "name": "laundry chute",
-      "description": "The laundry chute opens up to a laundry basket.\nYou cannot climb up it, but you can slide down it if you know where the entrance is.",
+      "description": "The laundry chute opens up into a laundry basket.\nYou cannot climb up it, but you can slide down it if you know where\n the entrance is.",
       "tooBig": true,
       "isFeature": true,
       "discovered": true,
@@ -15,7 +15,7 @@
     },
     "desk": {
       "name": "desk",
-      "description": "The computer is on the desk, but you can't see it from here, you have to CLIMB DESK to look at it.",
+      "description": "The computer is on the desk, but you can't see it from here.\nYou have to CLIMB DESK to look at it.",
       "tooBig":true,
       "isFeature": true,
       "discovered": true,
@@ -25,7 +25,7 @@
     },
     "computer": {
       "name": "computer",
-      "description": "The computer has a big, old-fashioned keyboard. You must ENTER PASSWORD to access this computer.",
+      "description": "The computer has a big, old-fashioned keyboard.\nYou must ENTER PASSWORD to access this computer.",
       "tooBig": true,
       "isFeature": true,
       "discovered": false,
