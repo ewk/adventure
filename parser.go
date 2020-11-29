@@ -299,7 +299,13 @@ func playerJump() {
 }
 
 func callYourParents() {
-	fmt.Println("Are you sure you want to do that? You'll be grounded forever")
+	if !(checkForWin()) && !gameOver {
+		fmt.Printf("You've given up. You can't stand to be this tiny any longer!\nYou call your parents who race home from the store\nThey start lecturing you as they collect items from around the house\nThey had a spare shrink ray the whole time!\nThey point it at you and you hear a loud hiss and buzz and your ears pop.\nA light purple light surrounds you as you grow back to normal size. What a relief!\nUntil your mother grabs you by the ear and throws you in your room.\nYou hear the door lock from the outside\nYou are grounded for eternity.\n")
+		fmt.Println("GAME OVER")
+		gameOver = true
+	} else if curRoom.Name != "Attic" && checkForWin() {
+		fmt.Println("But you're so close you just have to get back to the attic!")
+	}
 }
 
 // eatItem searches the player's inventory for an edible item and consumes it
@@ -694,8 +700,10 @@ LOOK around?`)
 			gameOver = checkForWin()
 		}
 
-		if gameOver {
+		if gameOver && checkForWin() {
 			break
+		} else if !checkForWin() {
+			fmt.Println("You have lost we need to exit without saving")
 		}
 
 		fmt.Print("\n> ")
