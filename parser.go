@@ -115,7 +115,12 @@ func moveToRoom(exit string) {
 		if e == exit { // check that requested exit is valid
 			if val, ok := rooms[exit]; ok {
 				if curRoom.Name == "Attic" && val.Name == "Upstairs Hallway" {
-					useTheThread()
+					if _, ok := inventory["paper"]; ok {
+						useTheThread()
+					} else {
+						fmt.Printf("You might be forgetting something important, but you can always come back.\n\n")
+						useTheThread()
+					}
 				}
 				if curRoom.Name == "Upstairs Hallway" && val.Name == "Attic" {
 					useTheThread()
