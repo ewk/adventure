@@ -455,26 +455,19 @@ func tauntTheEagle() {
 }
 
 func slideDownJumpIn(userInput []string) {
-	if curRoom.Name == "Large Bedroom" || curRoom.Name == "Small Bedroom" {
-		if userInput[1] == "fireplace" {
-			fmt.Println("GERONIMO!!!!")
-			curRoom = rooms["Living Room"]
-			lookAtRoom()
-		} else if userInput[1] == "laundry" {
+	if curRoom.Name == "Small Bedroom" {
+		if len(userInput) > 1 && userInput[1] == "laundry" {
 			fmt.Println("HERE GOES NOTHING")
+			fmt.Println("With all of your strength you jump into the gaping opening of the laundry chute\nWoah it smells terrible in here.\nDirty clothes and dust bunnies zip past as you gain speed.\nYou bang against the sides of the chute, but nothing too damaging.\nWhen you reach the bottom of the chute\nthere's a three foot drop from the opening to the laundry basket.\nThat was the farthest three feet of your life.\nThankfully the hamper is full and your landing was soft.\nYou scamper out of the basket, throwing clothes everywhere and tipping it over in the process.\n")
 			curRoom = rooms["Basement Lab"]
 			lookAtRoom()
 		}
-		if len(userInput) > 2 {
-			if userInput[2] == "fireplace" {
-				fmt.Println("GERONIMO!!!!")
-				curRoom = rooms["Living Room"]
-				lookAtRoom()
-			} else if userInput[2] == "laundry" {
-				fmt.Println("HERE GOES NOTHING")
-				curRoom = rooms["Basement Lab"]
-				lookAtRoom()
-			}
+
+		if len(userInput) > 2 && userInput[2] == "laundry" {
+			fmt.Println("HERE GOES NOTHING")
+			fmt.Println("With all of your strength you jump into the gaping opening of the laundry chute\nWoah it smells terrible in here.\nDirty clothes and dust bunnies zip past as you gain speed.\nYou bang against the sides of the chute, but nothing too damaging.\nWhen you reach the bottom of the chute\nthere's a three foot drop from the opening to the laundry basket.\nThat was the farthest three feet of your life.\nThankfully the hamper is full and your landing was soft.\nYou scamper out of the basket, throwing clothes everywhere and tipping it over in the process.\n")
+			curRoom = rooms["Basement Lab"]
+			lookAtRoom()
 		}
 	} else {
 		if userInput[0] == "slide" {
