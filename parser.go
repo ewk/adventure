@@ -96,6 +96,10 @@ func listInventory() {
 
 // moveToRoom takes a requested exit and moves the player there if the exit exists
 func moveToRoom(exit string) {
+	if climbedUp {
+		fmt.Printf("Make sure you CLIMB DOWN before you try to go anywhere!\n")
+		return
+	}
 	b := checkExit() // verify we have items needed to leave
 	if !b {
 		fmt.Printf("You cannot leave because %s.\n", curRoom.ExitBlock)
@@ -256,8 +260,8 @@ func shrinkObject(item string) {
 	if _, ok := inventory["shrink ray"]; ok {
 		if item == "shrink ray" {
 			fmt.Println("You can't shrink the shrink ray")
-		}
-		if val, ok := curRoom.Items[item]; ok {
+			return
+		} else if val, ok := curRoom.Items[item]; ok {
 			if val.IsFeature == false {
 				if val.TooBig == true {
 					fmt.Println("SHRINKING!")
@@ -269,6 +273,8 @@ func shrinkObject(item string) {
 			} else {
 				fmt.Println("You can't shrink this. Mom and Dad might notice!")
 			}
+		} else {
+			fmt.Printf("There is no '%s' in this room to shrink!\n", item)
 		}
 	} else {
 		fmt.Println("You need the shrink ray to shrink things.")
@@ -338,19 +344,25 @@ func enterThePassword() {
 
 func climbStuff(feature string) {
 	if curRoom.Name == "Basement Lab" && feature == "desk" {
+		climbedUp = true
 		fmt.Println("You climb up the desk and are face to face with the computer.")
 		fmt.Println("It seems locked. Why don't you take a LOOK?")
 		curRoom.Items["computer"].Discovered = true
 	} else if curRoom.Name == "Large Bedroom" && feature == "desk" {
 		fmt.Println("You had better not climb on your parent's desk!")
 	} else if curRoom.Name == "Pantry" && feature == "paper towels" {
+		climbedUp = true
 		fmt.Println("From up on the paper towels you can get a better look at the shelves.")
 		fmt.Println("There is a box of CORN FLAKES pushed all the way back on one of the shelves.\nWeren't you looking for corn flakes?")
 		curRoom.Items["corn flakes"].Discovered = true
 	} else if curRoom.Name == "Dining Room" && feature == "dining room table" {
+		climbedUp = true
 		fmt.Println("From on top of the dining room table you can get a better look at the candelabra.")
 		curRoom.Items["candelabra"].Discovered = true
 		fmt.Println("There's wax everywhere but it looks like there might still be a bit of candle left. Is that a candle? Look closer")
+	} else if feature == "down" {
+		climbedUp = false
+		fmt.Println("You climb back down to the ground before you get dizzy!")
 	} else {
 		fmt.Println("You can't climb on that!")
 	}
