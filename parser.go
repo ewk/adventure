@@ -692,8 +692,8 @@ LOOK around?`)
 			fmt.Println("Not a valid command:", action)
 		}
 
-		if curRoom.Name == "Attic" {
-			gameOver = haveAllItems()
+		if curRoom.Name == "Attic" && haveAllItems() {
+			gameOver = true
 		}
 
 		if gameOver {
@@ -703,7 +703,7 @@ LOOK around?`)
 	}
 	if gameOver && haveAllItems() {
 		fmt.Println("\nYou dump out your backpack and out everything tumbles onto the carpet.")
-		fmt.Println("The shampoo, the dirty socks, the candle,\nthe couch stuffing, the copper wire, the cornflakes,\n the screw, the can, the sand, and the software\n and everything else you've picked up all day.\n Now what?\n")
+		fmt.Println("The shampoo, the dirty socks, the candle,\nthe couch stuffing, the copper wire, the cornflakes,\nthe screw, the can, the sand, and the software\nand everything else you've picked up all day.\nNow what?\n")
 		fmt.Println("You grab the notebook and flip through it feverishly looking for instructions.")
 		fmt.Println("EUREKA! You've found them.")
 		fmt.Println("You pop the back open on the shrink ray and start dumping stuff in, being careful to shake it frequently, just like the notebook says.")
@@ -720,7 +720,7 @@ LOOK around?`)
 		fmt.Println("Uhoh.")
 		fmt.Println("\nROLL CREDITS")
 	} else {
-		fmt.Printf("You've given up. You can't stand to be this tiny any longer!\nYou call your parents who race home from the store\nThey start lecturing you as they collect items from around the house\nThey had a spare shrink ray the whole time!\nThey point it at you and you hear a loud hiss and buzz and your ears pop.\nA light purple light surrounds you as you grow back to normal size. What a relief!\nUntil your mother grabs you by the ear and throws you in your room.\nYou hear the door lock from the outside\nYou are grounded for eternity.\n")
+		fmt.Printf("You've given up. You can't stand to be this tiny any longer!\nYou call your parents who race home from the store.\nThey start lecturing you as they collect items from around the house.\nThey had a spare shrink ray the whole time!\nThey point it at you and you hear a loud hiss and buzz and your ears pop.\nA purple light surrounds you as you grow back to normal size. What a relief!\nUntil your mother grabs you by the ear and throws you in your room.\nYou hear the door lock from the outside.\nYou are grounded for eternity.\n")
 		fmt.Println("GAME OVER")
 	}
 
