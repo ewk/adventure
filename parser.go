@@ -449,6 +449,7 @@ func useTheUmbrella() {
 
 func tauntTheEagle() {
 	fmt.Printf("The eagle has heard your taunts and it has made him mad!\n\n")
+	fmt.Println("The eagle swoops down and picks you up. You can see your whole neighborhood\nfrom up here!\n\nYou manage to wriggle free and drop down the chimney. You climb down\ntowards a bit of sunlight, and exit through a small hole in the chimney\ninto the large bedroom.")
 	curRoom = rooms["Large Bedroom"]
 	lookAtRoom()
 }
