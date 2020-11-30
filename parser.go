@@ -172,9 +172,9 @@ func checkExit() bool {
 	return false
 }
 
-// checkForWin checks if player's inventory has all the items needed to win
+// haveAllItems checks if player's inventory has all the items needed to win
 // the game. Should only be called if player is in the attic.
-func checkForWin() bool {
+func haveAllItems() bool {
 	for _, item := range winningItems {
 		_, ok := inventory[item]
 		if !ok {
@@ -299,12 +299,12 @@ func playerJump() {
 }
 
 func callYourParents() {
-	if !(checkForWin()) {
+	if haveAllItems() {
+		fmt.Println("But you're so close you just have to get back to the attic!")
+	} else {
 		fmt.Printf("You've given up. You can't stand to be this tiny any longer!\nYou call your parents who race home from the store\nThey start lecturing you as they collect items from around the house\nThey had a spare shrink ray the whole time!\nThey point it at you and you hear a loud hiss and buzz and your ears pop.\nA light purple light surrounds you as you grow back to normal size. What a relief!\nUntil your mother grabs you by the ear and throws you in your room.\nYou hear the door lock from the outside\nYou are grounded for eternity.\n")
 		fmt.Println("GAME OVER")
 		gameOver = true
-	} else if curRoom.Name != "Attic" && checkForWin() {
-		fmt.Println("But you're so close you just have to get back to the attic!")
 	}
 }
 
@@ -533,7 +533,7 @@ LOOK around?`)
 			// This is repetitive, but we must also check if the player returned
 			// to the attic without using the verb 'go'
 			if curRoom.Name == "Attic" {
-				gameOver = checkForWin()
+				gameOver = haveAllItems()
 			}
 
 			if gameOver {
@@ -693,7 +693,7 @@ LOOK around?`)
 		}
 
 		if curRoom.Name == "Attic" {
-			gameOver = checkForWin()
+			gameOver = haveAllItems()
 		}
 
 		if gameOver {
