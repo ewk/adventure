@@ -35,5 +35,5 @@
 		}
 	},
 	"visited" : false,
-  "exits": [ "Basement Lab", "Dining Room", "Front Porch" ]
+  "exits": [ "Basement Lab", "Front Porch" ]
 }
