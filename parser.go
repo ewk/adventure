@@ -558,6 +558,17 @@ LOOK around?`)
 
 		s := strings.Fields(action)
 
+		if len(s) > 1 && (s[1] == "on" || s[1] == "in" || s[1] == "onto" || s[1] == "the") {
+			var tempS strings.Builder
+			tempS.WriteString(s[0])
+			for i := 2; i < len(s); i++ {
+				tempS.WriteString(" ")
+				tempS.WriteString(s[i])
+			}
+			s = tempS.String()
+
+		}
+
 		if cap(s) == 0 {
 			fmt.Print("\n> ")
 			continue
