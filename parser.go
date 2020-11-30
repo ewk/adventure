@@ -591,7 +591,7 @@ LOOK around?`)
 		if len(s) > 1 {
 			var tempS strings.Builder
 			for i := 0; i < len(s); i++ {
-				if !(s[i] == "on" || s[i] == "in" || s[i] == "onto" || s[i] == "the" || s[i] == "at" || s[i] == "under") {
+				if !(s[i] == "on" || s[i] == "in" || s[i] == "onto" || s[i] == "the" || s[i] == "at" || s[i] == "under" || s[i] == "to") {
 					tempS.WriteString(s[i])
 					tempS.WriteString(" ")
 				}
