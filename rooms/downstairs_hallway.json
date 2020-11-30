@@ -45,7 +45,7 @@
 		},
 		"skateboard": {
 			"name": "skateboard",
-			"description": "This is your mom's skateboard. She left it in the middle of the hallway AGAIN!",
+			"description": "This is your mom's skateboard. She left it in the middle of the hallway...again...",
 			"tooBig": true,
 			"isFeature": false,
 			"discovered": true,
