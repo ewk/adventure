@@ -246,9 +246,7 @@ func help() {
 	loadgame :: confirms with the user that this really is desired, then loads
 	the game state from the file.
 
-	exit :: save game and then exit.
-
-	quit :: see exit
+	quit :: save game and then exit.
 
 	help :: Print this message
 	`)
@@ -509,6 +507,32 @@ func capInput(input []string) []string {
 	return input
 }
 
+func quitGame() {
+	// player must confirm they want to quit and stop having fun
+	fmt.Println("Do you want to save your game before you leave? ('y' or 'n')")
+	input := bufio.NewScanner(os.Stdin)
+
+Goto:
+	for input.Scan() {
+		action := input.Text()
+		s := strings.Fields(action)
+
+		if cap(s) == 0 {
+			continue
+		}
+
+		switch s[0] {
+		case "n":
+			break Goto // considered convenient
+		case "y":
+			saveGame()
+			os.Exit(0)
+		default:
+			fmt.Println("Please type 'y' or 'n'.")
+		}
+	}
+}
+
 func playGame() {
 	openingMessage := fmt.Sprintf(`
 It was a bright and sunny afternoon. Everything was going fine.
@@ -710,8 +734,8 @@ LOOK around?`)
 			}
 		case "savegame":
 			saveGame()
-		case "exit", "quit":
-			saveGame()
+		case "quit":
+			quitGame()
 			return
 		case "loadgame":
 			if len(s) > 1 {
