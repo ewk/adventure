@@ -20,12 +20,12 @@
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "I wonder if this bird seed could come in handy.",
+			"discoveryStatement": "Do eagles like bird seed?",
 			"hiddenObject": "bird seed"
 		},
 		"bird seed": {
 			"name": "bird seed",
-			"description": "Crunchy tasty millet. Birds don't actually like millet.",  
+			"description": "Crunchy tasty millet. Birds don't actually like millet.\nDo not take this and give it to birds.",  
 			"tooBig": false,
 			"isFeature": false,
 			"discovered": false,
@@ -35,7 +35,7 @@
 		},
 		"newspaper": {
 			"name": "newspaper",
-			"description": "Last Sunday's Newspaper. Headline: Mads and Madeline Scientist do it again...",
+			"description": "Last Sunday's Newspaper. Headline: Mads and Madeline Scientist at it again...",
 			"tooBig": true,
 			"isFeature": false,
 			"discovered": true,
