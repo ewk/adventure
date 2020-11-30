@@ -301,11 +301,11 @@ func playerJump() {
 func callYourParents() {
 	if haveAllItems() {
 		fmt.Println("But you're so close you just have to get back to the attic!")
+
 	} else {
-		fmt.Printf("You've given up. You can't stand to be this tiny any longer!\nYou call your parents who race home from the store\nThey start lecturing you as they collect items from around the house\nThey had a spare shrink ray the whole time!\nThey point it at you and you hear a loud hiss and buzz and your ears pop.\nA light purple light surrounds you as you grow back to normal size. What a relief!\nUntil your mother grabs you by the ear and throws you in your room.\nYou hear the door lock from the outside\nYou are grounded for eternity.\n")
-		fmt.Println("GAME OVER")
 		gameOver = true
 	}
+
 }
 
 // eatItem searches the player's inventory for an edible item and consumes it
@@ -701,22 +701,27 @@ LOOK around?`)
 		}
 		fmt.Print("\n> ")
 	}
+	if gameOver && haveAllItems() {
+		fmt.Println("\nYou dump out your backpack and out everything tumbles onto the carpet.")
+		fmt.Println("The shampoo, the dirty socks, the candle,\nthe couch stuffing, the copper wire, the cornflakes,\n the screw, the can, the sand, and the software\n and everything else you've picked up all day.\n Now what?\n")
+		fmt.Println("You grab the notebook and flip through it feverishly looking for instructions.")
+		fmt.Println("EUREKA! You've found them.")
+		fmt.Println("You pop the back open on the shrink ray and start dumping stuff in, being careful to shake it frequently, just like the notebook says.")
+		fmt.Println("This is one time you will be following instructions!")
+		fmt.Println("The shrink ray starts to vibrate and buzz and you see it start to glow purple.")
+		fmt.Println("You plug the software into it and watching it whir to life.")
+		fmt.Println("You grab it, it's getting really hot now, and rush over the scorched mirror.")
+		fmt.Println("Here goes nothing!\nYou think you hear a car door slam in the driveway.")
+		fmt.Println("WHABAM! The shrink ray explodes and your ears pop. You feel woozy, and heavy.")
+		fmt.Println("What was that? You hear your dad yell from a distance.")
+		fmt.Println("Nooooooothing you hear yourself say. You sound louder now. Woozily you sit up and look in the mirror.")
+		fmt.Println("You're back to normal size! You got away with it! Everything is going to be fine!")
+		fmt.Println("WHAT IS ALL THIS MESS!")
+		fmt.Println("Uhoh.")
+		fmt.Println("\nROLL CREDITS")
+	} else {
+		fmt.Printf("You've given up. You can't stand to be this tiny any longer!\nYou call your parents who race home from the store\nThey start lecturing you as they collect items from around the house\nThey had a spare shrink ray the whole time!\nThey point it at you and you hear a loud hiss and buzz and your ears pop.\nA light purple light surrounds you as you grow back to normal size. What a relief!\nUntil your mother grabs you by the ear and throws you in your room.\nYou hear the door lock from the outside\nYou are grounded for eternity.\n")
+		fmt.Println("GAME OVER")
+	}
 
-	fmt.Println("\nYou dump out your backpack and out everything tumbles onto the carpet.")
-	fmt.Println("The shampoo, the dirty socks, the candle,\nthe couch stuffing, the copper wire, the cornflakes,\n the screw, the can, the sand, and the software\n and everything else you've picked up all day.\n Now what?\n")
-	fmt.Println("You grab the notebook and flip through it feverishly looking for instructions.")
-	fmt.Println("EUREKA! You've found them.")
-	fmt.Println("You pop the back open on the shrink ray and start dumping stuff in, being careful to shake it frequently, just like the notebook says.")
-	fmt.Println("This is one time you will be following instructions!")
-	fmt.Println("The shrink ray starts to vibrate and buzz and you see it start to glow purple.")
-	fmt.Println("You plug the software into it and watching it whir to life.")
-	fmt.Println("You grab it, it's getting really hot now, and rush over the scorched mirror.")
-	fmt.Println("Here goes nothing!\nYou think you hear a car door slam in the driveway.")
-	fmt.Println("WHABAM! The shrink ray explodes and your ears pop. You feel woozy, and heavy.")
-	fmt.Println("What was that? You hear your dad yell from a distance.")
-	fmt.Println("Nooooooothing you hear yourself say. You sound louder now. Woozily you sit up and look in the mirror.")
-	fmt.Println("You're back to normal size! You got away with it! Everything is going to be fine!")
-	fmt.Println("WHAT IS ALL THIS MESS!")
-	fmt.Println("Uhoh.")
-	fmt.Println("\nROLL CREDITS")
 }
