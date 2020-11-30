@@ -299,7 +299,7 @@ func playerJump() {
 }
 
 func callYourParents() {
-	if !(checkForWin()) && !gameOver {
+	if !(checkForWin()) {
 		fmt.Printf("You've given up. You can't stand to be this tiny any longer!\nYou call your parents who race home from the store\nThey start lecturing you as they collect items from around the house\nThey had a spare shrink ray the whole time!\nThey point it at you and you hear a loud hiss and buzz and your ears pop.\nA light purple light surrounds you as you grow back to normal size. What a relief!\nUntil your mother grabs you by the ear and throws you in your room.\nYou hear the door lock from the outside\nYou are grounded for eternity.\n")
 		fmt.Println("GAME OVER")
 		gameOver = true
@@ -696,12 +696,9 @@ LOOK around?`)
 			gameOver = checkForWin()
 		}
 
-		if gameOver && checkForWin() {
+		if gameOver {
 			break
-		} else if gameOver && !checkForWin() {
-			fmt.Println("You have lost outside the attic we need to exit without saving")
 		}
-
 		fmt.Print("\n> ")
 	}
 
