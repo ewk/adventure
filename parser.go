@@ -390,7 +390,9 @@ func downTheBanister() {
 }
 
 func lookAtEagle() {
+	fmt.Printf("You look at the eagle dead in its eyes.\nHe has a look on his face screaming 'YOU WANNA FIGHT BRO' as he swoops down.\n\n")
 	if _, ok := inventory["umbrella"]; ok {
+		fmt.Println("But you have the umbrella! You can use it to hide from the eagle. He'll be distracted by the bright colors.")
 		fmt.Println("If you want to use the umbrella to hide from the eagle say: use umbrella")
 		fmt.Println("If you want to be taken by the eagle say: taunt eagle")
 	} else {
@@ -438,7 +440,7 @@ func bounceEnterLargeBedroom() {
 func useTheUmbrella() {
 	if _, ok := inventory["umbrella"]; ok && curRoom.Name == "Yard" {
 		fmt.Println("You open the umbrella and are completely hidden from the eagle.")
-		fmt.Println("Not finding lunch, the eagle flies away.")
+		fmt.Println("The bright colors calm him and he no longer wants to fight.\nThe eagle flies away.")
 		curRoom.Items["eagle"].Discovered = false
 	} else if _, ok := inventory["umbrella"]; ok && curRoom.Name != "Yard" {
 		fmt.Println("You can't open the umbrella inside!")
