@@ -14,7 +14,7 @@
 			"hiddenObject": "notepad"
 		},
 		"note": {
-			"name": "notw",
+			"name": "note",
 			"description": "Shopping List:\nshampoo\ndirty socks\ncouch stuffing",
 			"tooBig": true,
 			"isFeature":true,
