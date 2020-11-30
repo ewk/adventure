@@ -364,7 +364,7 @@ func climbStuff(item string) {
 		climbedUp = false
 		fmt.Println("You climb back down to the ground before you get dizzy!")
 	} else if _, ok := curRoom.Items[item]; !ok {
-			fmt.Printf("%s not found.\n", item)
+		fmt.Printf("%s not found.\n", item)
 	} else {
 		fmt.Printf("You can't climb on that!\n")
 	}
@@ -563,16 +563,19 @@ LOOK around?`)
 
 		s := strings.Fields(action)
 
-		if len(s) > 1 && (s[1] == "on" || s[1] == "in" || s[1] == "onto" || s[1] == "the") {
+		//scans the input string for prepositions and deletes them before passing the string to the parser
+		if len(s) > 1 {
 			var tempS strings.Builder
-			tempS.WriteString(s[0])
-			for i := 2; i < len(s); i++ {
-				tempS.WriteString(" ")
-				tempS.WriteString(s[i])
+			for i := 0; i < len(s); i++ {
+				if !(s[i] == "on" || s[i] == "in" || s[i] == "onto" || s[i] == "the" || s[i] == "at" || s[i] == "under") {
+					tempS.WriteString(s[i])
+					tempS.WriteString(" ")
+				}
 			}
-			s = tempS.String()
-
+			s = strings.Fields(tempS.String())
 		}
+
+		fmt.Println(s)
 
 		if cap(s) == 0 {
 			fmt.Print("\n> ")
@@ -581,12 +584,12 @@ LOOK around?`)
 
 		switch s[0] {
 		case "look":
-			if len(s) > 1 && s[1] == "at" {
-				if len(s) < 3 {
-					fmt.Println("What would you like to look at?")
+			if len(s) > 1 {
+				if s[1] == strings.ToLower(curRoom.Name) {
+					lookAtRoom()
 					break
 				} else {
-					tmp := s[2:]
+					tmp := s[1:]
 					item := strings.Join(tmp, " ")
 					lookAtItem(item)
 				}
