@@ -342,31 +342,34 @@ func enterThePassword() {
 	}
 }
 
-func climbStuff(feature string) {
-	if curRoom.Name == "Basement Lab" && feature == "desk" {
+func climbStuff(item string) {
+	if curRoom.Name == "Basement Lab" && item == "desk" {
 		climbedUp = true
 		fmt.Println("You climb up the desk and are face to face with the computer.")
 		fmt.Println("It seems locked. Why don't you take a LOOK?")
 		curRoom.Items["computer"].Discovered = true
-	} else if curRoom.Name == "Large Bedroom" && feature == "desk" {
+	} else if curRoom.Name == "Large Bedroom" && item == "desk" {
 		fmt.Println("You had better not climb on your parent's desk!")
-	} else if curRoom.Name == "Pantry" && feature == "paper towels" {
+	} else if curRoom.Name == "Pantry" && item == "paper towels" {
 		climbedUp = true
 		fmt.Println("From up on the paper towels you can get a better look at the shelves.")
 		fmt.Println("There is a box of CORN FLAKES pushed all the way back on one of the shelves.\nWeren't you looking for corn flakes?")
 		curRoom.Items["corn flakes"].Discovered = true
-	} else if curRoom.Name == "Dining Room" && feature == "dining room table" {
+	} else if curRoom.Name == "Dining Room" && item == "dining room table" {
 		climbedUp = true
 		fmt.Println("From on top of the dining room table you can get a better look at the candelabra.")
 		curRoom.Items["candelabra"].Discovered = true
 		fmt.Println("There's wax everywhere but it looks like there might still be a bit of candle left. Is that a candle? Look closer")
-	} else if feature == "down" {
+	} else if item == "down" {
 		climbedUp = false
 		fmt.Println("You climb back down to the ground before you get dizzy!")
+	} else if _, ok := curRoom.Items[item]; !ok {
+			fmt.Printf("%s not found.\n", item)
 	} else {
-		fmt.Println("You can't climb on that!")
+		fmt.Printf("You can't climb on that!\n")
 	}
 }
+
 func climbTheStairs() {
 	fmt.Println("Oof that's a lot of stairs to climb")
 	if _, ok := inventory["dog whistle"]; ok {
@@ -378,6 +381,7 @@ func climbTheStairs() {
 		fmt.Println("You're drenched and smell terrible now but at least you didn't have to climb those stairs")
 	}
 }
+
 func cutStuff(item string) {
 	if curRoom.Name == "Family Room" && item == "copper wire" || curRoom.Name == "Living Room" && item == "couch stuffing" {
 		fmt.Println("snip snip")
@@ -388,6 +392,7 @@ func cutStuff(item string) {
 		fmt.Println("Please don't cut that.")
 	}
 }
+
 func downTheBanister() {
 	if _, ok := inventory["scarf"]; ok {
 		fmt.Println("\nYou use the scarf to slide quickly and safely down the banister")
@@ -643,8 +648,8 @@ LOOK around?`)
 		case "climb":
 			if len(s) > 1 {
 				tmp := s[1:]
-				feature := strings.Join(tmp, " ")
-				climbStuff(feature)
+				item := strings.Join(tmp, " ")
+				climbStuff(item)
 			} else {
 				fmt.Println("Climb what? The corporate ladder?")
 			}
