@@ -100,6 +100,12 @@ func moveToRoom(exit string) {
 		fmt.Printf("Make sure you CLIMB DOWN before you try to go anywhere!\n")
 		return
 	}
+
+	if eagleWatching {
+		fmt.Printf("Do you want to USE UMBRELLA or TAUNT EAGLE?\n")
+		return
+	}
+
 	b := checkExit() // verify we have items needed to leave
 	if !b {
 		fmt.Printf("You cannot leave because %s.\n", curRoom.ExitBlock)
@@ -401,7 +407,8 @@ func downTheBanister() {
 }
 
 func lookAtEagle() {
-	fmt.Printf("You look directly into the eagle's eyes.\nHe has a look on his face screaming 'YOU WANNA FIGHT, BRO?' as he flies towards you.\n\n")
+	fmt.Printf("You look at the eagle dead in its eyes.\nHe has a look on his face screaming 'YOU WANNA FIGHT BRO' as he swoops down.\n\n")
+	eagleWatching = true
 	if _, ok := inventory["umbrella"]; ok {
 		fmt.Println("But you have the umbrella! You can use it to hide from the eagle.\nHe'll be distracted by the bright colors.")
 		fmt.Println("If you want to use the umbrella to hide from the eagle say: use umbrella")
@@ -450,9 +457,9 @@ func bounceEnterLargeBedroom() {
 
 func useTheUmbrella() {
 	if _, ok := inventory["umbrella"]; ok && curRoom.Name == "Yard" {
+		eagleWatching = false
 		fmt.Println("You open the umbrella and are completely hidden from the eagle.")
 		fmt.Println("The bright colors calm him and he no longer wants to fight.\nThe eagle flies away.")
-		curRoom.Items["eagle"].Discovered = false
 	} else if _, ok := inventory["umbrella"]; ok && curRoom.Name != "Yard" {
 		fmt.Println("You can't open the umbrella inside!")
 	} else {
@@ -462,8 +469,9 @@ func useTheUmbrella() {
 
 func tauntTheEagle() {
 	if curRoom.Name == "Yard" {
+		eagleWatching = false
 		fmt.Printf("The eagle has heard your taunts and it has made him mad!\n\n")
-		fmt.Println("The eagle swoops down and picks you up. You can see your whole neighborhood\nfrom up here!\n\nYou manage to wriggle free and drop down the chimney. You climb down\ntowards a bit of sunlight, and exit through a small hole in the chimney\ninto the large bedroom.\n")
+		fmt.Println("The eagle swoops down and picks you up. You can see your whole neighborhood\nfrom up here!\n\nYou manage to wriggle free and drop down the chimney. You climb down\ntowards a bit of sunlight, and exit through a small hole in the chimney\ninto the large bedroom.")
 		curRoom = rooms["Large Bedroom"]
 		lookAtRoom()
 	} else {

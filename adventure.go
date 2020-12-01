@@ -22,6 +22,7 @@ var inventory = make(map[string]*Item)    // player inventory
 var curRoom *Room
 var gameOver bool
 var climbedUp bool
+var eagleWatching bool
 
 // definition of a room
 type Room struct {
@@ -51,10 +52,11 @@ type Item struct {
 
 // struct to store game state
 type Game struct {
-	CurRoom   string
-	Rooms     map[string]*Room
-	Inventory map[string]*Item
-	ClimbedUp bool
+	CurRoom       string
+	Rooms         map[string]*Room
+	Inventory     map[string]*Item
+	ClimbedUp     bool
+	EagleWatching bool
 }
 
 // items needed to win the game
@@ -111,10 +113,11 @@ func loadRooms() {
 // saveGame dumps the current game state to a timestamped JSON file
 func saveGame() {
 	g := Game{
-		CurRoom:   curRoom.Name,
-		Rooms:     rooms,
-		Inventory: inventory,
-		ClimbedUp: climbedUp,
+		CurRoom:       curRoom.Name,
+		Rooms:         rooms,
+		Inventory:     inventory,
+		ClimbedUp:     climbedUp,
+		EagleWatching: eagleWatching,
 	}
 
 	b, e := json.MarshalIndent(g, "", " ")
@@ -177,6 +180,8 @@ Goto:
 	curRoom = rooms[g.CurRoom] // must be set after loading rooms!
 
 	climbedUp = g.ClimbedUp
+
+	eagleWatching = g.EagleWatching
 }
 
 func main() {
