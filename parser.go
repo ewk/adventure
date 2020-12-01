@@ -96,6 +96,10 @@ func listInventory() {
 
 // moveToRoom takes a requested exit and moves the player there if the exit exists
 func moveToRoom(exit string) {
+	if climbedUp {
+		fmt.Printf("Make sure you CLIMB DOWN before you try to go anywhere!\n")
+		return
+	}
 	b := checkExit() // verify we have items needed to leave
 	if !b {
 		fmt.Printf("You cannot leave because %s.\n", curRoom.ExitBlock)

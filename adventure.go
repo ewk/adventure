@@ -21,7 +21,7 @@ var roomAliases = make(map[string]string) // map of room name aliases
 var inventory = make(map[string]*Item)    // player inventory
 var curRoom *Room
 var gameOver bool
-var climbedUp bool = true
+var climbedUp bool = false
 
 // definition of a room
 type Room struct {
