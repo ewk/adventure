@@ -590,7 +590,7 @@ help you? HELP! Why don't you try to LOOK around?`)
 		if len(s) > 1 {
 			var tempS strings.Builder
 			for i := 0; i < len(s); i++ {
-				if !(s[i] == "on" || s[i] == "in" || s[i] == "onto" || s[i] == "the" || s[i] == "at" || s[i] == "under" || s[i] == "to") {
+				if !(s[i] == "on" || s[i] == "in" || s[i] == "onto" || s[i] == "the" || s[i] == "at" || s[i] == "under" || s[i] == "to" || s[i] == "off" || s[i] == "of") {
 					tempS.WriteString(s[i])
 					tempS.WriteString(" ")
 				}
