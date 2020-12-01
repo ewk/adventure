@@ -5,17 +5,17 @@
   "items": {
 		"tv": {
 			"name": "tv",
-			"description": "The TV is old and has wires popping out of the sides and back,\n but it's all your parents will let you have.",
+			"description": "The TV is old and has wires popping out of the sides and back,\nbut it's all your parents will let you have.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "That COPPER WIRE looks like it'll be the easiest to cut. You could also try PULLing or YANKing it",
+			"discoveryStatement": "That COPPER WIRE looks like it'll be the easiest to cut.\nYou could also try PULLing or YANKing it.",
 			"hiddenObject": "copper wire"
 		},
 		"toy box": {
 			"name": "toy box",
-			"description": "The toy box is empty now, with a note taped inside saying your toys were\n taken away the last time you stole an experiment.",
+			"description": "The toy box is empty now, with a note taped inside saying your toys were\ntaken away the last time you stole an experiment.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
@@ -33,9 +33,9 @@
 			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"Nintendo 64": {
-			"name": "Nintendo 64",
-			"description": "This is an old, dusty Nintendo 64, a classic gaming system to accompany the aging relic of the TV.",
+		"nintendo 64": {
+			"name": "nintendo 64",
+			"description": "This is an old, dusty Nintendo 64, a classic gaming system to accompany\nthe aging relic of the TV.",
 			"tooBig": true,
 			"isFeature": false,
 			"discovered": true,

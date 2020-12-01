@@ -5,17 +5,17 @@
 	"items": {
 		"couch": {
 			"name": "couch",
-			"description": "The couch is large and well-worn, with a visible tear with COUCH STUFFING coming out.",
+			"description": "The couch is large and well-worn, with a visible tear with COUCH STUFFING\ncoming out.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "You should be able to pull that stuffing out.",
+			"discoveryStatement": "You should be able to PULL that stuffing out.",
 			"hiddenObject": "couch stuffing"
 		},
 		"window": {
 			"name": "window",
-			"description": "The window looks out over the yard. Through the window, you can see an eagle flying.",
+			"description": "The window looks out over the yard. Through the window, you can see an\neagle flying.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,

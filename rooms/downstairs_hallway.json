@@ -10,12 +10,12 @@
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "One LETTER stands out in particular, it might just be junk\nbut take a closer look to be sure",
+			"discoveryStatement": "One LETTER stands out in particular. It might just be junk,\nbut take a closer look to be sure.",
 			"hiddenObject": "letter"
 		},
 		"letter": {
 			"name": "letter",
-			"description": "Flashy direct mail advertising for securing your top secret lair.\nDon't leave it up to fate whether your kids discover your secret inventtions and discoveries.\nThere's a note in your dad's handwriting:\nMaybe we should consider something more secure than just a password stuck to the side of the desk?",
+			"description": "Flashy direct mail advertising for securing a top secret lair.\nDon't leave it up to fate whether your kids discover your\nsecret inventions and discoveries!\nThere's a note in your dad's handwriting:\nMaybe we should consider something more secure than just a password\nstuck to the side of the desk?",
 			"tooBig": true,
 			"isFeature": false,
 			"discovered": false,
@@ -25,7 +25,7 @@
 		},
 		"shoe tray": {
 			"name": "shoe tray",
-			"description": "You're supposed to put muddy shoes on the tray, but there aren't any there right now.",
+			"description": "The tray is for muddy shoes, but there aren't any there right now.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
@@ -45,7 +45,7 @@
 		},
 		"skateboard": {
 			"name": "skateboard",
-			"description": "This is your mom's skateboard. She left it in the middle of the hallway...again...",
+			"description": "This is your mom's skateboard. She left it in the middle of the hallway again.",
 			"tooBig": true,
 			"isFeature": false,
 			"discovered": true,
