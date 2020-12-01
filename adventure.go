@@ -21,6 +21,7 @@ var roomAliases = make(map[string]string) // map of room name aliases
 var inventory = make(map[string]*Item)    // player inventory
 var curRoom *Room
 var gameOver bool
+var climbedUp bool = true
 
 // definition of a room
 type Room struct {
@@ -53,6 +54,7 @@ type Game struct {
 	CurRoom   string
 	Rooms     map[string]*Room
 	Inventory map[string]*Item
+	ClimbedUp bool
 }
 
 // items needed to win the game
@@ -112,6 +114,7 @@ func saveGame() {
 		CurRoom:   curRoom.Name,
 		Rooms:     rooms,
 		Inventory: inventory,
+		ClimbedUp: climbedUp,
 	}
 
 	b, e := json.MarshalIndent(g, "", " ")
@@ -167,11 +170,12 @@ Goto:
 	rooms = nil
 	rooms = g.Rooms
 
-	inventory = nil
 	inventory = g.Inventory
 
 	curRoom = nil
 	curRoom = rooms[g.CurRoom] // must be set after loading rooms!
+
+	climbedUp = g.ClimbedUp
 }
 
 func main() {
