@@ -598,8 +598,6 @@ help you? HELP! Why don't you try to LOOK around?`)
 			s = strings.Fields(tempS.String())
 		}
 
-		fmt.Println(s)
-
 		if cap(s) == 0 {
 			fmt.Print("\n> ")
 			continue
