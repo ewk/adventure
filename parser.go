@@ -102,7 +102,8 @@ func moveToRoom(exit string) {
 	}
 
 	if eagleWatching {
-		fmt.Printf("Do you want to USE UMBRELLA or TAUNT EAGLE?\n")
+		fmt.Printf("AGH! The eagle is taking his revenge!\n")
+		tauntTheEagle()
 		return
 	}
 
@@ -413,6 +414,7 @@ func lookAtEagle() {
 		fmt.Println("But you have the umbrella! You can use it to hide from the eagle.\nHe'll be distracted by the bright colors.")
 		fmt.Println("If you want to use the umbrella to hide from the eagle say: use umbrella")
 		fmt.Println("If you want to be taken by the eagle say: taunt eagle")
+		fmt.Println("You can also try your luck acting like you never looked at the eagle.\nWho knows? He might just leave you alone.")
 	} else {
 		fmt.Println("The eagle swoops down and picks you up. You can see your whole neighborhood\nfrom up here!\n\nYou manage to wriggle free and drop down the chimney. You climb down\ntowards a bit of sunlight, and exit through a small hole in the chimney\ninto the large bedroom.\n")
 		curRoom = rooms["Large Bedroom"]
