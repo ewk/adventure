@@ -652,6 +652,10 @@ LOOK around?`)
 			if len(s) > 1 {
 				if s[1] == "umbrella" {
 					useTheUmbrella()
+				} else if s[1] == "whistle" {
+					callTheDog("dog whistle")
+				} else if len(s) > 2 && s[1] == "dog" {
+					callTheDog("dog whistle")
 				} else {
 					fmt.Println("I don't know how to USE that, can you use a more specific action?")
 				}

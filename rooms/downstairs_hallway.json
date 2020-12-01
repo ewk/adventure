@@ -10,7 +10,7 @@
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "One letter stands out in particular, it might just be junk\nbut take a closer look to be sure",
+			"discoveryStatement": "One LETTER stands out in particular, it might just be junk\nbut take a closer look to be sure",
 			"hiddenObject": "letter"
 		},
 		"letter": {
@@ -45,7 +45,7 @@
 		},
 		"skateboard": {
 			"name": "skateboard",
-			"description": "This is your mom's skateboard. She left it in the middle of the hallway AGAIN!",
+			"description": "This is your mom's skateboard. She left it in the middle of the hallway...again...",
 			"tooBig": true,
 			"isFeature": false,
 			"discovered": true,
