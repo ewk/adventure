@@ -60,13 +60,17 @@ func takeItem(item string) {
 			fmt.Printf("%s not found.\n", item)
 			return
 		}
+
 		if val.IsFeature == false && val.TooBig == false {
 			inventory[item] = val
 			delete(curRoom.Items, item) // remove item from room after picking it up
 			fmt.Printf("You have picked up the %s.\nIt is now in your INVENTORY.\n", item)
 		} else if val.TooBig == true {
 			fmt.Printf("%s is too big to pick up!\nWhy don't you try to SHRINK it first?\n", item)
+		} else {
+			fmt.Println("You cannot pick that up!")
 		}
+
 	} else {
 		fmt.Printf("%s not found.\n", item)
 	}
@@ -92,6 +96,10 @@ func listInventory() {
 
 // moveToRoom takes a requested exit and moves the player there if the exit exists
 func moveToRoom(exit string) {
+	if climbedUp {
+		fmt.Printf("Make sure you CLIMB DOWN before you try to go anywhere!\n")
+		return
+	}
 	b := checkExit() // verify we have items needed to leave
 	if !b {
 		fmt.Printf("You cannot leave because %s.\n", curRoom.ExitBlock)
@@ -111,7 +119,12 @@ func moveToRoom(exit string) {
 		if e == exit { // check that requested exit is valid
 			if val, ok := rooms[exit]; ok {
 				if curRoom.Name == "Attic" && val.Name == "Upstairs Hallway" {
-					useTheThread()
+					if _, ok := inventory["paper"]; ok {
+						useTheThread()
+					} else {
+						fmt.Printf("You might be forgetting something important, but you can always come back.\n\n")
+						useTheThread()
+					}
 				}
 				if curRoom.Name == "Upstairs Hallway" && val.Name == "Attic" {
 					useTheThread()
@@ -163,9 +176,9 @@ func checkExit() bool {
 	return false
 }
 
-// checkForWin checks if player's inventory has all the items needed to win
+// haveAllItems checks if player's inventory has all the items needed to win
 // the game. Should only be called if player is in the attic.
-func checkForWin() bool {
+func haveAllItems() bool {
 	for _, item := range winningItems {
 		_, ok := inventory[item]
 		if !ok {
@@ -247,8 +260,8 @@ func shrinkObject(item string) {
 	if _, ok := inventory["shrink ray"]; ok {
 		if item == "shrink ray" {
 			fmt.Println("You can't shrink the shrink ray")
-		}
-		if val, ok := curRoom.Items[item]; ok {
+			return
+		} else if val, ok := curRoom.Items[item]; ok {
 			if val.IsFeature == false {
 				if val.TooBig == true {
 					fmt.Println("SHRINKING!")
@@ -260,6 +273,8 @@ func shrinkObject(item string) {
 			} else {
 				fmt.Println("You can't shrink this. Mom and Dad might notice!")
 			}
+		} else {
+			fmt.Printf("There is no '%s' in this room to shrink!\n", item)
 		}
 	} else {
 		fmt.Println("You need the shrink ray to shrink things.")
@@ -290,7 +305,13 @@ func playerJump() {
 }
 
 func callYourParents() {
-	fmt.Println("Are you sure you want to do that? You'll be grounded forever")
+	if haveAllItems() {
+		fmt.Println("But you're so close you just have to get back to the attic!")
+
+	} else {
+		gameOver = true
+	}
+
 }
 
 // eatItem searches the player's inventory for an edible item and consumes it
@@ -323,19 +344,25 @@ func enterThePassword() {
 
 func climbStuff(item string) {
 	if curRoom.Name == "Basement Lab" && item == "desk" {
+		climbedUp = true
 		fmt.Println("You climb up the desk and are face to face with the computer.")
 		fmt.Println("It seems locked. Why don't you take a LOOK?")
 		curRoom.Items["computer"].Discovered = true
 	} else if curRoom.Name == "Large Bedroom" && item == "desk" {
 		fmt.Println("You had better not climb on your parent's desk!")
 	} else if curRoom.Name == "Pantry" && item == "paper towels" {
+		climbedUp = true
 		fmt.Println("From up on the paper towels you can get a better look at the shelves.")
 		fmt.Println("There is a box of CORN FLAKES pushed all the way back on one of the shelves.\nWeren't you looking for corn flakes?")
 		curRoom.Items["corn flakes"].Discovered = true
 	} else if curRoom.Name == "Dining Room" && item == "dining room table" {
+		climbedUp = true
 		fmt.Println("From on top of the dining room table you can get a better look at the candelabra.")
-		curRoom.Items["candle"].Discovered = true
+		curRoom.Items["candelabra"].Discovered = true
 		fmt.Println("There's wax everywhere but it looks like there might still be a bit of candle left. Is that a candle? Look closer")
+	} else if item == "down" {
+		climbedUp = false
+		fmt.Println("You climb back down to the ground before you get dizzy!")
 	} else if _, ok := curRoom.Items[item]; !ok {
 			fmt.Printf("%s not found.\n", item)
 	} else {
@@ -380,17 +407,15 @@ func downTheBanister() {
 }
 
 func lookAtEagle() {
-	if curRoom.Items["eagle"].Discovered == true {
-		if _, ok := inventory["umbrella"]; ok {
-			fmt.Println("If you want to use the umbrella to hide from the eagle say: use umbrella")
-			fmt.Println("If you want to be taken by the eagle say: taunt eagle")
-		} else {
-			fmt.Println("The eagle swoops down and picks you up. You can see your whole neighborhood\nfrom up here!\n\nYou manage to wriggle free and drop down the chimney. You climb down\ntowards a bit of sunlight, and exit through a small hole in the chimney\ninto the large bedroom.\n")
-			curRoom = rooms["Large Bedroom"]
-			lookAtRoom()
-		}
+	fmt.Printf("You look at the eagle dead in its eyes.\nHe has a look on his face screaming 'YOU WANNA FIGHT BRO' as he swoops down.\n\n")
+	if _, ok := inventory["umbrella"]; ok {
+		fmt.Println("But you have the umbrella! You can use it to hide from the eagle. He'll be distracted by the bright colors.")
+		fmt.Println("If you want to use the umbrella to hide from the eagle say: use umbrella")
+		fmt.Println("If you want to be taken by the eagle say: taunt eagle")
 	} else {
-		fmt.Println("Hmm...the eagle doesn't seem to be here right now")
+		fmt.Println("The eagle swoops down and picks you up. You can see your whole neighborhood\nfrom up here!\n\nYou manage to wriggle free and drop down the chimney. You climb down\ntowards a bit of sunlight, and exit through a small hole in the chimney\ninto the large bedroom.")
+		curRoom = rooms["Large Bedroom"]
+		lookAtRoom()
 	}
 }
 
@@ -432,7 +457,7 @@ func bounceEnterLargeBedroom() {
 func useTheUmbrella() {
 	if _, ok := inventory["umbrella"]; ok && curRoom.Name == "Yard" {
 		fmt.Println("You open the umbrella and are completely hidden from the eagle.")
-		fmt.Println("Not finding lunch, the eagle flies away.")
+		fmt.Println("The bright colors calm him and he no longer wants to fight.\nThe eagle flies away.")
 		curRoom.Items["eagle"].Discovered = false
 	} else if _, ok := inventory["umbrella"]; ok && curRoom.Name != "Yard" {
 		fmt.Println("You can't open the umbrella inside!")
@@ -442,38 +467,26 @@ func useTheUmbrella() {
 }
 
 func tauntTheEagle() {
-	if curRoom.Items["eagle"].Discovered == true {
-		curRoom = rooms["Large Bedroom"]
-		lookAtRoom()
-	} else if curRoom.Items["eagle"].Discovered == false {
-		fmt.Println("The eagle has heard your taunts and it has made him mad!")
-		curRoom.Items["eagle"].Discovered = true
-		curRoom = rooms["Large Bedroom"]
-		lookAtRoom()
-	}
+	fmt.Printf("The eagle has heard your taunts and it has made him mad!\n\n")
+	fmt.Println("The eagle swoops down and picks you up. You can see your whole neighborhood\nfrom up here!\n\nYou manage to wriggle free and drop down the chimney. You climb down\ntowards a bit of sunlight, and exit through a small hole in the chimney\ninto the large bedroom.")
+	curRoom = rooms["Large Bedroom"]
+	lookAtRoom()
 }
 
 func slideDownJumpIn(userInput []string) {
-	if curRoom.Name == "Large Bedroom" || curRoom.Name == "Small Bedroom" {
-		if userInput[1] == "fireplace" {
-			fmt.Println("GERONIMO!!!!")
-			curRoom = rooms["Living Room"]
-			lookAtRoom()
-		} else if userInput[1] == "laundry" {
+	if curRoom.Name == "Small Bedroom" {
+		if len(userInput) > 1 && userInput[1] == "laundry" {
 			fmt.Println("HERE GOES NOTHING")
+			fmt.Println("With all of your strength you jump into the gaping opening of the laundry chute\nWoah it smells terrible in here.\nDirty clothes and dust bunnies zip past as you gain speed.\nYou bang against the sides of the chute, but nothing too damaging.\nWhen you reach the bottom of the chute\nthere's a three foot drop from the opening to the laundry basket.\nThat was the farthest three feet of your life.\nThankfully the hamper is full and your landing was soft.\nYou scamper out of the basket, throwing clothes everywhere and tipping it over in the process.\n")
 			curRoom = rooms["Basement Lab"]
 			lookAtRoom()
 		}
-		if len(userInput) > 2 {
-			if userInput[2] == "fireplace" {
-				fmt.Println("GERONIMO!!!!")
-				curRoom = rooms["Living Room"]
-				lookAtRoom()
-			} else if userInput[2] == "laundry" {
-				fmt.Println("HERE GOES NOTHING")
-				curRoom = rooms["Basement Lab"]
-				lookAtRoom()
-			}
+
+		if len(userInput) > 2 && userInput[2] == "laundry" {
+			fmt.Println("HERE GOES NOTHING")
+			fmt.Println("With all of your strength you jump into the gaping opening of the laundry chute\nWoah it smells terrible in here.\nDirty clothes and dust bunnies zip past as you gain speed.\nYou bang against the sides of the chute, but nothing too damaging.\nWhen you reach the bottom of the chute\nthere's a three foot drop from the opening to the laundry basket.\nThat was the farthest three feet of your life.\nThankfully the hamper is full and your landing was soft.\nYou scamper out of the basket, throwing clothes everywhere and tipping it over in the process.\n")
+			curRoom = rooms["Basement Lab"]
+			lookAtRoom()
 		}
 	} else {
 		if userInput[0] == "slide" {
@@ -537,7 +550,7 @@ LOOK around?`)
 			// This is repetitive, but we must also check if the player returned
 			// to the attic without using the verb 'go'
 			if curRoom.Name == "Attic" {
-				gameOver = checkForWin()
+				gameOver = haveAllItems()
 			}
 
 			if gameOver {
@@ -696,16 +709,36 @@ LOOK around?`)
 			fmt.Println("Not a valid command:", action)
 		}
 
-		if curRoom.Name == "Attic" {
-			gameOver = checkForWin()
+		if curRoom.Name == "Attic" && haveAllItems() {
+			gameOver = true
 		}
 
 		if gameOver {
 			break
 		}
-
 		fmt.Print("\n> ")
 	}
+	if gameOver && haveAllItems() {
+		fmt.Println("\nYou dump out your backpack and out everything tumbles onto the carpet.")
+		fmt.Println("The shampoo, the dirty socks, the candle,\nthe couch stuffing, the copper wire, the cornflakes,\nthe screw, the can, the sand, and the software\nand everything else you've picked up all day.\nNow what?\n")
+		fmt.Println("You grab the notebook and flip through it feverishly looking for instructions.")
+		fmt.Println("EUREKA! You've found them.")
+		fmt.Println("You pop the back open on the shrink ray and start dumping stuff in, being careful to shake it frequently, just like the notebook says.")
+		fmt.Println("This is one time you will be following instructions!")
+		fmt.Println("The shrink ray starts to vibrate and buzz and you see it start to glow purple.")
+		fmt.Println("You plug the software into it and watching it whir to life.")
+		fmt.Println("You grab it, it's getting really hot now, and rush over the scorched mirror.")
+		fmt.Println("Here goes nothing!\nYou think you hear a car door slam in the driveway.")
+		fmt.Println("WHABAM! The shrink ray explodes and your ears pop. You feel woozy, and heavy.")
+		fmt.Println("What was that? You hear your dad yell from a distance.")
+		fmt.Println("Nooooooothing you hear yourself say. You sound louder now. Woozily you sit up and look in the mirror.")
+		fmt.Println("You're back to normal size! You got away with it! Everything is going to be fine!")
+		fmt.Println("WHAT IS ALL THIS MESS!")
+		fmt.Println("Uhoh.")
+		fmt.Println("\nROLL CREDITS")
+	} else {
+		fmt.Printf("You've given up. You can't stand to be this tiny any longer!\nYou call your parents who race home from the store.\nThey start lecturing you as they collect items from around the house.\nThey had a spare shrink ray the whole time!\nThey point it at you and you hear a loud hiss and buzz and your ears pop.\nA purple light surrounds you as you grow back to normal size. What a relief!\nUntil your mother grabs you by the ear and throws you in your room.\nYou hear the door lock from the outside.\nYou are grounded for eternity.\n")
+		fmt.Println("GAME OVER")
+	}
 
-	fmt.Println("If you got here, you won!") // TODO
 }

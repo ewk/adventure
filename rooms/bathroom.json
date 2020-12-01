@@ -9,6 +9,16 @@
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
+			"containsHiddenObject": true,
+			"discoveryStatement": "What does it say? Try taking a closer look at that notepad",
+			"hiddenObject": "notepad"
+		},
+		"notepad": {
+			"name": "notepad",
+			"description": "Shopping List:\nshampoo\ndirty socks\ncouch stuffing",
+			"tooBig": true,
+			"isFeature":false,
+			"discovered": false,
 			"containsHiddenObject": false,
 			"discoveryStatement": "",
 			"hiddenObject": ""

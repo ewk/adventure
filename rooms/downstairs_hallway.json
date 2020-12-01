@@ -9,6 +9,16 @@
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
+			"containsHiddenObject": true,
+			"discoveryStatement": "One letter stands out in particular, it might just be junk\nbut take a closer look to be sure",
+			"hiddenObject": "letter"
+		},
+		"letter": {
+			"name": "letter",
+			"description": "Flashy direct mail advertising for securing your top secret lair.\nDon't leave it up to fate whether your kids discover your secret inventtions and discoveries.\nThere's a note in your dad's handwriting:\nMaybe we should consider something more secure than just a password stuck to the side of the desk?",
+			"tooBig": true,
+			"isFeature": false,
+			"discovered": false,
 			"containsHiddenObject": false,
 			"discoveryStatement": "",
 			"hiddenObject": ""

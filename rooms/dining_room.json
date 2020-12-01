@@ -1,21 +1,21 @@
 {
   "name": "Dining Room",
-  "longDesc": "You are in the DINING ROOM.\nThere is a doorway to the DOWNSTAIRS HALLWAY and an exit to the YARD.\nThere is a large window which looks out onto the street.\nOne wall is open to the LIVING ROOM.",
-  "description": "You are in the DINING ROOM.\nThere is a doorway to the DOWNSTAIRS HALLWAY and an exit to the YARD.\nOne wall is open to the LIVING ROOM.",
+  "longDesc": "You are in the DINING ROOM.\nThere is a doorway to the DOWNSTAIRS HALLWAY.\nThere is a large window which looks out onto the street.\nOne wall is open to the LIVING ROOM.",
+  "description": "You are in the DINING ROOM.\nThere is a doorway to the DOWNSTAIRS HALLWAY.\nOne wall is open to the LIVING ROOM.",
   "items": {
 		"dining room table": {
 			"name": "dining room table",
-			"description": "The dining room table is tall, mahogany, and set for a formal dinner party for no discernible reason.",
+			"description": "The dining room table is tall, mahogany, and set for a formal dinner party for no discernible reason.\nThey left the candelabra out but you can't see any candles from here.\nBetter climb the table to get a better look",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
-			"containsHiddenObject": true,
-			"discoveryStatement": "They left the candelabra out but you can't see any candles from here.\nBetter climb the table to get a better look",
-			"hiddenObject": "candelabra"
+			"containsHiddenObject": false,
+			"discoveryStatement":"",
+			"hiddenObject": ""
 		},
 		"painting": {
 			"name": "painting",
-			"description": "Wall-sized painting of a bowl of fruit. There is a clue hidden in the painting. Clue tbd",
+			"description": "Giant wall sized painting of sandy beach,\nand a dining room table set with a bunch of melty candles,\nan old computer from the 80s\nand corn flakes strewn all over.\nArt is weird.",
 			"tooBig":true,
 			"isFeature": true,
 			"discovered": true,
@@ -27,11 +27,11 @@
 			"name": "candelabra",
 			"description": "The candelabra has spots for three candles.",
 			"tooBig":true,
-			"isFeature": false,
+			"isFeature": true,
 			"discovered": false,
-			"containsHiddenObject": false,
-			"discoveryStatement": "",
-			"hiddenObject": ""
+			"containsHiddenObject": true,
+			"discoveryStatement": "There remains a tiny numb of a candle in the third spot.",
+			"hiddenObject": "candle"
 		},
 		"candle": {
 			"name": "candle",
@@ -45,5 +45,5 @@
 		}
 	},
   "visited" :false,
-  "exits": [ "Yard", "Downstairs Hallway", "Living Room" ]
+  "exits": [ "Downstairs Hallway", "Living Room" ]
 }

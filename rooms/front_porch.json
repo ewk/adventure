@@ -19,6 +19,16 @@
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
+			"containsHiddenObject": true,
+			"discoveryStatement": "I wonder if this bird seed could come in handy.",
+			"hiddenObject": "bird seed"
+		},
+		"bird seed": {
+			"name": "bird seed",
+			"description": "Crunchy tasty millet. Birds don't actually like millet.",  
+			"tooBig": false,
+			"isFeature": false,
+			"discovered": false,
 			"containsHiddenObject": false,
 			"discoveryStatement": "",
 			"hiddenObject": ""
