@@ -349,6 +349,7 @@ func climbStuff(feature string) {
 		fmt.Println("There's wax everywhere but it looks like there might still be a bit of candle left. Is that a candle? Look closer")
 	} else if feature == "down" {
 		climbedUp = false
+		fmt.Println("You climb back down to the ground before you get dizzy!")
 	} else {
 		fmt.Println("You can't climb on that!")
 	}
