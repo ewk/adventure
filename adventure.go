@@ -170,6 +170,7 @@ Goto:
 	rooms = nil
 	rooms = g.Rooms
 
+	inventory = nil
 	inventory = g.Inventory
 
 	curRoom = nil
