@@ -466,16 +466,17 @@ func slideDownJumpIn(userInput []string) {
 			fmt.Println("With all of your strength you jump into the gaping opening of the laundry chute.\nDirty clothes and dust bunnies zip past as you gain speed.\nYou bang against the sides of the chute, but it's nothing too damaging.\nFrom the bottom of the chute there's another three foot drop to the laundry basket.\nThat was the farthest three feet of your life!\nThankfully the hamper is full and your landing was soft.\nYou scamper out of the basket, throwing clothes everywhere in the process.\n")
 			curRoom = rooms["Basement Lab"]
 			lookAtRoom()
-		} else {
-			if userInput[0] == "slide" {
-				fmt.Println("Sliiiiiide to the left *clap* Sliiiiiide to the right.")
-				fmt.Println("You can't remember any more of the dance.")
-			} else if userInput[0] == "jump" {
-				fmt.Println("Jump all you want it's not going to do you any good")
-			}
-
 		}
+	} else {
+		if userInput[0] == "slide" {
+			fmt.Println("Sliiiiiide to the left *clap* Sliiiiiide to the right.")
+			fmt.Println("You can't remember any more of the dance.")
+		} else if userInput[0] == "jump" {
+			fmt.Println("Jump all you want it's not going to do you any good")
+		}
+
 	}
+
 }
 
 // capInput is a helper function to capitalize case insensitive input

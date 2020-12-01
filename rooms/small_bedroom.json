@@ -16,7 +16,7 @@
 		},
 		"laundry chute": {
 			"name": "laundry chute",
-			"description": "The laundry chute leads straight to the basement.\nYou can jump or slide down it if you want",
+			"description": "The laundry chute leads straight to the basement.\nYou can JUMP or SLIDE down it if you want",
 			"tooBig" : true,
 			"isFeature": true,
 			"discovered": false,
