@@ -256,8 +256,8 @@ func shrinkObject(item string) {
 	if _, ok := inventory["shrink ray"]; ok {
 		if item == "shrink ray" {
 			fmt.Println("You can't shrink the shrink ray")
-		}
-		if val, ok := curRoom.Items[item]; ok {
+			return
+		} else if val, ok := curRoom.Items[item]; ok {
 			if val.IsFeature == false {
 				if val.TooBig == true {
 					fmt.Println("SHRINKING!")
@@ -269,6 +269,8 @@ func shrinkObject(item string) {
 			} else {
 				fmt.Println("You can't shrink this. Mom and Dad might notice!")
 			}
+		} else {
+			fmt.Printf("There is no '%s' in this room to shrink!\n", item)
 		}
 	} else {
 		fmt.Println("You need the shrink ray to shrink things.")
