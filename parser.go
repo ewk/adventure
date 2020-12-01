@@ -344,6 +344,8 @@ func climbStuff(feature string) {
 		fmt.Println("From on top of the dining room table you can get a better look at the candelabra.")
 		curRoom.Items["candelabra"].Discovered = true
 		fmt.Println("There's wax everywhere but it looks like there might still be a bit of candle left. Is that a candle? Look closer")
+	} else if feature == "down" {
+		climbedUp = false
 	} else {
 		fmt.Println("You can't climb on that!")
 	}
