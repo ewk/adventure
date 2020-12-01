@@ -15,7 +15,7 @@
 		},
 		"painting": {
 			"name": "painting",
-			"description": "Wall-sized painting of a bowl of fruit. There is a clue hidden in the painting. Clue tbd",
+			"description": "Giant wall sized painting of sandy beach,\nand a dining room table set with a bunch of melty candles,\nan old computer from the 80s\nand corn flakes strewn all over.\nArt is weird.",
 			"tooBig":true,
 			"isFeature": true,
 			"discovered": true,
