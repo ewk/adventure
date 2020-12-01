@@ -15,7 +15,7 @@
 		},
 		"notepad": {
 			"name": "notepad",
-			"description": "Shopping List:\nshampoo\ndirty socks\ncouch stuffing\n",
+			"description": "Shopping List:\nshampoo\ndirty socks\ncouch stuffing",
 			"tooBig": true,
 			"isFeature":false,
 			"discovered": false,

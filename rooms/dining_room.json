@@ -1,7 +1,7 @@
 {
   "name": "Dining Room",
-  "longDesc": "You are in the DINING ROOM.\nThere is a doorway to the DOWNSTAIRS HALLWAY and an exit to the YARD.\nThere is a large window which looks out onto the street.\nOne wall is open to the LIVING ROOM.",
-  "description": "You are in the DINING ROOM.\nThere is a doorway to the DOWNSTAIRS HALLWAY and an exit to the YARD.\nOne wall is open to the LIVING ROOM.",
+  "longDesc": "You are in the DINING ROOM.\nThere is a doorway to the DOWNSTAIRS HALLWAY.\nThere is a large window which looks out onto the street.\nOne wall is open to the LIVING ROOM.",
+  "description": "You are in the DINING ROOM.\nThere is a doorway to the DOWNSTAIRS HALLWAY.\nOne wall is open to the LIVING ROOM.",
   "items": {
 		"dining room table": {
 			"name": "dining room table",
@@ -45,5 +45,5 @@
 		}
 	},
   "visited" :false,
-  "exits": [ "Yard", "Downstairs Hallway", "Living Room" ]
+  "exits": [ "Downstairs Hallway", "Living Room" ]
 }
