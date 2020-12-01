@@ -358,7 +358,7 @@ func climbStuff(item string) {
 		climbedUp = false
 		fmt.Println("You climb back down to the ground before you get dizzy!")
 	} else if _, ok := curRoom.Items[item]; !ok {
-			fmt.Printf("%s not found.\n", item)
+		fmt.Printf("%s not found.\n", item)
 	} else {
 		fmt.Printf("You can't climb on that!\n")
 	}
@@ -461,10 +461,15 @@ func useTheUmbrella() {
 }
 
 func tauntTheEagle() {
-	fmt.Printf("The eagle has heard your taunts and it has made him mad!\n\n")
-	fmt.Println("The eagle swoops down and picks you up. You can see your whole neighborhood\nfrom up here!\n\nYou manage to wriggle free and drop down the chimney. You climb down\ntowards a bit of sunlight, and exit through a small hole in the chimney\ninto the large bedroom.\n")
-	curRoom = rooms["Large Bedroom"]
-	lookAtRoom()
+	if curRoom.Name == "Yard" {
+		fmt.Printf("The eagle has heard your taunts and it has made him mad!\n\n")
+		fmt.Println("The eagle swoops down and picks you up. You can see your whole neighborhood\nfrom up here!\n\nYou manage to wriggle free and drop down the chimney. You climb down\ntowards a bit of sunlight, and exit through a small hole in the chimney\ninto the large bedroom.\n")
+		curRoom = rooms["Large Bedroom"]
+		lookAtRoom()
+	} else {
+		fmt.Println("There's nobody here to taunt but yourself.")
+	}
+
 }
 
 func slideDownJumpIn(userInput []string) {
