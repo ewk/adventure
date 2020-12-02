@@ -525,9 +525,12 @@ shrink ray out anyway.
 That's the last thing you remember. You open your eyes and seem to be in a
 giant cavern. Everything is so big! Wait...you're so small!
 
-Where are you? How will you fix this? Is there anywhere you could GO TO?
-Is there anything you could TAKE to help you? HELP! Why don't you try to
-LOOK around?`)
+Where are you? How will you fix this? You still have your (tiny!) cell phone
+in your pocket. Should you CALL your parents? No way, they'd save you but
+you'd be in sooooo much trouble.
+
+Is there anywhere you could GO TO? Is there anything you could TAKE to
+help you? HELP! Why don't you try to LOOK around?`)
 
 	fmt.Println(openingMessage)
 
