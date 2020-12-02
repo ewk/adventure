@@ -343,7 +343,7 @@ func enterThePassword() {
 func climbStuff(item string) {
 	if curRoom.Name == "Basement Lab" && item == "desk" {
 		climbedUp = true
-		fmt.Println("You climb up the desk and are face to face with the computer.")
+		fmt.Println("You climb up the desk and are face to face with the COMPUTER.")
 		fmt.Println("It seems locked. Why don't you take a LOOK?")
 		curRoom.Items["computer"].Discovered = true
 	} else if curRoom.Name == "Large Bedroom" && item == "desk" {
@@ -407,7 +407,7 @@ func downTheBanister() {
 func lookAtEagle() {
 	fmt.Printf("You look directly into the eagle's eyes.\nHe has a look on his face screaming 'YOU WANNA FIGHT, BRO?' as he flies towards you.\n\n")
 	if _, ok := inventory["umbrella"]; ok {
-		fmt.Println("But you have the umbrella! You can use it to hide from the eagle. He'll be distracted by the bright colors.")
+		fmt.Println("But you have the umbrella! You can use it to hide from the eagle.\nHe'll be distracted by the bright colors.")
 		fmt.Println("If you want to use the umbrella to hide from the eagle say: use umbrella")
 		fmt.Println("If you want to be taken by the eagle say: taunt eagle")
 	} else {
@@ -724,7 +724,8 @@ help you? HELP! Why don't you try to LOOK around?`)
 		fmt.Print("\n> ")
 	}
 	if gameOver && haveAllItems() {
-		winningMessage := fmt.Sprintf(`You dump out your backpack and everything tumbles onto the carpet.
+		winningMessage := fmt.Sprintf(`
+You dump out your backpack and everything tumbles onto the carpet.
 The shampoo, the dirty socks, the candle, the couch stuffing, the copper
 wire, the cornflakes, the screw, the can, the sand, and the software and
 everything else you've picked up all day. Now what?

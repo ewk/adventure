@@ -25,7 +25,7 @@
 		},
 		"wall": {
 			"name": "wall",
-			"description": "Don't forget:\naluminum can\ncopper wire\nscrew\n",
+			"description": "Don't forget:\naluminum can\ncopper wire\nscrew",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": false,
@@ -45,7 +45,7 @@
 		},
 		"books": {
 			"name": "books",
-			"description": "The books are large and heavy looking, discussing subjects such as scaffolding design, waste water management, and some big book on computers with a fruit on it.",
+			"description": "The books are large and heavy looking, discussing subjects such as\nscaffolding design and waste water management.\nThere is a big book about computers with a fruit on it.",
 			"tooBig" : true,
 			"isFeature": false,
 			"discovered": true,

@@ -10,7 +10,7 @@
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "That COPPER WIRE looks like it'll be the easiest to cut. You could also try PULLing or YANKing it",
+			"discoveryStatement": "That COPPER WIRE looks like it'll be the easiest to cut.\nYou could also try PULLing or YANKing it.",
 			"hiddenObject": "copper wire"
 		},
 		"toy box": {
@@ -33,9 +33,9 @@
 			"discoveryStatement": "",
 			"hiddenObject": ""
 		},
-		"Nintendo 64": {
-			"name": "Nintendo 64",
-			"description": "This is an old, dusty Nintendo 64, a classic gaming system to accompany the aging relic of the TV.",
+		"nintendo 64": {
+			"name": "nintendo 64",
+			"description": "This is an old, dusty Nintendo 64, a classic gaming system to accompany\nthe aging relic of the TV.",
 			"tooBig": true,
 			"isFeature": false,
 			"discovered": true,
