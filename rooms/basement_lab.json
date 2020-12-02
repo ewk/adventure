@@ -1,11 +1,11 @@
 {
   "name": "Basement Lab",
-  "longDesc": "You are in the BASEMENT LAB.\nA hatch leads up and out to the YARD. It is the only real exit.\nIf your parents find out you came down here you'll be grounded for months.",
+  "longDesc": "You are in the BASEMENT LAB.\nA hatch leads up and out to the YARD. It is the only real exit.\nIf your parents find out you came down here, you'll be grounded for months.",
   "description": "You are in the BASEMENT LAB.\nA hatch leads up and out to the YARD.",
   "items": {
     "laundry chute": {
       "name": "laundry chute",
-      "description": "The laundry chute opens up into a laundry basket.\nYou cannot climb up it, but you can slide down it if you know where\n the entrance is.",
+      "description": "The laundry chute opens up into a laundry basket.\nYou cannot climb up it, but you can slide down it if you know where\nthe entrance is.",
       "tooBig": true,
       "isFeature": true,
       "discovered": true,
