@@ -318,7 +318,6 @@ func eatItem(item string) {
 	if val, ok := inventory[item]; ok {
 		if val.IsEdible {
 			fmt.Println("That was delicious! Your strength has been restored.")
-			delete(inventory, item)
 		} else {
 			fmt.Printf("I know you're hangry. But %s is not food!\n", item)
 		}
