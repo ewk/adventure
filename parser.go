@@ -721,26 +721,52 @@ LOOK around?`)
 		fmt.Print("\n> ")
 	}
 	if gameOver && haveAllItems() {
-		fmt.Println("\nYou dump out your backpack and out everything tumbles onto the carpet.")
-		fmt.Println("The shampoo, the dirty socks, the candle,\nthe couch stuffing, the copper wire, the cornflakes,\nthe screw, the can, the sand, and the software\nand everything else you've picked up all day.\nNow what?\n")
-		fmt.Println("You grab the notebook and flip through it feverishly looking for instructions.")
-		fmt.Println("EUREKA! You've found them.")
-		fmt.Println("You pop the back open on the shrink ray and start dumping stuff in, being careful to shake it frequently, just like the notebook says.")
-		fmt.Println("This is one time you will be following instructions!")
-		fmt.Println("The shrink ray starts to vibrate and buzz and you see it start to glow purple.")
-		fmt.Println("You plug the software into it and watching it whir to life.")
-		fmt.Println("You grab it, it's getting really hot now, and rush over the scorched mirror.")
-		fmt.Println("Here goes nothing!\nYou think you hear a car door slam in the driveway.")
-		fmt.Println("WHABAM! The shrink ray explodes and your ears pop. You feel woozy, and heavy.")
-		fmt.Println("What was that? You hear your dad yell from a distance.")
-		fmt.Println("Nooooooothing you hear yourself say. You sound louder now. Woozily you sit up and look in the mirror.")
-		fmt.Println("You're back to normal size! You got away with it! Everything is going to be fine!")
-		fmt.Println("WHAT IS ALL THIS MESS!")
-		fmt.Println("Uhoh.")
-		fmt.Println("\nROLL CREDITS")
+		winningMessage := fmt.Sprintf(`You dump out your backpack and everything tumbles onto the carpet.
+The shampoo, the dirty socks, the candle, the couch stuffing, the copper
+wire, the cornflakes, the screw, the can, the sand, and the software and
+everything else you've picked up all day. Now what?
+
+You grab the notebook and flip through it feverishly looking for
+instructions. EUREKA! You've found them.
+
+You pop the back open on the shrink ray and start dumping stuff in,
+being careful to shake it frequently, just like the notebook says. This is
+one time you will be following instructions!
+
+The shrink ray starts to vibrate and buzz and you see it start to glow purple.
+You plug the software into it and watching it whir to life. You grab it 
+-- it's getting really hot now -- and rush over the scorched mirror.
+
+Here goes nothing! You think you hear a car door slam in the driveway.
+
+WHABAM! The shrink ray explodes and your ears pop. You feel dizzy, and heavy.
+
+"What was that?"" You hear your dad yell from a distance.
+
+"Nooooooothing" you hear yourself say. You sound louder now. Woozily you
+sit up and look in the mirror. You're back to normal size!
+You got away with it! Everything is going to be fine!
+
+"WHAT IS ALL THIS MESS?!"
+		
+Uh-oh.
+			
+ROLL CREDITS`)
+
+		fmt.Println(winningMessage)
 	} else {
-		fmt.Printf("You've given up. You can't stand to be this tiny any longer!\nYou call your parents who race home from the store.\nThey start lecturing you as they collect items from around the house.\nThey had a spare shrink ray the whole time!\nThey point it at you and you hear a loud hiss and buzz and your ears pop.\nA purple light surrounds you as you grow back to normal size. What a relief!\nUntil your mother grabs you by the ear and throws you in your room.\nYou hear the door lock from the outside.\nYou are grounded for eternity.\n")
-		fmt.Println("GAME OVER")
+		losingMessage := fmt.Sprintf(`You've given up. You can't stand to be this tiny any longer! You call your
+parents who race home from the store. They start lecturing you as they collect
+items from around the house. They had a spare shrink ray the whole time!
+They point it at you and you hear a loud hiss and buzz and your ears pop.
+
+A purple light surrounds you as you grow back to normal size. What a relief!
+Until your mother grabs you by the ear and throws you in your room.
+You hear the door lock from the outside. You are grounded for eternity.
+
+GAME OVER`)
+
+		fmt.Println(losingMessage)
 	}
 
 }
