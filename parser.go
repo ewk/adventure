@@ -159,7 +159,7 @@ func moveToRoom(exit string) {
 			}
 		}
 	}
-	fmt.Printf("%s is not a valid exit\n", exit)
+	fmt.Printf("%s is not a valid exit.\n", exit)
 }
 
 // checkExit verifies the player has the item necessary to exit a room
@@ -287,7 +287,7 @@ func callTheDog(item string) {
 		} else {
 			fmt.Printf("You hear the padding footsteps of your loyal steed.\nHe comes loping into the %s.\n", strings.ToLower(curRoom.Name))
 			fmt.Println("You grab onto him and he starts running.")
-			fmt.Println("When he finally slows down at the top of the stairs you jump off.")
+			fmt.Println("When he finally slows down at the top of the stairs you jump off.\n")
 			curRoom = rooms["Staircase"]
 		}
 	} else {
@@ -356,9 +356,9 @@ func climbStuff(item string) {
 		curRoom.Items["corn flakes"].Discovered = true
 	} else if curRoom.Name == "Dining Room" && item == "dining room table" {
 		climbedUp = true
-		fmt.Println("From on top of the dining room table you can get a better look at the candelabra.")
+		fmt.Println("From on top of the table you can see more.")
 		curRoom.Items["candelabra"].Discovered = true
-		fmt.Println("There's wax everywhere but it looks like there might still be a bit of candle left. Is that a candle? Look closer")
+		fmt.Println("There's wax everywhere but it looks like there might still be a bit of\ncandle left. LOOK at the CANDELABRA to investigate.")
 	} else if item == "down" {
 		climbedUp = false
 		fmt.Println("You climb back down to the ground before you get dizzy!")
@@ -370,7 +370,7 @@ func climbStuff(item string) {
 }
 
 func climbTheStairs() {
-	fmt.Println("Oof that's a lot of stairs to climb")
+	fmt.Println("Oof that's a lot of stairs to climb!")
 	if _, ok := inventory["dog whistle"]; ok {
 		fmt.Println("But you have the dog whistle!")
 		callTheDog("dog whistle")
@@ -394,14 +394,14 @@ func cutStuff(item string) {
 
 func downTheBanister() {
 	if _, ok := inventory["scarf"]; ok {
-		fmt.Println("\nYou use the scarf to slide quickly and safely down the banister")
+		fmt.Println("\nYou use the scarf to slide quickly and safely down the banister.\n")
 	} else {
-		fmt.Println("\nYou try to slide down the banister but your jeans don't slide down easily so it's more of a scooch.")
-		fmt.Println("After a couple of minutes of struggling you're sweaty and have worn a hole down in the seat of your pants.")
+		fmt.Println("\nYou try to slide down the banister but your jeans don't slide down easily\nso it's more of a scooch.")
+		fmt.Println("After a couple minutes of struggling you're sweaty and have worn a hole\ndown in the seat of your pants.")
 		fmt.Println("You fall off the banister halfway down and tumble down the rest of the stairs.")
 		fmt.Println("The dog just raises his head and looks at you while you flail helplessly.")
 		fmt.Println("You land with another thud, thankfully nothing seems broken.")
-		fmt.Println("You should have grabbed that silky scarf.")
+		fmt.Println("You should have grabbed that silky scarf.\n")
 	}
 }
 

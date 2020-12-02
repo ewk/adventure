@@ -15,7 +15,7 @@
 		},
 		"peeling wallpaper": {
 			"name": "peeling wallpaper",
-			"description": "Some wallpaper seems to be peeling from the wall here, I wonder if there are any deep dark secrets hidden underneath.",
+			"description": "Some wallpaper seems to be peeling from the wall here.",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
