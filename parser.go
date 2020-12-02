@@ -191,66 +191,39 @@ func haveAllItems() bool {
 
 // help prints a subset of verbs the game understands
 func help() {
-	m := fmt.Sprintf(`
-	Here are some of the commands the game understands:
+	m := fmt.Sprintf(`Here are some of the commands the game understands:
 
 	inventory :: Lists the contents of your inventory.
-
-	mystuff :: see inventory
-
-	look :: Print the long form explanation of the current room.
-
-	look at <feature or object> :: gives a fictionally interesting explanation of
-	the feature or object. You should be able to "look at" objects in your
-	inventory, as well. If you describe something in your text descriptions, you
-	should be able to "look at" it to examine it.
-
-	go :: "go Upstairs Hallway" or "go $EXIT" or "go to $ROOM" - proceed through
-	the indicated exit to the next room.
-
-	take :: acquire an object, putting it into your inventory.
-
-	grab :: see take
-
-	drop :: remove an object from your inventory, dropping it in the current room.
-
-	eat :: restore your strength by eating an item
-
-	pull :: see take
-
-	whistle :: With the right item at hand, you can whistle to summon the family pet.
-
-	call :: Call your parents to come get you.
-
+	mystuff :: See inventory.
+	look :: Prints the long form explanation of the current room.
+	look at <feature or object> :: Prints the description of an item.
+	go :: "go <room>" or "go to <room>" - Proceed through
+		the indicated exit to the next room.
+	take :: Acquire an object, putting it into your inventory.
+	grab :: See take.
+	drop :: Remove an object from your inventory, dropping it in
+		the current room.
+	eat :: Restore your strength by eating an item.
+	pull :: See take.
+	whistle :: With the right item at hand, you can whistle to
+		summon the family pet.
+	call :: Call your parents to come and fix things for you.
 	enter :: Type a secret password into a computer.
-
 	climb :: Climb a desk. Maybe someday you can climb a mountain. Or even
-	climb on the rest of the furniture ...
-
+		climb on the rest of the furniture ...
 	use :: Make use of an item in your inventory.
-
 	taunt :: Pick a fight!
-
 	jump :: Get vertical!
-
-	slide :: Travel quickly
-
-	yank :: see take
-
-	shrink :: make a big thing a smaller thing
-
-	cut :: cut an item
-
-	savegame :: saves the state of the game to a file.
-
-	loadgame :: confirms with the user that this really is desired, then loads
-	the game state from the file.
-
-	exit :: save game and then exit.
-
-	quit :: see exit
-
-	help :: Print this message`)
+	slide :: Travel quickly.
+	yank :: See take.
+	shrink :: Make a big thing a smaller thing.
+	cut :: Cut an item.
+	savegame :: Saves the state of the game to a file.
+	loadgame :: Confirms that this really is desired, then loads
+		the game state from a file.
+	exit :: Save game and then exit.
+	quit :: See exit.
+	help :: Print this message.`)
 
 	fmt.Println(m)
 }
