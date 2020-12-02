@@ -315,7 +315,7 @@ func callYourParents() {
 func eatItem(item string) {
 	if val, ok := inventory[item]; ok {
 		if val.IsEdible {
-			fmt.Println("That was delicious! Your strength has been restored.")
+			fmt.Println("You just eat one corn flake. It's big enough to quiet your appetite given\nyour current stature. You save the rest of the box so you can\nfix the shrink ray before mom and dad get home.")
 		} else {
 			fmt.Printf("I know you're hangry. But %s is not food!\n", item)
 		}
