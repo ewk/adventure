@@ -246,9 +246,7 @@ func help() {
 	loadgame :: confirms with the user that this really is desired, then loads
 	the game state from the file.
 
-	exit :: save game and then exit.
-
-	quit :: see exit
+	quit :: save game and then exit.
 
 	help :: Print this message
 	`)
