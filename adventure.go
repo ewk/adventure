@@ -187,7 +187,7 @@ func main() {
 	// the player always starts with the shrink ray
 	s := Item{
 		Name:        "shrink ray",
-		Description: "makes things smaller",
+		Description: "Your parents' latest invention.",
 		TooBig:      false,
 		IsFeature:   false,
 		Discovered:  true,

@@ -5,13 +5,13 @@
 	"items": {
 		"shower": {
 			"name": "shower",
-			"description": "The shower has a note written on the tiles in big, erasable letters.\nWhen was the last time this shower was cleaned?\nTake a closer LOOK at the NOTE",
+			"description": "The shower has a note written on the tiles in big, erasable letters.\nWhen was the last time this shower was cleaned?",
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": true,
-			"discoveryStatement": "What does it say? Try taking a closer look at that notepad",
-			"hiddenObject": "notepad"
+			"discoveryStatement": "What does it say? Try taking a closer LOOK at the NOTE.",
+			"hiddenObject": "note"
 		},
 		"note": {
 			"name": "note",
