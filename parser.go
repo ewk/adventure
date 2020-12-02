@@ -194,35 +194,60 @@ func help() {
 	m := fmt.Sprintf(`Here are some of the commands the game understands:
 
 	inventory :: Lists the contents of your inventory.
+
 	mystuff :: See inventory.
+
 	look :: Prints the long form explanation of the current room.
+
 	look at <feature or object> :: Prints the description of an item.
+
 	go :: "go <room>" or "go to <room>" - Proceed through
 		the indicated exit to the next room.
+
 	take :: Acquire an object, putting it into your inventory.
+
 	grab :: See take.
+
 	drop :: Remove an object from your inventory, dropping it in
 		the current room.
+
 	eat :: Restore your strength by eating an item.
+
 	pull :: See take.
+
 	whistle :: With the right item at hand, you can whistle to
 		summon the family pet.
+
 	call :: Call your parents to come and fix things for you.
+
 	enter :: Type a secret password into a computer.
+
 	climb :: Climb a desk. Maybe someday you can climb a mountain. Or even
 		climb on the rest of the furniture ...
+
 	use :: Make use of an item in your inventory.
+
 	taunt :: Pick a fight!
+
 	jump :: Get vertical!
+
 	slide :: Travel quickly.
+
 	yank :: See take.
+
 	shrink :: Make a big thing a smaller thing.
+
 	cut :: Cut an item.
+
 	savegame :: Saves the state of the game to a file.
+
 	loadgame :: Confirms that this really is desired, then loads
 		the game state from a file.
+
 	exit :: Save game and then exit.
+
 	quit :: See exit.
+
 	help :: Print this message.`)
 
 	fmt.Println(m)
