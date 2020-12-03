@@ -795,7 +795,21 @@ You got away with it! Everything is going to be fine!
 		
 Uh-oh.
 			
-ROLL CREDITS`)
+ROLL CREDITS
+
+
+
+ _____________________
+< Thanks for playing! >
+ ---------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+`)
 
 		fmt.Println(winningMessage)
 	} else {
