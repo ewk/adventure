@@ -37,6 +37,9 @@ func lookAtItem(item string) {
 	} else if val, ok := curRoom.Items[item]; ok { // check the room for requested item
 		if val.Discovered == true {
 			fmt.Println(val.Description)
+			if val.TooBig && !val.IsFeature {
+				fmt.Println("This is too big to pick up at this size, can you make it any smaller?")
+			}
 		} else {
 			fmt.Println("You cannot see that, at least not from here!")
 		}
@@ -65,7 +68,7 @@ func takeItem(item string) {
 			inventory[item] = val
 			delete(curRoom.Items, item) // remove item from room after picking it up
 			fmt.Printf("You have picked up the %s.\nIt is now in your INVENTORY.\n", item)
-		} else if val.TooBig == true {
+		} else if val.TooBig && !val.IsFeature {
 			fmt.Printf("%s is too big to pick up!\nWhy don't you try to SHRINK it first?\n", item)
 		} else {
 			fmt.Println("You cannot pick that up!")
