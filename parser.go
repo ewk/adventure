@@ -588,14 +588,17 @@ help you? HELP! Why don't you try to LOOK around?`)
 
 		//scans the input string for prepositions and deletes them before passing the string to the parser
 		if len(s) > 1 {
-			var tempS strings.Builder
-			for i := 0; i < len(s); i++ {
-				if !(s[i] == "on" || s[i] == "in" || s[i] == "onto" || s[i] == "the" || s[i] == "at" || s[i] == "under" || s[i] == "to" || s[i] == "off" || s[i] == "of") {
-					tempS.WriteString(s[i])
-					tempS.WriteString(" ")
+			if !(len(s) == 2 && s[0] == "look" && s[1] == "at") {
+				var tempS strings.Builder
+				for i := 0; i < len(s); i++ {
+					if !(s[i] == "on" || s[i] == "in" || s[i] == "onto" || s[i] == "the" || s[i] == "at" || s[i] == "under" || s[i] == "to" || s[i] == "off") {
+						tempS.WriteString(s[i])
+						tempS.WriteString(" ")
+					}
 				}
+				s = strings.Fields(tempS.String())
 			}
-			s = strings.Fields(tempS.String())
+
 		}
 
 		if cap(s) == 0 {
@@ -609,12 +612,16 @@ help you? HELP! Why don't you try to LOOK around?`)
 				if s[1] == strings.ToLower(curRoom.Name) {
 					lookAtRoom()
 					break
+				} else if s[1] == "at" {
+					fmt.Println("What would you like to look at?")
+					break
 				} else {
 					tmp := s[1:]
 					item := strings.Join(tmp, " ")
 					lookAtItem(item)
 				}
 			} else {
+				fmt.Println(len(s))
 				lookAtRoom()
 			}
 		case "go":
