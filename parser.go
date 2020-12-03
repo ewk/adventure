@@ -37,10 +37,7 @@ func lookAtItem(item string) {
 	} else if val, ok := curRoom.Items[item]; ok { // check the room for requested item
 		if val.Discovered == true {
 			fmt.Println(val.Description)
-			if val.TooBig && !val.IsFeature {
-				fmt.Println("This is too big to pick up at this size, can you make it any smaller?")
-			}
-		} else {
+		} else if val.Name != "dog" {
 			fmt.Println("You cannot see that, at least not from here!")
 		}
 
