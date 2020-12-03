@@ -621,7 +621,6 @@ help you? HELP! Why don't you try to LOOK around?`)
 					lookAtItem(item)
 				}
 			} else {
-				fmt.Println(len(s))
 				lookAtRoom()
 			}
 		case "go":
