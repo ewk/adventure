@@ -104,6 +104,7 @@ func moveToRoom(exit string) {
 	if eagleWatching {
 		fmt.Printf("AGH! The eagle is taking his revenge!\n")
 		tauntTheEagle()
+		eagleWatching = false
 		return
 	}
 
@@ -411,6 +412,7 @@ func lookAtEagle() {
 	} else {
 		fmt.Println("The eagle swoops down and picks you up. You can see your whole neighborhood\nfrom up here!\n\nYou manage to wriggle free and drop down the chimney. You climb down\ntowards a bit of sunlight, and exit through a small hole in the chimney\ninto the large bedroom.\n")
 		curRoom = rooms["Large Bedroom"]
+		eagleWatching = false
 		lookAtRoom()
 	}
 }
