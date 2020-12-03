@@ -719,7 +719,7 @@ help you? HELP! Why don't you try to LOOK around?`)
 				slideDownJumpIn(s)
 			} else {
 				fmt.Println("Sliiiiiide to the left *clap* Sliiiiiide to the right.")
-				fmt.Println("You can't remmeber and more of the dance.")
+				fmt.Println("You can't remember and more of the dance.")
 			}
 		case "jump":
 			if len(s) > 1 {
