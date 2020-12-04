@@ -401,7 +401,7 @@ func downTheBanister() {
 }
 
 func lookAtEagle() {
-	fmt.Printf("You look at the eagle dead in its eyes.\nHe has a look on his face screaming 'YOU WANNA FIGHT BRO' as he swoops down.\n\n")
+	fmt.Printf("You look directly into the eagle's eyes.\nHe has a look on his face screaming 'YOU WANNA FIGHT, BRO?' as he flies towards you.\n\n")
 	eagleWatching = true
 
 	if _, ok := inventory["umbrella"]; ok {
