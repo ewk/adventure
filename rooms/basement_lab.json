@@ -35,7 +35,7 @@
     },
     "software": {
       "name": "software",
-      "description": "All the code you need to program the shrink ray to make things big again.",
+      "description": "All the code you need to program the shrink ray to make things big again.\nRemember this shrink ray will only be safe if you point it at a mirror.\nThe mirror in the attic makes it easy to hide the evidence.\n",
       "tooBig": false,
       "isFeature": false,
       "discovered": false,
