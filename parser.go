@@ -146,9 +146,7 @@ func moveToRoom(exit string) {
 				if curRoom.Name == "Downstairs Hallway" && val.Name == "Staircase" {
 					climbTheStairs()
 				}
-				if curRoom.Name == "Basement Lab" {
-					fmt.Println("There's a message above the door here:\nThe unshrink function only works with the mirror in the attic.\n")
-				}
+
 				curRoom = val // if found, the exit is the new current room
 
 				if curRoom.Visited == false { // have we been here before?
@@ -329,7 +327,7 @@ func eatItem(item string) {
 func enterThePassword() {
 	if _, ok := inventory["password"]; ok {
 		if curRoom.Name == "Basement Lab" && curRoom.Items["computer"].Discovered {
-			fmt.Println("TAKE the SOFTWARE you need.")
+			fmt.Println("TAKE the SOFTWARE you need. Make sure to LOOK at it too.")
 			curRoom.Items["software"].Discovered = true
 		} else {
 			fmt.Println("There's nothing that needs a password here.")
