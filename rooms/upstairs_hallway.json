@@ -27,7 +27,7 @@
 			"name": "exercise ball",
 			"description": "The giant blue exercise ball that your dad uses instead of a desk chair.\nIt is very bouncy.",
 			"tooBig": true,
-			"isFeature": false,
+			"isFeature": true,
 			"discovered": true,
 			"containsHiddenObject": false,
 			"discoveryStatement": "",
