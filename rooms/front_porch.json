@@ -15,7 +15,7 @@
 		},
 		"wicker couch": {
 			"name": "wicker couch",
-			"description": "The wicker couch is weathered and covered with bird seed detritus.",  
+			"description": "The wicker couch is weathered and covered with BIRD SEED detritus.",  
 			"tooBig": true,
 			"isFeature": true,
 			"discovered": true,
