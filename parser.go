@@ -134,7 +134,12 @@ func moveToRoom(exit string) {
 					}
 				}
 				if curRoom.Name == "Upstairs Hallway" && val.Name == "Attic" {
-					useTheThread()
+					if _, ok := inventory["thread"]; ok {
+						useTheThread()
+					} else {
+						fmt.Printf("Did you drop the thread somewhere?\nYou'll need to throw it up to reach the bottom of the attic ladder.\n") 
+						return
+					}
 				}
 				if curRoom.Name == "Upstairs Hallway" && val.Name == "Large Bedroom" && val.Visited == false {
 					bounceEnterLargeBedroom()
