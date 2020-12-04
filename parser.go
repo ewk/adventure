@@ -39,6 +39,7 @@ func lookAtItem(item string) {
 			fmt.Println(val.Description)
 		} else if val.Name != "dog" {
 			fmt.Println("You cannot see that, at least not from here!")
+			return
 		}
 
 		if val.ContainsHiddenObject == true {
