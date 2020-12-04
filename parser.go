@@ -104,7 +104,6 @@ func moveToRoom(exit string) {
 	if eagleWatching {
 		fmt.Printf("AGH! The eagle is taking his revenge!\n")
 		tauntTheEagle()
-		eagleWatching = false
 		return
 	}
 
