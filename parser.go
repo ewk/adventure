@@ -145,6 +145,7 @@ func moveToRoom(exit string) {
 				if curRoom.Name == "Downstairs Hallway" && val.Name == "Staircase" {
 					climbTheStairs()
 				}
+
 				curRoom = val // if found, the exit is the new current room
 
 				if curRoom.Visited == false { // have we been here before?
@@ -325,7 +326,7 @@ func eatItem(item string) {
 func enterThePassword() {
 	if _, ok := inventory["password"]; ok {
 		if curRoom.Name == "Basement Lab" && curRoom.Items["computer"].Discovered {
-			fmt.Println("TAKE the SOFTWARE you need.")
+			fmt.Println("TAKE the SOFTWARE you need. Make sure to LOOK at it too.")
 			curRoom.Items["software"].Discovered = true
 		} else {
 			fmt.Println("There's nothing that needs a password here.")
@@ -400,7 +401,7 @@ func downTheBanister() {
 }
 
 func lookAtEagle() {
-	fmt.Printf("You look at the eagle dead in its eyes.\nHe has a look on his face screaming 'YOU WANNA FIGHT BRO' as he swoops down.\n\n")
+	fmt.Printf("You look directly into the eagle's eyes.\nHe has a look on his face screaming 'YOU WANNA FIGHT, BRO?' as he flies towards you.\n\n")
 	eagleWatching = true
 
 	if _, ok := inventory["umbrella"]; ok {
@@ -411,6 +412,7 @@ func lookAtEagle() {
 	} else {
 		fmt.Println("The eagle swoops down and picks you up. You can see your whole neighborhood\nfrom up here!\n\nYou manage to wriggle free and drop down the chimney. You climb down\ntowards a bit of sunlight, and exit through a small hole in the chimney\ninto the large bedroom.\n")
 		curRoom = rooms["Large Bedroom"]
+		eagleWatching = false
 		lookAtRoom()
 	}
 }
