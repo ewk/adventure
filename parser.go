@@ -290,6 +290,16 @@ func callTheDog(item string) {
 			fmt.Println(curRoom.Items["dog"].DiscoveryStatement)
 		} else {
 			fmt.Printf("You hear the padding footsteps of your loyal steed.\nHe comes loping into the %s.\n", strings.ToLower(curRoom.Name))
+			if climbedUp {
+				if curRoom.Name == "Dining Room" {
+					fmt.Printf("With a running start you leap off of the dining room table.\n")
+				} else if curRoom.Name == "Basement Lab" {
+					fmt.Printf("With a running start you leap off of the desk.\n")
+				} else if curRoom.Name == "Pantry" {
+					fmt.Printf("With a running start you leap off of the shelves.\n")
+				}
+				climbedUp = false
+			}
 			fmt.Println("You grab onto him and he starts running.")
 			fmt.Println("When he finally slows down at the top of the stairs you jump off.\n")
 			curRoom = rooms["Staircase"]
