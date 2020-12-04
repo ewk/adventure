@@ -146,6 +146,9 @@ func moveToRoom(exit string) {
 				if curRoom.Name == "Downstairs Hallway" && val.Name == "Staircase" {
 					climbTheStairs()
 				}
+				if curRoom.Name == "Basement Lab" {
+					fmt.Println("There's a message above the door here:\nThe unshrink function only works with the mirror in the attic.\n")
+				}
 				curRoom = val // if found, the exit is the new current room
 
 				if curRoom.Visited == false { // have we been here before?
